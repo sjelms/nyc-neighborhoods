@@ -22,9 +22,9 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project directories: `src/models/`, `src/services/`, `src/cli/`, `src/lib/`, `tests/contract/`, `tests/integration/`, `tests/unit/`, `/input`, `/output`, `/logs`, `/cache`
-- [ ] T002 [P] Create `src/__init__.py` to make `src` a Python package
-- [ ] T003 [P] Configure `pytest.ini` at the root for test discovery and markers, including `pytest-cov` and `pytest-mock` (From research.md)
+- [x] T001 Create project directories: `src/models/`, `src/services/`, `src/cli/`, `src/lib/`, `tests/contract/`, `tests/integration/`, `tests/unit/`, `/input`, `/output`, `/logs`, `/cache`
+- [x] T002 [P] Create `src/__init__.py` to make `src` a Python package
+- [x] T003 [P] Configure `pytest.ini` at the root for test discovery and markers, including `pytest-cov` and `pytest-mock` (From research.md)
 
 ---
 
@@ -34,10 +34,10 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Define Pydantic models for data structures in `src/models/neighborhood_profile.py` based on `data-model.md` (`NeighborhoodProfile`, `KeyDetails`, `NeighborhoodFacts`, `Boundaries`, `TransitAccessibility`, `CommuteTime`)
-- [ ] T005 Implement a CSV parser in `src/lib/csv_parser.py` to read `neighborhood-borough.csv`, handling `Neighborhood` and `Borough` columns, and validating input.
-- [ ] T006 Implement a Markdown template renderer in `src/lib/template_renderer.py` for `output-template.md`.
-- [ ] T007 Set up basic logging configuration in `src/lib/logger.py`.
+- [x] T004 Define Pydantic models for data structures in `src/models/neighborhood_profile.py` based on `data-model.md` (`NeighborhoodProfile`, `KeyDetails`, `NeighborhoodFacts`, `Boundaries`, `TransitAccessibility`, `CommuteTime`)
+- [x] T005 Implement a CSV parser in `src/lib/csv_parser.py` to read `neighborhood-borough.csv`, handling `Neighborhood` and `Borough` columns, and validating input.
+- [x] T006 Implement a Markdown template renderer in `src/lib/template_renderer.py` for `output-template.md`.
+- [x] T007 Set up basic logging configuration in `src/lib/logger.py`.
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -51,18 +51,18 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 ### Tests for User Story 1
 
-- [ ] T008 [P] [US1] Write unit tests for `neighborhood_profile.py` Pydantic models in `tests/unit/test_models.py`.
-- [ ] T009 [P] [US1] Write unit tests for `csv_parser.py` in `tests/unit/test_csv_parser.py`.
-- [ ] T010 [P] [US1] Write unit tests for `template_renderer.py` in `tests/unit/test_template_renderer.py`.
+- [x] T008 [P] [US1] Write unit tests for `neighborhood_profile.py` Pydantic models in `tests/unit/test_models.py`.
+- [x] T009 [P] [US1] Write unit tests for `csv_parser.py` in `tests/unit/test_csv_parser.py`.
+- [x] T010 [P] [US1] Write unit tests for `template_renderer.py` in `tests/unit/test_template_renderer.py`.
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Implement `web_fetcher.py` in `src/services/web_fetcher.py` to fetch Wikipedia content using `requests`.
-- [ ] T012 [US1] Implement `wikipedia_parser.py` in `src/services/wikipedia_parser.py` to extract data from Wikipedia HTML using `BeautifulSoup`.
-- [ ] T013 [US1] Implement `data_normalizer.py` in `src/services/data_normalizer.py` to convert raw parsed data into `NeighborhoodProfile` model.
-- [ ] T014 [US1] Implement `profile_generator.py` in `src/services/profile_generator.py` to orchestrate data fetching, parsing, normalization, and rendering for a single profile.
-- [ ] T015 [US1] Write integration test for single profile generation (from CSV to Markdown output) in `tests/integration/test_single_profile.py`.
-- [ ] T016 [US1] Implement CLI command for single profile generation in `src/cli/main.py` using `typer`, handling input CSV path, output directory, and version metadata.
+- [x] T011 [US1] Implement `web_fetcher.py` in `src/services/web_fetcher.py` to fetch Wikipedia content using `requests`.
+- [x] T012 [US1] Implement `wikipedia_parser.py` in `src/services/wikipedia_parser.py` to extract data from Wikipedia HTML using `BeautifulSoup`.
+- [x] T013 [US1] Implement `data_normalizer.py` in `src/services/data_normalizer.py` to convert raw parsed data into `NeighborhoodProfile` model.
+- [x] T014 [US1] Implement `profile_generator.py` in `src/services/profile_generator.py` to orchestrate data fetching, parsing, normalization, and rendering for a single profile.
+- [x] T015 [US1] Write integration test for single profile generation (from CSV to Markdown output) in `tests/integration/test_single_profile.py`.
+- [x] T016 [US1] Implement CLI command for single profile generation in `src/cli/main.py` using `typer`, handling input CSV path, output directory, and version metadata.
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -76,9 +76,9 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Modify `profile_generator.py` to handle processing multiple profiles from a list of neighborhoods, ensuring graceful error handling.
-- [ ] T018 [US2] Update CLI command in `src/cli/main.py` to support batch processing and error reporting for multiple profiles.
-- [ ] T019 [US2] Write integration test for multiple profile generation with error handling in `tests/integration/test_batch_profile.py`.
+- [x] T017 [US2] Modify `profile_generator.py` to handle processing multiple profiles from a list of neighborhoods, ensuring graceful error handling.
+- [x] T018 [US2] Update CLI command in `src/cli/main.py` to support batch processing and error reporting for multiple profiles.
+- [x] T019 [US2] Write integration test for multiple profile generation with error handling in `tests/integration/test_batch_profile.py`.
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -88,7 +88,7 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T020 [P] Implement caching mechanism for fetched web content in `src/lib/cache_manager.py` within the `/cache` directory.
+- [x] T020 [P] Implement caching mechanism for fetched web content in `src/lib/cache_manager.py` within the `/cache` directory.
 - [ ] T021 [P] Implement NYC Open Data API fetching and parsing in `src/services/nyc_open_data_fetcher.py` and `src/services/nyc_open_data_parser.py`.
 - [ ] T022 [P] Integrate NYC Open Data fetching/parsing into `data_normalizer.py` for supplementing/cross-validating.
 - [ ] T023 [P] Refactor code for maintainability and extensibility across the project.
