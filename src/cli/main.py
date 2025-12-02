@@ -11,7 +11,9 @@ from src.services.web_fetcher import WebFetcher
 from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
 from src.services.profile_generator import ProfileGenerator
-from src.lib.cache_manager import CacheManager # Import CacheManager
+from src.lib.cache_manager import CacheManager
+from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher # Import NYCOpenDataFetcher
+from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import NYCOpenDataParser
 
 app = typer.Typer()
 logger = typer.echo  # Use typer.echo for CLI output, logging for internal messages
@@ -35,7 +37,9 @@ def generate_profiles(
                                    writable=True, readable=True, resolve_path=True,
                                    help="Path to the directory for caching web content."),
     cache_expiry_days: int = typer.Option(7, "--cache-expiry-days", "-e", min=0,
-                                         help="Number of days before cached web content expires. Set to 0 to disable caching.")
+                                         help="Number of days before cached web content expires. Set to 0 to disable caching."),
+    nyc_open_data_dataset_id: Optional[str] = typer.Option(None, "--nyc-open-data-dataset-id", "--odid",
+                                                          help="ID of the NYC Open Data Socrata dataset to use for supplementary data. e.g. 'ntacode_dataset_placeholder'. If not provided, Open Data will not be used.")
 ):
     """
     Generates standardized Markdown profile files for New York City neighborhoods.
@@ -53,11 +57,29 @@ def generate_profiles(
     else:
         internal_logger.info("Caching disabled.")
 
+    # Initialize WebFetcher
+    web_fetcher = WebFetcher(cache_manager=cache_manager)
+
+    # Initialize NYC Open Data components if ID is provided
+    nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None
+    nyc_open_data_parser: Optional[NYCOpenDataParser] = None
+    if nyc_open_data_dataset_id:
+        nyc_open_data_fetcher = NYCOpenDataFetcher(web_fetcher=web_fetcher)
+        nyc_open_data_parser = NYCOpenDataParser()
+        internal_logger.info(f"NYC Open Data integration enabled for dataset: {nyc_open_data_dataset_id}")
+    else:
+        internal_logger.info("NYC Open Data integration disabled.")
+
+
     # Initialize core components
     csv_parser = CSVParser(input_csv)
-    web_fetcher = WebFetcher(cache_manager=cache_manager) # Pass cache_manager here
     wikipedia_parser = WikipediaParser()
-    data_normalizer = DataNormalizer(version, ratified_date, last_amended_date)
+    
+    data_normalizer = DataNormalizer(
+        version, ratified_date, last_amended_date,
+        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
+        nyc_open_data_parser=nyc_open_data_parser   # Pass here
+    )
     
     try:
         template_renderer = TemplateRenderer(template_path)
@@ -71,7 +93,9 @@ def generate_profiles(
         wikipedia_parser=wikipedia_parser,
         data_normalizer=data_normalizer,
         template_renderer=template_renderer,
-        output_dir=output_dir
+        output_dir=output_dir,
+        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
+        nyc_open_data_parser=nyc_open_data_parser   # Pass here
     )
 
     # Parse CSV for neighborhoods

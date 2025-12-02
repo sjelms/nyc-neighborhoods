@@ -8,23 +8,31 @@ from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
 from src.lib.template_renderer import TemplateRenderer
 from src.models.neighborhood_profile import NeighborhoodProfile
+from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher # Import for type hinting
+from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import for type hinting
+
 
 logger = logging.getLogger("nyc_neighborhoods")
 
 class ProfileGenerator:
     WIKIPEDIA_BASE_URL = "https://en.wikipedia.org/wiki/"
 
-    def __init__(self,
+    def __init__(
+                 self,
                  web_fetcher: WebFetcher,
                  wikipedia_parser: WikipediaParser,
                  data_normalizer: DataNormalizer,
                  template_renderer: TemplateRenderer,
-                 output_dir: Path):
+                 output_dir: Path,
+                 nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None, # New
+                 nyc_open_data_parser: Optional[NYCOpenDataParser] = None): # New
         self.web_fetcher = web_fetcher
         self.wikipedia_parser = wikipedia_parser
         self.data_normalizer = data_normalizer
         self.template_renderer = template_renderer
         self.output_dir = output_dir
+        self.nyc_open_data_fetcher = nyc_open_data_fetcher # Store
+        self.nyc_open_data_parser = nyc_open_data_parser   # Store
         self.output_dir.mkdir(parents=True, exist_ok=True) # Ensure output directory exists
 
     def _construct_wikipedia_url(self, neighborhood_name: str, borough: str) -> str:
@@ -69,8 +77,14 @@ class ProfileGenerator:
             raw_data["sources"] = []
         raw_data["sources"].append(wikipedia_url)
 
-        # 4. Normalize data
-        profile = self.data_normalizer.normalize(raw_data, neighborhood_name)
+        # 4. Normalize data (now passing Open Data fetcher/parser)
+        profile = self.data_normalizer.normalize(
+            raw_data,
+            neighborhood_name,
+            borough,
+            nyc_open_data_fetcher=self.nyc_open_data_fetcher, # Pass here
+            nyc_open_data_parser=self.nyc_open_data_parser # Pass here
+        )
         if not profile:
             logger.error(f"Failed to normalize data for {neighborhood_name}, {borough}. Skipping.")
             return False, None
@@ -93,7 +107,8 @@ class ProfileGenerator:
             logger.error(f"Error saving profile for {neighborhood_name}, {borough} to {output_file_path}: {e}")
             return False, None
     
-    def generate_profiles_from_list(self,
+    def generate_profiles_from_list(
+                                    self,
                                     neighborhood_list: List[Dict[str, str]]) -> Dict[str, Any]:
         """
         Generates Markdown profiles for a list of neighborhoods.
@@ -152,6 +167,10 @@ if __name__ == '__main__':
     from src.lib.logger import setup_logging
     from pathlib import Path
     import os
+    from unittest.mock import MagicMock
+    from src.services.web_fetcher import WebFetcher as RealWebFetcher
+    from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher as RealNYCOpenDataFetcher
+    from src.services.nyc_open_data_parser import NYCOpenDataParser as RealNYCOpenDataParser
 
     setup_logging(level=logging.INFO)
 
@@ -214,30 +233,46 @@ if __name__ == '__main__':
         dummy_template_path.write_text(template_content)
 
     # Instantiate dependencies (using MagicMock for WebFetcher to prevent real external calls)
-    from unittest.mock import MagicMock
-    mock_fetcher = MagicMock(spec=WebFetcher)
-    mock_fetcher.fetch.side_effect = [
+    mock_web_fetcher = MagicMock(spec=RealWebFetcher)
+    mock_web_fetcher.fetch.side_effect = [
         # Mock HTML for Maspeth (success)
-        "<div class=\"mw-parser-output\"><p>Summary Maspeth.</p><table class=\"infobox\"><tr><th>Population</th><td>50000</td></tr></table></div>",
+        """<div class=\"mw-parser-output\"><p>Summary Maspeth.</p><table class=\"infobox\"><tr><th>Population</th><td>50000</td></tr></table></div>""",
         # Mock HTML for Williamsburg (will cause normalization failure by parser returning minimal data)
-        "<div class=\"mw-parser-output\"><p>Summary Williamsburg.</p></div>",
+        """<div class=\"mw-parser-output\"><p>Summary Williamsburg.</p></div>""",
         # Mock HTML for NonExistent (fetch failure)
         None
     ]
 
-    parser = WikipediaParser()
-    normalizer = DataNormalizer(version="1.0", ratified_date=date(2025, 12, 2), last_amended_date=date(2025, 12, 2))
+    mock_web_fetcher_for_open_data = MagicMock(spec=RealWebFetcher)
+    mock_web_fetcher_for_open_data.fetch.return_value = json.dumps([
+        {"ntacode": "QN27", "ntaname": "Maspeth-Ridgewood", "boroughname": "Queens", "shape_area": "123456.78", "shape_len": "9876.54"}
+    ])
+
+    # Real dependencies used for demonstration of types
+    wikipedia_parser = WikipediaParser()
+    nyc_open_data_fetcher = RealNYCOpenDataFetcher(web_fetcher=mock_web_fetcher_for_open_data)
+    nyc_open_data_parser = RealNYCOpenDataParser()
+
+    normalizer = DataNormalizer(
+        version="1.0",
+        ratified_date=date(2025, 12, 2),
+        last_amended_date=date(2025, 12, 2),
+        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
+        nyc_open_data_parser=nyc_open_data_parser   # Pass here
+    )
     renderer = TemplateRenderer(dummy_template_path)
     
     # Use a temporary output directory for demonstration
     demo_output_dir = Path("demo_output")
     
     generator = ProfileGenerator(
-        web_fetcher=mock_fetcher,
-        wikipedia_parser=parser,
+        web_fetcher=mock_web_fetcher,
+        wikipedia_parser=wikipedia_parser,
         data_normalizer=normalizer,
         template_renderer=renderer,
-        output_dir=demo_output_dir
+        output_dir=demo_output_dir,
+        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
+        nyc_open_data_parser=nyc_open_data_parser   # Pass here
     )
 
     # --- Generate profiles from a list ---

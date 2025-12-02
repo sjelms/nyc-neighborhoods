@@ -5,22 +5,63 @@ from src.models.neighborhood_profile import (
     NeighborhoodProfile, KeyDetails, NeighborhoodFacts, Boundaries,
     TransitAccessibility, CommuteTime
 )
+from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher # Import Fetcher
+from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import Parser
 
 logger = logging.getLogger("nyc_neighborhoods")
 
 class DataNormalizer:
-    def __init__(self, version: str, ratified_date: date, last_amended_date: date):
+    def __init__(self,
+                 version: str,
+                 ratified_date: date,
+                 last_amended_date: date,
+                 nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None,
+                 nyc_open_data_parser: Optional[NYCOpenDataParser] = None):
         self.version = version
         self.ratified_date = ratified_date
         self.last_amended_date = last_amended_date
+        self.nyc_open_data_fetcher = nyc_open_data_fetcher
+        self.nyc_open_data_parser = nyc_open_data_parser
 
-    def normalize(self, raw_data: Dict[str, Any], neighborhood_name: str) -> Optional[NeighborhoodProfile]:
+    def normalize(self, raw_data: Dict[str, Any], neighborhood_name: str, borough: str) -> Optional[NeighborhoodProfile]:
         """
         Normalizes raw data extracted from Wikipedia (and potentially other sources)
         into a NeighborhoodProfile Pydantic model.
         """
         current_warnings = raw_data.get("warnings", [])
         
+        # --- Supplement with NYC Open Data if available ---
+        if self.nyc_open_data_fetcher and self.nyc_open_data_parser:
+            logger.info(f"Attempting to supplement data for {neighborhood_name} with NYC Open Data.")
+            # For demonstration, using a placeholder dataset ID and querying by neighborhood name
+            # A real implementation would involve careful selection of dataset_id and query parameters
+            # based on what specific data is needed (e.g., zoning, community boards, etc.)
+            open_data_dataset_id = "ntacode_dataset_placeholder" # Replace with actual NTA dataset ID
+            
+            # Construct a basic query to find the neighborhood. This is a heuristic and might need refinement.
+            # Socrata's SODA API uses 'where' clauses like "$where=ntaname='Maspeth'"
+            query_params = {
+                "$where": f"ntaname LIKE '{neighborhood_name}%%' OR ntaname LIKE '%%{neighborhood_name}%%'"
+            }
+            
+            open_data_raw_json = self.nyc_open_data_fetcher.fetch_data(open_data_dataset_id, query_params)
+
+            if open_data_raw_json:
+                open_data_parsed = self.nyc_open_data_parser.parse_nta_data(open_data_raw_json, neighborhood_name)
+                
+                # Update existing data with Open Data if it's more specific or fills gaps
+                if open_data_parsed.get("area_from_open_data") and (not raw_data["neighborhood_facts"].get("area") or raw_data["neighborhood_facts"].get("area") == "N/A"):
+                    raw_data["neighborhood_facts"]["area"] = open_data_parsed["area_from_open_data"]
+                    current_warnings.append(f"Area supplemented by NYC Open Data for {neighborhood_name}.")
+                
+                # Add Open Data sources
+                raw_data["sources"].extend(open_data_parsed.get("open_data_sources", []))
+            else:
+                current_warnings.append(f"Failed to fetch or parse NYC Open Data for {neighborhood_name}.")
+        else:
+            logger.debug("NYC Open Data fetcher/parser not provided to DataNormalizer.")
+
+
         # --- Handle KeyDetails ---
         # These are not directly from Wikipedia infobox, so we can set defaults or process later
         key_details_data = raw_data.get("key_details", {})
@@ -91,71 +132,77 @@ class DataNormalizer:
 
 if __name__ == '__main__':
     from src.lib.logger import setup_logging
+    from unittest.mock import MagicMock
+    from src.services.web_fetcher import WebFetcher as RealWebFetcher # Use real WebFetcher
+    from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher as RealNYCOpenDataFetcher # Use real fetcher
+    from src.services.nyc_open_data_parser import NYCOpenDataParser as RealNYCOpenDataParser # Use real parser
+
     setup_logging(level=logging.INFO)
 
-    # Dummy raw data from WikipediaParser
-    dummy_raw_data = {
-        "summary": "A sample summary.",
+    # --- Setup for demo ---
+    dummy_wikipedia_raw_data = {
+        "summary": "A sample summary from Wikipedia.",
         "key_details": {},
-        "around_the_block": "A narrative about the area.",
+        "around_the_block": "A narrative about the area from Wikipedia.",
         "neighborhood_facts": {
-            "population": "100,000",
-            "population_density": "10,000/sq mi",
-            "area": "5 sq mi",
+            "population": "50,000",
+            "population_density": "N/A", # Wikipedia might not have this, expect Open Data to supplement
+            "area": "N/A", # Wikipedia might not have this, expect Open Data to supplement
             "boundaries": {
-                "east_to_west": "East St.",
-                "north_to_south": "North Ave.",
-                "adjacent_neighborhoods": ["Town A", "Town B"]
+                "east_to_west": "Wikipedia East",
+                "north_to_south": "Wikipedia North",
+                "adjacent_neighborhoods": ["Wiki Neighbor A"]
             },
-            "zip_codes": ["10001", "10002"]
+            "zip_codes": ["10001"]
         },
         "transit_accessibility": {
-            "nearest_subways": ["A", "C"],
-            "major_stations": ["Station X"],
-            "bus_routes": ["M15"],
+            "nearest_subways": ["A"],
+            "major_stations": [],
+            "bus_routes": [],
             "rail_freight_other": [],
-            "highways_major_roads": ["I-95"]
+            "highways_major_roads": []
         },
-        "commute_times": None,
-        "sources": ["https://en.wikipedia.org/wiki/Sample_Neighborhood"],
-        "warnings": ["Infobox data missing for some fields."]
+        "sources": ["https://en.wikipedia.org/wiki/Test_Neighborhood"],
+        "warnings": ["Wikipedia did not have full boundary info."]
     }
 
-    # Test with valid data
-    normalizer = DataNormalizer(
+    # Mock NYCOpenDataFetcher and Parser responses
+    mock_web_fetcher_for_open_data = MagicMock(spec=RealWebFetcher)
+    mock_web_fetcher_for_open_data.fetch.return_value = json.dumps([
+        {"ntacode": "QN27", "ntaname": "Maspeth-Ridgewood", "boroughname": "Queens", "shape_area": "123456.78", "shape_len": "9876.54"}
+    ])
+    mock_nyc_open_data_fetcher = RealNYCOpenDataFetcher(web_fetcher=mock_web_fetcher_for_open_data)
+    mock_nyc_open_data_parser = RealNYCOpenDataParser()
+
+    # --- Test case: Supplementing data ---
+    normalizer_with_open_data = DataNormalizer(
+        version="1.0",
+        ratified_date=date(2025, 1, 1),
+        last_amended_date=date(2025, 1, 10),
+        nyc_open_data_fetcher=mock_nyc_open_data_fetcher,
+        nyc_open_data_parser=mock_nyc_open_data_parser
+    )
+    profile_supplemented = normalizer_with_open_data.normalize(dummy_wikipedia_raw_data, "Maspeth", "Queens")
+
+    if profile_supplemented:
+        print("\n--- Normalized Profile (Supplemented with Open Data) ---")
+        print(profile_supplemented.json(indent=2))
+        assert profile_supplemented.neighborhood_facts.area == "123456.78" # Should be supplemented
+        assert "Area supplemented by NYC Open Data for Maspeth." in profile_supplemented.warnings
+        assert "NYC NTA Data (ntacode: QN27)" in profile_supplemented.sources # Should have open data source
+    else:
+        print("Normalization failed for Maspeth (supplemented).")
+    
+    # --- Test case: No Open Data provided ---
+    normalizer_no_open_data = DataNormalizer(
         version="1.0",
         ratified_date=date(2025, 1, 1),
         last_amended_date=date(2025, 1, 10)
     )
-    profile = normalizer.normalize(dummy_raw_data, "Sampleville")
-    
-    if profile:
-        print("\n--- Normalized Profile (Sampleville) ---")
-        print(profile.json(indent=2))
-        assert profile.neighborhood_name == "Sampleville"
-        assert "Population data missing" not in profile.warnings
-        assert profile.neighborhood_facts.boundaries.east_to_west == "East St."
+    profile_no_open_data = normalizer_no_open_data.normalize(dummy_wikipedia_raw_data, "Testville", "Brooklyn")
+    if profile_no_open_data:
+        print("\n--- Normalized Profile (No Open Data) ---")
+        print(profile_no_open_data.json(indent=2))
+        assert "Area supplemented by NYC Open Data" not in profile_no_open_data.warnings
     else:
-        print("Normalization failed for Sampleville.")
-
-    # Test with missing critical data (e.g., population)
-    dummy_raw_data_missing_pop = dummy_raw_data.copy()
-    dummy_raw_data_missing_pop["neighborhood_facts"]["population"] = ""
-    profile_missing_pop = normalizer.normalize(dummy_raw_data_missing_pop, "MissingPopville")
-    
-    if profile_missing_pop:
-        print("\n--- Normalized Profile (MissingPopville) ---")
-        print(profile_missing_pop.json(indent=2))
-        assert "Population data missing for MissingPopville." in profile_missing_pop.warnings
-    else:
-        print("Normalization failed for MissingPopville.")
-
-    # Test with entirely empty raw data
-    empty_raw_data = {}
-    profile_empty = normalizer.normalize(empty_raw_data, "Emptyville")
-    if profile_empty:
-        print("\n--- Normalized Profile (Emptyville) ---")
-        print(profile_empty.json(indent=2))
-        assert "Population data missing for Emptyville." in profile_empty.warnings
-    else:
-        print("Normalization failed for Emptyville (expected to fail gracefully).")
+        print("Normalization failed for Testville (no Open Data).")

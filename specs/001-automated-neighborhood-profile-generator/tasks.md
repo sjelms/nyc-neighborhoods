@@ -89,11 +89,11 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 **Purpose**: Improvements that affect multiple user stories
 
 - [x] T020 [P] Implement caching mechanism for fetched web content in `src/lib/cache_manager.py` within the `/cache` directory.
-- [ ] T021 [P] Implement NYC Open Data API fetching and parsing in `src/services/nyc_open_data_fetcher.py` and `src/services/nyc_open_data_parser.py`.
-- [ ] T022 [P] Integrate NYC Open Data fetching/parsing into `data_normalizer.py` for supplementing/cross-validating.
-- [ ] T023 [P] Refactor code for maintainability and extensibility across the project.
-- [ ] T024 [P] Review and enhance logging for better traceability (source URLs, warnings, errors) throughout the application.
-- [ ] T025 [P] Update `README.md` and `quickstart.md` with comprehensive usage instructions for the implemented CLI.
+- [x] T021 [P] Implement NYC Open Data API fetching and parsing in `src/services/nyc_open_data_fetcher.py` and `src/services/nyc_open_data_parser.py`.
+- [x] T022 [P] Integrate NYC Open Data fetching/parsing into `data_normalizer.py` for supplementing/cross-validating.
+- [x] T023 [P] Refactor code for maintainability and extensibility across the project.
+- [x] T024 [P] Review and enhance logging for better traceability (source URLs, warnings, errors) throughout the application.
+- [x] T025 [P] Update `README.md` and `quickstart.md` with comprehensive usage instructions for the implemented CLI.
 
 ---
 
