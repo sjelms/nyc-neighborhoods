@@ -1,44 +1,42 @@
-# Implementation Plan: [FEATURE]
+# Implementation Plan: Automated Neighborhood Profile Generator
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**Branch**: `001-automated-neighborhood-profile-generator` | **Date**: 2025-12-02 | **Spec**: [spec.md](spec.md)
+**Input**: Feature specification from `specs/001-automated-neighborhood-profile-generator/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
 ## Summary
 
-[Extract from feature spec: primary requirement + technical approach from research]
+Develop a Python tool to automatically generate Markdown profile files for NYC neighborhoods. The tool will read a list of neighborhoods from a CSV, fetch data from Wikipedia and NYC Open Data, populate a standardized template, and save the output. Key principles include data accuracy, standardized output, and robust error handling.
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: Python 3.11
+**Primary Dependencies**: requests, beautifulsoup4, pandas, pydantic, typer
+**Storage**: Filesystem for input (CSV), output (.md files), logs, and cache
+**Testing**: pytest
+**Target Platform**: N/A (OS-agnostic CLI tool)
+**Project Type**: Single project
+**Performance Goals**: N/A (Batch processing tool, not performance-critical)
+**Constraints**: Must run on standard Python environments. Must handle varied data quality from web sources.
+**Scale/Scope**: Initial scope is ~70 neighborhoods based on input CSV. Tool should be extensible for more.
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **I. Data Accuracy & Traceability**: Prioritize data accuracy and source traceability by preferring high-authority sources (Wikipedia, official NYC Open Data). Cross-validate facts, and for conflicting data, prefer official sources. Flag inconsistencies for manual review.
+- **II. Standardized Output**: Produce standalone Markdown files per neighborhood with a fixed template, including metadata (Version, Ratified Date, Last Amended Date). Follow `Neighborhood_Borough.md` naming convention. Maintain a companion log for generation details and warnings.
+- **III. Python-First Development**: All core development must utilize Python 3.x. Adhere to the preferred stack: `requests`, `BeautifulSoup`, `pandas`, `pydantic` (or `dataclasses`), `typer` or `argparse`. Maintain a modular component architecture.
+- **IV. Verification & Robustness**: Implement comprehensive testing and debugging for all components. Start with a subset of neighborhoods for verification. Verify formatting, structure, and data accuracy. Handle missing/malformed sections with warnings and flag any missing or ambiguous values.
+- **V. Extensibility & Maintainability**: Design the system to be maintainable, extensible, and easy to review/update. Implement flexible parsing logic and fallback rules for varying data sources. Add inline flags (e.g., `#reference-required`, `#to-validate`) for missing or unverified data.
 
 ## Project Structure
 
 ### Documentation (this feature)
 
 ```text
-specs/[###-feature]/
+specs/001-automated-neighborhood-profile-generator/
 ├── plan.md              # This file (/speckit.plan command output)
 ├── research.md          # Phase 0 output (/speckit.plan command)
 ├── data-model.md        # Phase 1 output (/speckit.plan command)
@@ -48,15 +46,9 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
 
 ```text
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
+# Option 1: Single project (DEFAULT)
 src/
 ├── models/
 ├── services/
@@ -67,32 +59,9 @@ tests/
 ├── contract/
 ├── integration/
 └── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+**Structure Decision**: Option 1 (Single project) is selected as this is a self-contained CLI tool. The source code will reside in `src/` with a corresponding `tests/` directory.
 
 ## Complexity Tracking
 
@@ -100,5 +69,4 @@ directories captured above]
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
 |-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+|           |            |                                     |
