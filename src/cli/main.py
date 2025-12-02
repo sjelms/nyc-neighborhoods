@@ -21,18 +21,18 @@ logger = typer.echo  # Use typer.echo for CLI output, logging for internal messa
 
 @app.command()
 def generate_profiles(
-    input_csv: Path = typer.Option(..., "--input-csv", "-i", exists=True, file_okay=True, dir_okay=False,
+    input_csv: Path = typer.Option(Path("reference/neighborhood-borough.csv"), "--input-csv", "-i", exists=True, file_okay=True, dir_okay=False,
                                    writable=False, readable=True, resolve_path=True,
                                    help="Path to the input CSV file containing neighborhood and borough."),
-    output_dir: Path = typer.Option(..., "--output-dir", "-o", exists=False, file_okay=False, dir_okay=True,
+    output_dir: Path = typer.Option(Path("output/profiles"), "--output-dir", "-o", exists=False, file_okay=False, dir_okay=True,
                                     writable=True, readable=True, resolve_path=True,
                                     help="Path to the directory where generated Markdown files will be saved."),
-    template_path: Path = typer.Option("output-template.md", "--template-path", "-t", exists=True, file_okay=True, dir_okay=False,
+    template_path: Path = typer.Option(Path("reference/output-template.md"), "--template-path", "-t", exists=True, file_okay=True, dir_okay=False,
                                     readable=True, resolve_path=True,
                                     help="Path to the Markdown template file for output."),
     version: str = typer.Option("1.0", "--version", "-v", help="Version of the generated profiles."),
-    ratified_date: date = typer.Option(date.today(), "--ratified-date", "-r", help="Date when the profile format was ratified (YYYY-MM-DD)."),
-    last_amended_date: date = typer.Option(date.today(), "--last-amended-date", "-a", help="Date when the profile was last amended (YYYY-MM-DD)."),
+    ratified_date: Optional[str] = typer.Option(None, "--ratified-date", "-r", help="Date when the profile format was ratified (YYYY-MM-DD). Defaults to today."),
+    last_amended_date: Optional[str] = typer.Option(None, "--last-amended-date", "-a", help="Date when the profile was last amended (YYYY-MM-DD). Defaults to today."),
     log_level: str = typer.Option("INFO", "--log-level", "-l", help="Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)."),
     cache_dir: Path = typer.Option("cache", "--cache-dir", "-c", exists=False, file_okay=False, dir_okay=True,
                                    writable=True, readable=True, resolve_path=True,
@@ -43,7 +43,7 @@ def generate_profiles(
                                                           help="ID of the NYC Open Data Socrata dataset to use for supplementary data. e.g. 'ntacode_dataset_placeholder'. If not provided, Open Data will not be used."),
     force_regenerate: bool = typer.Option(False, "--force-regenerate", "-f",
                                          help="Force regeneration of all profiles, even if they exist in the log."),
-    update_since: Optional[date] = typer.Option(None, "--update-since", "-u",
+    update_since: Optional[str] = typer.Option(None, "--update-since", "-u",
                                               help="Regenerate profiles last amended on or after this date (YYYY-MM-DD)."),
     generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf",
                                            file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
@@ -56,6 +56,22 @@ def generate_profiles(
     internal_logger = logging.getLogger("nyc_neighborhoods")
     
     internal_logger.info("CLI command started.")
+
+    def _parse_date(value: Optional[str], option_name: str) -> date:
+        """Parse ISO date strings supplied via CLI options."""
+        if value is None:
+            return date.today()
+        try:
+            return date.fromisoformat(value)
+        except ValueError:
+            typer.echo(f"Error: Invalid date for --{option_name}: '{value}'. Use YYYY-MM-DD.", err=True)
+            raise typer.Exit(code=1)
+
+    parsed_ratified_date = _parse_date(ratified_date, "ratified-date")
+    parsed_last_amended_date = _parse_date(last_amended_date, "last-amended-date")
+    parsed_update_since = None
+    if update_since is not None:
+        parsed_update_since = _parse_date(update_since, "update-since")
 
     # Initialize CacheManager if caching is enabled
     cache_manager: Optional[CacheManager] = None
@@ -87,7 +103,7 @@ def generate_profiles(
     wikipedia_parser = WikipediaParser()
     
     data_normalizer = DataNormalizer(
-        version, ratified_date, last_amended_date,
+        version, parsed_ratified_date, parsed_last_amended_date,
         nyc_open_data_fetcher=nyc_open_data_fetcher,
         nyc_open_data_parser=nyc_open_data_parser
     )
@@ -127,7 +143,7 @@ def generate_profiles(
     results = profile_generator.generate_profiles_from_list(
         neighborhoods_to_process,
         force_regenerate=force_regenerate,
-        update_since=update_since
+        update_since=parsed_update_since
     )
     
     # Report summary

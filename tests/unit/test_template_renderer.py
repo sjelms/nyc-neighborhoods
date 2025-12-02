@@ -102,6 +102,7 @@ def sample_profile_data():
         ratified_date=date(2023, 1, 1),
         last_amended_date=date(2023, 1, 15),
         neighborhood_name="Exampleville",
+        borough="Example Borough",
         summary="A bustling neighborhood.",
         key_details=key_details,
         around_the_block="Lots of cafes and parks.",

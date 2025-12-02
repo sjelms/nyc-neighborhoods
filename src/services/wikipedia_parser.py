@@ -78,7 +78,11 @@ class WikipediaParser:
                 data["warnings"].append("Could not extract population from Wikipedia infobox.")
 
             # Area
-            area_raw = infobox_data.get("Area", {{}}).get("Total", "")
+            area_data = infobox_data.get("Area", {})
+            if isinstance(area_data, dict):
+                area_raw = area_data.get("Total", "")
+            else:
+                area_raw = area_data
             if isinstance(area_raw, list):
                 area_raw = area_raw[0] if area_raw else ""
             data["neighborhood_facts"]["area"] = area_raw
@@ -165,8 +169,8 @@ class WikipediaParser:
                     data["transit_accessibility"][key] = list(set([item.strip() for item in data["transit_accessibility"].get(key, []) if item.strip()]))
                 
                 if not any(data["transit_accessibility"].values()):
-                     logger.warning(f"[{neighborhood_name}] Could not extract detailed transit info, but found transportation section.")
-                     data["warnings"].append("Could not extract detailed transit info from Wikipedia.")
+                    logger.warning(f"[{neighborhood_name}] Could not extract detailed transit info, but found transportation section.")
+                    data["warnings"].append("Could not extract detailed transit info from Wikipedia.")
                 break # Stop after first transportation section
 
         if not any(data["transit_accessibility"].values()):
@@ -221,7 +225,7 @@ class WikipediaParser:
         # Try to get text from links if relevant (e.g., for 'Area' which might link to units)
         links = [a.get_text(strip=True) for a in cell.find_all('a') if a.get_text(strip=True)]
         if links and len(" ".join(links)) > len(cell.get_text(strip=True)) / 2: # Heuristic: if links cover most of the text
-             return links # Return all linked items as a list
+            return links # Return all linked items as a list
         
         # Fallback to direct text
         text = cell.get_text(separator=' ', strip=True)
@@ -331,7 +335,7 @@ if __name__ == '__main__':
         <h2>Geography</h2>
         <p>The neighborhood is bordered by Neighbor C to the North, and Neighbor D to the South.</p>
     </div>
-    "
+    """
     parser = WikipediaParser()
     extracted_data = parser.parse(html_content, "Test Neighborhood")
     
