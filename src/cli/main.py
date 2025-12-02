@@ -12,8 +12,9 @@ from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
 from src.services.profile_generator import ProfileGenerator
 from src.lib.cache_manager import CacheManager
-from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher # Import NYCOpenDataFetcher
-from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import NYCOpenDataParser
+from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher
+from src.services.nyc_open_data_parser import NYCOpenDataParser
+from src.lib.generation_log import GenerationLog # Import GenerationLog
 
 app = typer.Typer()
 logger = typer.echo  # Use typer.echo for CLI output, logging for internal messages
@@ -39,7 +40,14 @@ def generate_profiles(
     cache_expiry_days: int = typer.Option(7, "--cache-expiry-days", "-e", min=0,
                                          help="Number of days before cached web content expires. Set to 0 to disable caching."),
     nyc_open_data_dataset_id: Optional[str] = typer.Option(None, "--nyc-open-data-dataset-id", "--odid",
-                                                          help="ID of the NYC Open Data Socrata dataset to use for supplementary data. e.g. 'ntacode_dataset_placeholder'. If not provided, Open Data will not be used.")
+                                                          help="ID of the NYC Open Data Socrata dataset to use for supplementary data. e.g. 'ntacode_dataset_placeholder'. If not provided, Open Data will not be used."),
+    force_regenerate: bool = typer.Option(False, "--force-regenerate", "-f",
+                                         help="Force regeneration of all profiles, even if they exist in the log."),
+    update_since: Optional[date] = typer.Option(None, "--update-since", "-u",
+                                              help="Regenerate profiles last amended on or after this date (YYYY-MM-DD)."),
+    generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf",
+                                           file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
+                                           help="Path to the JSON log file for tracking generated profiles.")
 ):
     """
     Generates standardized Markdown profile files for New York City neighborhoods.
@@ -70,6 +78,9 @@ def generate_profiles(
     else:
         internal_logger.info("NYC Open Data integration disabled.")
 
+    # Initialize GenerationLog
+    generation_log = GenerationLog(generation_log_file)
+    internal_logger.info(f"Generation log initialized at {generation_log_file}")
 
     # Initialize core components
     csv_parser = CSVParser(input_csv)
@@ -77,8 +88,8 @@ def generate_profiles(
     
     data_normalizer = DataNormalizer(
         version, ratified_date, last_amended_date,
-        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
-        nyc_open_data_parser=nyc_open_data_parser   # Pass here
+        nyc_open_data_fetcher=nyc_open_data_fetcher,
+        nyc_open_data_parser=nyc_open_data_parser
     )
     
     try:
@@ -94,8 +105,9 @@ def generate_profiles(
         data_normalizer=data_normalizer,
         template_renderer=template_renderer,
         output_dir=output_dir,
-        nyc_open_data_fetcher=nyc_open_data_fetcher, # Pass here
-        nyc_open_data_parser=nyc_open_data_parser   # Pass here
+        nyc_open_data_fetcher=nyc_open_data_fetcher,
+        nyc_open_data_parser=nyc_open_data_parser,
+        generation_log=generation_log # Pass generation log here
     )
 
     # Parse CSV for neighborhoods
@@ -112,13 +124,18 @@ def generate_profiles(
     
     # Process all neighborhoods (batch mode)
     typer.echo(f"Starting to generate profiles for {len(neighborhoods_to_process)} neighborhoods...")
-    results = profile_generator.generate_profiles_from_list(neighborhoods_to_process)
+    results = profile_generator.generate_profiles_from_list(
+        neighborhoods_to_process,
+        force_regenerate=force_regenerate,
+        update_since=update_since
+    )
     
     # Report summary
     typer.echo("\n--- Profile Generation Summary ---")
     typer.echo(f"Total neighborhoods processed: {results['total']}")
     typer.echo(f"Successfully generated: {results['success']}")
     typer.echo(f"Failed to generate: {results['failed']}")
+    typer.echo(f"Skipped: {results['skipped']}") # Display skipped count
 
     if results['failed'] > 0:
         typer.echo("\n--- Details for Failed Profiles ---")
@@ -126,8 +143,11 @@ def generate_profiles(
             if detail['status'] == 'failed':
                 typer.echo(f"  - {detail['neighborhood']}, {detail.get('borough', 'N/A')}: {detail['reason']}")
         raise typer.Exit(code=1) # Exit with error code if any profiles failed
+    elif results['skipped'] > 0 and not force_regenerate and not update_since:
+        typer.echo("\nSome profiles were skipped because they already exist in the log.")
+        typer.echo("Use --force-regenerate to reprocess all, or --update-since to refresh specific records.")
     else:
-        typer.echo("\nAll profiles generated successfully!")
+        typer.echo("\nAll eligible profiles generated successfully!")
 
     internal_logger.info("CLI command finished.")
 

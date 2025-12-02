@@ -97,6 +97,18 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 ---
 
+## Phase 6: Generation Log Implementation
+
+**Purpose**: Add a JSON log to track generated profiles and support incremental updates.
+
+- [x] T026 Implement `generation_log.py` in `src/lib/` to manage reading, writing, and querying the JSON log file.
+- [x] T027 Update `NeighborhoodProfile` model in `src/models/neighborhood_profile.py` to include a unique identifier (e.g., a combination of neighborhood and borough).
+- [x] T028 Update `ProfileGenerator` in `src/services/profile_generator.py` to interact with `generation_log.py`, check for existing records, and log new ones.
+- [x] T029 Update `main.py` in `src/cli/` to add new CLI flags (`--force-regenerate`, `--update-since`, `--log-file`) and logic for record management.
+- [x] T030 Write integration tests for generation log functionality in `tests/integration/test_generation_log.py`.
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies

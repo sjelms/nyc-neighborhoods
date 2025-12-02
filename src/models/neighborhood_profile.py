@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from typing import List, Optional
 from datetime import date, datetime
 
@@ -36,6 +36,7 @@ class NeighborhoodProfile(BaseModel):
     ratified_date: date = Field(..., description="Date the profile was initially created (ISO format: YYYY-MM-DD).")
     last_amended_date: date = Field(..., description="Date the profile was last updated (ISO format: YYYY-MM-DD).")
     neighborhood_name: str = Field(..., description="The name of the neighborhood.")
+    borough: str = Field(..., description="The borough the neighborhood belongs to.") # Added borough field
     summary: str = Field(..., description="A short, one-paragraph summary of the neighborhood.")
     key_details: KeyDetails
     around_the_block: str = Field(..., description="A 1-2 paragraph narrative about the neighborhood.")
@@ -45,3 +46,8 @@ class NeighborhoodProfile(BaseModel):
     sources: List[str] = Field(..., description="A list of source URLs used to generate the profile.")
     generation_date: datetime = Field(..., description="The timestamp when the profile was generated (ISO 8601 format).")
     warnings: List[str] = Field(..., description="A list of any warnings encountered during data scraping or generation.")
+
+    @property
+    def unique_id(self) -> str:
+        """Generates a unique identifier for the neighborhood profile."""
+        return f"{self.neighborhood_name.lower().replace(' ', '-')}-{self.borough.lower().replace(' ', '-')}"

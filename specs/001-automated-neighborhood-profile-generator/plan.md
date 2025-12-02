@@ -13,7 +13,8 @@ Develop a Python tool to automatically generate Markdown profile files for NYC n
 
 **Language/Version**: Python 3.11
 **Primary Dependencies**: requests, beautifulsoup4, pandas, pydantic, typer
-**Storage**: Filesystem for input (CSV), output (.md files), logs, and cache
+**Storage**: Filesystem for input (CSV), output (.md files), logs, and cache.
+**Generation Log**: A JSON file (`generation_log.json` in `/logs`) to track generated profiles, their versions, and timestamps.
 **Testing**: pytest
 **Target Platform**: N/A (OS-agnostic CLI tool)
 **Project Type**: Single project
@@ -70,3 +71,36 @@ tests/
 | Violation | Why Needed | Simpler Alternative Rejected Because |
 |-----------|------------|-------------------------------------|
 |           |            |                                     |
+
+## Generation Log & Record Management
+
+To manage generated profiles and support incremental updates, a JSON log file (`generation_log.json`) will be maintained in the `/logs` directory.
+
+### Log Entry Structure
+
+Each record in the log will be a JSON object with the following structure:
+
+```json
+{
+  "neighborhood_name": "Maspeth",
+  "borough": "Queens",
+  "version": "1.0",
+  "generation_date": "2025-12-02T10:00:00.000Z",
+  "last_amended_date": "2025-12-02",
+  "output_file_path": "/path/to/output/Maspeth_Queens.md"
+}
+```
+
+### CLI Flags for Record Management
+
+The CLI will be extended with the following flags to manage record generation:
+
+*   `--force-regenerate`: A boolean flag that, when present, forces the re-generation of all profiles, even if they already exist in the log. By default, existing neighborhoods are skipped.
+*   `--update-since <YYYY-MM-DD>`: A date string that instructs the tool to only re-generate profiles that were last amended *on or after* this date. This is useful for refreshing a subset of records.
+*   `--log-file <PATH>`: Specifies the path to the generation log file. Defaults to `logs/generation_log.json`.
+
+### Behavior
+
+1.  **Default Behavior**: When run without any special flags, the tool will read the `generation_log.json`, identify which neighborhoods from the input CSV are *not* in the log, and generate profiles only for those new neighborhoods.
+2.  **With `--force-regenerate`**: The tool will ignore the generation log and attempt to generate a profile for every neighborhood in the input CSV.
+3.  **With `--update-since`**: The tool will read the generation log, find all records with a `last_amended_date` on or after the specified date, and re-generate profiles for those neighborhoods.
