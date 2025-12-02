@@ -51,6 +51,9 @@ python -m src.cli.main generate-profiles [OPTIONS]
 *   `-c, --cache-dir <PATH>`: Path to the directory for caching web content. Defaults to `cache`.
 *   `-e, --cache-expiry-days <INT>`: Number of days before cached web content expires. Set to `0` to disable caching. Defaults to `7`.
 *   `--odid, --nyc-open-data-dataset-id <TEXT>`: ID of the NYC Open Data Socrata dataset to use for supplementary data (e.g., `ntacode_dataset_placeholder`). If not provided, Open Data will not be used.
+*   `-f, --force-regenerate`: A boolean flag that, when present, forces the re-generation of all profiles, even if they already exist in the log.
+*   `-u, --update-since <YYYY-MM-DD>`: A date string that instructs the tool to only re-generate profiles that were last amended *on or after* this date.
+*   `--glf, --generation-log-file <PATH>`: Path to the JSON log file for tracking generated profiles. Defaults to `logs/generation_log.json`.
 
 ### Example:
 
@@ -65,7 +68,10 @@ python -m src.cli.main generate-profiles \
   --log-level "INFO" \
   --cache-dir "./my_cache" \
   --cache-expiry-days 30 \
-  --nyc-open-data-dataset-id "ntacode_dataset_placeholder"
+  --nyc-open-data-dataset-id "ntacode_dataset_placeholder" \
+  --force-regenerate \
+  --update-since "2025-01-01" \
+  --generation-log-file "./logs/my_custom_log.json"
 ```
 
 ## 4. Expected Output
