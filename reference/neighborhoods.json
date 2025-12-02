@@ -1,0 +1,89 @@
+{
+  "source": "reference/neighborhoods.csv",
+  "boroughs": [
+    {
+      "name": "Queens",
+      "slug": "queens",
+      "neighborhoods": [
+        "Astoria",
+        "Bayside",
+        "College Point",
+        "Corona",
+        "Douglaston",
+        "East Elmhurst",
+        "Elmhurst",
+        "Far Rockaway",
+        "Flushing",
+        "Forest Hills",
+        "Fresh Meadows",
+        "Glendale",
+        "Hollis",
+        "Inwood",
+        "Jackson Heights",
+        "Jamaica",
+        "JFK",
+        "Kew Gardens",
+        "Little Neck",
+        "Long Island City",
+        "Maspeth",
+        "Middle Village",
+        "Ozone Park",
+        "Queens Village",
+        "Rego Park",
+        "Richmond Hill",
+        "Ridgewood",
+        "Rockaway",
+        "Rosedale",
+        "Sheepshead Bay",
+        "South Ozone Park",
+        "Springfield Gardens",
+        "Whitestone",
+        "Willeet Point",
+        "Woodhaven",
+        "Woodside"
+      ]
+    },
+    {
+      "name": "Brooklyn",
+      "slug": "brooklyn",
+      "neighborhoods": [
+        "Bay Ridge",
+        "Bedford Stuyvesant",
+        "Bensonhurst",
+        "Boro Park",
+        "Brighon Beach",
+        "Brooklyn Heights",
+        "Brownsville",
+        "Bushwick",
+        "Canarsie",
+        "Coney Island",
+        "Crown Heights",
+        "Cypress Hills",
+        "Downtown Brooklyn",
+        "East Flatbush",
+        "East New York",
+        "East Williamsburg",
+        "Flatbush",
+        "Flatlands",
+        "Ft. Greene/Clinton Hill",
+        "Gowanus",
+        "Greenpoint",
+        "Midwood",
+        "Mill Basin",
+        "Park Slope",
+        "Prospect Heights",
+        "Red Hook",
+        "Spring Creek",
+        "Sunset Park",
+        "Williamsburg"
+      ]
+    },
+    {
+      "name": "Bronx",
+      "slug": "bronx",
+      "neighborhoods": [
+        "Bronx"
+      ]
+    }
+  ]
+}

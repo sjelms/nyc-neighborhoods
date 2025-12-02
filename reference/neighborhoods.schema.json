@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nyc-neighborhoods/reference/neighborhoods.schema.json",
+  "title": "NYC Boroughs with Nested Neighborhoods",
+  "description": "Schema for representing New York City boroughs with nested neighborhood lists derived from a CSV of Neighborhood,Borough pairs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["boroughs"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Optional version of this dataset (semantic version preferred).",
+      "pattern": "^\\d+\\.\\d+(?:\\.\\d+)?$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional ISO-8601 timestamp when this dataset was generated."
+    },
+    "source": {
+      "type": "string",
+      "description": "Optional free-form source reference for the dataset (e.g., file path or URL)."
+    },
+    "boroughs": {
+      "type": "array",
+      "description": "Collection of boroughs, each with its list of neighborhoods.",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/borough" }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "URL-friendly slug (lowercase, hyphen-separated)."
+    },
+    "boroughName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "NYC borough name.",
+      "enum": ["Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"]
+    },
+    "borough": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "neighborhoods"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/boroughName"
+        },
+        "slug": {
+          "$ref": "#/$defs/slug"
+        },
+        "neighborhoods": {
+          "type": "array",
+          "description": "List of neighborhood names belonging to this borough. Each item is the neighborhood's canonical display name.",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "version": "1.0.0",
+      "generatedAt": "2025-12-02T12:00:00Z",
+      "source": "reference/neighborhoods.csv",
+      "boroughs": [
+        {
+          "name": "Queens",
+          "slug": "queens",
+          "neighborhoods": [
+            "Astoria",
+            "Bayside",
+            "College Point",
+            "Corona",
+            "Douglaston",
+            "East Elmhurst",
+            "Elmhurst",
+            "Far Rockaway",
+            "Flushing",
+            "Forest Hills",
+            "Fresh Meadows",
+            "Glendale",
+            "Hollis",
+            "Jackson Heights",
+            "Jamaica",
+            "JFK",
+            "Kew Gardens",
+            "Little Neck",
+            "Long Island City",
+            "Maspeth",
+            "Middle Village",
+            "Ozone Park",
+            "Queens Village",
+            "Rego Park",
+            "Richmond Hill",
+            "Ridgewood",
+            "Rockaway",
+            "Rosedale",
+            "Sheepshead Bay",
+            "South Ozone Park",
+            "Springfield Gardens",
+            "Whitestone",
+            "Willeet Point",
+            "Woodhaven",
+            "Woodside"
+          ]
+        },
+        {
+          "name": "Brooklyn",
+          "slug": "brooklyn",
+          "neighborhoods": [
+            "Bay Ridge",
+            "Bedford Stuyvesant",
+            "Bensonhurst",
+            "Boro Park",
+            "Brighon Beach",
+            "Brooklyn Heights",
+            "Brownsville",
+            "Bushwick",
+            "Canarsie",
+            "Coney Island",
+            "Crown Heights",
+            "Cypress Hills",
+            "Downtown Brooklyn",
+            "East Flatbush",
+            "East New York",
+            "East Williamsburg",
+            "Gowanus",
+            "Greenpoint",
+            "Midwood",
+            "Mill Basin",
+            "Park Slope",
+            "Prospect Heights",
+            "Red Hook",
+            "Spring Creek",
+            "Sunset Park",
+            "Williamsburg"
+          ]
+        },
+        {
+          "name": "Bronx",
+          "slug": "bronx",
+          "neighborhoods": [
+            "Bronx"
+          ]
+        }
+      ]
+    }
+  ]
+}

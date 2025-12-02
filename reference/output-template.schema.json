@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nyc-neighborhoods/reference/output-template.schema.json",
+  "title": "NYC Neighborhood Output",
+  "description": "Structured representation of a neighborhood profile based on the reference markdown template.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "ratifiedDate",
+    "lastAmendedDate",
+    "neighborhoodName",
+    "shortSummary",
+    "keyDetails",
+    "aroundTheBlock",
+    "neighborhoodFacts",
+    "transitAccessibility"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Document version (semantic version preferred, e.g., 1.0.0).",
+      "pattern": "^\\d+\\.\\d+(?:\\.\\d+)?$"
+    },
+    "ratifiedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the document was ratified (YYYY-MM-DD)."
+    },
+    "lastAmendedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the document was last amended (YYYY-MM-DD)."
+    },
+    "neighborhoodName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The official neighborhood name."
+    },
+    "shortSummary": {
+      "$ref": "#/$defs/paragraph"
+    },
+    "keyDetails": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["whatToExpect", "unexpectedAppeal", "theMarket"],
+      "properties": {
+        "whatToExpect": { "$ref": "#/$defs/paragraph" },
+        "unexpectedAppeal": { "$ref": "#/$defs/paragraph" },
+        "theMarket": { "$ref": "#/$defs/paragraph" }
+      }
+    },
+    "aroundTheBlock": {
+      "description": "A 1–2 paragraph narrative.",
+      "oneOf": [
+        { "$ref": "#/$defs/paragraph" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      ]
+    },
+    "neighborhoodFacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["population", "populationDensity", "area", "boundaries", "zipCodes"],
+      "properties": {
+        "population": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Estimated number of residents."
+        },
+        "populationDensity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Residents per square mile (or km²)."
+        },
+        "area": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Area size (e.g., square miles)."
+        },
+        "boundaries": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eastToWest", "northToSouth", "adjacentNeighborhoods"],
+          "properties": {
+            "eastToWest": { "$ref": "#/$defs/nonEmptyString" },
+            "northToSouth": { "$ref": "#/$defs/nonEmptyString" },
+            "adjacentNeighborhoods": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/nonEmptyString" },
+              "minItems": 0,
+              "uniqueItems": true,
+              "description": "List of adjacent neighborhoods."
+            }
+          }
+        },
+        "zipCodes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/zipCode" },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "ZIP codes covering the neighborhood."
+        }
+      }
+    },
+    "transitAccessibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nearestSubways",
+        "majorStations",
+        "busRoutes",
+        "railFreightOtherTransit",
+        "highwaysMajorRoads"
+      ],
+      "properties": {
+        "nearestSubways": { "$ref": "#/$defs/stringArray" },
+        "majorStations": { "$ref": "#/$defs/stringArray" },
+        "busRoutes": { "$ref": "#/$defs/stringArray" },
+        "railFreightOtherTransit": { "$ref": "#/$defs/stringArray" },
+        "highwaysMajorRoads": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "commuteTimes": {
+      "type": "array",
+      "description": "Optional commute times to common destinations.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["destination", "subway", "drive"],
+        "properties": {
+          "destination": { "$ref": "#/$defs/nonEmptyString" },
+          "subway": { "$ref": "#/$defs/duration" },
+          "drive": { "$ref": "#/$defs/duration" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paragraph": {
+      "oneOf": [
+        { "$ref": "#/$defs/nonEmptyString" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/nonEmptyString" },
+          "minItems": 1
+        }
+      ],
+      "description": "Text content; accept a single string or an array of strings (paragraphs)."
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" },
+      "minItems": 0,
+      "uniqueItems": false
+    },
+    "zipCode": {
+      "type": "string",
+      "pattern": "^\\d{5}(?:-\\d{4})?$",
+      "description": "US ZIP code (5-digit or ZIP+4)."
+    },
+    "duration": {
+      "description": "Travel time as minutes (integer) or a human-readable range like '20–30 min'.",
+      "oneOf": [
+        { "type": "integer", "minimum": 0 },
+        {
+          "type": "string",
+          "pattern": "^\\d+\\s?(?:min|mins|minutes)(?:\\s?[–-]\\s?\\d+\\s?(?:min|mins|minutes))?$"
+        }
+      ],
+      "examples": [15, "20–30 min", "12-18 minutes"]
+    }
+  },
+  "examples": [
+    {
+      "version": "1.0.0",
+      "ratifiedDate": "2025-01-15",
+      "lastAmendedDate": "2025-02-10",
+      "neighborhoodName": "Hudson Yards",
+      "shortSummary": "A modern, amenity-rich district on Manhattan’s west side.",
+      "keyDetails": {
+        "whatToExpect": "Shiny new towers, curated retail, and a lot of buzz.",
+        "unexpectedAppeal": "Surprisingly accessible green space along the High Line.",
+        "theMarket": "Primarily luxury rentals and condos with premium amenities."
+      },
+      "aroundTheBlock": [
+        "Hudson Yards brings a master-planned feel to Manhattan.",
+        "It blends art, retail, offices, and residences in a tight footprint."
+      ],
+      "neighborhoodFacts": {
+        "population": 17000,
+        "populationDensity": 48000,
+        "area": 0.6,
+        "boundaries": {
+          "eastToWest": "8th Ave to Hudson River",
+          "northToSouth": "43rd St to 30th St",
+          "adjacentNeighborhoods": ["Hell's Kitchen", "Chelsea", "Midtown West"]
+        },
+        "zipCodes": ["10001", "10018-1234"]
+      },
+      "transitAccessibility": {
+        "nearestSubways": ["7"],
+        "majorStations": ["34 St–Hudson Yards"],
+        "busRoutes": ["M34", "M12"],
+        "railFreightOtherTransit": ["LIRR West Side Yard (freight/rail facility nearby)"],
+        "highwaysMajorRoads": ["West Side Highway", "10th Avenue"]
+      },
+      "commuteTimes": [
+        { "destination": "Midtown", "subway": "10–15 min", "drive": 10 },
+        { "destination": "FiDi", "subway": "20–30 min", "drive": "15–25 min" }
+      ]
+    }
+  ]
+}
