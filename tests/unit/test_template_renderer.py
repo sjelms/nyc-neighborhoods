@@ -66,7 +66,7 @@ def dummy_template_path(tmp_path: Path):
     file_path.write_text(content)
     return file_path
 
-@pytest.pytest.fixture
+@pytest.fixture
 def sample_profile_data():
     """Fixture to provide sample NeighborhoodProfile data."""
     key_details = KeyDetails(

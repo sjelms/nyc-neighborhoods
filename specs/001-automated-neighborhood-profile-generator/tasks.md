@@ -109,6 +109,16 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 ---
 
+## Phase 7: Pytest Troubleshooting
+
+**Purpose**: Resolve errors encountered during test execution.
+
+- [ ] T031 Fix the `SyntaxError: unterminated triple-quoted string literal` in `src/services/wikipedia_parser.py`.
+- [ ] T032 Fix the `AttributeError: module 'pytest' has no attribute 'pytest'` in `tests/unit/test_template_renderer.py`.
+- [ ] T033 Run tests to confirm all errors are resolved.
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies
