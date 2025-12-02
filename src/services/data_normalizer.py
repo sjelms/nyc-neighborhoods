@@ -114,6 +114,7 @@ class DataNormalizer:
                 ratified_date=self.ratified_date,
                 last_amended_date=self.last_amended_date,
                 neighborhood_name=neighborhood_name,
+                borough=borough,
                 summary=raw_data.get("summary", ""),
                 key_details=key_details,
                 around_the_block=raw_data.get("around_the_block", ""),

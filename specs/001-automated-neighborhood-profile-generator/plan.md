@@ -7,7 +7,7 @@
 
 ## Summary
 
-Develop a Python tool to automatically generate Markdown profile files for NYC neighborhoods. The tool will read a list of neighborhoods from a CSV, fetch data from Wikipedia and NYC Open Data, populate a standardized template, and save the output. Key principles include data accuracy, standardized output, and robust error handling.
+Develop a Python tool to automatically generate Markdown profile files for NYC neighborhoods. The tool reads a CSV, fetches data from Wikipedia and NYC Open Data, populates a standardized template, and saves the output. To improve reliability, prefer structured APIs (Wikipedia REST summary, MediaWiki/Wikidata lookups) and only fall back to HTML parsing when necessary.
 
 ## Technical Context
 
@@ -19,7 +19,7 @@ Develop a Python tool to automatically generate Markdown profile files for NYC n
 **Target Platform**: N/A (OS-agnostic CLI tool)
 **Project Type**: Single project
 **Performance Goals**: N/A (Batch processing tool, not performance-critical)
-**Constraints**: Must run on standard Python environments. Must handle varied data quality from web sources.
+**Constraints**: Must run on standard Python environments. Must handle varied data quality from web sources. Prefer API/structured data over brittle HTML scraping; cache responses to reduce request volume.
 **Scale/Scope**: Initial scope is ~70 neighborhoods based on input CSV. Tool should be extensible for more.
 
 ## Constitution Check

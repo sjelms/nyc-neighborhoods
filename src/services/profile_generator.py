@@ -71,8 +71,15 @@ class ProfileGenerator:
             logger.error(f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}. Skipping.")
             return False, None
 
-        # 3. Parse content
-        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name)
+        # 3a. Fetch REST summary (more stable than HTML)
+        summary_api_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{neighborhood_name.replace(' ', '_')},_{borough.replace(' ', '_')}"
+        summary_data = self.web_fetcher.fetch_json(summary_api_url)
+        summary_text = ""
+        if summary_data:
+            summary_text = summary_data.get("extract", "") or summary_data.get("description", "")
+
+        # 3b. Parse content
+        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name, summary_override=summary_text)
         
         # Add source URL to raw data for tracking
         if "sources" not in raw_data:
@@ -80,13 +87,7 @@ class ProfileGenerator:
         raw_data["sources"].append(wikipedia_url)
 
         # 4. Normalize data (now passing Open Data fetcher/parser)
-        profile = self.data_normalizer.normalize(
-            raw_data,
-            neighborhood_name,
-            borough,
-            nyc_open_data_fetcher=self.nyc_open_data_fetcher,
-            nyc_open_data_parser=self.nyc_open_data_parser
-        )
+        profile = self.data_normalizer.normalize(raw_data, neighborhood_name, borough)
         if not profile:
             logger.error(f"Failed to normalize data for {neighborhood_name}, {borough}. Skipping.")
             return False, None

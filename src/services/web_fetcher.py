@@ -7,8 +7,25 @@ from src.lib.cache_manager import CacheManager
 logger = logging.getLogger("nyc_neighborhoods")
 
 class WebFetcher:
-    def __init__(self, cache_manager: Optional[CacheManager] = None):
+    DEFAULT_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (compatible; nyc-neighborhoods/1.0; +https://example.com)",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    }
+
+    def __init__(self, cache_manager: Optional[CacheManager] = None, headers: Optional[dict] = None):
         self.cache_manager = cache_manager
+        self.headers = headers or self.DEFAULT_HEADERS
+
+    def fetch_json(self, url: str) -> Optional[dict]:
+        """Fetch JSON content with standard headers and return parsed dict."""
+        try:
+            response = requests.get(url, timeout=10, headers={**self.headers, "Accept": "application/json"})
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            logger.error(f"Error fetching JSON from {url}: {e}")
+            return None
 
     def fetch(self, url: str) -> Optional[str]:
         """
@@ -28,7 +45,7 @@ class WebFetcher:
 
         logger.info(f"Attempting to fetch content from network: {url}")
         try:
-            response = requests.get(url, timeout=10)  # 10-second timeout
+            response = requests.get(url, timeout=10, headers=self.headers)  # 10-second timeout
             response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
             content = response.text
             logger.info(f"Successfully fetched content from network: {url}")
@@ -39,6 +56,19 @@ class WebFetcher:
             
             return content
         except requests.exceptions.HTTPError as e:
+            # If forbidden from Wikipedia, try mobile site as a fallback
+            if getattr(response, "status_code", None) == 403 and "wikipedia.org" in url:
+                mobile_url = url.replace("https://en.wikipedia.org", "https://en.m.wikipedia.org")
+                logger.warning(f"HTTP 403 for {url}; retrying via mobile Wikipedia at {mobile_url}")
+                try:
+                    response_mobile = requests.get(mobile_url, timeout=10, headers=self.headers)
+                    response_mobile.raise_for_status()
+                    content = response_mobile.text
+                    if self.cache_manager:
+                        self.cache_manager.set(url, content)  # cache under original URL
+                    return content
+                except Exception as mobile_error:
+                    logger.error(f"Fallback mobile fetch failed for {mobile_url}: {mobile_error}")
             logger.error(f"HTTP error fetching {url}: {e}")
         except requests.exceptions.ConnectionError as e:
             logger.error(f"Connection error fetching {url}: {e}")

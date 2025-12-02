@@ -113,9 +113,20 @@ description: "Task list for Automated Neighborhood Profile Generator feature imp
 
 **Purpose**: Resolve errors encountered during test execution.
 
-- [ ] T031 Fix the `SyntaxError: unterminated triple-quoted string literal` in `src/services/wikipedia_parser.py`.
-- [ ] T032 Fix the `AttributeError: module 'pytest' has no attribute 'pytest'` in `tests/unit/test_template_renderer.py`.
-- [ ] T033 Run tests to confirm all errors are resolved.
+- [x] T031 Fix the `SyntaxError: unterminated triple-quoted string literal` in `src/services/wikipedia_parser.py`.
+- [x] T032 Fix the `AttributeError: module 'pytest' has no attribute 'pytest'` in `tests/unit/test_template_renderer.py`.
+- [x] T033 Run tests to confirm all errors are resolved.
+
+---
+
+## Phase 8: Data Source Hardening (Wikipedia)
+
+**Purpose**: Stop relying solely on brittle HTML parsing; use stable APIs and more robust parsing.
+
+- [ ] T034 Add REST summary fallback: call `https://en.wikipedia.org/api/rest_v1/page/summary/{title}` and use it when HTML summary is empty.
+- [ ] T035 Improve infobox parsing: accept any table with `infobox` class, handle subsection bullets, normalize non-breaking spaces, and map population/area/density/ZIP/highways keys by prefix/keyword.
+- [ ] T036 Broaden content extraction: relax paragraph/heading selection for summaries, "Around the Block", and transit to capture common section variations.
+- [ ] T037 Normalize rendered output: strip non-breaking spaces and other artifacts before writing Markdown.
 
 ---
 
