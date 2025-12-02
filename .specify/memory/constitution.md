@@ -1,8 +1,8 @@
 <!--
 <div id="sync-impact-report">
-Version change: None (initial creation)
-Modified principles: All (initial creation)
-Added sections: Project Scope & Limitations, Development Workflow (initial creation)
+Version change: 1.0.0 -> 1.1.0 (MINOR: New governance rule added)
+Modified principles: None
+Added sections: None (new rule added to existing Governance section)
 Removed sections: None
 Templates requiring updates:
   - .specify/templates/plan-template.md: ⚠ pending (Constitution Check section needs to reference new principles)
@@ -62,5 +62,6 @@ Design the system to be maintainable, extensible, and easy to review/update. Imp
 
 ## Governance
 This Constitution supersedes all other project practices. Amendments require a documented rationale, approval from project leads, and a migration plan if applicable. All code reviews must verify compliance with these principles. Versioning of outputs and the Constitution itself must adhere to semantic versioning guidelines outlined below.
+During implementation, the agent responsible for tasks MUST update the corresponding `tasks.md` file by marking completed tasks as `[x]` to provide real-time progress tracking.
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-02
+**Version**: 1.1.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-02
