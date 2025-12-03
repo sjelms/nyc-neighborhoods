@@ -61,7 +61,7 @@ def generate_profiles(
                                            file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
                                            help="Path to the JSON log file for tracking generated profiles."),
     use_llm: bool = typer.Option(True, "--use-llm/--no-llm", help="Enable or disable LLM-assisted structuring. Auto-disables if no API key is present."),
-    llm_model: str = typer.Option("gpt-5-mini", "--llm-model", help="LLM model to use when --use-llm is enabled."),
+    llm_model: str = typer.Option("gpt-5.1-2025-11-13", "--llm-model", help="LLM model to use when --use-llm is enabled."),
 ):
     """
     Generates standardized Markdown profile files for New York City neighborhoods.

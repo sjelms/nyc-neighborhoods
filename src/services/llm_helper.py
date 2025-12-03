@@ -17,7 +17,7 @@ class LLMHelper:
 
     def __init__(
         self,
-        model: str = "gpt-5-mini",
+        model: str = "gpt-5.1-2025-11-13",
         api_key: Optional[str] = None,
         enabled: bool = True,
     ) -> None:
