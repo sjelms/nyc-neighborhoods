@@ -17,7 +17,18 @@ from src.services.nyc_open_data_parser import NYCOpenDataParser
 from src.lib.generation_log import GenerationLog # Import GenerationLog
 
 app = typer.Typer()
-logger = typer.echo  # Use typer.echo for CLI output, logging for internal messages
+
+
+def _parse_date(value: Optional[str], option_name: str) -> date:
+    """Parse ISO date strings supplied via CLI options."""
+    if value is None:
+        return date.today()
+    try:
+        return date.fromisoformat(value)
+    except ValueError:
+        typer.echo(f"Error: Invalid date for --{option_name}: '{value}'. Use YYYY-MM-DD.", err=True)
+        raise typer.Exit(code=1)
+
 
 @app.command()
 def generate_profiles(
@@ -57,16 +68,6 @@ def generate_profiles(
     
     internal_logger.info("CLI command started.")
 
-    def _parse_date(value: Optional[str], option_name: str) -> date:
-        """Parse ISO date strings supplied via CLI options."""
-        if value is None:
-            return date.today()
-        try:
-            return date.fromisoformat(value)
-        except ValueError:
-            typer.echo(f"Error: Invalid date for --{option_name}: '{value}'. Use YYYY-MM-DD.", err=True)
-            raise typer.Exit(code=1)
-
     parsed_ratified_date = _parse_date(ratified_date, "ratified-date")
     parsed_last_amended_date = _parse_date(last_amended_date, "last-amended-date")
     parsed_update_since = None
@@ -105,7 +106,8 @@ def generate_profiles(
     data_normalizer = DataNormalizer(
         version, parsed_ratified_date, parsed_last_amended_date,
         nyc_open_data_fetcher=nyc_open_data_fetcher,
-        nyc_open_data_parser=nyc_open_data_parser
+        nyc_open_data_parser=nyc_open_data_parser,
+        nyc_open_data_dataset_id=nyc_open_data_dataset_id
     )
     
     try:

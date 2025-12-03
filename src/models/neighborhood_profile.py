@@ -13,9 +13,9 @@ class Boundaries(BaseModel):
     adjacent_neighborhoods: List[str] = Field(..., description="A list of neighboring areas.")
 
 class NeighborhoodFacts(BaseModel):
-    population: str = Field(..., description="Total population count.")
-    population_density: str = Field(..., description="Population per square mile/kilometer.")
-    area: str = Field(..., description="Total area of the neighborhood.")
+    population: int = Field(..., description="Total population count.")
+    population_density: float = Field(..., description="Population per square mile/kilometer.")
+    area: float = Field(..., description="Total area of the neighborhood.")
     boundaries: Boundaries
     zip_codes: List[str] = Field(..., description="A list of ZIP codes covering the neighborhood.")
 
