@@ -115,7 +115,6 @@ class LLMHelper:
 
             base_params = {
                 "model": self.model,
-                "temperature": 0.2,
                 "messages": [
                     {"role": "system", "content": system},
                     {"role": "user", "content": user},
@@ -141,16 +140,18 @@ class LLMHelper:
                     break
                 except Exception as e:
                     last_error = e
-                    # If the error is clearly about an unsupported parameter, try the next option
-                    if hasattr(e, "response") and getattr(e, "response", None) is not None:
-                        try:
-                            err_json = e.response.json()  # type: ignore[attr-defined]
-                            message = err_json.get("error", {}).get("message", "").lower()
-                            if param_name and param_name.replace("_", " ") in message:
-                                continue
-                        except Exception:
-                            pass
-                    # Otherwise bail out
+                    error_message = str(e).lower()
+                    # If the error is clearly about an unsupported parameter, try the next option.
+                    # This handles both API errors (e.g., "unsupported parameter") and
+                    # local TypeErrors (e.g., "unexpected keyword argument").
+                    if param_name and (
+                        f"unsupported parameter: '{param_name}'" in error_message
+                        or f"got an unexpected keyword argument '{param_name}'" in error_message
+                    ):
+                        logger.debug(f"LLM param '{param_name}' not supported, trying next option.")
+                        continue
+
+                    # For any other error (like 401 auth), break the loop and fail fast.
                     break
 
             if response is None:
@@ -171,6 +172,8 @@ class LLMHelper:
                         )
                     elif isinstance(raw_content, str):
                         content = raw_content
+            
+            logger.debug(f"LLM raw response content: {content}")
 
             if not content:
                 return {}

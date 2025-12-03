@@ -68,31 +68,42 @@ class DataNormalizer:
             if self.llm_helper and self.llm_helper.is_enabled:
                 refined = self.llm_helper.refine_profile_inputs(raw_data, neighborhood_name, borough)
                 if refined:
-                    # Merge key_details
+                    
+                    def _merge_lists(original: List, new: List) -> List:
+                        """Combine lists and return a sorted, unique list."""
+                        return sorted(list(set(original + new)))
+
+                    # --- Merge Key Details ---
                     if "key_details" in refined and isinstance(refined["key_details"], dict):
                         raw_kd = raw_data.get("key_details", {})
                         for k in ["what_to_expect", "unexpected_appeal", "the_market"]:
                             v = refined["key_details"].get(k)
-                            if v:
+                            # Overwrite if new value exists and old one is empty/placeholder
+                            if v and not raw_kd.get(k):
                                 raw_kd[k] = v
                         raw_data["key_details"] = raw_kd
 
-                    # around_the_block
+                    # --- Merge Around the Block ---
                     atb = refined.get("around_the_block")
                     if atb and isinstance(atb, str):
-                        if not raw_data.get("around_the_block"):
+                        existing_atb = raw_data.get("around_the_block", "")
+                        # Overwrite if new is longer or existing is empty
+                        if len(atb) > len(existing_atb) or not existing_atb:
                             raw_data["around_the_block"] = atb
 
-                    # neighborhood_facts merge
+                    # --- Merge Neighborhood Facts ---
                     nf_ref = refined.get("neighborhood_facts") or {}
                     if isinstance(nf_ref, dict):
                         nf_raw = raw_data.get("neighborhood_facts", {})
+                        
+                        # Singular text fields (population, density, area)
                         for field in ["population", "population_density", "area"]:
                             val = nf_ref.get(field)
-                            if val not in (None, ""):
-                                if not nf_raw.get(field):
+                            if val not in (None, "", "N/A"):
+                                if not nf_raw.get(field) or nf_raw.get(field) == "N/A":
                                     nf_raw[field] = val
-                        # boundaries
+
+                        # Boundaries (text and list fields)
                         b_ref = nf_ref.get("boundaries") or {}
                         if isinstance(b_ref, dict):
                             b_raw = nf_raw.get("boundaries", {})
@@ -100,33 +111,42 @@ class DataNormalizer:
                                 bv = b_ref.get(k)
                                 if bv and not b_raw.get(k):
                                     b_raw[k] = bv
-                            adj = b_ref.get("adjacent_neighborhoods")
-                            if isinstance(adj, list) and adj and not b_raw.get("adjacent_neighborhoods"):
-                                b_raw["adjacent_neighborhoods"] = adj
+                            
+                            # Merge adjacent neighborhoods
+                            adj_new = b_ref.get("adjacent_neighborhoods", [])
+                            if isinstance(adj_new, list) and adj_new:
+                                adj_orig = b_raw.get("adjacent_neighborhoods", [])
+                                b_raw["adjacent_neighborhoods"] = _merge_lists(adj_orig, adj_new)
+                            
                             nf_raw["boundaries"] = b_raw
-                        # zip codes
-                        z = nf_ref.get("zip_codes")
-                        if isinstance(z, list) and z and not nf_raw.get("zip_codes"):
-                            nf_raw["zip_codes"] = z
+
+                        # Merge ZIP codes
+                        zips_new = nf_ref.get("zip_codes", [])
+                        if isinstance(zips_new, list) and zips_new:
+                            zips_orig = nf_raw.get("zip_codes", [])
+                            nf_raw["zip_codes"] = _merge_lists(zips_orig, zips_new)
+                            
                         raw_data["neighborhood_facts"] = nf_raw
 
-                    # transit_accessibility
+                    # --- Merge Transit Accessibility ---
                     ta_ref = refined.get("transit_accessibility") or {}
                     if isinstance(ta_ref, dict):
                         ta_raw = raw_data.get("transit_accessibility", {})
-                        for k in [
+                        transit_list_keys = [
                             "nearest_subways",
                             "major_stations",
                             "bus_routes",
                             "rail_freight_other",
                             "highways_major_roads",
-                        ]:
-                            lst = ta_ref.get(k)
-                            if isinstance(lst, list) and lst and not ta_raw.get(k):
-                                ta_raw[k] = lst
+                        ]
+                        for k in transit_list_keys:
+                            lst_new = ta_ref.get(k, [])
+                            if isinstance(lst_new, list) and lst_new:
+                                lst_orig = ta_raw.get(k, [])
+                                ta_raw[k] = _merge_lists(lst_orig, lst_new)
                         raw_data["transit_accessibility"] = ta_raw
 
-                    current_warnings.append("Applied LLM-assisted structuring to scraped data.")
+                    current_warnings.append("Applied LLM-assisted structuring with smart merge.")
         except Exception as e:
             logger.debug(f"LLM structuring skipped due to error: {e}")
 
