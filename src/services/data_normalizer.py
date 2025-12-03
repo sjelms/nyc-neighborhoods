@@ -2,6 +2,7 @@ import logging
 import json
 from datetime import date, datetime
 from typing import Dict, Any, List, Optional
+from src.services.llm_helper import LLMHelper  # Optional LLM structuring
 from src.models.neighborhood_profile import (
     NeighborhoodProfile, KeyDetails, NeighborhoodFacts, Boundaries,
     TransitAccessibility, CommuteTime
@@ -18,13 +19,15 @@ class DataNormalizer:
                  last_amended_date: date,
                  nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None,
                  nyc_open_data_parser: Optional[NYCOpenDataParser] = None,
-                 nyc_open_data_dataset_id: Optional[str] = None):
+                 nyc_open_data_dataset_id: Optional[str] = None,
+                 llm_helper: Optional[LLMHelper] = None):
         self.version = version
         self.ratified_date = ratified_date
         self.last_amended_date = last_amended_date
         self.nyc_open_data_fetcher = nyc_open_data_fetcher
         self.nyc_open_data_parser = nyc_open_data_parser
         self.nyc_open_data_dataset_id = nyc_open_data_dataset_id
+        self.llm_helper = llm_helper
 
     def normalize(self, raw_data: Dict[str, Any], neighborhood_name: str, borough: str) -> Optional[NeighborhoodProfile]:
         """
@@ -32,6 +35,8 @@ class DataNormalizer:
         into a NeighborhoodProfile Pydantic model.
         """
         current_warnings = raw_data.get("warnings", [])
+
+        # (LLM structuring moved after NYC Open Data supplementation)
         
         # --- Supplement with NYC Open Data if available ---
         if self.nyc_open_data_fetcher and self.nyc_open_data_parser and self.nyc_open_data_dataset_id:
@@ -57,6 +62,73 @@ class DataNormalizer:
                 current_warnings.append(f"Failed to fetch or parse NYC Open Data for {neighborhood_name}.")
         else:
             logger.debug("NYC Open Data fetcher/parser not provided to DataNormalizer.")
+
+        # --- LLM-assisted structuring (optional, after merging sources) ---
+        try:
+            if self.llm_helper and self.llm_helper.is_enabled:
+                refined = self.llm_helper.refine_profile_inputs(raw_data, neighborhood_name, borough)
+                if refined:
+                    # Merge key_details
+                    if "key_details" in refined and isinstance(refined["key_details"], dict):
+                        raw_kd = raw_data.get("key_details", {})
+                        for k in ["what_to_expect", "unexpected_appeal", "the_market"]:
+                            v = refined["key_details"].get(k)
+                            if v:
+                                raw_kd[k] = v
+                        raw_data["key_details"] = raw_kd
+
+                    # around_the_block
+                    atb = refined.get("around_the_block")
+                    if atb and isinstance(atb, str):
+                        if not raw_data.get("around_the_block"):
+                            raw_data["around_the_block"] = atb
+
+                    # neighborhood_facts merge
+                    nf_ref = refined.get("neighborhood_facts") or {}
+                    if isinstance(nf_ref, dict):
+                        nf_raw = raw_data.get("neighborhood_facts", {})
+                        for field in ["population", "population_density", "area"]:
+                            val = nf_ref.get(field)
+                            if val not in (None, ""):
+                                if not nf_raw.get(field):
+                                    nf_raw[field] = val
+                        # boundaries
+                        b_ref = nf_ref.get("boundaries") or {}
+                        if isinstance(b_ref, dict):
+                            b_raw = nf_raw.get("boundaries", {})
+                            for k in ["east_to_west", "north_to_south"]:
+                                bv = b_ref.get(k)
+                                if bv and not b_raw.get(k):
+                                    b_raw[k] = bv
+                            adj = b_ref.get("adjacent_neighborhoods")
+                            if isinstance(adj, list) and adj and not b_raw.get("adjacent_neighborhoods"):
+                                b_raw["adjacent_neighborhoods"] = adj
+                            nf_raw["boundaries"] = b_raw
+                        # zip codes
+                        z = nf_ref.get("zip_codes")
+                        if isinstance(z, list) and z and not nf_raw.get("zip_codes"):
+                            nf_raw["zip_codes"] = z
+                        raw_data["neighborhood_facts"] = nf_raw
+
+                    # transit_accessibility
+                    ta_ref = refined.get("transit_accessibility") or {}
+                    if isinstance(ta_ref, dict):
+                        ta_raw = raw_data.get("transit_accessibility", {})
+                        for k in [
+                            "nearest_subways",
+                            "major_stations",
+                            "bus_routes",
+                            "rail_freight_other",
+                            "highways_major_roads",
+                        ]:
+                            lst = ta_ref.get(k)
+                            if isinstance(lst, list) and lst and not ta_raw.get(k):
+                                ta_raw[k] = lst
+                        raw_data["transit_accessibility"] = ta_raw
+
+                    current_warnings.append("Applied LLM-assisted structuring to scraped data.")
+        except Exception as e:
+            logger.debug(f"LLM structuring skipped due to error: {e}")
 
 
         # --- Handle KeyDetails ---

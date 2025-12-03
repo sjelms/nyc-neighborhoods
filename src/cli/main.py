@@ -11,6 +11,7 @@ from src.services.web_fetcher import WebFetcher
 from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
 from src.services.profile_generator import ProfileGenerator
+from src.services.llm_helper import LLMHelper
 from src.lib.cache_manager import CacheManager
 from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher
 from src.services.nyc_open_data_parser import NYCOpenDataParser
@@ -58,7 +59,9 @@ def generate_profiles(
                                               help="Regenerate profiles last amended on or after this date (YYYY-MM-DD)."),
     generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf",
                                            file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
-                                           help="Path to the JSON log file for tracking generated profiles.")
+                                           help="Path to the JSON log file for tracking generated profiles."),
+    use_llm: bool = typer.Option(True, "--use-llm/--no-llm", help="Enable or disable LLM-assisted structuring. Auto-disables if no API key is present."),
+    llm_model: str = typer.Option("gpt-5-mini", "--llm-model", help="LLM model to use when --use-llm is enabled."),
 ):
     """
     Generates standardized Markdown profile files for New York City neighborhoods.
@@ -102,12 +105,16 @@ def generate_profiles(
     # Initialize core components
     csv_parser = CSVParser(input_csv)
     wikipedia_parser = WikipediaParser()
-    
+
+    # Initialize optional LLM helper (auto-disabled when no key)
+    llm_helper: LLMHelper = LLMHelper(model=llm_model, enabled=use_llm)
+
     data_normalizer = DataNormalizer(
         version, parsed_ratified_date, parsed_last_amended_date,
         nyc_open_data_fetcher=nyc_open_data_fetcher,
         nyc_open_data_parser=nyc_open_data_parser,
-        nyc_open_data_dataset_id=nyc_open_data_dataset_id
+        nyc_open_data_dataset_id=nyc_open_data_dataset_id,
+        llm_helper=llm_helper if llm_helper.is_enabled else None
     )
     
     try:
