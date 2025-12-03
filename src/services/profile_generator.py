@@ -5,6 +5,8 @@ from datetime import date
 from pathlib import Path
 from typing import Optional, Tuple, List, Dict, Any
 
+from bs4 import BeautifulSoup
+
 from src.services.web_fetcher import WebFetcher
 from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
@@ -87,6 +89,13 @@ class ProfileGenerator:
         if "sources" not in raw_data:
             raw_data["sources"] = []
         raw_data["sources"].append(wikipedia_url)
+
+        # Provide cleaned page text to the LLM (truncated to keep payload reasonable)
+        try:
+            page_text = BeautifulSoup(html_content, "html.parser").get_text(" ", strip=True)
+            raw_data["page_text"] = page_text[:12000]  # limit to ~12k chars
+        except Exception:
+            raw_data["page_text"] = ""
 
         # 4. Normalize data (now passing Open Data fetcher/parser)
         profile = self.data_normalizer.normalize(raw_data, neighborhood_name, borough)

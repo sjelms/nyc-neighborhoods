@@ -92,18 +92,20 @@ class LLMHelper:
                 "neighborhood_facts": raw_data.get("neighborhood_facts", {}),
                 "transit_accessibility": raw_data.get("transit_accessibility", {}),
                 "sources": raw_data.get("sources", []),
+                "page_text": raw_data.get("page_text", ""),
             }
 
             system = (
                 "You are a careful data normalizer for NYC neighborhood profiles. "
-                "Given noisy scraped fields, return a STRICT JSON object with the following keys only: "
+                "Given noisy scraped fields and raw page text, return a STRICT JSON object with the following keys only: "
                 "key_details, around_the_block, neighborhood_facts, transit_accessibility. "
                 "- key_details must include what_to_expect, unexpected_appeal, the_market (short, factual, neutral). "
-                "- around_the_block: a concise 1–2 sentence narrative capturing the essence; if empty in input, write one from summary. "
+                "- around_the_block: a concise 1–2 sentence narrative capturing the essence; if empty in input, write one from summary and page_text. "
                 "- neighborhood_facts must include population, population_density, area, boundaries, zip_codes. "
                 "  Convert numbers to plain numbers when possible (no commas or units). If unknown, keep existing value. "
                 "  boundaries has east_to_west, north_to_south, adjacent_neighborhoods (list). "
                 "- transit_accessibility has nearest_subways, major_stations, bus_routes, rail_freight_other, highways_major_roads (lists). "
+                "- Use page_text to recover transit/boundary facts when the structured fields are empty. "
                 "Keep it grounded in the provided input; do not invent facts."
             )
 
@@ -121,18 +123,40 @@ class LLMHelper:
                 "response_format": {"type": "json_object"},  # enforce JSON when supported
             }
 
-            # Prefer the newer param name for GPT-4.1/5 style models, with fallback for older ones
-            try:
-                response = self._client.chat.completions.create(
-                    **base_params,
-                    max_completion_tokens=1200,
-                )
-            except Exception:
-                # Retry with legacy naming if the model/sdk rejects max_completion_tokens
-                response = self._client.chat.completions.create(
-                    **base_params,
-                    max_tokens=1200,
-                )
+            # Try token parameter variants in order (modern -> legacy), skipping ones the API rejects.
+            # Try token parameter variants in order (most likely to be supported for GPT-4.1/5 style models)
+            token_param_options = [
+                ("max_completion_tokens", 1600),  # new SDK/models
+                ("max_tokens", 1600),             # legacy
+                (None, None),                     # last resort: rely on model default limits
+            ]
+            response = None
+            last_error: Optional[Exception] = None
+            for param_name, param_value in token_param_options:
+                try:
+                    request_kwargs = dict(base_params)
+                    if param_name:
+                        request_kwargs[param_name] = param_value
+                    response = self._client.chat.completions.create(**request_kwargs)
+                    break
+                except Exception as e:
+                    last_error = e
+                    # If the error is clearly about an unsupported parameter, try the next option
+                    if hasattr(e, "response") and getattr(e, "response", None) is not None:
+                        try:
+                            err_json = e.response.json()  # type: ignore[attr-defined]
+                            message = err_json.get("error", {}).get("message", "").lower()
+                            if param_name and param_name.replace("_", " ") in message:
+                                continue
+                        except Exception:
+                            pass
+                    # Otherwise bail out
+                    break
+
+            if response is None:
+                if last_error:
+                    raise last_error
+                raise RuntimeError("LLM request failed with no response and no exception.")
 
             content = ""
             # Guard against unexpected shapes from the SDK
