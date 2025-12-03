@@ -21,7 +21,7 @@ This is the top-level entity representing a single neighborhood's profile.
 | `transit_accessibility` | `TransitAccessibility` | A nested object describing transit options. |
 | `commute_times` | List[`CommuteTime`] | (Optional) A list of commute times to various destinations. |
 | `sources` | List[string] | A list of source URLs used to generate the profile. |
-| `generation_date` | string | The timestamp when the profile was generated (ISO 8601 format). |
+| `generation_date` | datetime | The timestamp when the profile was generated (ISO 8601 format). |
 | `warnings` | List[string] | A list of any warnings encountered during data scraping or generation. |
 
 ## Nested Entity: `KeyDetails`
@@ -36,9 +36,9 @@ This is the top-level entity representing a single neighborhood's profile.
 
 | Attribute | Type | Description |
 |---|---|---|
-| `population` | string | Total population count. |
-| `population_density` | string | Population per square mile/kilometer. |
-| `area` | string | Total area of the neighborhood. |
+| `population` | integer | Total population count. |
+| `population_density` | number | Population per square mile/kilometer. |
+| `area` | number | Total area of the neighborhood. |
 | `boundaries` | `Boundaries` | A nested object describing the neighborhood's geographical boundaries. |
 | `zip_codes` | List[string] | A list of ZIP codes covering the neighborhood. |
 

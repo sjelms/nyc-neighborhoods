@@ -1,4 +1,5 @@
 import logging
+import json
 from datetime import date, datetime
 from typing import Dict, Any, List, Optional
 from src.models.neighborhood_profile import (
@@ -16,12 +17,14 @@ class DataNormalizer:
                  ratified_date: date,
                  last_amended_date: date,
                  nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None,
-                 nyc_open_data_parser: Optional[NYCOpenDataParser] = None):
+                 nyc_open_data_parser: Optional[NYCOpenDataParser] = None,
+                 nyc_open_data_dataset_id: Optional[str] = None):
         self.version = version
         self.ratified_date = ratified_date
         self.last_amended_date = last_amended_date
         self.nyc_open_data_fetcher = nyc_open_data_fetcher
         self.nyc_open_data_parser = nyc_open_data_parser
+        self.nyc_open_data_dataset_id = nyc_open_data_dataset_id
 
     def normalize(self, raw_data: Dict[str, Any], neighborhood_name: str, borough: str) -> Optional[NeighborhoodProfile]:
         """
@@ -31,20 +34,14 @@ class DataNormalizer:
         current_warnings = raw_data.get("warnings", [])
         
         # --- Supplement with NYC Open Data if available ---
-        if self.nyc_open_data_fetcher and self.nyc_open_data_parser:
+        if self.nyc_open_data_fetcher and self.nyc_open_data_parser and self.nyc_open_data_dataset_id:
             logger.info(f"Attempting to supplement data for {neighborhood_name} with NYC Open Data.")
-            # For demonstration, using a placeholder dataset ID and querying by neighborhood name
-            # A real implementation would involve careful selection of dataset_id and query parameters
-            # based on what specific data is needed (e.g., zoning, community boards, etc.)
-            open_data_dataset_id = "ntacode_dataset_placeholder" # Replace with actual NTA dataset ID
-            
-            # Construct a basic query to find the neighborhood. This is a heuristic and might need refinement.
-            # Socrata's SODA API uses 'where' clauses like "$where=ntaname='Maspeth'"
+            # Construct a query to find the neighborhood by exact name.
             query_params = {
-                "$where": f"ntaname LIKE '{neighborhood_name}%%' OR ntaname LIKE '%%{neighborhood_name}%%'"
+                "$where": f"ntaname = '{neighborhood_name}'"
             }
             
-            open_data_raw_json = self.nyc_open_data_fetcher.fetch_data(open_data_dataset_id, query_params)
+            open_data_raw_json = self.nyc_open_data_fetcher.fetch_data(self.nyc_open_data_dataset_id, query_params)
 
             if open_data_raw_json:
                 open_data_parsed = self.nyc_open_data_parser.parse_nta_data(open_data_raw_json, neighborhood_name)
@@ -181,7 +178,8 @@ if __name__ == '__main__':
         ratified_date=date(2025, 1, 1),
         last_amended_date=date(2025, 1, 10),
         nyc_open_data_fetcher=mock_nyc_open_data_fetcher,
-        nyc_open_data_parser=mock_nyc_open_data_parser
+        nyc_open_data_parser=mock_nyc_open_data_parser,
+        nyc_open_data_dataset_id="ntacode_dataset_placeholder"
     )
     profile_supplemented = normalizer_with_open_data.normalize(dummy_wikipedia_raw_data, "Maspeth", "Queens")
 

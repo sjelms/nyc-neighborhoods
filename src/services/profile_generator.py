@@ -1,4 +1,6 @@
 import logging
+import os
+import json
 from datetime import date
 from pathlib import Path
 from typing import Optional, Tuple, List, Dict, Any
@@ -104,7 +106,8 @@ class ProfileGenerator:
         output_file_path = self.output_dir / file_name
         try:
             output_file_path.write_text(markdown_content)
-            logger.info(f"Successfully generated profile for {neighborhood_name}, {borough} at {output_file_path}")
+            relative_output_path = os.path.relpath(output_file_path)
+            logger.info(f"Successfully generated profile for {neighborhood_name}, {borough} at {relative_output_path}")
             
             # 7. Log the generation
             if self.generation_log:
@@ -115,13 +118,13 @@ class ProfileGenerator:
                     "version": profile.version,
                     "generation_date": profile.generation_date.isoformat(),
                     "last_amended_date": profile.last_amended_date.isoformat(),
-                    "output_file_path": str(output_file_path)
+                    "output_file_path": relative_output_path
                 }
                 self.generation_log.add_entry(log_entry)
             
             return True, output_file_path
         except Exception as e:
-            logger.error(f"Error saving profile for {neighborhood_name}, {borough} to {output_file_path}: {e}")
+            logger.error(f"Error saving profile for {neighborhood_name}, {borough} to {os.path.relpath(output_file_path)}: {e}")
             return False, None
     
     def generate_profiles_from_list(
