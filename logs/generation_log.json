@@ -1,0 +1,38 @@
+[
+  {
+    "neighborhood_name": "Astoria",
+    "borough": "Queens",
+    "unique_id": "astoria-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-02T13:11:47.770245",
+    "last_amended_date": "2025-12-02",
+    "output_file_path": "/Users/stephenelms/Dev/nyc-neighborhoods/output/profiles/Astoria_Queens.md"
+  },
+  {
+    "neighborhood_name": "Bay Ridge",
+    "borough": "Brooklyn",
+    "unique_id": "bay-ridge-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-02T13:11:47.914956",
+    "last_amended_date": "2025-12-02",
+    "output_file_path": "/Users/stephenelms/Dev/nyc-neighborhoods/output/profiles/Bay_Ridge_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Bayside",
+    "borough": "Queens",
+    "unique_id": "bayside-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-02T13:11:48.035542",
+    "last_amended_date": "2025-12-02",
+    "output_file_path": "/Users/stephenelms/Dev/nyc-neighborhoods/output/profiles/Bayside_Queens.md"
+  },
+  {
+    "neighborhood_name": "Bedford Stuyvesant",
+    "borough": "Brooklyn",
+    "unique_id": "bedford-stuyvesant-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-02T13:11:48.308003",
+    "last_amended_date": "2025-12-02",
+    "output_file_path": "/Users/stephenelms/Dev/nyc-neighborhoods/output/profiles/Bedford_Stuyvesant_Brooklyn.md"
+  }
+]

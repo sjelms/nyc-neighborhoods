@@ -1,24 +1,37 @@
-# nyc-neighborhoods
-A tool that, given a list of New York City neighborhoods, automatically retrieves public information (such as demographics, boundaries, and transit details) from trusted online sources and outputs a standardized markdown file for each neighborhood, following a fixed template.
+# Quickstart: Automated Neighborhood Profile Generator
 
-## Installation
+**Date**: 2025-12-02
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/nyc-neighborhoods.git
-    cd nyc-neighborhoods
-    ```
-2.  **Create and activate a virtual environment:**
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+This guide provides a quick overview to get started with the Automated Neighborhood Profile Generator.
 
-## Usage
+## 1. Prerequisites
+
+*   Python 3.8+
+*   `pip` (Python package installer)
+
+## 2. Setup
+
+### 2.1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/nyc-neighborhoods.git
+cd nyc-neighborhoods
+```
+
+### 2.2. Create and activate a virtual environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 2.3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 3. Usage
 
 The primary way to use this tool is via its command-line interface (CLI).
 
@@ -61,23 +74,10 @@ python -m src.cli.main generate-profiles \
   --generation-log-file "./logs/my_custom_log.json"
 ```
 
-## Input CSV Format
+## 4. Expected Output
 
-Your input CSV file should have at least two columns: `Neighborhood` and `Borough`.
+The tool will generate Markdown files for each neighborhood in the specified output directory (e.g., `./output/Maspeth_Queens.md`).
 
-Example `neighborhoods.csv`:
+## 5. Development
 
-```csv
-Neighborhood,Borough
-Maspeth,Queens
-Williamsburg,Brooklyn
-Astoria,Queens
-```
-
-## Output Markdown Template
-
-The tool generates Markdown files based on a template. An example template (`output-template.md`) is provided in the repository. You can customize this template to control the structure and content of the generated neighborhood profiles.
-
-## Development
-
-Refer to the `tasks.md` and other documentation in the `specs/001-automated-neighborhood-profile-generator/` directory for development details, design decisions, and task tracking.
+For development and testing, refer to the `README.md` and the `tasks.md` and other documentation in this directory (`specs/001-automated-neighborhood-profile-generator/`).

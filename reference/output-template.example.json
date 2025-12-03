@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "ratifiedDate": "2025-02-01",
+  "lastAmendedDate": "2025-04-15",
+  "neighborhoodName": "Astoria",
+  "shortSummary": "A diverse Queens neighborhood known for its lively dining scene, waterfront parks, and quick access to Midtown Manhattan.",
+  "keyDetails": {
+    "whatToExpect": "Tree-lined streets, prewar walk-ups, and a bustling mix of bars, bakeries, and family-run restaurants.",
+    "unexpectedAppeal": "Waterfront sunsets at Astoria Park and a strong arts community anchored by local museums and studios.",
+    "theMarket": "A range of co-ops and rentals with comparatively good value for proximity to Manhattan."
+  },
+  "aroundTheBlock": [
+    "Astoria blends old-school charm with new arrivals, creating a neighborhood that feels both established and evolving.",
+    "The main corridors hum late into the night, but quiet residential blocks are never far away."
+  ],
+  "neighborhoodFacts": {
+    "population": 95000,
+    "populationDensity": 42000,
+    "area": 3.1,
+    "boundaries": {
+      "eastToWest": "Steinway St to East River",
+      "northToSouth": "Triborough Bridge/20th Ave to Queensboro Bridge corridor",
+      "adjacentNeighborhoods": [
+        "Long Island City",
+        "Ditmars–Steinway",
+        "Woodside",
+        "Sunnyside"
+      ]
+    },
+    "zipCodes": [
+      "11102",
+      "11103",
+      "11105",
+      "11106"
+    ]
+  },
+  "transitAccessibility": {
+    "nearestSubways": [
+      "N",
+      "W"
+    ],
+    "majorStations": [
+      "Astoria–Ditmars Blvd",
+      "Astoria Blvd",
+      "30 Av",
+      "Broadway",
+      "36 Av"
+    ],
+    "busRoutes": [
+      "Q18",
+      "Q19",
+      "Q69",
+      "Q100",
+      "Q102"
+    ],
+    "railFreightOtherTransit": [
+      "NYC Ferry (Astoria Route)"
+    ],
+    "highwaysMajorRoads": [
+      "Grand Central Parkway",
+      "Brooklyn–Queens Expressway",
+      "Astoria Blvd",
+      "31st St"
+    ]
+  },
+  "commuteTimes": [
+    {
+      "destination": "Midtown",
+      "subway": "15 min–25 min",
+      "drive": "15 min–30 min"
+    },
+    {
+      "destination": "Financial District",
+      "subway": "30 min–45 min",
+      "drive": "25 min–40 min"
+    }
+    ]
+}
