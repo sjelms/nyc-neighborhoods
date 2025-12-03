@@ -20,6 +20,7 @@
 - CLI flags:
   - `--use-llm/--no-llm` (default true if key present; helper still auto-disables when key or SDK missing)
   - `--llm-model gpt-5-mini` (default)
+  - `--log-file/--generation-log-file` (both supported)
 
 Examples:
 ```
@@ -30,13 +31,14 @@ python3 -m src.cli.main generate-profiles \
   --output-dir output/profiles \
   --version 1.0
 
-# Explicitly disable LLM
-python -m src.cli.main generate_profiles --no-llm
+# Explicitly disable LLM (underscore alias also works)
+python3 -m src.cli.main generate-profiles --no-llm
 ```
 
 ### Safety and fallbacks
 - If OpenAI SDK or API key is missing, LLM stays disabled and the scraper behaves exactly as before.
 - JSON-only output is requested from the model; we also attempt to recover JSON if necessary and ignore any unusable responses.
+- On any API failure (including 401s), the helper now disables itself for the remainder of the run and the pipeline continues without LLM.
 - LLM does not invent facts; prompt instructs grounding in provided sources.
 
 ### Files added/updated
@@ -47,6 +49,28 @@ python -m src.cli.main generate_profiles --no-llm
 - Could not run pytest in this environment (missing `pytest` command), but the integration is conservative: imports are lazy, the LLM helper is optional, and the default pipeline remains intact. To run locally:
 ```
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 pytest -q
 ```
+
+## Feedback 
+
+### Why you saw “Got unexpected extra argument (generate_profiles)”
+Typer (the CLI framework we use) automatically converts function names with underscores to kebab‑case commands. Our function is `generate_profiles`, so the command is `generate-profiles`.
+
+When you ran the underscore form before, Click/Typer treated `generate_profiles` as an unknown positional argument and raised that error. The CLI now registers both spellings—use `generate-profiles` (preferred) or `generate_profiles` (alias).
+
+### Keep `python3` consistent
+On macOS, always prefer the interpreter‑scoped form to avoid mixing Python versions:
+- Create venv: `python3 -m venv .venv && source .venv/bin/activate`
+- Install deps: `python3 -m pip install -r requirements.txt`
+- Run CLI: `python3 -m src.cli.main ...`
+
+### Quick sanity checks
+- List commands/options:
+  - `python3 -m src.cli.main --help`
+  - `python3 -m src.cli.main generate-profiles --help`
+- Verify your `.env` has `OPENAI_API_KEY` if you want LLM assistance; otherwise add `--no-llm`.
+
+### Optional: accept both spellings
+If you want `generate_profiles` to work as an alias alongside `generate-profiles`, I can add a tiny alias in the CLI so both forms are accepted. Let me know and I’ll implement it.

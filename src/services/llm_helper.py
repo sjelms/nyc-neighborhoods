@@ -25,6 +25,7 @@ class LLMHelper:
         self._openai = None
         self._client = None
         self.model = model
+        self._enabled = False
         self._enabled_requested = enabled
 
         # Load .env if python-dotenv is available
@@ -105,35 +106,30 @@ class LLMHelper:
                 "Input fields (JSON):\n" + json.dumps(llm_input, ensure_ascii=False)
             )
 
-            # Use chat.completions with JSON output if available
-            try:
-                response = self._client.chat.completions.create(
-                    model=self.model,
-                    temperature=0.2,
-                    messages=[
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": user},
-                    ],
-                    response_format={"type": "json_object"},  # enforce JSON when supported
-                    max_tokens=1200,
-                )
-                content = response.choices[0].message.content  # type: ignore[attr-defined]
-            except Exception:
-                # Fallback to responses API (in case the environment uses newer SDK)
-                try:
-                    content = (
-                        self._client.responses.create(  # type: ignore
-                            model=self.model,
-                            temperature=0.2,
-                            input=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-                            response_format={"type": "json_object"},
-                            max_output_tokens=1200,
+            response = self._client.chat.completions.create(
+                model=self.model,
+                temperature=0.2,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                response_format={"type": "json_object"},  # enforce JSON when supported
+                max_tokens=1200,
+            )
+
+            content = ""
+            # Guard against unexpected shapes from the SDK
+            if hasattr(response, "choices") and response.choices:
+                message = response.choices[0].message  # type: ignore[attr-defined]
+                if message and hasattr(message, "content"):
+                    raw_content = message.content  # type: ignore[attr-defined]
+                    if isinstance(raw_content, list):
+                        # Newer SDKs may return structured content parts
+                        content = "".join(
+                            part.get("text", "") if isinstance(part, dict) else str(part) for part in raw_content
                         )
-                        .output_text()
-                    )
-                except Exception as e2:
-                    logger.warning(f"LLMHelper request failed, skipping LLM refinement. Reason: {e2}")
-                    return {}
+                    elif isinstance(raw_content, str):
+                        content = raw_content
 
             if not content:
                 return {}
@@ -157,5 +153,10 @@ class LLMHelper:
             refined: Dict[str, Any] = {k: v for k, v in parsed.items() if k in allowed_top}
             return refined
         except Exception as e:
-            logger.warning(f"LLMHelper encountered an error: {e}")
+            # Disable further attempts for the remainder of the run to avoid noisy retries
+            self._enabled = False
+            logger.warning(
+                "LLMHelper request failed; disabling LLM for this run. "
+                f"Reason: {e}. Run with --no-llm or check OPENAI_API_KEY."
+            )
             return {}

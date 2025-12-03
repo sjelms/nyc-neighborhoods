@@ -15,7 +15,7 @@ A tool that, given a list of New York City neighborhoods, automatically retrieve
     ```
 3.  **Install dependencies:**
     ```bash
-    pip install -r requirements.txt
+    python3 -m pip install -r requirements.txt
     ```
 
 ## Usage
@@ -23,7 +23,8 @@ A tool that, given a list of New York City neighborhoods, automatically retrieve
 The primary way to use this tool is via its command-line interface (CLI).
 
 ```bash
-python -m src.cli.main generate-profiles [OPTIONS]
+python3 -m src.cli.main generate-profiles [OPTIONS]
+# Underscore alias is also accepted: generate_profiles
 ```
 
 ### Options:
@@ -40,12 +41,14 @@ python -m src.cli.main generate-profiles [OPTIONS]
 *   `--odid, --nyc-open-data-dataset-id <TEXT>`: ID of the NYC Open Data Socrata dataset to use for supplementary data (e.g., `ntacode_dataset_placeholder`). If not provided, Open Data will not be used.
 *   `-f, --force-regenerate`: A boolean flag that, when present, forces the re-generation of all profiles, even if they already exist in the log.
 *   `-u, --update-since <YYYY-MM-DD>`: A date string that instructs the tool to only re-generate profiles that were last amended *on or after* this date.
-*   `--glf, --generation-log-file <PATH>`: Path to the JSON log file for tracking generated profiles. Defaults to `logs/generation_log.json`.
+*   `--log-file, --generation-log-file, --glf <PATH>`: Path to the JSON log file for tracking generated profiles. Defaults to `logs/generation_log.json`.
+*   `--use-llm/--no-llm`: Enable or disable the optional LLM-assisted structuring layer. It auto-disables when `OPENAI_API_KEY` is missing.
+*   `--llm-model <TEXT>`: LLM model name to use when the helper is enabled. Defaults to `gpt-5-mini`.
 
 ### Example:
 
 ```bash
-python -m src.cli.main generate-profiles \
+python3 -m src.cli.main generate-profiles \
   --input-csv /path/to/your/neighborhoods.csv \
   --output-dir ./generated_profiles \
   --template-path ./output-template.md \
@@ -58,7 +61,8 @@ python -m src.cli.main generate-profiles \
   --nyc-open-data-dataset-id "ntacode_dataset_placeholder" \
   --force-regenerate \
   --update-since "2025-01-01" \
-  --generation-log-file "./logs/my_custom_log.json"
+  --log-file "./logs/my_custom_log.json" \
+  --no-llm
 ```
 
 ## Input CSV Format

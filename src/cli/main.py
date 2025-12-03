@@ -57,7 +57,7 @@ def generate_profiles(
                                          help="Force regeneration of all profiles, even if they exist in the log."),
     update_since: Optional[str] = typer.Option(None, "--update-since", "-u",
                                               help="Regenerate profiles last amended on or after this date (YYYY-MM-DD)."),
-    generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf",
+    generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf", "--generation-log-file",
                                            file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
                                            help="Path to the JSON log file for tracking generated profiles."),
     use_llm: bool = typer.Option(True, "--use-llm/--no-llm", help="Enable or disable LLM-assisted structuring. Auto-disables if no API key is present."),
@@ -175,6 +175,9 @@ def generate_profiles(
         typer.echo("\nAll eligible profiles generated successfully!")
 
     internal_logger.info("CLI command finished.")
+
+# Support legacy underscore command name alongside the Typer-preferred kebab-case
+app.command(name="generate_profiles", hidden=True)(generate_profiles)
 
 if __name__ == "__main__":
     app()
