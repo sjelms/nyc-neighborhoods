@@ -13,11 +13,25 @@ class Boundaries(BaseModel):
     adjacent_neighborhoods: List[str] = Field(..., description="A list of neighboring areas.")
 
 class NeighborhoodFacts(BaseModel):
-    population: int = Field(..., description="Total population count.")
-    population_density: float = Field(..., description="Population per square mile/kilometer.")
-    area: float = Field(..., description="Total area of the neighborhood.")
+    population: str = Field(..., description="Total population count.")
+    population_density: str = Field(..., description="Population per square mile/kilometer.")
+    area: str = Field(..., description="Total area of the neighborhood.")
     boundaries: Boundaries
     zip_codes: List[str] = Field(..., description="A list of ZIP codes covering the neighborhood.")
+
+    @validator("population", "population_density", "area", pre=True)
+    def normalize_fact_fields(cls, value: str) -> str:
+        """
+        Coerce numeric-like fields to safe strings; fall back to 'N/A' when empty.
+        Wikipedia often includes commas, units, or parentheses that are not
+        easily parsed into numbers, so we store the textual value.
+        """
+        if value is None:
+            return "N/A"
+        if isinstance(value, (int, float)):
+            return str(value)
+        value_str = str(value).strip()
+        return value_str if value_str else "N/A"
 
 class TransitAccessibility(BaseModel):
     nearest_subways: List[str] = Field(..., description="A list of subway lines serving the area.")

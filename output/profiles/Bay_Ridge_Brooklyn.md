@@ -1,4 +1,4 @@
-Version: 1.0 | Ratified: 2025-12-02 | Last Amended: 2025-12-02
+Version: 1.0 | Ratified: 2025-12-03 | Last Amended: 2025-12-03
 
 ## Bay Ridge
 
@@ -27,7 +27,7 @@ Bay Ridge is a neighborhood in the southwest corner of the New York City borough
 
 ### Neighborhood Facts
 - **Population:** 79,371
-- **Population Density:** 
+- **Population Density:** N/A
 - **Area:** 2.12 sq mi (5.49 km )
 - Boundaries:
   - East to West: 

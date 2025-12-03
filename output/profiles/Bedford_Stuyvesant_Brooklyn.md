@@ -1,4 +1,4 @@
-Version: 1.0 | Ratified: 2025-12-02 | Last Amended: 2025-12-02
+Version: 1.0 | Ratified: 2025-12-03 | Last Amended: 2025-12-03
 
 ## Bedford Stuyvesant
 
@@ -27,7 +27,7 @@ Bedford–Stuyvesant, colloquially known as Bed–Stuy, is a neighborhood in the
 
 ### Neighborhood Facts
 - **Population:** 166,380
-- **Population Density:** 
+- **Population Density:** N/A
 - **Area:** 2.8 sq mi (7.3 km )
 - Boundaries:
   - East to West: 

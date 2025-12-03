@@ -42,6 +42,11 @@ class LLMHelper:
             self._enabled = False
             logger.info("LLMHelper disabled: OPENAI_API_KEY not found.")
             return
+        if isinstance(key, str) and key.strip().startswith("op://"):
+            # Likely a 1Password reference that hasn't been resolved into a real key
+            self._enabled = False
+            logger.info("LLMHelper disabled: OPENAI_API_KEY appears to be an unresolved 1Password secret reference.")
+            return
 
         if not enabled:
             self._enabled = False
@@ -106,16 +111,28 @@ class LLMHelper:
                 "Input fields (JSON):\n" + json.dumps(llm_input, ensure_ascii=False)
             )
 
-            response = self._client.chat.completions.create(
-                model=self.model,
-                temperature=0.2,
-                messages=[
+            base_params = {
+                "model": self.model,
+                "temperature": 0.2,
+                "messages": [
                     {"role": "system", "content": system},
                     {"role": "user", "content": user},
                 ],
-                response_format={"type": "json_object"},  # enforce JSON when supported
-                max_tokens=1200,
-            )
+                "response_format": {"type": "json_object"},  # enforce JSON when supported
+            }
+
+            # Prefer the newer param name for GPT-4.1/5 style models, with fallback for older ones
+            try:
+                response = self._client.chat.completions.create(
+                    **base_params,
+                    max_completion_tokens=1200,
+                )
+            except Exception:
+                # Retry with legacy naming if the model/sdk rejects max_completion_tokens
+                response = self._client.chat.completions.create(
+                    **base_params,
+                    max_tokens=1200,
+                )
 
             content = ""
             # Guard against unexpected shapes from the SDK

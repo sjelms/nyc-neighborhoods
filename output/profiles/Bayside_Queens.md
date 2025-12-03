@@ -1,4 +1,4 @@
-Version: 1.0 | Ratified: 2025-12-02 | Last Amended: 2025-12-02
+Version: 1.0 | Ratified: 2025-12-03 | Last Amended: 2025-12-03
 
 ## Bayside
 
@@ -27,7 +27,7 @@ Bayside is a neighborhood in the New York City borough of Queens. It is bounded 
 
 ### Neighborhood Facts
 - **Population:** 43,808
-- **Population Density:** 
+- **Population Density:** N/A
 - **Area:** 718, 347, 929
 - Boundaries:
   - East to West: 

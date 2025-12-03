@@ -1,4 +1,4 @@
-Version: 1.0 | Ratified: 2025-12-02 | Last Amended: 2025-12-02
+Version: 1.0 | Ratified: 2025-12-03 | Last Amended: 2025-12-03
 
 ## Astoria
 
@@ -27,7 +27,7 @@ Astoria is a neighborhood in the western portion of the New York City borough of
 
 ### Neighborhood Facts
 - **Population:** 78,793 (154,000 with the subsections)
-- **Population Density:** 
+- **Population Density:** N/A
 - **Area:** 718, 347, 929
 - Boundaries:
   - East to West: 
