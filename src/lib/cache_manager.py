@@ -13,91 +13,81 @@ class CacheManager:
     Manages a file-based cache for web content.
     Each URL's content is stored in a separate file within the cache directory.
     """
-    def __init__(self, cache_dir: Path, expiry_days: int = 7):
+    def __init__(self, cache_dir: Path):
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self.expiry_time = timedelta(days=expiry_days)
-        logger.info(f"CacheManager initialized. Cache directory: {os.path.relpath(self.cache_dir)}, Expiry: {self.expiry_time}")
+        logger.info(f"CacheManager initialized. Cache directory: {os.path.relpath(self.cache_dir)}")
 
-    def _get_cache_path(self, url: str) -> Path:
-        """Generates a unique file path for a URL in the cache."""
-        url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()
-        return self.cache_dir / f"{url_hash}.json"
+    def _get_cache_path(self, filename: str, subdirectory: str) -> Path:
+        """Generates a file path within a specific subdirectory of the cache."""
+        sub_cache_dir = self.cache_dir / subdirectory
+        sub_cache_dir.mkdir(parents=True, exist_ok=True) # Ensure subdirectory exists
+        return sub_cache_dir / filename
 
-    def get(self, url: str) -> Optional[str]:
+    def get(self, filename: str, subdirectory: str) -> Optional[str]:
         """
-        Retrieves cached content for a given URL.
-        Returns the content as a string if found and not expired, otherwise None.
+        Retrieves content from a cached file.
+        Returns the content as a string if found, otherwise None.
         """
-        cache_file = self._get_cache_path(url)
+        cache_file = self._get_cache_path(filename, subdirectory)
         if not cache_file.exists():
-            logger.debug(f"Cache miss: {url} (file not found)")
+            logger.debug(f"Cache miss: {os.path.join(subdirectory, filename)}")
             return None
-
+        
         try:
-            with open(cache_file, 'r', encoding='utf-8') as f:
-                cache_entry = json.load(f)
-            
-            cached_timestamp = datetime.fromisoformat(cache_entry['timestamp'])
-            if datetime.now() - cached_timestamp > self.expiry_time:
-                logger.debug(f"Cache miss: {url} (expired)")
-                cache_file.unlink() # Delete expired entry
-                return None
-            
-            logger.debug(f"Cache hit: {url}")
-            return cache_entry['content']
-        except json.JSONDecodeError:
-            logger.warning(f"Corrupted cache file for {url} at {os.path.relpath(cache_file)}. Deleting.")
-            cache_file.unlink(missing_ok=True)
-            return None
+            content = cache_file.read_text(encoding='utf-8')
+            logger.debug(f"Cache hit: {os.path.join(subdirectory, filename)}")
+            return content
         except Exception as e:
-            logger.error(f"Error reading cache for {url} at {os.path.relpath(cache_file)}: {e}")
+            logger.error(f"Error reading cache file {os.path.relpath(cache_file)}: {e}")
             return None
 
-    def set(self, url: str, content: str):
+    def set(self, filename: str, content: str, subdirectory: str):
         """
-        Stores content for a given URL in the cache.
+        Stores content in a specific cached file.
         """
-        cache_file = self._get_cache_path(url)
+        cache_file = self._get_cache_path(filename, subdirectory)
         try:
-            cache_entry = {
-                'url': url,
-                'timestamp': datetime.now().isoformat(),
-                'content': content
-            }
-            with open(cache_file, 'w', encoding='utf-8') as f:
-                json.dump(cache_entry, f, ensure_ascii=False, indent=2)
-            logger.debug(f"Content for {url} cached to {cache_file}")
+            cache_file.write_text(content, encoding='utf-8')
+            logger.debug(f"Content cached to {os.path.join(subdirectory, filename)}")
         except Exception as e:
-            logger.error(f"Error writing cache for {url} to {os.path.relpath(cache_file)}: {e}")
+            logger.error(f"Error writing cache file {os.path.relpath(cache_file)}: {e}")
 
-    def clear_expired(self):
-        """Clears all expired cache entries from the cache directory."""
-        logger.info("Clearing expired cache entries.")
-        for cache_file in self.cache_dir.iterdir():
-            if cache_file.is_file() and cache_file.suffix == ".json":
-                try:
-                    with open(cache_file, 'r', encoding='utf-8') as f:
-                        cache_entry = json.load(f)
-                    cached_timestamp = datetime.fromisoformat(cache_entry['timestamp'])
-                    if datetime.now() - cached_timestamp > self.expiry_time:
-                        cache_file.unlink()
-                        logger.debug(f"Removed expired cache entry: {cache_file.name}")
-                except (json.JSONDecodeError, KeyError, ValueError) as e:
-                    logger.warning(f"Corrupted or invalid cache file {cache_file}. Deleting. Error: {e}")
-                    cache_file.unlink(missing_ok=True)
-                except Exception as e:
-                    logger.error(f"Unexpected error during cache cleanup for {cache_file}: {e}")
+
     
+    def delete(self, filename: str, subdirectory: str):
+        """
+        Deletes a specific cached file.
+        """
+        cache_file = self._get_cache_path(filename, subdirectory)
+        if cache_file.exists():
+            try:
+                cache_file.unlink()
+                logger.debug(f"Deleted cache file: {os.path.join(subdirectory, filename)}")
+            except Exception as e:
+                logger.error(f"Error deleting cache file {os.path.relpath(cache_file)}: {e}")
+
     def clear_all(self):
         """Clears all cache entries from the cache directory."""
         logger.info(f"Clearing all cache entries in {os.path.relpath(self.cache_dir)}.")
-        for cache_file in self.cache_dir.iterdir():
-            if cache_file.is_file():
+        # Iterate through subdirectories too
+        for item in self.cache_dir.iterdir():
+            if item.is_dir():
+                for cache_file in item.iterdir():
+                    if cache_file.is_file():
+                        try:
+                            cache_file.unlink()
+                        except Exception as e:
+                            logger.error(f"Error deleting cache file {os.path.relpath(cache_file)}: {e}")
                 try:
-                    cache_file.unlink()
+                    item.rmdir() # Remove empty subdirectory
                 except Exception as e:
-                    logger.error(f"Error deleting cache file {os.path.relpath(cache_file)}: {e}")
+                    logger.error(f"Error removing cache subdirectory {os.path.relpath(item)}: {e}")
+            elif item.is_file(): # For any files directly in cache_dir
+                try:
+                    item.unlink()
+                except Exception as e:
+                    logger.error(f"Error deleting cache file {os.path.relpath(item)}: {e}")
 
 
 if __name__ == '__main__':

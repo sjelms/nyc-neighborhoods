@@ -1,35 +1,41 @@
 # nyc-neighborhoods Development Guidelines
 
-Auto-generated from all feature plans. Last updated: 2025-12-02
+Auto-generated from all feature plans. Last updated: 2025-12-03
 
 ## Active Technologies
 
 - Python 3.11 + requests, beautifulsoup4, pandas, pydantic, typer (001-automated-neighborhood-profile-generator)
 - pytest, pytest-cov, pytest-mock (001-automated-neighborhood-profile-generator)
+- **openai, python-dotenv (002-helper-llm-feature)**
 
 ## Project Structure
 
 ```text
 src/
 tests/
+cache/ # Added for caching web content and LLM responses
 ```
 
-## Current Focus: Data Source Hardening (Phase 8)
+## Current Focus: LLM Pipeline Implementation & Refactoring (002-helper-llm-feature)
 
-Following a comprehensive code audit, all identified issues have been resolved. The project is now ready to proceed with **Phase 8: Data Source Hardening**. The primary goal is to improve the reliability and precision of data extraction, particularly from Wikipedia.
+The project is currently focused on enhancing data extraction and enrichment through LLM integration. This involves resolving initial implementation bugs and refactoring the caching and logging architecture for robustness and debuggability.
 
 ## Next Steps
 
-1.  **Implement REST API Fallback:** Use the Wikipedia REST API for page summaries as a more stable alternative to HTML parsing.
-2.  **Improve Infobox Parsing:** Make infobox parsing more robust to handle variations in structure and content.
-3.  **Broaden Content Extraction:** Relax parsing rules to capture summary and transit information from more varied page layouts.
-4.  **Normalize Rendered Output:** Strip artifacts and non-breaking spaces from the final Markdown output.
+As per `specs/002-helper-llm-feature/tasks.md`:
+- **T008**: Orchestration Logic for LLM cache.
+- **T009**: Full Pipeline Verification (final run with all architectural changes).
+- **T010**: Cache-Hit Verification (confirming LLM cache is effective).
 
 ## Commands
 
+```bash
 cd src
 .venv/bin/python -m pytest
 ruff check .
+# To generate profiles with LLM assistance (use --log-level DEBUG for detailed debugging)
+python3 -m src.cli.main generate-profiles --force-regenerate
+```
 
 ## Code Style
 
@@ -37,7 +43,18 @@ Python 3.11: Follow standard conventions
 
 ## Recent Changes
 
-- **Code Audit Fixes (December 2025):**
+- **LLM Pipeline Fix & Refactor (December 2025 - 002-helper-llm-feature):**
+  - **Initial LLM Integration & Bug Fixing:**
+    - **Resolved API Parameter Issues:** Fixed `LLMHelper` to correctly handle `max_tokens` and `temperature` parameters, preventing `400 Bad Request` errors and ensuring LLM calls succeed.
+    - **Upgraded LLM Model:** Switched default model from `gpt-5-mini` (which returned empty responses) to `gpt-5.1-2025-11-13` for reliable JSON output.
+    - **Fixed Brittle Template Rendering:** Rewrote `TemplateRenderer.render` using robust regex patterns to correctly populate all LLM-enriched data into Markdown files, resolving issues where sections were missing or unpopulated. Corrected an indentation error that previously broke the `render` method entirely.
+    - **Corrected ZIP Code Merging:** Improved `DataNormalizer`'s logic to correctly parse and merge ZIP code lists, preventing duplication and formatting errors.
+  - **Architectural Refactoring (In Progress):**
+    - **Created Tiered Cache Directories:** Established `cache/html/` and `cache/llm/` for organized caching.
+    - **Refactored CacheManager:** Transformed `src/lib/cache_manager.py` into a generic file storage utility, delegating expiry and metadata management to callers. Added `delete` method and updated `clear_all` for subdirectory handling.
+    - **Refactored WebFetcher:** Updated `src/services/web_fetcher.py` to use the new `CacheManager`, implementing descriptive filenames and managing its own content wrapping and expiry for fetched HTML and JSON.
+    - **Implemented LLM Response Caching:** Modified `src/services/llm_helper.py` to save successfully parsed LLM responses to `cache/llm/` with descriptive, timestamped filenames, and to return the cache path for logging.
+- **Code Audit Fixes (December 2025 - 001-automated-neighborhood-profile-generator):**
   - **Data Model Consistency:** Aligned data types for `population`, `area`, `population_density`, and `generation_date` across the Pydantic models, `data-model.md`, and JSON schemas.
   - **Code Portability:** Replaced all absolute, user-specific file paths in logs and source code with relative paths to ensure the project is portable.
   - **Code Quality:**

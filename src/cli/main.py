@@ -80,13 +80,13 @@ def generate_profiles(
     # Initialize CacheManager if caching is enabled
     cache_manager: Optional[CacheManager] = None
     if cache_expiry_days > 0:
-        cache_manager = CacheManager(cache_dir=cache_dir, expiry_days=cache_expiry_days)
-        internal_logger.info(f"Caching enabled with expiry of {cache_expiry_days} days in {cache_dir}")
+        cache_manager = CacheManager(cache_dir=cache_dir)
+        internal_logger.info(f"Caching enabled in {cache_dir}")
     else:
         internal_logger.info("Caching disabled.")
 
     # Initialize WebFetcher
-    web_fetcher = WebFetcher(cache_manager=cache_manager)
+    web_fetcher = WebFetcher(cache_manager=cache_manager, expiry_days=cache_expiry_days)
 
     # Initialize NYC Open Data components if ID is provided
     nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None
@@ -107,7 +107,7 @@ def generate_profiles(
     wikipedia_parser = WikipediaParser()
 
     # Initialize optional LLM helper (auto-disabled when no key)
-    llm_helper: LLMHelper = LLMHelper(model=llm_model, enabled=use_llm)
+    llm_helper: LLMHelper = LLMHelper(model=llm_model, enabled=use_llm, cache_manager=cache_manager, expiry_days=cache_expiry_days)
 
     data_normalizer = DataNormalizer(
         version, parsed_ratified_date, parsed_last_amended_date,

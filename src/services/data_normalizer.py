@@ -123,8 +123,13 @@ class DataNormalizer:
                         # Merge ZIP codes
                         zips_new = nf_ref.get("zip_codes", [])
                         if isinstance(zips_new, list) and zips_new:
-                            zips_orig = nf_raw.get("zip_codes", [])
-                            nf_raw["zip_codes"] = _merge_lists(zips_orig, zips_new)
+                            zips_orig_raw = nf_raw.get("zip_codes", [])
+                            # Flatten original list, which may contain comma-separated strings
+                            zips_orig_flat = []
+                            for z in zips_orig_raw:
+                                zips_orig_flat.extend([item.strip() for item in str(z).split(',')])
+                            
+                            nf_raw["zip_codes"] = _merge_lists(zips_orig_flat, zips_new)
                             
                         raw_data["neighborhood_facts"] = nf_raw
 
@@ -150,6 +155,7 @@ class DataNormalizer:
         except Exception as e:
             logger.debug(f"LLM structuring skipped due to error: {e}")
 
+        logger.debug(f"Raw data after LLM merge: {json.dumps(raw_data, ensure_ascii=False, indent=2)}")
 
         # --- Handle KeyDetails ---
         # These are not directly from Wikipedia infobox, so we can set defaults or process later

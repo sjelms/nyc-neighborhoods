@@ -2,6 +2,9 @@ import json
 import os
 import logging
 from typing import Any, Dict, Optional
+from datetime import datetime, timedelta
+import re
+from src.lib.cache_manager import CacheManager
 
 logger = logging.getLogger("nyc_neighborhoods")
 
@@ -20,6 +23,8 @@ class LLMHelper:
         model: str = "gpt-5.1-2025-11-13",
         api_key: Optional[str] = None,
         enabled: bool = True,
+        cache_manager: Optional['CacheManager'] = None, # Added
+        expiry_days: int = 7, # Added
     ) -> None:
         # Lazy imports and .env loading to keep tests and offline runs happy
         self._openai = None
@@ -27,6 +32,8 @@ class LLMHelper:
         self.model = model
         self._enabled = False
         self._enabled_requested = enabled
+        self.cache_manager = cache_manager # Added
+        self.expiry_time = timedelta(days=expiry_days) if expiry_days > 0 else None # Added
 
         # Load .env if python-dotenv is available
         try:
@@ -68,11 +75,23 @@ class LLMHelper:
     def is_enabled(self) -> bool:
         return bool(self._enabled and self._client is not None)
 
+    @property
+    def is_enabled(self) -> bool:
+        return bool(self._enabled and self._client is not None)
+
+    def _get_llm_cache_filename(self, neighborhood_name: str, borough: str) -> str:
+        """Generates a descriptive, timestamped filename for LLM cache entries."""
+        timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
+        neighborhood_slug = re.sub(r'[^\w\-_\.]', '', neighborhood_name.replace(' ', '_'))
+        borough_slug = re.sub(r'[^\w\-_\.]', '', borough.replace(' ', '_'))
+        return f"{neighborhood_slug}_{borough_slug}_{timestamp}.json"
+
     def refine_profile_inputs(
         self,
         raw_data: Dict[str, Any],
         neighborhood_name: str,
         borough: str,
+        cached_llm_path: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Send collected fields to the LLM and ask for a tightened, schema-aligned
@@ -81,6 +100,19 @@ class LLMHelper:
         """
         if not self.is_enabled:
             return {}
+
+        # --- Caching Logic: READ ---
+        if self.cache_manager and cached_llm_path and Path(cached_llm_path).exists():
+            logger.info(f"Using cached LLM response from {cached_llm_path}")
+            cached_content = self.cache_manager.get(Path(cached_llm_path).name, "llm")
+            if cached_content:
+                try:
+                    # The cached content should already be the refined JSON
+                    parsed = json.loads(cached_content)
+                    parsed['llm_cache_path'] = cached_llm_path # Ensure path is returned
+                    return parsed
+                except json.JSONDecodeError:
+                    logger.warning(f"Could not parse cached LLM response from {cached_llm_path}. Fetching live.")
 
         try:
             # Compose a compact input payload for the model
@@ -94,6 +126,7 @@ class LLMHelper:
                 "sources": raw_data.get("sources", []),
                 "page_text": raw_data.get("page_text", ""),
             }
+            logger.debug(f"LLM input payload: {json.dumps(llm_input, ensure_ascii=False, indent=2)}")
 
             system = (
                 "You are a careful data normalizer for NYC neighborhood profiles. "
@@ -122,13 +155,8 @@ class LLMHelper:
                 "response_format": {"type": "json_object"},  # enforce JSON when supported
             }
 
-            # Try token parameter variants in order (modern -> legacy), skipping ones the API rejects.
-            # Try token parameter variants in order (most likely to be supported for GPT-4.1/5 style models)
-            token_param_options = [
-                ("max_completion_tokens", 1600),  # new SDK/models
-                ("max_tokens", 1600),             # legacy
-                (None, None),                     # last resort: rely on model default limits
-            ]
+            # Try token parameter variants
+            token_param_options = [("max_completion_tokens", 1600), ("max_tokens", 1600), (None, None)]
             response = None
             last_error: Optional[Exception] = None
             for param_name, param_value in token_param_options:
@@ -141,17 +169,9 @@ class LLMHelper:
                 except Exception as e:
                     last_error = e
                     error_message = str(e).lower()
-                    # If the error is clearly about an unsupported parameter, try the next option.
-                    # This handles both API errors (e.g., "unsupported parameter") and
-                    # local TypeErrors (e.g., "unexpected keyword argument").
-                    if param_name and (
-                        f"unsupported parameter: '{param_name}'" in error_message
-                        or f"got an unexpected keyword argument '{param_name}'" in error_message
-                    ):
+                    if param_name and (f"unsupported parameter: '{param_name}'" in error_message or f"got an unexpected keyword argument '{param_name}'" in error_message):
                         logger.debug(f"LLM param '{param_name}' not supported, trying next option.")
                         continue
-
-                    # For any other error (like 401 auth), break the loop and fail fast.
                     break
 
             if response is None:
@@ -160,16 +180,12 @@ class LLMHelper:
                 raise RuntimeError("LLM request failed with no response and no exception.")
 
             content = ""
-            # Guard against unexpected shapes from the SDK
             if hasattr(response, "choices") and response.choices:
-                message = response.choices[0].message  # type: ignore[attr-defined]
+                message = response.choices[0].message
                 if message and hasattr(message, "content"):
-                    raw_content = message.content  # type: ignore[attr-defined]
+                    raw_content = message.content
                     if isinstance(raw_content, list):
-                        # Newer SDKs may return structured content parts
-                        content = "".join(
-                            part.get("text", "") if isinstance(part, dict) else str(part) for part in raw_content
-                        )
+                        content = "".join(part.get("text", "") if isinstance(part, dict) else str(part) for part in raw_content)
                     elif isinstance(raw_content, str):
                         content = raw_content
             
@@ -181,26 +197,29 @@ class LLMHelper:
             try:
                 parsed = json.loads(content)
             except Exception:
-                # If not strict JSON, attempt to find a JSON block
-                try:
-                    start = content.find("{")
-                    end = content.rfind("}")
-                    if start >= 0 and end > start:
-                        parsed = json.loads(content[start : end + 1])
-                    else:
-                        return {}
-                except Exception:
+                # Attempt to recover JSON block
+                start = content.find("{")
+                end = content.rfind("}")
+                if start >= 0 and end > start:
+                    parsed = json.loads(content[start : end + 1])
+                else:
                     return {}
 
             # Filter to only the keys we accept
             allowed_top = {"key_details", "around_the_block", "neighborhood_facts", "transit_accessibility"}
             refined: Dict[str, Any] = {k: v for k, v in parsed.items() if k in allowed_top}
+
+            # --- Caching Logic: WRITE ---
+            if self.cache_manager and refined:
+                cache_filename = self._get_llm_cache_filename(neighborhood_name, borough)
+                cache_subdirectory = "llm"
+                # We store the successfully parsed and refined JSON
+                self.cache_manager.set(cache_filename, json.dumps(refined, indent=2), cache_subdirectory)
+                # Return the cache path so the caller can log it.
+                refined['llm_cache_path'] = str((self.cache_manager.cache_dir / cache_subdirectory / cache_filename).resolve())
+
             return refined
         except Exception as e:
-            # Disable further attempts for the remainder of the run to avoid noisy retries
             self._enabled = False
-            logger.warning(
-                "LLMHelper request failed; disabling LLM for this run. "
-                f"Reason: {e}. Run with --no-llm or check OPENAI_API_KEY."
-            )
+            logger.warning(f"LLMHelper request failed; disabling LLM for this run. Reason: {e}")
             return {}

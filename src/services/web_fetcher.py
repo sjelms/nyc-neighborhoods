@@ -1,7 +1,11 @@
 import requests
 import logging
-from typing import Optional
+import hashlib
+import json
+from datetime import datetime, timedelta
+from typing import Optional, Tuple
 from pathlib import Path
+import re # Added re import
 from src.lib.cache_manager import CacheManager
 
 logger = logging.getLogger("nyc_neighborhoods")
@@ -13,46 +17,165 @@ class WebFetcher:
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     }
 
-    def __init__(self, cache_manager: Optional[CacheManager] = None, headers: Optional[dict] = None):
+    def __init__(self, cache_manager: Optional[CacheManager] = None, headers: Optional[dict] = None, expiry_days: int = 7):
         self.cache_manager = cache_manager
         self.headers = headers or self.DEFAULT_HEADERS
+        self.expiry_time = timedelta(days=expiry_days) if expiry_days > 0 else None
 
-    def fetch_json(self, url: str) -> Optional[dict]:
-        """Fetch JSON content with standard headers and return parsed dict."""
+    def _get_cache_filename_and_subdir(self, url: str, item_name: Optional[str] = None, item_type: str = "html") -> Tuple[str, str]:
+        # Clean up item_name for use in filename
+        cleaned_item_name = re.sub(r'[^\w\-_\.]', '', item_name.replace(' ', '_')) if item_name else None
+
+        if cleaned_item_name:
+            # Use descriptive filename if available
+            filename = f"{cleaned_item_name}.{item_type}"
+        else:
+            # Fallback to hash if no descriptive name is provided
+            url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()
+            filename = f"{url_hash}.{item_type}" # Using .type as extension now
+
+        # Determine subdirectory based on item_type
+        subdirectory = "html" if item_type == "html" else "json" # Default to html, or json for rest api responses
+        
+        return filename, subdirectory
+
+    def fetch_json(self, url: str, item_name: Optional[str] = None) -> Optional[dict]:
+        """
+        Fetches JSON content from a given URL, utilizing a cache if provided,
+        and manages cache expiry.
+        """
+        item_type = "json"
+        if not self.cache_manager or not self.expiry_time:
+            # Bypass cache if not configured
+            return self._fetch_json_from_network(url, item_name, item_type)
+
+        # Generate cache filename and subdirectory
+        filename, subdirectory = self._get_cache_filename_and_subdir(url, item_name, item_type)
+
+        # Attempt to retrieve from cache
+        cached_raw_entry = self.cache_manager.get(filename, subdirectory)
+        if cached_raw_entry:
+            try:
+                cache_entry = json.loads(cached_raw_entry)
+                cached_timestamp = datetime.fromisoformat(cache_entry['timestamp'])
+                
+                if datetime.now() - cached_timestamp < self.expiry_time:
+                    logger.info(f"Retrieved JSON for {url} from cache ({os.path.join(subdirectory, filename)}).")
+                    return cache_entry['content']
+                else:
+                    logger.debug(f"Cache miss: {url} (expired). Deleting {filename}.")
+                    self.cache_manager.delete(filename, subdirectory) # Delete expired entry
+            except (json.JSONDecodeError, KeyError, ValueError) as e:
+                logger.warning(f"Corrupted cache file for {url} at {os.path.join(subdirectory, filename)}. Deleting. Error: {e}")
+                self.cache_manager.delete(filename, subdirectory)
+            except Exception as e:
+                logger.error(f"Error processing cached entry for {url} at {os.path.join(subdirectory, filename)}: {e}")
+        
+        # If not in cache or expired/corrupted, fetch from network
+        return self._fetch_json_from_network(url, item_name, item_type, filename, subdirectory)
+
+    def _fetch_json_from_network(self, url: str, item_name: Optional[str], item_type: str, cache_filename: Optional[str] = None, cache_subdirectory: Optional[str] = None) -> Optional[dict]:
+        """Internal helper to fetch JSON content from the network and optionally cache it."""
+        logger.info(f"Attempting to fetch JSON from network: {url}")
+        content = None
         try:
             response = requests.get(url, timeout=10, headers={**self.headers, "Accept": "application/json"})
             response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            logger.error(f"Error fetching JSON from {url}: {e}")
-            return None
+            content = response.json()
+            logger.info(f"Successfully fetched JSON from network: {url}")
+            
+            if self.cache_manager and self.expiry_time:
+                # Prepare filename and subdirectory for caching
+                filename, subdirectory = self._get_cache_filename_and_subdir(url, item_name, item_type)
+                if cache_filename: filename = cache_filename # Use provided filename if in retry
+                if cache_subdirectory: subdirectory = cache_subdirectory # Use provided subdirectory if in retry
 
-    def fetch(self, url: str) -> Optional[str]:
+                cache_entry = {
+                    'url': url,
+                    'timestamp': datetime.now().isoformat(),
+                    'content': content
+                }
+                self.cache_manager.set(filename, json.dumps(cache_entry), subdirectory)
+                logger.info(f"Content for {url} saved to cache ({os.path.join(subdirectory, filename)}).")
+            
+            return content
+        except requests.exceptions.HTTPError as e:
+            logger.error(f"HTTP error fetching JSON {url}: {e}")
+        except requests.exceptions.ConnectionError as e:
+            logger.error(f"Connection error fetching JSON {url}: {e}")
+        except requests.exceptions.Timeout as e:
+            logger.error(f"Timeout error fetching JSON {url}: {e}")
+        except requests.exceptions.RequestException as e:
+            logger.error(f"An unexpected request error occurred while fetching JSON {url}: {e}")
+        except Exception as e:
+            logger.error(f"An unexpected error occurred while processing JSON: {e}")
+        return None
+
+    def fetch(self, url: str, item_name: Optional[str] = None, item_type: str = "html") -> Optional[str]:
         """
-        Fetches content from a given URL, utilizing a cache if provided.
+        Fetches content from a given URL, utilizing a cache if provided,
+        and manages cache expiry.
 
         Args:
             url: The URL to fetch.
+            item_name: A descriptive name for the item, used in the cache filename.
+            item_type: The type of item, used for the cache subdirectory and file extension.
 
         Returns:
             The content of the URL as a string, or None if an error occurred.
         """
-        if self.cache_manager:
-            cached_content = self.cache_manager.get(url)
-            if cached_content:
-                logger.info(f"Retrieved content for {url} from cache.")
-                return cached_content
+        if not self.cache_manager or not self.expiry_time:
+            # Bypass cache if not configured (expiry_days <= 0)
+            return self._fetch_from_network(url, item_name, item_type)
 
+        # Generate cache filename and subdirectory
+        filename, subdirectory = self._get_cache_filename_and_subdir(url, item_name, item_type)
+
+        # Attempt to retrieve from cache
+        cached_raw_entry = self.cache_manager.get(filename, subdirectory)
+        if cached_raw_entry:
+            try:
+                cache_entry = json.loads(cached_raw_entry)
+                cached_timestamp = datetime.fromisoformat(cache_entry['timestamp'])
+                
+                if datetime.now() - cached_timestamp < self.expiry_time:
+                    logger.info(f"Retrieved content for {url} from cache ({os.path.join(subdirectory, filename)}).")
+                    return cache_entry['content']
+                else:
+                    logger.debug(f"Cache miss: {url} (expired). Deleting {filename}.")
+                    self.cache_manager.delete(filename, subdirectory) # Delete expired entry
+            except (json.JSONDecodeError, KeyError, ValueError) as e:
+                logger.warning(f"Corrupted cache file for {url} at {os.path.join(subdirectory, filename)}. Deleting. Error: {e}")
+                self.cache_manager.delete(filename, subdirectory)
+            except Exception as e:
+                logger.error(f"Error processing cached entry for {url} at {os.path.join(subdirectory, filename)}: {e}")
+        
+        # If not in cache or expired/corrupted, fetch from network
+        return self._fetch_from_network(url, item_name, item_type, filename, subdirectory)
+
+    def _fetch_from_network(self, url: str, item_name: Optional[str], item_type: str, cache_filename: Optional[str] = None, cache_subdirectory: Optional[str] = None) -> Optional[str]:
+        """Internal helper to fetch content from the network and optionally cache it."""
         logger.info(f"Attempting to fetch content from network: {url}")
+        content = None
         try:
-            response = requests.get(url, timeout=10, headers=self.headers)  # 10-second timeout
-            response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
+            response = requests.get(url, timeout=10, headers=self.headers)
+            response.raise_for_status()
             content = response.text
             logger.info(f"Successfully fetched content from network: {url}")
             
-            if self.cache_manager:
-                self.cache_manager.set(url, content)
-                logger.info(f"Content for {url} saved to cache.")
+            if self.cache_manager and self.expiry_time:
+                # Prepare filename and subdirectory for caching
+                filename, subdirectory = self._get_cache_filename_and_subdir(url, item_name, item_type)
+                if cache_filename: filename = cache_filename # Use provided filename if in retry
+                if cache_subdirectory: subdirectory = cache_subdirectory # Use provided subdirectory if in retry
+
+                cache_entry = {
+                    'url': url,
+                    'timestamp': datetime.now().isoformat(),
+                    'content': content
+                }
+                self.cache_manager.set(filename, json.dumps(cache_entry), subdirectory)
+                logger.info(f"Content for {url} saved to cache ({os.path.join(subdirectory, filename)}).")
             
             return content
         except requests.exceptions.HTTPError as e:
@@ -64,8 +187,18 @@ class WebFetcher:
                     response_mobile = requests.get(mobile_url, timeout=10, headers=self.headers)
                     response_mobile.raise_for_status()
                     content = response_mobile.text
-                    if self.cache_manager:
-                        self.cache_manager.set(url, content)  # cache under original URL
+                    if self.cache_manager and self.expiry_time:
+                        # Re-use filename/subdirectory from original attempt
+                        filename, subdirectory = self._get_cache_filename_and_subdir(url, item_name, item_type)
+                        if cache_filename: filename = cache_filename
+                        if cache_subdirectory: subdirectory = cache_subdirectory
+
+                        cache_entry = {
+                            'url': url,
+                            'timestamp': datetime.now().isoformat(),
+                            'content': content
+                        }
+                        self.cache_manager.set(filename, json.dumps(cache_entry), subdirectory)
                     return content
                 except Exception as mobile_error:
                     logger.error(f"Fallback mobile fetch failed for {mobile_url}: {mobile_error}")
