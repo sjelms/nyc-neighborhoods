@@ -78,6 +78,10 @@ class ProfileGenerator:
         # 3a. Fetch REST summary (more stable than HTML)
         summary_api_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{neighborhood_name.replace(' ', '_')},_{borough.replace(' ', '_')}"
         summary_data = self.web_fetcher.fetch_json(summary_api_url)
+        print("--- WIKIPEDIA SUMMARY API RESPONSE ---")
+        import json
+        print(json.dumps(summary_data, indent=2))
+        print("------------------------------------")
         summary_text = ""
         if summary_data:
             summary_text = summary_data.get("extract", "") or summary_data.get("description", "")

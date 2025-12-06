@@ -24,6 +24,15 @@ class CacheManager:
         sub_cache_dir.mkdir(parents=True, exist_ok=True) # Ensure subdirectory exists
         return sub_cache_dir / filename
 
+    def get_file_path(self, filename: str, subdirectory: str) -> Optional[Path]:
+        """
+        Returns the Path object for a cached file if it exists, otherwise None.
+        """
+        cache_file = self._get_cache_path(filename, subdirectory)
+        if cache_file.exists():
+            return cache_file
+        return None
+
     def get(self, filename: str, subdirectory: str) -> Optional[str]:
         """
         Retrieves content from a cached file.

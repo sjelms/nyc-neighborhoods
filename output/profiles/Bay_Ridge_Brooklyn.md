@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
+**Version**: 1.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
 
 ## Bay Ridge
 
@@ -7,13 +7,13 @@ Bay Ridge is a neighborhood in the southwest corner of the New York City borough
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A residential waterfront neighborhood at Brooklyn’s southwest corner, with a mix of apartment buildings and houses, strong community institutions, and access to parks and shorefront views along the Narrows.
+- **WHAT TO EXPECT:** A largely residential southwest Brooklyn neighborhood with a mix of apartments and houses, waterfront views along the Narrows, and a long-established, diverse community.
 
 
-- **UNEXPECTED APPEAL:** Its combination of small-town feel and historic character with direct access to the Verrazzano-Narrows Bridge, the Belt Parkway, and long-established immigrant communities.
+- **UNEXPECTED APPEAL:** A distinct small-town feel at the edge of the city, shaped by its historic development as a resort area and its proximity to the Verrazzano-Narrows Bridge and Fort Hamilton.
 
 
-- **THE MARKET:** Housing consists mainly of prewar and postwar apartment buildings, row houses, and small multi-family homes, with prices influenced by proximity to Shore Road, the waterfront, and subway access along Fourth Avenue.
+- **THE MARKET:** Housing consists mainly of low- to mid-rise apartment buildings and attached homes, with some larger houses, serving primarily as a residential area for commuters and long-term residents.
 
 
 
@@ -21,14 +21,14 @@ Bay Ridge is a neighborhood in the southwest corner of the New York City borough
 
 ### Around the Block
 
-Bay Ridge is a southwest Brooklyn neighborhood overlooking New York Harbor, bounded by Sunset Park, Dyker Heights, the Narrows, and the Fort Hamilton area near the Verrazzano-Narrows Bridge. Its streets range from busier commercial corridors to quieter residential blocks closer to the waterfront.
+Bay Ridge is a southwest Brooklyn neighborhood overlooking New York Harbor, with tree-lined streets, a mix of apartments and houses, and strong ties to its historic Fort Hamilton section. It offers a quieter residential environment framed by Sunset Park, Dyker Heights, the Narrows, and the Verrazzano-Narrows Bridge.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 79,371
+- **Population:** 79371
 - **Population Density:** 37400
-- **Area:** 2.12 sq mi (5.49 km )
+- **Area:** 718, 347, 929 , and 917
 - **Boundaries:**  
   - **East to West:** The Narrows and the Belt Parkway on the west to Dyker Heights on the east
   - **North to South:** Sunset Park on the north to Fort Hamilton Army Base and the Verrazzano-Narrows Bridge on the south
@@ -41,20 +41,12 @@ Bay Ridge is a southwest Brooklyn neighborhood overlooking New York Harbor, boun
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- R
+N/A
 #### Major Stations:
-- 77th Street
-- 86th Street
-- Bay Ridge Avenue
-- Bay Ridge–95th Street
+N/A
 #### Bus Routes:
 N/A
 #### Rail / Freight / Other Transit (if applicable):
 N/A
 #### Highways & Major Roads:
-- Bay Ridge Parkway
-- Belt Parkway
-- Fort Hamilton Parkway
-- Fourth Avenue
-- Shore Road
-- Third Avenue
+N/A

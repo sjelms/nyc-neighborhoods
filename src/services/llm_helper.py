@@ -80,18 +80,16 @@ class LLMHelper:
         return bool(self._enabled and self._client is not None)
 
     def _get_llm_cache_filename(self, neighborhood_name: str, borough: str) -> str:
-        """Generates a descriptive, timestamped filename for LLM cache entries."""
-        timestamp = datetime.now().strftime("%Y%m%dT%H%M%S")
+        """Generates a descriptive, deterministic filename for LLM cache entries."""
         neighborhood_slug = re.sub(r'[^\w\-_\.]', '', neighborhood_name.replace(' ', '_'))
         borough_slug = re.sub(r'[^\w\-_\.]', '', borough.replace(' ', '_'))
-        return f"{neighborhood_slug}_{borough_slug}_{timestamp}.json"
+        return f"{neighborhood_slug}_{borough_slug}.json"
 
     def refine_profile_inputs(
         self,
         raw_data: Dict[str, Any],
         neighborhood_name: str,
-        borough: str,
-        cached_llm_path: Optional[str] = None
+        borough: str
     ) -> Dict[str, Any]:
         """
         Send collected fields to the LLM and ask for a tightened, schema-aligned
@@ -102,18 +100,33 @@ class LLMHelper:
             return {}
 
         # --- Caching Logic: READ ---
-        if self.cache_manager and cached_llm_path and Path(cached_llm_path).exists():
-            logger.info(f"Using cached LLM response from {cached_llm_path}")
-            cached_content = self.cache_manager.get(Path(cached_llm_path).name, "llm")
-            if cached_content:
-                try:
-                    # The cached content should already be the refined JSON
-                    parsed = json.loads(cached_content)
-                    parsed['llm_cache_path'] = cached_llm_path # Ensure path is returned
-                    return parsed
-                except json.JSONDecodeError:
-                    logger.warning(f"Could not parse cached LLM response from {cached_llm_path}. Fetching live.")
+        if self.cache_manager:
+            cache_filename = self._get_llm_cache_filename(neighborhood_name, borough)
+            cache_subdirectory = "llm"
+            
+            cached_file_path = self.cache_manager.get_file_path(cache_filename, cache_subdirectory)
 
+            if cached_file_path:
+                is_expired = False
+                if self.expiry_time:
+                    file_mod_time = datetime.fromtimestamp(cached_file_path.stat().st_mtime)
+                    if datetime.now() - file_mod_time > self.expiry_time:
+                        is_expired = True
+                        logger.info(f"LLM cache for {neighborhood_name} is expired. Fetching live.")
+
+                if not is_expired:
+                    logger.info(f"Using cached LLM response for {neighborhood_name} from {os.path.relpath(cached_file_path)}")
+                    cached_content = self.cache_manager.get(cache_filename, cache_subdirectory)
+                    if cached_content:
+                        try:
+                            # The cached content should already be the refined JSON
+                            parsed = json.loads(cached_content)
+                            # Return the cache path so the caller can log it.
+                            parsed['llm_cache_path'] = str(cached_file_path.resolve())
+                            return parsed
+                        except json.JSONDecodeError:
+                            logger.warning(f"Could not parse cached LLM response from {os.path.relpath(cached_file_path)}. Fetching live.")
+        
         try:
             # Compose a compact input payload for the model
             llm_input = {
@@ -122,23 +135,25 @@ class LLMHelper:
                 "summary": raw_data.get("summary", ""),
                 "around_the_block": raw_data.get("around_the_block", ""),
                 "neighborhood_facts": raw_data.get("neighborhood_facts", {}),
-                "transit_accessibility": raw_data.get("transit_accessibility", {}),
-                "sources": raw_data.get("sources", []),
                 "page_text": raw_data.get("page_text", ""),
+                "transportation_text": raw_data.get("transportation_text", "") # New focused text
             }
             logger.debug(f"LLM input payload: {json.dumps(llm_input, ensure_ascii=False, indent=2)}")
 
             system = (
                 "You are a careful data normalizer for NYC neighborhood profiles. "
-                "Given noisy scraped fields and raw page text, return a STRICT JSON object with the following keys only: "
+                "Given noisy scraped fields and various text inputs, return a STRICT JSON object with the following keys only: "
                 "key_details, around_the_block, neighborhood_facts, transit_accessibility. "
                 "- key_details must include what_to_expect, unexpected_appeal, the_market (short, factual, neutral). "
-                "- around_the_block: a concise 1–2 sentence narrative capturing the essence; if empty in input, write one from summary and page_text. "
+                "- around_the_block: a concise 1–2 sentence narrative capturing the essence; if empty in input, write one from summary. "
                 "- neighborhood_facts must include population, population_density, area, boundaries, zip_codes. "
-                "  Convert numbers to plain numbers when possible (no commas or units). If unknown, keep existing value. "
+                "  Convert numbers to plain numbers when possible (no commas or units). "
                 "  boundaries has east_to_west, north_to_south, adjacent_neighborhoods (list). "
-                "- transit_accessibility has nearest_subways, major_stations, bus_routes, rail_freight_other, highways_major_roads (lists). "
-                "- Use page_text to recover transit/boundary facts when the structured fields are empty. "
+                "- transit_accessibility: Use the 'transportation_text' field exclusively for this. "
+                "  - From 'transportation_text', find all subway lines (e.g., N, W, R). Put them in 'nearest_subways'. "
+                "  - From 'transportation_text', find all bus routes (e.g., Q18, Q69, M60). Put them in 'bus_routes'. "
+                "  - From 'transportation_text', find all major station names (e.g., 'Astoria–Ditmars Boulevard'). Put them in 'major_stations'. "
+                "  - From 'transportation_text', find all highways and major roads. Put them in 'highways_major_roads'. "
                 "Keep it grounded in the provided input; do not invent facts."
             )
 

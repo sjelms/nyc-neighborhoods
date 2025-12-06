@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
+**Version**: 1.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
 
 ## Bayside
 
@@ -7,13 +7,13 @@ Bayside is a neighborhood in the New York City borough of Queens. It is bounded 
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A largely residential Queens neighborhood of free-standing homes with relatively high population density and a reputation as one of the more expensive housing markets in the city for comparable detached houses.
+- **WHAT TO EXPECT:** A largely residential Queens neighborhood with many free-standing homes and relatively high population density.
 
 
-- **UNEXPECTED APPEAL:** Its combination of suburban-style housing near the water and longstanding status as a safe, relatively affluent community that once attracted entertainers and movie stars.
+- **UNEXPECTED APPEAL:** Despite its suburban-style housing stock, it ranks high nationally in population density and is considered one of the more expensive housing markets for detached homes.
 
 
-- **THE MARKET:** Dominated by free-standing single-family homes, with high prices for detached houses and additional stock in co-op and condo developments, particularly in areas like Bay Terrace.
+- **THE MARKET:** Known for comparatively expensive detached houses within Queens.
 
 
 
@@ -21,17 +21,17 @@ Bayside is a neighborhood in the New York City borough of Queens. It is bounded 
 
 ### Around the Block
 
-Bayside offers a suburban feel in northeastern Queens, with detached houses, waterfront access, and local commercial strips anchored by Bell Boulevard. Despite its low-rise housing character, it is densely populated and considered one of the wealthier, safer areas of the borough.
+Bayside is a primarily residential northeastern Queens neighborhood of free-standing homes, bordered by waterfront to the north and other low-rise neighborhoods on all sides. It combines a suburban feel with relatively high population density and a reputation for higher home prices.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 43,808
+- **Population:** 43808
 - **Population Density:** 23.6
-- **Area:** 718, 347, 929
+- **Area:** 718, 347, 929 , and 917
 - **Boundaries:**  
-  - **East to West:** Cross Island Parkway to Francis Lewis Boulevard and Auburndale, with Utopia Parkway to the northwest
-  - **North to South:** Long Island Sound and Little Neck Bay south to somewhere north of the Long Island Expressway, with Oakland Gardens and Hollis Hills usually considered parts of Bayside
+  - **East to West:** Whitestone to Fresh Meadows
+  - **North to South:** Long Island Sound and Little Neck Bay to Oakland Gardens
   - **Adjacent Neighborhoods:** Auburndale, Douglaston, Fresh Meadows, Hollis Hills, Oakland Gardens, Whitestone
 - **ZIP Codes:**
 - 11360
@@ -44,15 +44,10 @@ Bayside offers a suburban feel in northeastern Queens, with detached houses, wat
 #### Nearest Subways:
 N/A
 #### Major Stations:
-- Bayside (LIRR Port Washington Branch)
+N/A
 #### Bus Routes:
 N/A
 #### Rail / Freight / Other Transit (if applicable):
-- Long Island Rail Road Port Washington Branch
+N/A
 #### Highways & Major Roads:
-- Bell Boulevard
-- Clearview Expressway
-- Cross Island Parkway
-- Francis Lewis Boulevard
-- Long Island Expressway
-- Utopia Parkway
+N/A

@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
+**Version**: 1.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
 
 ## Bedford Stuyvesant
 
@@ -7,13 +7,13 @@ Bedford–Stuyvesant, colloquially known as Bed–Stuy, is a neighborhood in the
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A large, historic Brooklyn neighborhood with extensive Victorian and brownstone housing, busy commercial corridors like Fulton Street, and a long-standing role as a cultural center for Brooklyn’s Black community now experiencing significant gentrification.
+- **WHAT TO EXPECT:** A large northern Brooklyn neighborhood known for historic brownstones, Victorian architecture, and a mix of subareas including Bedford, Stuyvesant Heights, Ocean Hill, and Weeksville.
 
 
-- **UNEXPECTED APPEAL:** One of the largest collections of intact pre-1900 Victorian and brownstone architecture in the United States, with roughly 8800 largely untouched buildings featuring ornate classical detailing.
+- **UNEXPECTED APPEAL:** One of the largest collections of intact pre-1900 Victorian buildings in the United States, with highly ornamental details and classical architectural elements.
 
 
-- **THE MARKET:** Primarily attached rowhouses and brownstones, many historic and renovated, with rising rents and home prices linked to ongoing gentrification.
+- **THE MARKET:** Primarily historic row houses and brownstones with increasing rents and real estate prices associated with ongoing gentrification.
 
 
 
@@ -21,16 +21,16 @@ Bedford–Stuyvesant, colloquially known as Bed–Stuy, is a neighborhood in the
 
 ### Around the Block
 
-Bedford–Stuyvesant, or Bed–Stuy, is a sprawling, architecturally rich neighborhood defined by its historic brownstones, major shopping corridor along Fulton Street, and deep African American cultural roots. Once largely working- and middle-class, it has seen rapid demographic and real estate change since the early 2000s.
+Bedford–Stuyvesant, or Bed–Stuy, is a sprawling northern Brooklyn neighborhood defined by its brownstone blocks, major commercial spine along Fulton Street, and a long history as a cultural center for Brooklyn’s Black community.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 166,380
+- **Population:** 166380
 - **Population Density:** 59000
-- **Area:** 2.8 sq mi (7.3 km )
+- **Area:** 718, 347, 929 , and 917
 - **Boundaries:**  
-  - **East to West:** Classon Avenue to Broadway
+  - **East to West:** Broadway to Classon Avenue
   - **North to South:** Flushing Avenue to Atlantic Avenue
   - **Adjacent Neighborhoods:** Brownsville, Bushwick, Clinton Hill, Crown Heights, East New York, Williamsburg
 - **ZIP Codes:**
@@ -45,19 +45,12 @@ Bedford–Stuyvesant, or Bed–Stuy, is a sprawling, architecturally rich neighb
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- A
-- C
+N/A
 #### Major Stations:
 N/A
 #### Bus Routes:
 N/A
 #### Rail / Freight / Other Transit (if applicable):
-- Long Island Rail Road connection at Atlantic Avenue in the 19th century (historical)
+N/A
 #### Highways & Major Roads:
-- Atlantic Avenue
-- Bedford Avenue
-- Broadway
-- Flushing Avenue
-- Fulton Street
-- Nostrand Avenue
-- Stuyvesant Avenue
+N/A

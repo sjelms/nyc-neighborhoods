@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
+**Version**: 1.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
 
 ## Astoria
 
@@ -7,13 +7,13 @@ Astoria is a neighborhood in the western portion of the New York City borough of
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A dense, highly diverse western Queens neighborhood along the East River, with active commercial corridors, long-established residential blocks, and access to waterfront and cultural institutions.
+- **WHAT TO EXPECT:** A dense, western Queens neighborhood along the East River with a large, diverse population and a mix of residential and commercial blocks.
 
 
-- **UNEXPECTED APPEAL:** Its mix of historic village roots, film-studio heritage, and a strong progressive political identity alongside long-standing immigrant communities.
+- **UNEXPECTED APPEAL:** Strong historical roots, notable film and studio presence, and a reputation as a progressive political hub within New York City.
 
 
-- **THE MARKET:** Primarily multifamily housing in a dense urban grid, with a mix of older walk-ups, larger apartment buildings, and subdivided subsections such as Steinway, Old Astoria, and Ditmars.
+- **THE MARKET:** Urban housing stock in a built-out neighborhood with a population of about 154141 residents over roughly 2556.2 acres.
 
 
 
@@ -21,17 +21,17 @@ Astoria is a neighborhood in the western portion of the New York City borough of
 
 ### Around the Block
 
-Astoria combines waterfront views, busy avenues, and quieter side streets into one of Queens’ most densely populated and ethnically diverse neighborhoods. Historic roots and a strong cultural scene sit alongside active commercial and residential development.
+Astoria combines long-time residential streets with busy commercial avenues and a mix of historic and newer buildings. Its waterfront setting and ethnic diversity give it a distinctly urban yet neighborhood-oriented feel.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 78,793 (154,000 with the subsections)
+- **Population:** 154141
 - **Population Density:** 60.3
-- **Area:** 718, 347, 929
+- **Area:** 718, 347, 929 , and 917
 - **Boundaries:**  
-  - **East to West:** Approximately from the East River and Hell Gate inland toward the Brooklyn-Queens Expressway and 81st Street within Queens Community District 1
-  - **North to South:** Approximately from areas north of Grand Central Parkway and Hell Gate south toward Queens Plaza and Northern Boulevard within Queens Community District 1
+  - **East to West:** Approximately from the East River to around Hobart Street and 50th Street
+  - **North to South:** Approximately from Hell Gate and areas north of Grand Central Parkway to around Northern Boulevard and 36th Avenue
   - **Adjacent Neighborhoods:** East Elmhurst, Long Island City, Sunnyside, Woodside
 - **ZIP Codes:**
 - 11101
@@ -53,7 +53,4 @@ N/A
 #### Rail / Freight / Other Transit (if applicable):
 N/A
 #### Highways & Major Roads:
-- Brooklyn-Queens Expressway
-- Grand Central Parkway
-- Northern Boulevard
-- Queens Plaza
+N/A
