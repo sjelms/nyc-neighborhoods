@@ -2,18 +2,18 @@
 
 ## Bay Ridge
 
-Bay Ridge is a neighborhood in the southwest corner of the New York City borough of Brooklyn. It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano-Narrows Bridge to the south. The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton.
+Not available.
 
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A largely residential southwest Brooklyn neighborhood with a mix of apartments and houses, waterfront views along the Narrows, and a long-established, diverse community.
+- **WHAT TO EXPECT:** Insufficient information in the provided text to describe what to expect in Bay Ridge.
 
 
-- **UNEXPECTED APPEAL:** A distinct small-town feel at the edge of the city, shaped by its historic development as a resort area and its proximity to the Verrazzano-Narrows Bridge and Fort Hamilton.
+- **UNEXPECTED APPEAL:** The provided text does not contain enough detail to identify any unexpected appeal of Bay Ridge.
 
 
-- **THE MARKET:** Housing consists mainly of low- to mid-rise apartment buildings and attached homes, with some larger houses, serving primarily as a residential area for commuters and long-term residents.
+- **THE MARKET:** No information about the real estate or rental market in Bay Ridge is available in the provided text.
 
 
 
@@ -21,21 +21,20 @@ Bay Ridge is a neighborhood in the southwest corner of the New York City borough
 
 ### Around the Block
 
-Bay Ridge is a southwest Brooklyn neighborhood overlooking New York Harbor, with tree-lined streets, a mix of apartments and houses, and strong ties to its historic Fort Hamilton section. It offers a quieter residential environment framed by Sunset Park, Dyker Heights, the Narrows, and the Verrazzano-Narrows Bridge.
+The provided text only includes geographic coordinates for Bay Ridge in Brooklyn and does not describe the neighborhood’s character.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 79371
-- **Population Density:** 37400
-- **Area:** 718, 347, 929 , and 917
+- **Population:** N/A
+- **Population Density:** N/A
+- **Area:** N/A
 - **Boundaries:**  
-  - **East to West:** The Narrows and the Belt Parkway on the west to Dyker Heights on the east
-  - **North to South:** Sunset Park on the north to Fort Hamilton Army Base and the Verrazzano-Narrows Bridge on the south
-  - **Adjacent Neighborhoods:** Dyker Heights, Fort Hamilton, Sunset Park
+  - **East to West:** Information not available.
+  - **North to South:** Information not available.
+  - **Adjacent Neighborhoods:** N/A
 - **ZIP Codes:**
-- 11209
-- 11220
+N/A
 
 ---
 

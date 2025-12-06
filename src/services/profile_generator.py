@@ -75,31 +75,13 @@ class ProfileGenerator:
             logger.error(f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}. Skipping.")
             return False, None
 
-        # 3a. Fetch REST summary (more stable than HTML)
-        summary_api_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{neighborhood_name.replace(' ', '_')},_{borough.replace(' ', '_')}"
-        summary_data = self.web_fetcher.fetch_json(summary_api_url)
-        print("--- WIKIPEDIA SUMMARY API RESPONSE ---")
-        import json
-        print(json.dumps(summary_data, indent=2))
-        print("------------------------------------")
-        summary_text = ""
-        if summary_data:
-            summary_text = summary_data.get("extract", "") or summary_data.get("description", "")
-
-        # 3b. Parse content
-        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name, summary_override=summary_text)
+        # 3. Parse content
+        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name)
         
         # Add source URL to raw data for tracking
         if "sources" not in raw_data:
             raw_data["sources"] = []
         raw_data["sources"].append(wikipedia_url)
-
-        # Provide cleaned page text to the LLM (truncated to keep payload reasonable)
-        try:
-            page_text = BeautifulSoup(html_content, "html.parser").get_text(" ", strip=True)
-            raw_data["page_text"] = page_text[:12000]  # limit to ~12k chars
-        except Exception:
-            raw_data["page_text"] = ""
 
         # 4. Normalize data (now passing Open Data fetcher/parser)
         profile = self.data_normalizer.normalize(raw_data, neighborhood_name, borough)

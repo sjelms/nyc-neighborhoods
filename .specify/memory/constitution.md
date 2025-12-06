@@ -24,7 +24,7 @@ Prioritize data accuracy and source traceability by preferring high-authority so
 Produce standalone Markdown files per neighborhood with a fixed template, including metadata (Version, Ratified Date, Last Amended Date). Follow `Neighborhood_Borough.md` naming convention. Maintain a companion log for generation details and warnings.
 
 ### III. Python-First Development
-All core development must utilize Python 3.x. Adhere to the preferred stack: `requests`, `BeautifulSoup`, `pandas`, `pydantic` (or `dataclasses`), `typer` or `argparse`. Maintain a modular component architecture.
+All core development must utilize Python 3.x. Adhere to the preferred stack: `requests`, `beautifulsoup4`, `pandas`, `pydantic` (or `dataclasses`), `typer` or `argparse`. Maintain a modular component architecture.
 
 ### IV. Verification & Robustness
 Implement comprehensive testing and debugging for all components. Start with a subset of neighborhoods for verification. Verify formatting, structure, and data accuracy. Handle missing/malformed sections with warnings and flag any missing or ambiguous values.
@@ -62,6 +62,6 @@ Design the system to be maintainable, extensible, and easy to review/update. Imp
 
 ## Governance
 This Constitution supersedes all other project practices. Amendments require a documented rationale, approval from project leads, and a migration plan if applicable. All code reviews must verify compliance with these principles. Versioning of outputs and the Constitution itself must adhere to semantic versioning guidelines outlined below.
-During implementation, the agent responsible for tasks MUST update the corresponding `tasks.md` file by marking completed tasks as `[x]` to provide real-time progress tracking.
+During implementation, the agent responsible for tasks MUST update the corresponding `tasks.md` file by marking completed tasks as `[x]` to provide real-time progress tracking. **Failed or superseded tasks must be explicitly marked as 'cancelled' or 'failed' with a brief explanation, never deleted from `tasks.md`.** This ensures a complete record of development attempts and facilitates learning.
 
-**Version**: 1.1.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-02
+**Version**: 1.1.0 | **Ratified**: 2025-12-02 | **Last Amended**: 2025-12-06

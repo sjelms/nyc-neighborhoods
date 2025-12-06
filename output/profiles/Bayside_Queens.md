@@ -2,18 +2,18 @@
 
 ## Bayside
 
-Bayside is a neighborhood in the New York City borough of Queens. It is bounded by Whitestone to the northwest, the Long Island Sound and Little Neck Bay to the northeast, Douglaston to the east, Oakland Gardens to the south, and Fresh Meadows to the west. CNN Money ranked Bayside as one of the most expensive housing markets nationally when analyzing comparable detached homes. Despite its large housing stock of free-standing homes, it ranks high nationally in population density.
+Not available.
 
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A largely residential Queens neighborhood with many free-standing homes and relatively high population density.
+- **WHAT TO EXPECT:** Insufficient information in the provided text to describe what to expect in Bayside.
 
 
-- **UNEXPECTED APPEAL:** Despite its suburban-style housing stock, it ranks high nationally in population density and is considered one of the more expensive housing markets for detached homes.
+- **UNEXPECTED APPEAL:** The provided text does not contain details about any unexpected appeals of Bayside.
 
 
-- **THE MARKET:** Known for comparatively expensive detached houses within Queens.
+- **THE MARKET:** No information about the housing or real estate market in Bayside is available in the provided text.
 
 
 
@@ -21,22 +21,20 @@ Bayside is a neighborhood in the New York City borough of Queens. It is bounded 
 
 ### Around the Block
 
-Bayside is a primarily residential northeastern Queens neighborhood of free-standing homes, bordered by waterfront to the north and other low-rise neighborhoods on all sides. It combines a suburban feel with relatively high population density and a reputation for higher home prices.
+The provided text only includes geographic coordinates for Bayside in Queens and does not describe the neighborhood’s character.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** 43808
-- **Population Density:** 23.6
-- **Area:** 718, 347, 929 , and 917
+- **Population:** N/A
+- **Population Density:** N/A
+- **Area:** N/A
 - **Boundaries:**  
-  - **East to West:** Whitestone to Fresh Meadows
-  - **North to South:** Long Island Sound and Little Neck Bay to Oakland Gardens
-  - **Adjacent Neighborhoods:** Auburndale, Douglaston, Fresh Meadows, Hollis Hills, Oakland Gardens, Whitestone
+  - **East to West:** Information not available.
+  - **North to South:** Information not available.
+  - **Adjacent Neighborhoods:** N/A
 - **ZIP Codes:**
-- 11360
-- 11361
-- 11364
+N/A
 
 ---
 
