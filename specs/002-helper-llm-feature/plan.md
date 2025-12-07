@@ -8,6 +8,31 @@ This plan addresses critical bugs and architectural deficiencies in the LLM-base
 1.  **Immediate Bug Fix**: Diagnose and resolve the issue causing the LLM to return unusable data, despite successful API calls.
 2.  **Architectural Refactoring**: Overhaul the caching and logging systems to improve debuggability, reduce redundant API calls, and increase data traceability.
 
+---
+## Post-mortem on the previous LLM-first attempt (did not work)
+- Relying on the LLM to extract everything from `page_text` failed because `page_text` was often empty or missing key sections, so the LLM had nothing to parse.
+- Transit details stayed empty when the HTML had mixed structured/unstructured content (e.g., Astoria), and the prompt alone could not compensate.
+- Open Data integration remained aspirational and never contributed real fields; it added complexity without improving output.
+
+**What we should not repeat**
+- Do not depend on LLM extraction without first providing solid, deterministic scraped fields.
+- Do not assume section headers are consistent; fall back to heuristics across paragraphs and lists.
+- Do not ship without fixture-based tests against cached Wikipedia HTML (e.g., `cache/html/9bbcb6b6c18e86476af39c9f34bd6830.html`).
+
+---
+## Updated direction: Wikipedia-first, LLM-as-gap-filler
+1) **Deterministic scrape first**
+   - Parse infobox for population, density, area, ZIP codes.
+   - Heuristically gather boundaries, adjacent neighborhoods, and transportation from section text and inline mentions (subway line tokens, bus regexes, station keywords, highway patterns).
+2) **LLM only fills gaps**
+   - If a field is empty/weak, send the scraped facts plus `page_text` to the LLM to enrich just the missing pieces.
+   - Keep LLM output merge-safe and traceable (cache + warning that LLM filled a field).
+3) **Verification on real pages**
+   - Add tests/fixtures using the cached Astoria page to assert population/area/ZIPs/transit are present.
+   - CLI run on a small set should produce non-empty Key Details, Facts, Transit, and Boundaries before relying on LLM.
+4) **De-scope Open Data for now**
+   - Keep the hook but do not depend on it for correctness in this pass.
+
 ## Proposed High-Performance Pipeline
 
 This new design introduces a dedicated caching layer for the expensive LLM calls.
