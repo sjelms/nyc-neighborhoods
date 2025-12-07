@@ -77,6 +77,12 @@ This task list is generated based on the implementation plan. Tasks are organize
 - [x] T024 Tighten `LLMHelper` prompt/merge path to respect scraped values (no overwrites unless empty) and ensure the LLM cache path is recorded when enrichment happens.
 - [ ] T025 Run the pipeline on a small set (Astoria and one other) with `--force-regenerate`, confirm Markdown sections are populated from scrape+LLM, and backfill `generation_log.json` with useful warnings/LLM cache refs.
 
+## Phase 7: LLM commercial key details focus (New)
+- [x] T026 Update LLM prompt to generate Key Details with a commercial/CRE focus (retail, industrial, warehouse, manufacturing, parking) sourced from the Wikipedia page; avoid residential framing.
+- [ ] T027 Ensure DataNormalizer accepts LLM-filled Key Details when scraped values are empty/placeholder and logs which fields were LLM-derived.
+- [ ] T028 Add a targeted test (fixture + LLM mock) that asserts Key Details are populated (non-placeholder) for a sample page when the scraped data is blank.
+- [ ] T029 Re-run a small batch (including Astoria) and verify Key Details are populated with CRE-oriented content; mark T025 if overall output passes.
+
 ## Archive Tasks
 ### Phase 1: Diagnosis & Immediate Bug Fix 
 *   **Initial Problem**: The LLM pipeline was failing to produce enriched Markdown output, despite being integrated.

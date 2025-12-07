@@ -242,6 +242,12 @@ class DataNormalizer:
 
         # --- Construct NeighborhoodProfile ---
         try:
+            around_text = raw_data.get("around_the_block", "").strip()
+            if not around_text:
+                summary_text = raw_data.get("summary", "").strip()
+                if summary_text:
+                    # Prefer a condensed version of summary for Around the Block when no LLM enrichment
+                    around_text = summary_text[:400]
             profile = NeighborhoodProfile(
                 version=self.version,
                 ratified_date=self.ratified_date,
@@ -250,7 +256,7 @@ class DataNormalizer:
                 borough=borough,
                 summary=raw_data.get("summary", ""),
                 key_details=key_details,
-                around_the_block=raw_data.get("around_the_block", ""),
+                around_the_block=around_text,
                 neighborhood_facts=neighborhood_facts,
                 transit_accessibility=transit_accessibility,
                 commute_times=commute_times,

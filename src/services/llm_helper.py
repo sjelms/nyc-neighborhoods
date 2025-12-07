@@ -82,6 +82,25 @@ class LLMHelper:
         if not self.is_enabled:
             return {}
 
+        def _is_effectively_empty(payload: Dict[str, Any]) -> bool:
+            kd = payload.get("key_details", {})
+            nf = payload.get("neighborhood_facts", {})
+            ta = payload.get("transit_accessibility", {})
+            if any(kd.get(k) for k in ["what_to_expect", "unexpected_appeal", "the_market"]):
+                return False
+            if payload.get("around_the_block"):
+                return False
+            if any(nf.get(k) for k in ["population", "population_density", "area"]):
+                return False
+            b = nf.get("boundaries", {})
+            if any(b.get(k) for k in ["east_to_west", "north_to_south"]):
+                return False
+            if nf.get("zip_codes"):
+                return False
+            if any(ta.get(k) for k in ["nearest_subways", "major_stations", "bus_routes", "rail_freight_other", "highways_major_roads"]):
+                return False
+            return True
+
         if self.cache_manager:
             cache_filename = self._get_llm_cache_filename(neighborhood_name, borough)
             cache_subdirectory = "llm"
@@ -100,8 +119,15 @@ class LLMHelper:
                     if cached_content:
                         try:
                             parsed = json.loads(cached_content)
-                            parsed['llm_cache_path'] = str(cached_file_path.resolve())
-                            return parsed
+                            if _is_effectively_empty(parsed):
+                                logger.info(f"Cached LLM response for {neighborhood_name} is effectively empty; refreshing.")
+                                try:
+                                    self.cache_manager.delete(cache_filename, cache_subdirectory)
+                                except Exception:
+                                    pass
+                            else:
+                                parsed['llm_cache_path'] = str(cached_file_path.resolve())
+                                return parsed
                         except json.JSONDecodeError:
                             logger.warning(f"Could not parse cached LLM response. Fetching live.")
         
@@ -113,11 +139,16 @@ class LLMHelper:
             }
             
             system_prompt = (
-                "You are an expert data extractor for NYC neighborhood profiles. Your task is to parse the provided 'page_text' "
-                "and populate a STRICT JSON object with the following schema. Ground all answers in the provided text. Do not invent facts.\n"
+                "You are an expert data extractor for NYC neighborhood profiles with a commercial/CRE emphasis. "
+                "Your task is to parse the provided 'page_text' and populate a STRICT JSON object with the schema below. "
+                "Ground all answers in the provided text. Do not invent facts. If truly absent, return empty strings or empty lists.\n"
                 "SCHEMA:\n"
                 "{\n"
-                "  \"key_details\": {\"what_to_expect\": \"...\", \"unexpected_appeal\": \"...\", \"the_market\": \"...\"},\n"
+                "  \"key_details\": {\n"
+                "    \"what_to_expect\": \"...\",\n"
+                "    \"unexpected_appeal\": \"...\",\n"
+                "    \"the_market\": \"...\"\n"
+                "  },\n"
                 "  \"around_the_block\": \"...\",\n"
                 "  \"neighborhood_facts\": {\n"
                 "    \"population\": \"...\",\n"
@@ -134,18 +165,19 @@ class LLMHelper:
                 "    \"highways_major_roads\": []\n"
                 "  }\n"
                 "}\n"
-                "INSTRUCTIONS:\n"
-                "1.  **key_details**: Synthesize short, neutral, one-sentence descriptions for each key from the entire text.\n"
-                "2.  **around_the_block**: Write a 1-2 sentence narrative capturing the neighborhood's essence from the summary and introduction.\n"
-                "3.  **neighborhood_facts**:\n"
-                "    - Find Population, Area, and Density from an infobox or 'Demographics' section. Convert numbers to plain integers where possible. If a value is given in multiple units, prefer the imperial unit (e.g., sq mi over km2).\n"
-                "    - For 'boundaries', find descriptions of what borders the neighborhood (e.g., 'bounded by...'). Synthesize the E-W and N-S descriptions. List all unique adjacent neighborhoods.\n"
-                "    - For 'zip_codes', find all 5-digit postal codes mentioned in the 'ZIP Codes' section or infobox.\n"
-                "4.  **transit_accessibility**: Scour the 'Transportation' or 'Public transportation' section of the 'page_text'.\n"
-                "    - `nearest_subways`: Find all subway lines. They are often single letters or numbers (e.g., N, W, R, 4, 5, 6).\n"
-                "    - `bus_routes`: Find all bus routes. They usually start with a letter (Q, B, M, Bx) followed by a number (e.g., Q101, M60).\n"
-                "    - `major_stations`: List any prominent train or subway station names.\n"
-                "    - `highways_major_roads`: List all named highways, parkways, or major boulevards."
+                "INSTRUCTIONS (commercial focus):\n"
+                "1) key_details: Write concise, neutral, CRE-aware sentences. Mention retail corridors, industrial/warehouse presence, manufacturing legacy, parking availability, zoning/land-use hints, and commercial vibrancy when present. Avoid residential language.\n"
+                "2) around_the_block: 1-2 sentences summarizing the commercial vibe (retail streets, mixed-use density, industrial edges) from the intro/overview.\n"
+                "3) neighborhood_facts:\n"
+                "   - population/density/area: prefer values from infobox/demographics; keep units as seen (plain text ok).\n"
+                "   - boundaries: summarize E-W and N-S if text mentions 'bounded by' or similar; list adjacent neighborhoods if explicit.\n"
+                "   - zip_codes: list all 5-digit ZIPs.\n"
+                "4) transit_accessibility: from transportation/public transit sections.\n"
+                "   - nearest_subways: subway lines (single letters/numbers).\n"
+                "   - bus_routes: bus IDs (Q, B, M, Bx + number).\n"
+                "   - major_stations: named stations/terminals.\n"
+                "   - highways_major_roads: named highways/major arterials.\n"
+                "Return ONLY the JSON object."
             )
 
             user_prompt = "Input text to parse:\n" + json.dumps(llm_input, ensure_ascii=False)

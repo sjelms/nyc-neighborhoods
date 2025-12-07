@@ -65,6 +65,16 @@ class TemplateRenderer:
         else:
             content = commute_section_pattern.sub("", content)
 
+        # Online Resources links
+        if profile.sources:
+            wiki_link = next((src for src in profile.sources if "wikipedia.org" in src), "")
+            official_link = next((src for src in profile.sources if "nyc.gov" in src or "official" in src.lower()), "")
+            content = content.replace("[Neighborhood Website URL]", official_link or "N/A")
+            content = content.replace("[Wikipedia URL]", wiki_link or "N/A")
+        else:
+            content = content.replace("[Neighborhood Website URL]", "N/A")
+            content = content.replace("[Wikipedia URL]", "N/A")
+
         # Final cleanup
         content = content.replace('…', '')
         return content.strip()
