@@ -7,13 +7,13 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A dense Brooklyn neighborhood with a strong commercial spine along Fulton Street and multiple north–south retail corridors at Bedford, Nostrand, and Stuyvesant Avenues, supporting a wide mix of small businesses and service uses amid historic brownstone and mixed-use building stock.
+- **WHAT TO EXPECT:** A large, historic Brooklyn neighborhood with extensive late-19th and early-20th century brownstone and mixed-use building stock, active along major retail corridors such as Fulton Street and key north–south avenues.
 
 
-- **UNEXPECTED APPEAL:** Despite its long association with disinvestment, Bed-Stuy combines one of the nation’s largest intact Victorian and brownstone districts with multiple historic districts and growing BID-backed streetscape upgrades that enhance the appeal for restaurants, neighborhood retail, and creative enterprises.
+- **UNEXPECTED APPEAL:** The area combines landmarked Victorian and brownstone historic districts with ongoing infrastructure upgrades, business improvement district activity, and growing food, hospitality, and creative-sector offerings.
 
 
-- **THE MARKET:** Significant gentrification since the early 2000s has driven rising rents and real estate prices, attracted Zagat-rated restaurants and new retailers, and focused investment around the Fulton Street–Nostrand Avenue Gateway BID and other key corridors, while existing commercial strips remain heavily neighborhood-serving.
+- **THE MARKET:** Bedford–Stuyvesant has seen significant gentrification since the early 2000s, rising rents and real estate prices, BID-backed retail revitalization on Fulton and Nostrand, and increasing demand for renovated mixed-use and commercial properties.
 
 
 
@@ -53,6 +53,8 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 - M
 - Z
 #### Major Stations:
+- Broadway BMT Jamaica Line corridor
+- Fulton Street IND Fulton Street Line corridor
 - Nostrand Avenue (LIRR)
 #### Bus Routes:
 - B15
@@ -73,8 +75,7 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 - B7
 - Q24
 #### Rail / Freight / Other Transit (if applicable):
-- BMT Franklin Avenue Line
-- Nostrand Avenue station of the Long Island Rail Road
+- Long Island Rail Road Nostrand Avenue station
 #### Highways & Major Roads:
 - Atlantic Avenue
 - Bedford Avenue
@@ -83,6 +84,13 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 - Flushing Avenue
 - Fulton Street
 - Lafayette Avenue
+- Malcolm X Boulevard
 - Marcy Avenue
 - Nostrand Avenue
 - Stuyvesant Avenue
+- Tompkins Avenue
+
+
+### Online Resources
+- **Official Website:** N/A
+- **Wikipedia:** https://en.wikipedia.org/wiki/Bedford_Stuyvesant,_Brooklyn

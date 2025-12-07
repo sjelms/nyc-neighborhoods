@@ -63,6 +63,24 @@ class GenerationLog:
         """Returns all entries in the log."""
         return self.log_data
 
+    def remove_entry(self, neighborhood_name: str, borough: str) -> bool:
+        """
+        Removes a log entry by neighborhood name and borough.
+
+        Returns:
+            True if an entry was removed, False otherwise.
+        """
+        initial_len = len(self.log_data)
+        self.log_data = [
+            entry for entry in self.log_data
+            if not (entry.get("neighborhood_name") == neighborhood_name and entry.get("borough") == borough)
+        ]
+        if len(self.log_data) < initial_len:
+            self._save()
+            logger.debug(f"Removed log entry for {neighborhood_name}, {borough}.")
+            return True
+        return False
+
     def find_entry(self, neighborhood_name: str, borough: str) -> Optional[Dict[str, Any]]:
         """
         Finds a log entry by neighborhood name and borough.

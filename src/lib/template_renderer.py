@@ -56,7 +56,7 @@ class TemplateRenderer:
         content = content.replace("#### Highways & Major Roads:\n…  ", f"#### Highways & Major Roads:\n{self._format_list(profile.transit_accessibility.highways_major_roads) or 'N/A'}")
 
         # Safely remove Commute Times section if no data is available
-        commute_section_pattern = re.compile(r"\n---\s*\n\n### Commute Times.*?(?=\n\n---|$)", re.DOTALL)
+        commute_section_pattern = re.compile(r"\n---\s*\n\n### Commute Times.*?(?=\n\n### Online Resources|$)", re.DOTALL)
         if profile.commute_times:
             table = ["| Destination | Subway | Drive |", "|-------------|--------|-------|"]
             table.extend([f"| {ct.destination} | {ct.subway} | {ct.drive} |" for ct in profile.commute_times])
@@ -66,14 +66,19 @@ class TemplateRenderer:
             content = commute_section_pattern.sub("", content)
 
         # Online Resources links
+        wiki_link = ""
+        official_link = ""
         if profile.sources:
-            wiki_link = next((src for src in profile.sources if "wikipedia.org" in src), "")
-            official_link = next((src for src in profile.sources if "nyc.gov" in src or "official" in src.lower()), "")
-            content = content.replace("[Neighborhood Website URL]", official_link or "N/A")
-            content = content.replace("[Wikipedia URL]", wiki_link or "N/A")
-        else:
-            content = content.replace("[Neighborhood Website URL]", "N/A")
-            content = content.replace("[Wikipedia URL]", "N/A")
+            wiki_link = next((src for src in profile.sources if "wikipedia.org" in src.lower()), "")
+            official_link = next((src for src in profile.sources if "nyc.gov" in src.lower() or "official" in src.lower()), "")
+
+        if not wiki_link and profile.neighborhood_name and profile.borough:
+            # Construct a reasonable Wikipedia URL fallback
+            slug = f"{profile.neighborhood_name.replace(' ', '_')},_{profile.borough.replace(' ', '_')}"
+            wiki_link = f"https://en.wikipedia.org/wiki/{slug}"
+
+        content = content.replace("[Neighborhood Website URL]", official_link or "N/A")
+        content = content.replace("[Wikipedia URL]", wiki_link or "N/A")
 
         # Final cleanup
         content = content.replace('…', '')

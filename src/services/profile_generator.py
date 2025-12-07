@@ -170,9 +170,13 @@ class ProfileGenerator:
             
             # Determine if this profile should be processed based on log and flags
             process_profile = True
-            if self.generation_log and not force_regenerate:
+            if self.generation_log:
                 existing_log_entry = self.generation_log.find_entry(neighborhood, borough)
-                if existing_log_entry:
+                if existing_log_entry and force_regenerate:
+                    removed = self.generation_log.remove_entry(neighborhood, borough)
+                    if removed:
+                        logger.info(f"Force regenerate: removed existing log entry for {neighborhood}, {borough} before reprocessing.")
+                elif existing_log_entry and not force_regenerate:
                     if update_since:
                         # Convert log's last_amended_date string to date object for comparison
                         log_amended_date_str = existing_log_entry.get("last_amended_date")
@@ -192,11 +196,9 @@ class ProfileGenerator:
                             except ValueError:
                                 logger.warning(f"Log entry for {neighborhood}, {borough} has invalid 'last_amended_date': '{log_amended_date_str}'. Processing.")
                         else:
-                            # If no last_amended_date in log, treat as old and don't skip if update_since is present
-                            # Or decide to always process if amended date is missing. For now, process if missing.
                             logger.warning(f"Log entry for {neighborhood}, {borough} is missing 'last_amended_date'. Processing.")
 
-                    if process_profile and not update_since: # Skip if no update_since and not force_regenerate
+                    if process_profile and not update_since:
                         process_profile = False
                         results["skipped"] += 1
                         results["details"].append({

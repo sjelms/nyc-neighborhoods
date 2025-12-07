@@ -66,7 +66,7 @@ class WikipediaParser:
             for element in cleaned_parser_output.find_all(class_=element_class):
                 element.decompose()
 
-        summary = self._extract_summary(cleaned_parser_output, neighborhood_name)
+        summary, secondary_para = self._extract_summary(cleaned_parser_output, neighborhood_name)
         page_text = self._extract_page_text(cleaned_parser_output)
 
         infobox_data = self._parse_infobox(infobox_po)  # use original to avoid any accidental table removal
@@ -103,7 +103,7 @@ class WikipediaParser:
             "summary": summary,
             "page_text": page_text,
             "key_details": {},
-            "around_the_block": around_text,
+            "around_the_block": around_text or secondary_para or summary,
             "neighborhood_facts": neighborhood_facts,
             "transit_accessibility": transit_data,
             "warnings": warnings,
@@ -192,8 +192,14 @@ class WikipediaParser:
             data["zip_codes"] = sorted(set(zips))
         return data
 
-    def _extract_summary(self, cleaned_parser_output: BeautifulSoup, neighborhood_name: str) -> str:
+    def _extract_summary(self, cleaned_parser_output: BeautifulSoup, neighborhood_name: str) -> (str, str):
+        """
+        Returns a tuple: (summary, secondary_paragraph_candidate)
+        """
         summary = ""
+        secondary = ""
+        meaningful_paras = []
+
         for p in cleaned_parser_output.find_all("p"):
             text = p.get_text(" ", strip=True)
             if not text:
@@ -201,12 +207,30 @@ class WikipediaParser:
             if "coordinates" in text.lower() and len(text) < 120:
                 # Likely the coordinates-only lead paragraph
                 continue
-            summary = text
-            break
+            meaningful_paras.append(text)
+            if len(meaningful_paras) >= 2:
+                break
+
+        if meaningful_paras and len(meaningful_paras) < 2:
+            # keep scanning for the next distinct paragraph after the first
+            seen_first = meaningful_paras[0]
+            for p in cleaned_parser_output.find_all("p"):
+                text = p.get_text(" ", strip=True)
+                if not text or text == seen_first:
+                    continue
+                if "coordinates" in text.lower() and len(text) < 120:
+                    continue
+                meaningful_paras.append(text)
+                break
+
+        if meaningful_paras:
+            summary = meaningful_paras[0]
+            if len(meaningful_paras) > 1:
+                secondary = meaningful_paras[1]
 
         if not summary:
             logger.warning(f"[{neighborhood_name}] Could not extract short summary.")
-        return summary
+        return summary, secondary
 
     def _extract_page_text(self, cleaned_parser_output: BeautifulSoup) -> str:
         page_text_parts = []

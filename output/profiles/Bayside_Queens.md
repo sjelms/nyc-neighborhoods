@@ -7,13 +7,13 @@ Bayside is a neighborhood in the New York City borough of Queens . It is bounded
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** Insufficient information in the provided text to describe what to expect in Bayside.
+- **WHAT TO EXPECT:** Bayside is a northeastern Queens neighborhood with strong rail and highway access, a network of local retail and service strips, and several notable institutional anchors such as Queensborough Community College and FDNY’s EMS Training Academy at Fort Totten.
 
 
-- **UNEXPECTED APPEAL:** The provided text does not contain details about any unexpected appeals of Bayside.
+- **UNEXPECTED APPEAL:** Waterfront open space at Little Neck Bay, Fort Totten and multiple parks add recreational and destination value alongside affluent enclaves like Bay Terrace and the gated Bayside Gables community.
 
 
-- **THE MARKET:** No information about the housing or real estate market in Bayside is available in the provided text.
+- **THE MARKET:** The area is characterized by some of the most expensive housing markets for detached homes, affluent condo and co-op complexes around Bay Terrace, and long-established commercial properties including restaurant/banquet uses and historic industrial sites such as the former Straiton-Storm Cigar Factory.
 
 
 
@@ -27,8 +27,8 @@ Bayside is a neighborhood in the New York City borough of Queens . It is bounded
 
 ### Neighborhood Facts
 - **Population:** 43,808
-- **Population Density:** N/A
-- **Area:** N/A
+- **Population Density:** 23.6 inhabitants per acre (15,100/sq mi; 5,800/km²)
+- **Area:** 1,857.24 acres (751.60 ha)
 - **Boundaries:**  
   - **East to West:** Bayside is bordered by the
 Long Island Sound
@@ -37,7 +37,7 @@ Little Neck Bay
 to the northeast.
   - **North to South:** Bayside Hills
 Bayside Hills is a subdivision of Bayside's south side, bordered by 48th Avenue to the north, the Long Island Expressway to the south, 211th Street to the west, and Springfield Boulevard on the east.
-  - **Adjacent Neighborhoods:** N/A
+  - **Adjacent Neighborhoods:** Auburndale, Bay Terrace, Bellerose, Douglaston, Douglaston–Little Neck, Fresh Meadows, Hollis Hills, Oakland Gardens, Queens Village, Whitestone
 - **ZIP Codes:**
 - 11360
 - 11361
@@ -50,7 +50,11 @@ Bayside Hills is a subdivision of Bayside's south side, bordered by 48th Avenue 
 - 7
 - E
 #### Major Stations:
+- Bayside station
+- Flushing–Main Street station
+- Grand Central
 - Main Street station
+- New York Penn Station
 - York Penn Station
 - the Bayside station
 #### Bus Routes:
@@ -67,17 +71,37 @@ Bayside Hills is a subdivision of Bayside's south side, bordered by 48th Avenue 
 - Q75
 - Q76
 - Q88
+- QM2
+- QM20
+- QM32
+- QM35
+- QM36
+- QM5
+- QM6
+- QM8
+- n20G
+- n20X
 #### Rail / Freight / Other Transit (if applicable):
-N/A
+- Long Island Rail Road Port Washington Branch
 #### Highways & Major Roads:
 - Bell Boulevard
 - Clearview Expressway
+- Clearview Expressway (I-295)
+- Cross Island Parkway
+- Francis Lewis Boulevard
 - I-295
 - I-495
 - Island Expressway
 - Island Parkway
 - Lewis Boulevard
+- Long Island Expressway (I-495)
 - Main Street
 - Northern Boulevard
 - Rail Road
+- Union Turnpike
 - Utopia Parkway
+
+
+### Online Resources
+- **Official Website:** N/A
+- **Wikipedia:** https://en.wikipedia.org/wiki/Bayside,_Queens
