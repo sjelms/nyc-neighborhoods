@@ -65,10 +65,33 @@ class DataNormalizer:
 
         # --- LLM-assisted structuring (optional, after merging sources) ---
         try:
-            if self.llm_helper and self.llm_helper.is_enabled:
+            def _needs_llm(data: Dict[str, Any]) -> bool:
+                nf = data.get("neighborhood_facts", {})
+                ta = data.get("transit_accessibility", {})
+                kd = data.get("key_details", {})
+                if not data.get("summary"):
+                    return True
+                if not data.get("around_the_block"):
+                    return True
+                if not nf.get("population") or nf.get("population") == "N/A":
+                    return True
+                if not nf.get("area") or nf.get("area") == "N/A":
+                    return True
+                if not nf.get("zip_codes"):
+                    return True
+                if not kd.get("what_to_expect") or not kd.get("unexpected_appeal") or not kd.get("the_market"):
+                    return True
+                transit_keys = ["nearest_subways", "bus_routes", "major_stations", "highways_major_roads"]
+                if any(not ta.get(k) for k in transit_keys):
+                    return True
+                return False
+
+            if self.llm_helper and self.llm_helper.is_enabled and _needs_llm(raw_data):
                 refined = self.llm_helper.refine_profile_inputs(raw_data, neighborhood_name, borough)
+                filled_fields: List[str] = []
+
                 if refined:
-                    
+
                     def _merge_lists(original: List, new: List) -> List:
                         """Combine lists and return a sorted, unique list."""
                         return sorted(list(set(original + new)))
@@ -78,30 +101,31 @@ class DataNormalizer:
                         raw_kd = raw_data.get("key_details", {})
                         for k in ["what_to_expect", "unexpected_appeal", "the_market"]:
                             v = refined["key_details"].get(k)
-                            # Overwrite if new value exists and old one is empty/placeholder
                             if v and not raw_kd.get(k):
                                 raw_kd[k] = v
+                                filled_fields.append(f"key_details.{k}")
                         raw_data["key_details"] = raw_kd
 
                     # --- Merge Around the Block ---
                     atb = refined.get("around_the_block")
                     if atb and isinstance(atb, str):
                         existing_atb = raw_data.get("around_the_block", "")
-                        # Overwrite if new is longer or existing is empty
                         if len(atb) > len(existing_atb) or not existing_atb:
                             raw_data["around_the_block"] = atb
+                            filled_fields.append("around_the_block")
 
                     # --- Merge Neighborhood Facts ---
                     nf_ref = refined.get("neighborhood_facts") or {}
                     if isinstance(nf_ref, dict):
                         nf_raw = raw_data.get("neighborhood_facts", {})
-                        
+
                         # Singular text fields (population, density, area)
                         for field in ["population", "population_density", "area"]:
                             val = nf_ref.get(field)
                             if val not in (None, "", "N/A"):
                                 if not nf_raw.get(field) or nf_raw.get(field) == "N/A":
                                     nf_raw[field] = val
+                                    filled_fields.append(f"neighborhood_facts.{field}")
 
                         # Boundaries (text and list fields)
                         b_ref = nf_ref.get("boundaries") or {}
@@ -111,26 +135,32 @@ class DataNormalizer:
                                 bv = b_ref.get(k)
                                 if bv and not b_raw.get(k):
                                     b_raw[k] = bv
-                            
+                                    filled_fields.append(f"boundaries.{k}")
+
                             # Merge adjacent neighborhoods
                             adj_new = b_ref.get("adjacent_neighborhoods", [])
                             if isinstance(adj_new, list) and adj_new:
                                 adj_orig = b_raw.get("adjacent_neighborhoods", [])
-                                b_raw["adjacent_neighborhoods"] = _merge_lists(adj_orig, adj_new)
-                            
+                                merged_adj = _merge_lists(adj_orig, adj_new)
+                                if merged_adj != adj_orig:
+                                    filled_fields.append("boundaries.adjacent_neighborhoods")
+                                b_raw["adjacent_neighborhoods"] = merged_adj
+
                             nf_raw["boundaries"] = b_raw
 
                         # Merge ZIP codes
                         zips_new = nf_ref.get("zip_codes", [])
                         if isinstance(zips_new, list) and zips_new:
                             zips_orig_raw = nf_raw.get("zip_codes", [])
-                            # Flatten original list, which may contain comma-separated strings
                             zips_orig_flat = []
                             for z in zips_orig_raw:
                                 zips_orig_flat.extend([item.strip() for item in str(z).split(',')])
-                            
-                            nf_raw["zip_codes"] = _merge_lists(zips_orig_flat, zips_new)
-                            
+
+                            merged_zips = _merge_lists(zips_orig_flat, zips_new)
+                            if merged_zips != zips_orig_raw:
+                                filled_fields.append("neighborhood_facts.zip_codes")
+                            nf_raw["zip_codes"] = merged_zips
+
                         raw_data["neighborhood_facts"] = nf_raw
 
                     # --- Merge Transit Accessibility ---
@@ -148,10 +178,18 @@ class DataNormalizer:
                             lst_new = ta_ref.get(k, [])
                             if isinstance(lst_new, list) and lst_new:
                                 lst_orig = ta_raw.get(k, [])
-                                ta_raw[k] = _merge_lists(lst_orig, lst_new)
+                                merged_lst = _merge_lists(lst_orig, lst_new)
+                                if merged_lst != lst_orig:
+                                    filled_fields.append(f"transit_accessibility.{k}")
+                                ta_raw[k] = merged_lst
                         raw_data["transit_accessibility"] = ta_raw
 
-                    current_warnings.append("Applied LLM-assisted structuring with smart merge.")
+                    if filled_fields:
+                        current_warnings.append(
+                            f"Applied LLM-assisted structuring; filled/enhanced: {', '.join(sorted(set(filled_fields)))}."
+                        )
+                    if refined.get("llm_cache_path"):
+                        current_warnings.append(f"LLM cache: {refined['llm_cache_path']}")
         except Exception as e:
             logger.debug(f"LLM structuring skipped due to error: {e}")
 

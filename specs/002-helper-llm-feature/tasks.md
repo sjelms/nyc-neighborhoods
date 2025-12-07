@@ -71,10 +71,10 @@ This task list is generated based on the implementation plan. Tasks are organize
 ## Phase 6: Wikipedia-first deterministic scrape, LLM as gap-filler (New)
 
 - [x] T020 Capture lessons-learned from the LLM-first approach in `plan.md` (documented failures and anti-patterns).
-- [ ] T021 Enhance `WikipediaParser` to extract infobox metrics (population, population density, area, ZIP codes) plus heuristics for boundaries/adjacent areas and transit tokens from both sections and inline text.
-- [ ] T022 Add fixture-based tests using `cache/html/9bbcb6b6c18e86476af39c9f34bd6830.html` to assert non-empty population/area/ZIP/transit outputs from the parser.
-- [ ] T023 Update `DataNormalizer` to merge scraped fields first, then call the LLM only for missing/weak values; add warnings when the LLM fills gaps.
-- [ ] T024 Tighten `LLMHelper` prompt/merge path to respect scraped values (no overwrites unless empty) and ensure the LLM cache path is recorded when enrichment happens.
+- [x] T021 Enhance `WikipediaParser` to extract infobox metrics (population, population density, area, ZIP codes) plus heuristics for boundaries/adjacent areas and transit tokens from both sections and inline text.
+- [x] T022 Add fixture-based tests using `cache/html/9bbcb6b6c18e86476af39c9f34bd6830.html` to assert non-empty population/area/ZIP/transit outputs from the parser.
+- [x] T023 Update `DataNormalizer` to merge scraped fields first, then call the LLM only for missing/weak values; add warnings when the LLM fills gaps.
+- [x] T024 Tighten `LLMHelper` prompt/merge path to respect scraped values (no overwrites unless empty) and ensure the LLM cache path is recorded when enrichment happens.
 - [ ] T025 Run the pipeline on a small set (Astoria and one other) with `--force-regenerate`, confirm Markdown sections are populated from scrape+LLM, and backfill `generation_log.json` with useful warnings/LLM cache refs.
 
 ## Archive Tasks

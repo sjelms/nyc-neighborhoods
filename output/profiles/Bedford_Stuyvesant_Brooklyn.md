@@ -1,8 +1,8 @@
-**Version**: 1.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
+**Version**: 1.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07
 
 ## Bedford Stuyvesant
 
-Not available.
+Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–Stuy , is a neighborhood in the northern section of the New York City borough of Brooklyn . Bedford–Stuyvesant is bordered by Flushing Avenue to the north (bordering Williamsburg ), Classon Avenue to the west (bordering Clinton Hill ), Broadway to the east (bordering Bushwick and East New York ), and Atlantic Avenue to the south (bordering Crown Heights and Brownsville ). The main shopping street, Fulton Street, runs east–west the length of the neighborhood and intersects high-traffic north–south streets including Bedford Avenue , Nostrand Avenue , and Stuyvesant Avenue. Bedford–Stuyvesant contains four smaller neighborhoods: Bedford, Stuyvesant Heights, Ocean Hill , and Weeksville (also part of Crown Heights). Part of Clinton Hill was once considered part of Bedford–Stuyvesant.
 
 ---
 
@@ -21,26 +21,32 @@ Not available.
 
 ### Around the Block
 
-
+Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–Stuy , is a neighborhood in the northern section of the New York City borough of Brooklyn . Bedford–Stuyvesant is bordered by Flushing Avenue to the north (bordering Williamsburg ), Classon Avenue to the west (bordering Clinton Hill ), Broadway to the east (bordering Bushwick and East New York ), and Atlantic Avenue to the south (bordering Crown Heights and Brownsville ). The main shopping street, Fulton Street, runs east–west the length of the neighborhood and intersects high-traffic north–south streets including Bedford Avenue , Nostrand Avenue , and Stuyvesant Avenue. Bedford–Stuyvesant contains four smaller neighborhoods: Bedford, Stuyvesant Heights, Ocean Hill , and Weeksville (also part of Crown Heights). Part of Clinton Hill was once considered part of Bedford–Stuyvesant.
 
 ---
 
 ### Neighborhood Facts
-- **Population:** N/A
+- **Population:** 166,380
 - **Population Density:** N/A
-- **Area:** N/A
+- **Area:** 2.8 sq mi (7.3 km 2 )
 - **Boundaries:**  
-  - **East to West:** Information not available.
-  - **North to South:** Information not available.
-  - **Adjacent Neighborhoods:** N/A
+  - **East to West:** Bedford–Stuyvesant is bordered by Flushing Avenue to the north (bordering Williamsburg ), Classon Avenue to the west (bordering Clinton Hill ), Broadway to the east (bordering Bushwick and East New York ), and Atlantic Avenue to the south (bordering Crown Heights and Brownsville ).
+  - **North to South:** The grounds were bordered by Nostrand Avenue, Halsey Street, Marcy Avenue, and Putnam Avenue.
+  - **Adjacent Neighborhoods:** Flushing Avenue to the north, Fulton Street, Macon, Nostrand Avenue
 - **ZIP Codes:**
-N/A
+- 11205
+- 11206
+- 11216
+- 11221
+- 11233
+- 11238
 
 ---
 
 ### Transit & Accessibility
 #### Nearest Subways:
-N/A
+- A
+- C
 #### Major Stations:
 N/A
 #### Bus Routes:
@@ -48,4 +54,4 @@ N/A
 #### Rail / Freight / Other Transit (if applicable):
 N/A
 #### Highways & Major Roads:
-N/A
+- Fulton Street
