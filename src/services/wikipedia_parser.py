@@ -1,399 +1,385 @@
 import logging
-from typing import Dict, List, Optional, Any
-from bs4 import BeautifulSoup, Tag
 import re
+from typing import Dict, Any, List, Optional
+from bs4 import BeautifulSoup, Tag
 
 logger = logging.getLogger("nyc_neighborhoods")
 
 class WikipediaParser:
-    def parse(self, html_content: str, neighborhood_name: str, summary_override: Optional[str] = None) -> Dict[str, Any]:
-        """
-        Parses Wikipedia HTML content to extract neighborhood information.
+    SUBWAY_LINES = {
+        "A", "C", "E", "B", "D", "F", "M", "G", "L", "J", "Z",
+        "N", "Q", "R", "W", "1", "2", "3", "4", "5", "6", "7", "S"
+    }
 
-        Args:
-            html_content: The HTML content of the Wikipedia page.
-            neighborhood_name: The name of the neighborhood (for context in logging).
+    BUS_PATTERN = re.compile(r"\b(?:M|Q|B|Bx|S)\d{1,3}[A-Z]?\b")
+    ZIP_PATTERN = re.compile(r"\b\d{5}(?:-\d{4})?\b")
 
-        Returns:
-            A dictionary containing extracted data.
+    def parse(self, html_content: str, neighborhood_name: str) -> Dict[str, Any]:
         """
-        soup = BeautifulSoup(html_content, 'html.parser')
-        data: Dict[str, Any] = {
-            "summary": "",
-            "key_details": { # Placeholder for now, Wikipedia doesn't have these directly
-                "what_to_expect": "",
-                "unexpected_appeal": "",
-                "the_market": ""
-            },
-            "around_the_block": "",
-            "neighborhood_facts": {
-                "population": "",
-                "population_density": "",
-                "area": "",
-                "boundaries": {
-                    "east_to_west": "",
-                    "north_to_south": "",
-                    "adjacent_neighborhoods": []
+        Parses Wikipedia HTML content to extract structured fields plus a cleaned
+        fallback page_text for LLM use.
+        """
+        soup = BeautifulSoup(html_content, "html.parser")
+
+        parser_outputs = soup.find_all("div", class_="mw-parser-output")
+        text_po = None
+        infobox_po = None
+        if parser_outputs:
+            parser_outputs_sorted = sorted(parser_outputs, key=lambda po: len(po.get_text(" ", strip=True)), reverse=True)
+            text_po = parser_outputs_sorted[0]
+            with_infobox = [po for po in parser_outputs if po.find("table", class_=re.compile("infobox"))]
+            infobox_po = with_infobox[0] if with_infobox else text_po
+
+        if not text_po:
+            logger.warning(f"[{neighborhood_name}] Could not find main content area ('mw-parser-output').")
+            return {
+                "summary": "",
+                "page_text": "",
+                "key_details": {},
+                "around_the_block": "",
+                "neighborhood_facts": {
+                    "population": "",
+                    "population_density": "",
+                    "area": "",
+                    "boundaries": {
+                        "east_to_west": "",
+                        "north_to_south": "",
+                        "adjacent_neighborhoods": []
+                    },
+                    "zip_codes": []
                 },
-                "zip_codes": []
+                "transit_accessibility": {
+                    "nearest_subways": [],
+                    "major_stations": [],
+                    "bus_routes": [],
+                    "rail_freight_other": [],
+                    "highways_major_roads": []
+                },
+                "warnings": ["Could not find main content area."],
+            }
+
+        cleaned_parser_output = BeautifulSoup(str(text_po), "html.parser")
+        for element_class in [
+            "mw-editsection", "reference", "reflist", "portal",
+            "thumb", "gallery", "IPA", "sidebar"
+        ]:
+            for element in cleaned_parser_output.find_all(class_=element_class):
+                element.decompose()
+
+        summary, secondary_para = self._extract_summary(cleaned_parser_output, neighborhood_name)
+        page_text = self._extract_page_text(cleaned_parser_output)
+
+        infobox_data = self._parse_infobox(infobox_po)  # use original to avoid any accidental table removal
+        section_texts = self._collect_section_text(cleaned_parser_output)
+        transit_data = self._extract_transit(section_texts, fallback_text=page_text)
+        boundary_texts = self._extract_boundaries(section_texts, fallback_text=page_text)
+
+        neighborhood_facts = {
+            "population": infobox_data.get("population", ""),
+            "population_density": infobox_data.get("population_density", ""),
+            "area": infobox_data.get("area", ""),
+            "boundaries": {
+                "east_to_west": boundary_texts.get("east_to_west", ""),
+                "north_to_south": boundary_texts.get("north_to_south", ""),
+                "adjacent_neighborhoods": boundary_texts.get("adjacent_neighborhoods", []),
             },
-            "transit_accessibility": {
-                "nearest_subways": [],
-                "major_stations": [],
-                "bus_routes": [],
-                "rail_freight_other": [],
-                "highways_major_roads": []
-            },
-            "commute_times": None, # Not typically found on Wikipedia infoboxes
-            "sources": [], # To be filled by WebFetcher or external tracking
-            "warnings": []
+            "zip_codes": infobox_data.get("zip_codes", []),
         }
 
-        # Extract Short Summary Paragraph
-        # Look for the first few paragraphs after the main title
-        summary_paragraphs = []
-        parser_output = soup.find('div', class_='mw-parser-output')
-        if parser_output:
-            candidates = parser_output.find_all('p')  # grab paragraphs in order
-            for p in candidates:
-                text = p.get_text(strip=True)
-                if not text or text.startswith('Coordinates:') or p.find('span', class_='coordinates'):
-                    continue
-                summary_paragraphs.append(text)
-                if len(summary_paragraphs) >= 2:  # keep it simple: first two non-empty paragraphs
-                    break
-        data["summary"] = " ".join(summary_paragraphs[:3])  # up to first 3 short paragraphs
-        if summary_override and not data["summary"]:
-            data["summary"] = summary_override.strip()
+        warnings: List[str] = []
+        if not neighborhood_facts["population"]:
+            warnings.append("Population not found in Wikipedia infobox.")
+        if not neighborhood_facts["area"]:
+            warnings.append("Area not found in Wikipedia infobox.")
+        if not neighborhood_facts["zip_codes"]:
+            warnings.append("ZIP codes not found; will rely on LLM inference.")
 
-        if not data["summary"]:
-            logger.warning(f"[{neighborhood_name}] Could not extract short summary.")
-            data["warnings"].append("Could not extract short summary from Wikipedia.")
+        around_text = summary
+        if not around_text:
+            first_two = " ".join(page_text.split(". ")[:2]).strip()
+            around_text = first_two
 
-        # Extract Infobox data
-        infobox = soup.find('table', class_=lambda c: c and 'infobox' in c)
-        if infobox:
-            infobox_data = self._parse_infobox(infobox)
+        return {
+            "summary": summary,
+            "page_text": page_text,
+            "key_details": {},
+            "around_the_block": around_text or secondary_para or summary,
+            "neighborhood_facts": neighborhood_facts,
+            "transit_accessibility": transit_data,
+            "warnings": warnings,
+        }
 
-            def _first_value(prefix: str):
-                for k, v in infobox_data.items():
-                    if k.lower().startswith(prefix.lower()):
-                        return v
-                return ""
+    def _clean_cell_text(self, node: Tag) -> str:
+        return node.get_text(" ", strip=True) if node else ""
 
-            # Population
-            data["neighborhood_facts"]["population"] = _first_value("Population")
-            if not data["neighborhood_facts"]["population"]:
-                logger.warning(f"[{neighborhood_name}] Could not extract population from infobox.")
-                data["warnings"].append("Could not extract population from Wikipedia infobox.")
+    def _parse_infobox(self, soup: BeautifulSoup) -> Dict[str, Any]:
+        data: Dict[str, Any] = {"zip_codes": []}
+        infobox = soup.find("table", class_=re.compile("infobox"))
+        if not infobox:
+            return data
 
-            # Area
-            area_raw = _first_value("Area")
-            if isinstance(area_raw, list):
-                area_raw = area_raw[0] if area_raw else ""
-            data["neighborhood_facts"]["area"] = area_raw
-            if not data["neighborhood_facts"]["area"]:
-                logger.warning(f"[{neighborhood_name}] Could not extract area from infobox.")
-                data["warnings"].append("Could not extract area from Wikipedia infobox.")
-            
-            # Population Density (often calculated or missing)
-            data["neighborhood_facts"]["population_density"] = _first_value("Density")
-            if not data["neighborhood_facts"]["population_density"]:
-                logger.warning(f"[{neighborhood_name}] Could not extract population density from infobox.")
-                data["warnings"].append("Could not extract population density from Wikipedia infobox.")
+        current_field: Optional[str] = None
 
-            # ZIP Codes (often under 'Postal code' or similar)
-            zip_codes_raw = ""
-            for k, v in infobox_data.items():
-                if any(lbl in k.lower() for lbl in ["zip", "postal"]):
-                    zip_codes_raw = v
-                    break
-            if isinstance(zip_codes_raw, str):
-                data["neighborhood_facts"]["zip_codes"] = [zc.strip() for zc in zip_codes_raw.split(',') if zc.strip()]
-            elif isinstance(zip_codes_raw, list):
-                data["neighborhood_facts"]["zip_codes"] = [zc.strip() for zc in zip_codes_raw if zc.strip()]
-            
-            if not data["neighborhood_facts"]["zip_codes"]:
-                logger.warning(f"[{neighborhood_name}] Could not extract ZIP codes from infobox.")
-                data["warnings"].append("Could not extract ZIP codes from Wikipedia infobox.")
-            
-            # Highways might be in infobox
-            highways_raw = ""
-            for k, v in infobox_data.items():
-                if any(lbl in k.lower() for lbl in ["highway", "road"]):
-                    highways_raw = v
-                    break
-            if isinstance(highways_raw, str):
-                data["transit_accessibility"]["highways_major_roads"].extend([h.strip() for h in highways_raw.split(',') if h.strip()])
-            elif isinstance(highways_raw, list):
-                data["transit_accessibility"]["highways_major_roads"].extend([h.strip() for h in highways_raw if h.strip()])
+        def set_population(text: str):
+            if data.get("population"):
+                return
+            number_match = re.search(r"([\d,]{3,})", text)
+            data["population"] = number_match.group(1) if number_match else text
 
+        def set_density(text: str):
+            if data.get("population_density"):
+                return
+            density_match = re.search(r"([\d,\.]+)\s*[/\\s]*(?:sq|km)", text)
+            data["population_density"] = density_match.group(1) if density_match else text
 
-        else:
-            logger.warning(f"[{neighborhood_name}] Infobox not found.")
-            data["warnings"].append("Could not find infobox on Wikipedia page.")
+        def set_area(text: str):
+            if data.get("area"):
+                return
+            area_match = re.search(r"([\d,\.]+)\s*(sq mi|sqmi|square mile|mi2|mi²)", text, re.IGNORECASE)
+            km_match = re.search(r"([\d,\.]+)\s*(km2|km²|square kilometre|square kilometer)", text, re.IGNORECASE)
+            if area_match:
+                data["area"] = f"{area_match.group(1)} sq mi"
+            elif km_match:
+                data["area"] = f"{km_match.group(1)} km²"
+            else:
+                data["area"] = text
 
-        # Placeholder for "Around the Block" - grab content from common descriptive sections
-        around_the_block_content = []
-        for heading in soup.find_all(['h2', 'h3', 'h4']):
-            heading_text = heading.get_text(strip=True).lower()
-            if any(text in heading_text for text in ['history', 'culture', 'description', 'overview', 'character']):
-                for sibling in heading.find_next_siblings():
-                    if sibling.name and sibling.name.startswith('h') and sibling.name <= heading.name:
-                        break # Stop at next major heading
-                    if sibling.name == 'p':
-                        text = sibling.get_text(strip=True)
-                        if text and not text.startswith('Coordinates:') and not text.startswith('This article is about'):
-                            around_the_block_content.append(text)
-                            if len(" ".join(around_the_block_content).split()) >= 100: # Roughly 2 paragraphs
-                                break
-                if around_the_block_content:
-                    break
-        data["around_the_block"] = " ".join(around_the_block_content[:2]) # Take up to first 2 paragraphs
+        for row in infobox.find_all("tr"):
+            header = row.find("th")
+            value = row.find("td")
+            header_text = header.get_text(" ", strip=True).lower() if header else ""
+            value_text = self._clean_cell_text(value) if value else ""
 
-        if not data["around_the_block"]:
-            logger.warning(f"[{neighborhood_name}] Could not extract 'Around the Block' narrative.")
-            data["warnings"].append("Could not extract 'Around the Block' narrative from Wikipedia.")
-
-        # Extract Transit information (highly variable, best effort)
-        # Look for sections like "Transportation", "Transit", "Infrastructure"
-        for heading in soup.find_all(['h2', 'h3', 'h4']):
-            heading_text = heading.get_text(strip=True).lower()
-            if any(k in heading_text for k in ['transportation', 'transit', 'transport', 'infrastructure', 'public transport']):
-                for sibling in heading.find_next_siblings():
-                    if sibling.name and sibling.name.startswith('h') and sibling.name <= heading.name:
-                        break # Stop at next major heading
-                    if sibling.name == 'p':
-                        data["transit_accessibility"]["nearest_subways"].extend(self._extract_transit_items(soup, 'Subway', heading))
-                        data["transit_accessibility"]["major_stations"].extend(self._extract_transit_items(soup, 'Station', heading))
-                        data["transit_accessibility"]["bus_routes"].extend(self._extract_transit_items(soup, 'Bus', heading))
-                        data["transit_accessibility"]["rail_freight_other"].extend(self._extract_transit_items(soup, 'Rail', heading))
-                        if not data["transit_accessibility"]["highways_major_roads"]:
-                            data["transit_accessibility"]["highways_major_roads"].extend(self._extract_transit_items(soup, 'Highway', heading))
-                    elif sibling.name in ['ul', 'ol']:
-                        for li in sibling.find_all('li'):
-                            data["transit_accessibility"]["nearest_subways"].extend(self._extract_transit_items(soup, 'Subway', heading))
-                            data["transit_accessibility"]["major_stations"].extend(self._extract_transit_items(soup, 'Station', heading))
-                            data["transit_accessibility"]["bus_routes"].extend(self._extract_transit_items(soup, 'Bus', heading))
-                            data["transit_accessibility"]["rail_freight_other"].extend(self._extract_transit_items(soup, 'Rail', heading))
-                            if not data["transit_accessibility"]["highways_major_roads"]:
-                                data["transit_accessibility"]["highways_major_roads"].extend(self._extract_transit_items(soup, 'Highway', heading))
-
-                # Deduplicate and clean
-                for key in ["nearest_subways", "major_stations", "bus_routes", "rail_freight_other", "highways_major_roads"]:
-                    data["transit_accessibility"][key] = list(set([item.strip() for item in data["transit_accessibility"].get(key, []) if item.strip()]))
-                
-                if not any(data["transit_accessibility"].values()):
-                    logger.warning(f"[{neighborhood_name}] Could not extract detailed transit info, but found transportation section.")
-                    data["warnings"].append("Could not extract detailed transit info from Wikipedia.")
-                break # Stop after first transportation section
-
-        if not any(data["transit_accessibility"].values()):
-            logger.warning(f"[{neighborhood_name}] Could not find transit information section.")
-            data["warnings"].append("Could not find transit information section on Wikipedia page.")
-
-
-        # Boundaries are very hard to parse generally from text. Will leave as placeholders or try to extract from infobox
-        # For now, leave these empty as direct text parsing is too ambiguous without specific patterns.
-        # Infobox might have "Area" and "Coordinates" but not "East to West" etc.
-        data["neighborhood_facts"]["boundaries"]["east_to_west"] = "" # NEEDS MANUAL REVIEW/SOPHISTICATION
-        data["neighborhood_facts"]["boundaries"]["north_to_south"] = "" # NEEDS MANUAL REVIEW/SOPHISTICATION
-        
-        # Adjacent neighborhoods are also hard to parse reliably.
-        data["neighborhood_facts"]["boundaries"]["adjacent_neighborhoods"] = self._extract_adjacent_neighborhoods(soup)
-        if not data["neighborhood_facts"]["boundaries"]["adjacent_neighborhoods"]:
-            logger.warning(f"[{neighborhood_name}] Could not extract adjacent neighborhoods.")
-            data["warnings"].append("Could not extract adjacent neighborhoods from Wikipedia.")
-
-
-        # Key Details fields are abstract and won't be directly found on Wikipedia
-        # These would likely need to be generated or summarized from other data after parsing.
-        data["key_details"]["what_to_expect"] = "" # NEEDS POST-PROCESSING
-        data["key_details"]["unexpected_appeal"] = "" # NEEDS POST-PROCESSING
-        data["key_details"]["the_market"] = "" # NEEDS POST-PROCESSING
-
-        return data
-
-    def _parse_infobox(self, infobox: Tag) -> Dict[str, Any]:
-        """Helper to parse a Wikipedia infobox table."""
-        infobox_data: Dict[str, Any] = {}
-        current_section = None
-        for row in infobox.find_all('tr'):
-            header = row.find('th')
-            value_cell = row.find('td')
-
-            if header and not value_cell:
-                current_section = header.get_text(strip=True)
+            # Skip obvious non-targets
+            if "area code" in header_text:
                 continue
 
-            if header and value_cell:
-                key_text = header.get_text(strip=True).replace('\n', ' ')
-                if key_text.startswith('•'):
-                    # Bulleted sub-row; prepend section if available
-                    key_text = key_text.lstrip('•').strip()
-                    if current_section:
-                        key_text = f"{current_section} {key_text}"
-                value = self._clean_infobox_value(value_cell)
-                infobox_data[key_text] = value
-        return infobox_data
+            if "population density" in header_text:
+                set_density(value_text)
+                current_field = None
+                continue
 
-    def _clean_infobox_value(self, cell: Tag) -> Any:
-        """Cleans and extracts text from an infobox cell, handling lists and nested tags."""
-        # Remove sup tags (citations)
-        for sup in cell.find_all('sup'):
-            sup.decompose()
-        
-        # Handle lists within cells
-        list_items = [li.get_text(strip=True) for li in cell.find_all(['li', 'div'], recursive=False) if li.get_text(strip=True)]
-        if list_items:
-            return [item.replace('\xa0', ' ') for item in list_items]
-        
-        # Try to get text from links if relevant (e.g., for 'Area' which might link to units)
-        links = [a.get_text(strip=True) for a in cell.find_all('a') if a.get_text(strip=True)]
-        if links and len(" ".join(links)) > len(cell.get_text(strip=True)) / 2: # Heuristic: if links cover most of the text
-            return [link.replace('\xa0', ' ') for link in links] # Return all linked items as a list
-        
-        # Fallback to direct text
-        text = cell.get_text(separator=' ', strip=True)
-        # Clean up common infobox patterns like " • " list separators or multiple values separated by newlines
-        text = text.replace('\xa0', ' ').replace(' • ', ', ').replace('\n', ', ').replace(' , ', ', ')
-        return text.strip()
+            if "population" in header_text:
+                current_field = "population"
+                if value_text:
+                    set_population(value_text)
+                    current_field = None
+                continue
 
-    def _extract_transit_items(self, soup: BeautifulSoup, keyword: str, section_heading: Optional[Tag] = None) -> List[str]:
+            if "area" in header_text:
+                current_field = "area"
+                if value_text:
+                    set_area(value_text)
+                    current_field = None
+                continue
+
+            if "zip" in header_text or "postal" in header_text:
+                zips = self.ZIP_PATTERN.findall(value_text)
+                data["zip_codes"] = sorted(set(zips))
+                continue
+
+            # Handle sub-rows (e.g., "• Total" under Population)
+            if current_field and value_text:
+                if current_field == "population":
+                    set_population(value_text)
+                elif current_field == "area":
+                    set_area(value_text)
+                current_field = None
+
+        # Secondary ZIP scan from entire infobox text if none found
+        if not data["zip_codes"]:
+            zips = self.ZIP_PATTERN.findall(infobox.get_text(" ", strip=True))
+            data["zip_codes"] = sorted(set(zips))
+        return data
+
+    def _extract_summary(self, cleaned_parser_output: BeautifulSoup, neighborhood_name: str) -> (str, str):
         """
-        Extracts transit items (e.g., subway lines, bus routes) based on keywords within a given section.
+        Returns a tuple: (summary, secondary_paragraph_candidate)
         """
-        items = []
-        search_scope = section_heading.find_next_siblings() if section_heading else soup.find_all(['p', 'ul', 'ol'])
-        
-        for sibling in search_scope:
-            if sibling.name and sibling.name.startswith('h') and section_heading and sibling.name <= section_heading.name:
-                break # Stop at next major heading
-            
-            if sibling.name == 'p':
-                # Look for patterns like "served by the 1, 2, 3 subway lines"
-                matches = re.findall(rf'\b(?:{keyword}|line|route)[s]?\s(?:[A-Z0-9&/-]+(?:,\s*)?)+\b', sibling.get_text(), re.IGNORECASE)
-                for match in matches:
-                    # Extract just the codes/names
-                    codes = re.findall(r'[A-Z0-9&/-]+', match)
-                    items.extend(codes)
-            elif sibling.name in ['ul', 'ol']:
-                for li in sibling.find_all('li'):
-                    text = li.get_text(strip=True)
-                    if keyword.lower() in text.lower() or any(k in text.lower() for k in ['train', 'station', 'bus', 'highway', 'road']):
-                        # Heuristic: try to get the most relevant part, or the whole item
-                        match = re.search(r'(\b[A-Z0-9&/-]+\b(?:.*?line)?(?:.*?route)?)', text, re.IGNORECASE)
-                        if match:
-                            items.append(match.group(1).replace('line', '').replace('route', '').strip())
-                        else:
-                            items.append(text)
-            
-        return list(set([item.replace('•','').strip() for item in items if item.strip() and len(item) > 1])) # Deduplicate and clean
+        summary = ""
+        secondary = ""
+        meaningful_paras = []
 
+        for p in cleaned_parser_output.find_all("p"):
+            text = p.get_text(" ", strip=True)
+            if not text:
+                continue
+            if "coordinates" in text.lower() and len(text) < 120:
+                # Likely the coordinates-only lead paragraph
+                continue
+            meaningful_paras.append(text)
+            if len(meaningful_paras) >= 2:
+                break
 
-    def _extract_adjacent_neighborhoods(self, soup: BeautifulSoup) -> List[str]:
+        if meaningful_paras and len(meaningful_paras) < 2:
+            # keep scanning for the next distinct paragraph after the first
+            seen_first = meaningful_paras[0]
+            for p in cleaned_parser_output.find_all("p"):
+                text = p.get_text(" ", strip=True)
+                if not text or text == seen_first:
+                    continue
+                if "coordinates" in text.lower() and len(text) < 120:
+                    continue
+                meaningful_paras.append(text)
+                break
+
+        if meaningful_paras:
+            summary = meaningful_paras[0]
+            if len(meaningful_paras) > 1:
+                secondary = meaningful_paras[1]
+
+        if not summary:
+            logger.warning(f"[{neighborhood_name}] Could not extract short summary.")
+        return summary, secondary
+
+    def _extract_page_text(self, cleaned_parser_output: BeautifulSoup) -> str:
+        page_text_parts = []
+        for child in cleaned_parser_output.children:
+            if isinstance(child, Tag) and child.name in [
+                "p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "div", "table", "li"
+            ]:
+                text = child.get_text(" ", strip=True)
+                if text and not (text.lower().startswith("coordinates") and len(text) < 120):
+                    page_text_parts.append(text)
+        return " ".join(page_text_parts)
+
+    def _collect_section_text(self, cleaned_parser_output: BeautifulSoup) -> Dict[str, str]:
         """
-        A highly experimental and basic method to extract adjacent neighborhoods,
-        as this is very inconsistent on Wikipedia pages.
+        Collects text for key sections we care about (transportation, geography/boundaries).
         """
-        adjacent = []
-        # Common patterns: "Bordered by X, Y, and Z" or lists under a "Geography" section
-        for heading in soup.find_all(['h2', 'h3', 'h4']):
-            if 'geography' in heading.get_text(strip=True).lower() or 'borders' in heading.get_text(strip=True).lower():
-                for sibling in heading.find_next_siblings(['p', 'ul', 'ol']):
-                    if sibling.name and sibling.name.startswith('h') and sibling.name <= heading.name:
-                        break # Stop at next major heading
-                    text = sibling.get_text(strip=True)
-                    # Look for "bordered by" pattern
-                    match = re.search(r'bordered by (.*?)(?:\.|;|,$|$)', text, re.IGNORECASE)
-                    if match:
-                        parts = re.split(r', and |,? and |,|;', match.group(1))
-                        adjacent.extend([p.strip() for p in parts if p.strip()])
-                    # Look for lists of places (might be too broad)
-                    if sibling.name in ['ul', 'ol']:
-                        for li in sibling.find_all('li'):
-                            # Heuristic: if list item looks like a place name (e.g., capitalized words)
-                            if len(li.get_text().split()) <= 3 and li.get_text().istitle():
-                                adjacent.append(li.get_text(strip=True))
+        sections: Dict[str, str] = {"transport": "", "geography": ""}
+        full_text = cleaned_parser_output.get_text("\n", strip=True)
+        full_lower = full_text.lower()
 
-        # Filter out self-reference or very short words that are not neighborhoods
-        return list(set([n for n in adjacent if len(n.split()) > 1 or (len(n) > 2 and n.istitle())]))
+        headings = cleaned_parser_output.find_all("h2")
+        heading_positions = []
+        for h in headings:
+            title = h.get_text(" ", strip=True)
+            if not title:
+                continue
+            pos = full_lower.find(title.lower())
+            if pos >= 0:
+                heading_positions.append((pos, title))
+        heading_positions.sort()
 
+        def slice_section(match_keys: List[str]) -> str:
+            start = None
+            end = len(full_text)
+            for idx, (pos, title) in enumerate(heading_positions):
+                if any(k in title.lower() for k in match_keys):
+                    start = pos
+                    # end at next heading if exists
+                    if idx + 1 < len(heading_positions):
+                        end = heading_positions[idx + 1][0]
+                    break
+            if start is None:
+                return ""
+            return full_text[start:end]
 
-if __name__ == '__main__':
-    from src.lib.logger import setup_logging
-    setup_logging(level=logging.INFO)
+        sections["transport"] = slice_section(["transport", "transit", "public transportation"])
+        sections["geography"] = slice_section(["geography", "boundar", "location"])
+        return sections
 
-    # Example HTML (simplified structure for demonstration)
-    # A real Wikipedia page would be much more complex.
-    html_content = """
-    <div class="mw-parser-output">
-        <p><b>Coordinates:</b> 40°45′14″N 73°54′54″W</p>
-        <p>This is the first paragraph of the summary. It talks about the neighborhood's general characteristics and location.</p>
-        <p>This is the second paragraph of the summary, providing more details about its history and culture. It is quite a long paragraph to test summary extraction.</p>
-        <p>This is a third paragraph. It might contain additional information.</p>
-        <table class="infobox geography vcard">
-            <tbody>
-                <tr><th scope="row">Population</th><td>100,000 (2020)</td></tr>
-                <tr><th scope="row">Density</th><td>10,000/sq mi</td></tr>
-                <tr><th scope="row">Area</th><td><div><a href="/wiki/Square_mile" title="Square mile">5 sq mi</a></div></td></tr>
-                <tr><th scope="row">ZIP Code</th><td><ul><li>10001</li><li>10002</li></ul></td></tr>
-                <tr><th scope="row">Adjacent</th><td><div class="plainlist"><ul><li>Neighbor A</li><li>Neighbor B</li></ul></div></td></tr>
-                <tr><th scope="row">Highways</th><td>I-95</td></tr>
-            </tbody>
-        </table>
-        <h2>History</h2>
-        <p>The neighborhood has a rich history, dating back to colonial times. It was settled by Dutch immigrants.</p>
-        <p>Later, it became an industrial hub and attracted various immigrant groups.</p>
-        <h2>Transportation</h2>
-        <p>The area is well-served by public transit, including several subway lines.</p>
-        <ul>
-            <li><a href="/wiki/B_train_(New_York_City_Subway)" title="B train (New York City Subway)">B</a>, <a href="/wiki/D_train_(New_York_City_Subway)" title="D train (New York City Subway)">D</a> trains</li>
-            <li><a href="/wiki/4_train_(New_York_City_Subway)" title="4 train (New York City Subway)">4</a>, <a href="/wiki/5_train_(New_York_City_Subway)" title="5 train (New York City Subway)">5</a> trains</li>
-            <li>M15, M42 bus routes</li>
-        </ul>
-        <h3>Major Stations</h3>
-        <p>Grand Central Station, Penn Station</p>
-        <h4>Bus Routes</h4>
-        <p>Several MTA local and express bus routes serve the neighborhood, including the Bx1, Bx2, and Bx3.</p>
-        <h4>Rail and Freight</h4>
-        <p>LIRR has a station here. Freight rail also passes through.</p>
-        <h2>Geography</h2>
-        <p>The neighborhood is bordered by Neighbor C to the North, and Neighbor D to the South.</p>
-    </div>
-    """
-    parser = WikipediaParser()
-    extracted_data = parser.parse(html_content, "Test Neighborhood")
-    
-    print("\n--- Extracted Data ---")
-    for key, value in extracted_data.items():
-        if isinstance(value, dict):
-            print(f"{key}:")
-            for sub_key, sub_value in value.items():
-                print(f"  {sub_key}: {sub_value}")
-        else:
-            print(f"{key}: {value}")
+    def _extract_transit(self, section_texts: Dict[str, str], fallback_text: str) -> Dict[str, List[str]]:
+        text = section_texts.get("transport", "") or fallback_text
+        text = re.sub(r"\s+", " ", text)
+        text = re.sub(r"[^A-Za-z0-9\s/,-]", " ", text)  # remove odd zero-width or icon characters
+        text = re.sub(r"\s+", " ", text)
+        nearest_subways: List[str] = []
+        bus_routes: List[str] = []
+        major_stations: List[str] = []
+        highways: List[str] = []
 
-    # Test case for no infobox
-    html_no_infobox = """
-    <div class="mw-parser-output">
-        <p>This is a summary without an infobox.</p>
-    </div>
-    """
-    extracted_no_infobox = parser.parse(html_no_infobox, "No Infobox Test")
-    print("\n--- Extracted Data (No Infobox) ---")
-    print(extracted_no_infobox["summary"])
-    print(extracted_no_infobox["warnings"])
+        if text:
+            line_tokens = set()
 
-    # Test case for no summary
-    html_no_summary = """
-    <div class="mw-parser-output">
-        <table class="infobox geography vcard"></table>
-        <h2>Transportation</h2>
-        <p>Bus routes only</p>
-    </div>
-    """
-    extracted_no_summary = parser.parse(html_no_summary, "No Summary Test")
-    print("\n--- Extracted Data (No Summary) ---")
-    print(extracted_no_summary["summary"])
-    print(extracted_no_summary["warnings"])
+            # 1) Capture tokens inside parentheses that mention trains/lines
+            for m in re.finditer(r"\(([^)]*?)\)", text):
+                content = m.group(1)
+                if any(k in content.lower() for k in ["train", "line"]):
+                    for tok in re.findall(r"\b([A-Z0-9])\b", content):
+                        if tok in self.SUBWAY_LINES:
+                            line_tokens.add(tok)
+
+            # 2) Capture tokens in snippets near train/subway keywords
+            for m in re.finditer(r"(?:train|trains|subway|line|lines)[^.]{0,80}", text, flags=re.IGNORECASE):
+                snippet = m.group(0)
+                for tok in re.findall(r"\b([A-Z0-9])\b", snippet):
+                    if tok in self.SUBWAY_LINES:
+                        line_tokens.add(tok)
+
+            # 3) Fallback: any standalone tokens in the transport text that match known lines
+            if not line_tokens:
+                for tok in re.findall(r"\b([A-Z0-9])\b", text):
+                    if tok in self.SUBWAY_LINES:
+                        line_tokens.add(tok)
+
+            nearest_subways = sorted(line_tokens)
+
+            # Bus routes
+            bus_routes = sorted(set(self.BUS_PATTERN.findall(text)))
+
+            # Major stations / terminals
+            station_matches = re.findall(
+                r"\b([A-Za-z0-9][\w'&.-]*(?:\s+[A-Za-z0-9][\w'&.-]*){0,5}\s+(?:Station|Terminal))\b",
+                text,
+                flags=re.IGNORECASE
+            )
+            cleaned_stations: List[str] = []
+            for s in station_matches:
+                words = s.split()
+                idx = next((i for i, w in enumerate(words) if w.lower().startswith("station") or w.lower().startswith("terminal")), None)
+                if idx is None:
+                    cleaned_stations.append(s.strip())
+                else:
+                    start = max(0, idx - 2)
+                    cleaned_stations.append(" ".join(words[start:idx + 1]))
+            major_stations = sorted(set(cleaned_stations))
+
+            # Highways / major roads
+            highway_matches = re.findall(
+                r"\b(?:I-[0-9]{1,3}|Interstate [0-9]{1,3}|U\.S\. Route [0-9]{1,3}|"
+                r"(?:[A-Z][\w'&.-]*\s+){0,2}[A-Z][\w'&.-]*\s+(?:Expressway|Parkway|Highway|Boulevard|Avenue|Drive|Road|Street))\b",
+                text
+            )
+            highways = []
+            for h in highway_matches:
+                cleaned = h.strip()
+                if "train" in cleaned.lower():
+                    continue
+                highways.append(cleaned)
+            highways = sorted(set(highways))
+
+        return {
+            "nearest_subways": nearest_subways,
+            "major_stations": major_stations,
+            "bus_routes": bus_routes,
+            "rail_freight_other": [],
+            "highways_major_roads": highways,
+        }
+
+    def _extract_boundaries(self, section_texts: Dict[str, str], fallback_text: str) -> Dict[str, Any]:
+        """
+        Simple heuristic: grab sentences mentioning 'bounded by' or 'bordered by'.
+        """
+        geography_text = section_texts.get("geography", "") or fallback_text
+        if not geography_text:
+            return {"east_to_west": "", "north_to_south": "", "adjacent_neighborhoods": []}
+
+        sentences = re.split(r"(?<=[.!?])\s+", geography_text)
+        bound_sentences = [s for s in sentences if "bounded by" in s.lower() or "bordered by" in s.lower()]
+
+        east_to_west = bound_sentences[0] if bound_sentences else ""
+        north_to_south = bound_sentences[1] if len(bound_sentences) > 1 else east_to_west
+
+        neighbors: List[str] = []
+        for s in bound_sentences:
+            # crude extraction of capitalized words following "by"
+            for match in re.findall(r"by\s+([A-Z][\w\s&-]+)", s):
+                neighbors.append(match.strip())
+
+        return {
+            "east_to_west": east_to_west,
+            "north_to_south": north_to_south,
+            "adjacent_neighborhoods": sorted(set([n for n in neighbors if n])),
+        }

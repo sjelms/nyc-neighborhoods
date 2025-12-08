@@ -11,6 +11,7 @@ from src.services.web_fetcher import WebFetcher
 from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
 from src.services.profile_generator import ProfileGenerator
+from src.services.llm_helper import LLMHelper
 from src.lib.cache_manager import CacheManager
 from src.services.nyc_open_data_fetcher import NYCOpenDataFetcher
 from src.services.nyc_open_data_parser import NYCOpenDataParser
@@ -56,9 +57,11 @@ def generate_profiles(
                                          help="Force regeneration of all profiles, even if they exist in the log."),
     update_since: Optional[str] = typer.Option(None, "--update-since", "-u",
                                               help="Regenerate profiles last amended on or after this date (YYYY-MM-DD)."),
-    generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf",
+    generation_log_file: Path = typer.Option("logs/generation_log.json", "--log-file", "--glf", "--generation-log-file",
                                            file_okay=True, dir_okay=False, writable=True, readable=True, resolve_path=True,
-                                           help="Path to the JSON log file for tracking generated profiles.")
+                                           help="Path to the JSON log file for tracking generated profiles."),
+    use_llm: bool = typer.Option(True, "--use-llm/--no-llm", help="Enable or disable LLM-assisted structuring. Auto-disables if no API key is present."),
+    llm_model: str = typer.Option("gpt-5.1-2025-11-13", "--llm-model", help="LLM model to use when --use-llm is enabled."),
 ):
     """
     Generates standardized Markdown profile files for New York City neighborhoods.
@@ -77,13 +80,13 @@ def generate_profiles(
     # Initialize CacheManager if caching is enabled
     cache_manager: Optional[CacheManager] = None
     if cache_expiry_days > 0:
-        cache_manager = CacheManager(cache_dir=cache_dir, expiry_days=cache_expiry_days)
-        internal_logger.info(f"Caching enabled with expiry of {cache_expiry_days} days in {cache_dir}")
+        cache_manager = CacheManager(cache_dir=cache_dir)
+        internal_logger.info(f"Caching enabled in {cache_dir}")
     else:
         internal_logger.info("Caching disabled.")
 
     # Initialize WebFetcher
-    web_fetcher = WebFetcher(cache_manager=cache_manager)
+    web_fetcher = WebFetcher(cache_manager=cache_manager, expiry_days=cache_expiry_days)
 
     # Initialize NYC Open Data components if ID is provided
     nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None
@@ -102,12 +105,16 @@ def generate_profiles(
     # Initialize core components
     csv_parser = CSVParser(input_csv)
     wikipedia_parser = WikipediaParser()
-    
+
+    # Initialize optional LLM helper (auto-disabled when no key)
+    llm_helper: LLMHelper = LLMHelper(model=llm_model, enabled=use_llm, cache_manager=cache_manager, expiry_days=cache_expiry_days)
+
     data_normalizer = DataNormalizer(
         version, parsed_ratified_date, parsed_last_amended_date,
         nyc_open_data_fetcher=nyc_open_data_fetcher,
         nyc_open_data_parser=nyc_open_data_parser,
-        nyc_open_data_dataset_id=nyc_open_data_dataset_id
+        nyc_open_data_dataset_id=nyc_open_data_dataset_id,
+        llm_helper=llm_helper if llm_helper.is_enabled else None
     )
     
     try:
@@ -168,6 +175,9 @@ def generate_profiles(
         typer.echo("\nAll eligible profiles generated successfully!")
 
     internal_logger.info("CLI command finished.")
+
+# Support legacy underscore command name alongside the Typer-preferred kebab-case
+app.command(name="generate_profiles", hidden=True)(generate_profiles)
 
 if __name__ == "__main__":
     app()

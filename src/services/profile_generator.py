@@ -5,6 +5,8 @@ from datetime import date
 from pathlib import Path
 from typing import Optional, Tuple, List, Dict, Any
 
+from bs4 import BeautifulSoup
+
 from src.services.web_fetcher import WebFetcher
 from src.services.wikipedia_parser import WikipediaParser
 from src.services.data_normalizer import DataNormalizer
@@ -38,6 +40,7 @@ class ProfileGenerator:
         self.nyc_open_data_parser = nyc_open_data_parser
         self.generation_log = generation_log # Store
         self.output_dir.mkdir(parents=True, exist_ok=True) # Ensure output directory exists
+        self.last_failure_reason: Optional[str] = None
 
     def _construct_wikipedia_url(self, neighborhood_name: str, borough: str) -> str:
         """
@@ -62,26 +65,21 @@ class ProfileGenerator:
             A tuple: (success_status, path_to_generated_file if successful else None).
         """
         logger.info(f"Starting profile generation for {neighborhood_name}, {borough}")
+        self.last_failure_reason = None
         
         # 1. Construct Wikipedia URL
         wikipedia_url = self._construct_wikipedia_url(neighborhood_name, borough)
         logger.debug(f"Constructed Wikipedia URL: {wikipedia_url}")
 
         # 2. Fetch content
-        html_content = self.web_fetcher.fetch(wikipedia_url)
+        html_content = self.web_fetcher.fetch(wikipedia_url, item_name=f"{neighborhood_name}_{borough}")
         if not html_content:
             logger.error(f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}. Skipping.")
+            self.last_failure_reason = f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}."
             return False, None
 
-        # 3a. Fetch REST summary (more stable than HTML)
-        summary_api_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{neighborhood_name.replace(' ', '_')},_{borough.replace(' ', '_')}"
-        summary_data = self.web_fetcher.fetch_json(summary_api_url)
-        summary_text = ""
-        if summary_data:
-            summary_text = summary_data.get("extract", "") or summary_data.get("description", "")
-
-        # 3b. Parse content
-        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name, summary_override=summary_text)
+        # 3. Parse content
+        raw_data = self.wikipedia_parser.parse(html_content, neighborhood_name)
         
         # Add source URL to raw data for tracking
         if "sources" not in raw_data:
@@ -92,6 +90,7 @@ class ProfileGenerator:
         profile = self.data_normalizer.normalize(raw_data, neighborhood_name, borough)
         if not profile:
             logger.error(f"Failed to normalize data for {neighborhood_name}, {borough}. Skipping.")
+            self.last_failure_reason = f"Failed to normalize data for {neighborhood_name}, {borough}."
             return False, None
 
         # 5. Render Markdown
@@ -99,6 +98,7 @@ class ProfileGenerator:
             markdown_content = self.template_renderer.render(profile)
         except Exception as e:
             logger.error(f"Error rendering Markdown for {neighborhood_name}, {borough}: {e}. Skipping.")
+            self.last_failure_reason = f"Error rendering Markdown for {neighborhood_name}, {borough}: {e}"
             return False, None
 
         # 6. Save Markdown to file
@@ -170,9 +170,13 @@ class ProfileGenerator:
             
             # Determine if this profile should be processed based on log and flags
             process_profile = True
-            if self.generation_log and not force_regenerate:
+            if self.generation_log:
                 existing_log_entry = self.generation_log.find_entry(neighborhood, borough)
-                if existing_log_entry:
+                if existing_log_entry and force_regenerate:
+                    removed = self.generation_log.remove_entry(neighborhood, borough)
+                    if removed:
+                        logger.info(f"Force regenerate: removed existing log entry for {neighborhood}, {borough} before reprocessing.")
+                elif existing_log_entry and not force_regenerate:
                     if update_since:
                         # Convert log's last_amended_date string to date object for comparison
                         log_amended_date_str = existing_log_entry.get("last_amended_date")
@@ -181,15 +185,20 @@ class ProfileGenerator:
                                 log_amended_date = date.fromisoformat(log_amended_date_str)
                                 if log_amended_date < update_since:
                                     process_profile = False
+                                    results["skipped"] += 1
+                                    results["details"].append({
+                                        "neighborhood": neighborhood,
+                                        "borough": borough,
+                                        "status": "skipped",
+                                        "reason": f"Profile last amended {log_amended_date} is before update_since {update_since}."
+                                    })
                                     logger.info(f"Skipping {neighborhood}, {borough} (last amended {log_amended_date} is before update_since {update_since}).")
                             except ValueError:
                                 logger.warning(f"Log entry for {neighborhood}, {borough} has invalid 'last_amended_date': '{log_amended_date_str}'. Processing.")
                         else:
-                            # If no last_amended_date in log, treat as old and don't skip if update_since is present
-                            # Or decide to always process if amended date is missing. For now, process if missing.
                             logger.warning(f"Log entry for {neighborhood}, {borough} is missing 'last_amended_date'. Processing.")
 
-                    if process_profile and not update_since: # Skip if no update_since and not force_regenerate
+                    if process_profile and not update_since:
                         process_profile = False
                         results["skipped"] += 1
                         results["details"].append({
@@ -219,7 +228,7 @@ class ProfileGenerator:
                     "neighborhood": neighborhood,
                     "borough": borough,
                     "status": "failed",
-                    "reason": f"Failed to generate profile. Check logs for details."
+                    "reason": self.last_failure_reason or "Failed to generate profile. Check logs for details."
                 })
         
         logger.info(f"Batch profile generation completed. Successful: {results['success']}, Failed: {results['failed']}, Skipped: {results['skipped']}.")

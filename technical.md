@@ -1,8 +1,8 @@
-# Implementation Plan — Automated Neighborhood Profile Generator
+# Technical Summary — Automated Neighborhood Profile Generator
 
 ## 1. Overview & Objectives
 
-- Develop a tool that, given a list of New York City neighborhoods, **automatically retrieves** public information (demographics, boundaries, transit, etc.) from trusted online sources and  
+- Develop a tool that, given a list of New York City neighborhoods, **automatically retrieves** public information (demographics, boundaries, transit, commercial context, etc.) from trusted online sources and  
   **outputs** a standardized markdown file per neighborhood following a fixed template.  
 - Ensure outputs include a header with metadata:  
   **Version**, **Ratified Date**, and **Last Amended Date**.  
@@ -15,7 +15,7 @@
 
 | Source | Purpose / Use Cases |
 |--------|--------------------|
-| **Wikipedia** (neighborhood pages) | Demographics, historical context, boundaries, ZIP codes, transit summary, notable features — often compiled with citations. |  
+| **Wikipedia** (neighborhood pages) | Demographics, historical context, boundaries, ZIP codes, transit summary, notable features — often compiled with citations and used as primary scrape source. |  
 | **NYC Open Data** portal ([data.cityofnewyork.us](https://data.cityofnewyork.us)) | For more granular / official data — e.g. zoning, community district boundaries, land use, infrastructure, sanitation, or other public‑agency datasets. |  
 
 **Source Strategy:**
@@ -37,7 +37,7 @@
 
 ## 4. Output Specification
 
-For each neighborhood, produce a standalone Markdown (`.md`) file using the following structure:
+For each neighborhood, produce a standalone Markdown (`.md`) file using the following structure (see `reference/output-template.md`):
 
 ```markdown
 **Version**: [VERSION] | **Ratified**: [RATIFIED_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
@@ -97,6 +97,10 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 | Destination | Subway | Drive |
 |-------------|--------|-------|
 | … | … | … |
+
+### Online Resources
+- **Official Website:** [Neighborhood Website URL]
+- **Wikipedia:** [Wikipedia URL]
 ```
 
 - File naming format: `Neighborhood_Borough.md` (e.g. `Maspeth_Queens.md`)
@@ -118,9 +122,9 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 ### Components:
 - **CSV Input Parser** — read the list of neighborhoods
 - **Data Fetcher** — fetch Wikipedia page or Open Data API (if available)
-- **Parser / Extractor** — extract key data (infoboxes, tables, bullet points)
-- **Data Normalizer** — convert raw HTML data into a structured schema
-- **Template Renderer** — inject structured data into the Markdown template
+- **Parser / Extractor** — extract key data (infoboxes, sections, transit text)
+- **Data Normalizer** — convert raw HTML data into a structured schema; orchestrates LLM gap-fill for narratives and key details
+- **Template Renderer** — inject structured data into the Markdown template (including Online Resources links)
 - **File Writer** — output individual `.md` files into an `/output/` folder
 - **Logging** — record source URLs, warnings, or missing fields
 - **Cache (Optional)** — save downloaded HTML/JSON for repeatability
@@ -143,7 +147,7 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 
 4. **HTML Parser**
    - Extract infobox items (population, ZIPs, area, etc.)
-   - Scrape transit, boundary, and zoning info
+   - Scrape transit, boundary, and zoning info with heuristics across sections/inline text
    - Handle missing/malformed sections with warnings
 
 5. **Data Schema**
@@ -153,12 +157,13 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 6. **Template Renderer**
    - Inject values into Markdown template with correct formatting
    - Add version metadata at top
+   - Render Online Resources with clickable Wikipedia link; official link when available
 
 7. **File Output**
    - Save as `Neighborhood_Borough.md` in `/output`
    - Append a log entry for each record (CSV or JSON)
 
-8. **CLI Interface (optional)**
+8. **CLI Interface**
    - Allow version, ratified, amended dates to be passed as flags
    - Example:
      ```bash
@@ -169,6 +174,7 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
    - Start with ~3 neighborhoods (e.g. Williamsburg, Maspeth, Sunset Park)
    - Verify: formatting, structure, key data filled in
    - Log any missing or ambiguous values
+   - Fixture-based parser tests with cached HTML (e.g. Astoria) for infobox/transit extraction
 
 10. **Refinement**
     - Add fallback options for unreliable sources
@@ -194,6 +200,7 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
   - `Last Amended`
 - Encourage users to manually update the `Last Amended` date if they revise the markdown file
 - Refresh process (every 6–12 months): re-run generator with updated sources, bump version number
+- LLM cache refresh: empty/short responses trigger a new LLM call to ensure rich narratives
 
 ---
 

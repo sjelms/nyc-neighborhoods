@@ -1,7 +1,9 @@
 import logging
 import json
+import re
 from datetime import date, datetime
 from typing import Dict, Any, List, Optional
+from src.services.llm_helper import LLMHelper  # Optional LLM structuring
 from src.models.neighborhood_profile import (
     NeighborhoodProfile, KeyDetails, NeighborhoodFacts, Boundaries,
     TransitAccessibility, CommuteTime
@@ -11,6 +13,11 @@ from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import Parse
 
 logger = logging.getLogger("nyc_neighborhoods")
 
+def _merge_lists(original: List, new: List) -> List:
+    """Combine lists and return a sorted, unique list."""
+    return sorted(list(set(original + new)))
+
+
 class DataNormalizer:
     def __init__(self,
                  version: str,
@@ -18,13 +25,15 @@ class DataNormalizer:
                  last_amended_date: date,
                  nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None,
                  nyc_open_data_parser: Optional[NYCOpenDataParser] = None,
-                 nyc_open_data_dataset_id: Optional[str] = None):
+                 nyc_open_data_dataset_id: Optional[str] = None,
+                 llm_helper: Optional[LLMHelper] = None):
         self.version = version
         self.ratified_date = ratified_date
         self.last_amended_date = last_amended_date
         self.nyc_open_data_fetcher = nyc_open_data_fetcher
         self.nyc_open_data_parser = nyc_open_data_parser
         self.nyc_open_data_dataset_id = nyc_open_data_dataset_id
+        self.llm_helper = llm_helper
 
     def normalize(self, raw_data: Dict[str, Any], neighborhood_name: str, borough: str) -> Optional[NeighborhoodProfile]:
         """
@@ -32,6 +41,8 @@ class DataNormalizer:
         into a NeighborhoodProfile Pydantic model.
         """
         current_warnings = raw_data.get("warnings", [])
+
+        # (LLM structuring moved after NYC Open Data supplementation)
         
         # --- Supplement with NYC Open Data if available ---
         if self.nyc_open_data_fetcher and self.nyc_open_data_parser and self.nyc_open_data_dataset_id:
@@ -58,6 +69,141 @@ class DataNormalizer:
         else:
             logger.debug("NYC Open Data fetcher/parser not provided to DataNormalizer.")
 
+        # --- LLM-assisted structuring (optional, after merging sources) ---
+        try:
+            def _needs_llm(data: Dict[str, Any]) -> bool:
+                nf = data.get("neighborhood_facts", {})
+                ta = data.get("transit_accessibility", {})
+                kd = data.get("key_details", {})
+                atb = (data.get("around_the_block") or "").strip()
+                summary_text = (data.get("summary") or "").strip()
+                if not data.get("summary"):
+                    return True
+                atb_words = len(atb.split())
+                if not atb or atb_words < 120 or (summary_text and atb == summary_text):
+                    return True
+                if not nf.get("population") or nf.get("population") == "N/A":
+                    return True
+                if not nf.get("area") or nf.get("area") == "N/A":
+                    return True
+                if not nf.get("zip_codes"):
+                    return True
+                if not kd.get("what_to_expect") or not kd.get("unexpected_appeal") or not kd.get("the_market"):
+                    return True
+                transit_keys = ["nearest_subways", "bus_routes", "major_stations", "highways_major_roads"]
+                if any(not ta.get(k) for k in transit_keys):
+                    return True
+                return False
+
+            if self.llm_helper and self.llm_helper.is_enabled and _needs_llm(raw_data):
+                refined = self.llm_helper.refine_profile_inputs(raw_data, neighborhood_name, borough)
+                filled_fields: List[str] = []
+
+                if refined:
+                    # --- Merge Key Details ---
+                    if "key_details" in refined and isinstance(refined["key_details"], dict):
+                        raw_kd = raw_data.get("key_details", {})
+                        for k in ["what_to_expect", "unexpected_appeal", "the_market"]:
+                            v = refined["key_details"].get(k)
+                            if v and not raw_kd.get(k):
+                                raw_kd[k] = v
+                                filled_fields.append(f"key_details.{k}")
+                        raw_data["key_details"] = raw_kd
+
+                    # --- Merge Around the Block ---
+                    atb = refined.get("around_the_block")
+                    if atb and isinstance(atb, str):
+                        existing_atb = (raw_data.get("around_the_block", "") or "").strip()
+                        summary_text = (raw_data.get("summary", "") or "").strip()
+                        # Prefer LLM narrative if existing is empty/short or duplicates summary
+                        if (
+                            not existing_atb
+                            or len(existing_atb.split()) < 120
+                            or (summary_text and existing_atb == summary_text)
+                        ):
+                            raw_data["around_the_block"] = atb.strip()
+                            filled_fields.append("around_the_block")
+
+                    # --- Merge Neighborhood Facts ---
+                    nf_ref = refined.get("neighborhood_facts") or {}
+                    if isinstance(nf_ref, dict):
+                        nf_raw = raw_data.get("neighborhood_facts", {})
+
+                        # Singular text fields (population, density, area)
+                        for field in ["population", "population_density", "area"]:
+                            val = nf_ref.get(field)
+                            if val not in (None, "", "N/A"):
+                                if not nf_raw.get(field) or nf_raw.get(field) == "N/A":
+                                    nf_raw[field] = val
+                                    filled_fields.append(f"neighborhood_facts.{field}")
+
+                        # Boundaries (text and list fields)
+                        b_ref = nf_ref.get("boundaries") or {}
+                        if isinstance(b_ref, dict):
+                            b_raw = nf_raw.get("boundaries", {})
+                            for k in ["east_to_west", "north_to_south"]:
+                                bv = b_ref.get(k)
+                                if bv and not b_raw.get(k):
+                                    b_raw[k] = bv
+                                    filled_fields.append(f"boundaries.{k}")
+
+                            # Merge adjacent neighborhoods
+                            adj_new = b_ref.get("adjacent_neighborhoods", [])
+                            if isinstance(adj_new, list) and adj_new:
+                                adj_orig = b_raw.get("adjacent_neighborhoods", [])
+                                merged_adj = _merge_lists(adj_orig, adj_new)
+                                if merged_adj != adj_orig:
+                                    filled_fields.append("boundaries.adjacent_neighborhoods")
+                                b_raw["adjacent_neighborhoods"] = merged_adj
+
+                            nf_raw["boundaries"] = b_raw
+
+                        # Merge ZIP codes
+                        zips_new = nf_ref.get("zip_codes", [])
+                        if isinstance(zips_new, list) and zips_new:
+                            zips_orig_raw = nf_raw.get("zip_codes", [])
+                            zips_orig_flat = []
+                            for z in zips_orig_raw:
+                                zips_orig_flat.extend([item.strip() for item in str(z).split(',')])
+
+                            merged_zips = _merge_lists(zips_orig_flat, zips_new)
+                            if merged_zips != zips_orig_raw:
+                                filled_fields.append("neighborhood_facts.zip_codes")
+                            nf_raw["zip_codes"] = merged_zips
+
+                        raw_data["neighborhood_facts"] = nf_raw
+
+                    # --- Merge Transit Accessibility ---
+                    ta_ref = refined.get("transit_accessibility") or {}
+                    if isinstance(ta_ref, dict):
+                        ta_raw = raw_data.get("transit_accessibility", {})
+                        transit_list_keys = [
+                            "nearest_subways",
+                            "major_stations",
+                            "bus_routes",
+                            "rail_freight_other",
+                            "highways_major_roads",
+                        ]
+                        for k in transit_list_keys:
+                            lst_new = ta_ref.get(k, [])
+                            if isinstance(lst_new, list) and lst_new:
+                                lst_orig = ta_raw.get(k, [])
+                                merged_lst = _merge_lists(lst_orig, lst_new)
+                                if merged_lst != lst_orig:
+                                    filled_fields.append(f"transit_accessibility.{k}")
+                                ta_raw[k] = merged_lst
+                        raw_data["transit_accessibility"] = ta_raw
+
+                    if filled_fields:
+                        current_warnings.append(
+                            f"Applied LLM-assisted structuring; filled/enhanced: {', '.join(sorted(set(filled_fields)))}."
+                        )
+                    if refined.get("llm_cache_path"):
+                        current_warnings.append(f"LLM cache: {refined['llm_cache_path']}")
+        except Exception as e:
+            logger.debug(f"LLM structuring skipped due to error: {e}")
+
+        logger.debug(f"Raw data after LLM merge: {json.dumps(raw_data, ensure_ascii=False, indent=2)}")
 
         # --- Handle KeyDetails ---
         # These are not directly from Wikipedia infobox, so we can set defaults or process later
@@ -106,6 +252,20 @@ class DataNormalizer:
 
         # --- Construct NeighborhoodProfile ---
         try:
+            around_text = raw_data.get("around_the_block", "").strip()
+            summary_text = raw_data.get("summary", "").strip()
+            # If around_text is missing or identical to summary, try to build a distinct block from page_text
+            if not around_text or (summary_text and around_text == summary_text):
+                page_text = raw_data.get("page_text", "")
+                sentences = [s.strip() for s in re.split(r"(?<=[.!?]) +", page_text) if s.strip()]
+                # Drop leading sentence if it matches the summary
+                if sentences and summary_text and sentences[0].startswith(summary_text[:50]):
+                    sentences = sentences[1:]
+                if sentences:
+                    around_text = " ".join(sentences[:3])[:600]  # up to ~3 sentences
+                elif summary_text:
+                    around_text = summary_text[:400]
+
             profile = NeighborhoodProfile(
                 version=self.version,
                 ratified_date=self.ratified_date,
@@ -114,7 +274,7 @@ class DataNormalizer:
                 borough=borough,
                 summary=raw_data.get("summary", ""),
                 key_details=key_details,
-                around_the_block=raw_data.get("around_the_block", ""),
+                around_the_block=around_text,
                 neighborhood_facts=neighborhood_facts,
                 transit_accessibility=transit_accessibility,
                 commute_times=commute_times,

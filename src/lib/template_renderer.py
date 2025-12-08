@@ -14,99 +14,78 @@ class TemplateRenderer:
         """
         Renders the Markdown template with data from a NeighborhoodProfile object.
         """
-        rendered_content = self.template_content
-
-        # Normalize key labels so tests can assert on plain text forms
-        rendered_content = rendered_content.replace("**Version**", "Version")
-        rendered_content = rendered_content.replace("**Ratified**", "Ratified")
-        rendered_content = rendered_content.replace("**Last Amended**", "Last Amended")
+        content = self.template_content
 
         # Simple string replacements for direct fields
-        rendered_content = rendered_content.replace("[VERSION]", profile.version)
-        rendered_content = rendered_content.replace("[RATIFIED_DATE]", profile.ratified_date.isoformat())
-        rendered_content = rendered_content.replace("[LAST_AMENDED_DATE]", profile.last_amended_date.isoformat())
-        rendered_content = rendered_content.replace("[Neighborhood Name]", profile.neighborhood_name)
-        rendered_content = rendered_content.replace("[Short Summary Paragraph]", profile.summary)
-        rendered_content = rendered_content.replace("[A 1–2 paragraph narrative]", profile.around_the_block)
+        content = content.replace("[VERSION]", profile.version or "N/A")
+        content = content.replace("[RATIFIED_DATE]", profile.ratified_date.isoformat())
+        content = content.replace("[LAST_AMENDED_DATE]", profile.last_amended_date.isoformat())
+        content = content.replace("[Neighborhood Name]", profile.neighborhood_name or "N/A")
+        content = content.replace("[Short Summary Paragraph]", profile.summary or "Not available.")
+        content = content.replace("[A 1–2 paragraph narrative]", profile.around_the_block or "")
 
-        # Key Details
-        rendered_content = rendered_content.replace("- **WHAT TO EXPECT:**  ",
-                                                  f"- **WHAT TO EXPECT:** {profile.key_details.what_to_expect}")
-        rendered_content = rendered_content.replace("- **UNEXPECTED APPEAL:**  ",
-                                                  f"- **UNEXPECTED APPEAL:** {profile.key_details.unexpected_appeal}")
-        rendered_content = rendered_content.replace("- **THE MARKET:**  ",
-                                                  f"- **THE MARKET:** {profile.key_details.the_market}")
+        # Key-Value replacements using regex for robustness
+        def replace_kv(text, key, value):
+            # Matches "- **KEY:**" followed by optional whitespace up to the end of the line.
+            pattern = re.compile(f"(- \\*\\*{re.escape(key)}:\\*\\*).*$", re.IGNORECASE | re.MULTILINE)
+            replacement = f"\\g<1> {value or 'N/A'}"
+            return pattern.sub(replacement, text)
 
-        # Neighborhood Facts
-        rendered_content = rendered_content.replace("- **Population:**   ",
-                                                  f"- **Population:** {profile.neighborhood_facts.population}")
-        rendered_content = rendered_content.replace("- **Population Density:**   ",
-                                                  f"- **Population Density:** {profile.neighborhood_facts.population_density}")
-        rendered_content = rendered_content.replace("- **Area:** ",
-                                                  f"- **Area:** {profile.neighborhood_facts.area}")
-        boundaries_block = (
-            "- Boundaries:\n"
-            f"  - East to West: {profile.neighborhood_facts.boundaries.east_to_west}\n"
-            f"  - North to South: {profile.neighborhood_facts.boundaries.north_to_south}\n"
-            f"  - Adjacent Neighborhoods: {', '.join(profile.neighborhood_facts.boundaries.adjacent_neighborhoods)}"
-        )
-        boundaries_pattern = (
-            r"- \*\*Boundaries:\*\*\s*\n"
-            r"\s*-\s*\*\*East to West:\*\*\s.*\n"
-            r"\s*-\s*\*\*North to South:\*\*\s.*\n"
-            r"\s*-\s*\*\*Adjacent Neighborhoods:\*\*\s.*"
-        )
-        rendered_content = re.sub(boundaries_pattern, boundaries_block, rendered_content)
+        content = replace_kv(content, "WHAT TO EXPECT", profile.key_details.what_to_expect)
+        content = replace_kv(content, "UNEXPECTED APPEAL", profile.key_details.unexpected_appeal)
+        content = replace_kv(content, "THE MARKET", profile.key_details.the_market)
+        
+        content = replace_kv(content, "Population", str(profile.neighborhood_facts.population or 'N/A'))
+        content = replace_kv(content, "Population Density", str(profile.neighborhood_facts.population_density or 'N/A'))
+        content = replace_kv(content, "Area", str(profile.neighborhood_facts.area or 'N/A'))
 
-        zip_codes_formatted = self._format_list(profile.neighborhood_facts.zip_codes)
-        zip_codes_block = "- ZIP Codes:"
-        if zip_codes_formatted:
-            zip_codes_block += f"\n{zip_codes_formatted}"
-        else:
-            zip_codes_block += " "
-        rendered_content = re.sub(r"- \*\*ZIP Codes:\*\*.*", zip_codes_block, rendered_content, flags=re.MULTILINE)
+        # Boundaries
+        content = replace_kv(content, "East to West", profile.neighborhood_facts.boundaries.east_to_west or 'N/A')
+        content = replace_kv(content, "North to South", profile.neighborhood_facts.boundaries.north_to_south or 'N/A')
+        adj_neighborhoods_str = ', '.join(profile.neighborhood_facts.boundaries.adjacent_neighborhoods or [])
+        content = replace_kv(content, "Adjacent Neighborhoods", adj_neighborhoods_str or 'N/A')
 
-        # Transit & Accessibility
-        rendered_content = rendered_content.replace("#### Nearest Subways:\n…  ",
-                                                  f"#### Nearest Subways:\n{self._format_list(profile.transit_accessibility.nearest_subways)}")
-        rendered_content = rendered_content.replace("#### Major Stations:\n…  ",
-                                                  f"#### Major Stations:\n{self._format_list(profile.transit_accessibility.major_stations)}")
-        rendered_content = rendered_content.replace("#### Bus Routes:\n…  ",
-                                                  f"#### Bus Routes:\n{self._format_list(profile.transit_accessibility.bus_routes)}")
-        rendered_content = rendered_content.replace("#### Rail / Freight / Other Transit (if applicable):\n…  ",
-                                                  f"#### Rail / Freight / Other Transit (if applicable):\n{self._format_list(profile.transit_accessibility.rail_freight_other)}")
-        rendered_content = rendered_content.replace("#### Highways & Major Roads:\n…  ",
-                                                  f"#### Highways & Major Roads:\n{self._format_list(profile.transit_accessibility.highways_major_roads)}")
+        # List-based sections (ZIPs and Transit)
+        zip_list_str = self._format_list(profile.neighborhood_facts.zip_codes)
+        content = re.sub(r"(- \*\*ZIP Codes:\*\*).*", f"\\g<1>\n{zip_list_str or 'N/A'}", content, flags=re.IGNORECASE)
 
-        # Commute Times (optional)
-        commute_section_pattern = (
-            r"### Commute Times \(optional — if data available\)\n"
-            r"\| Destination \| Subway \| Drive \|\n"
-            r"\|-------------\|--------\|-------\|\n"
-            r"(?:\|.*\n?)+"
-        )
+        content = content.replace("#### Nearest Subways:\n…  ", f"#### Nearest Subways:\n{self._format_list(profile.transit_accessibility.nearest_subways) or 'N/A'}")
+        content = content.replace("#### Major Stations:\n…  ", f"#### Major Stations:\n{self._format_list(profile.transit_accessibility.major_stations) or 'N/A'}")
+        content = content.replace("#### Bus Routes:\n…  ", f"#### Bus Routes:\n{self._format_list(profile.transit_accessibility.bus_routes) or 'N/A'}")
+        content = content.replace("#### Rail / Freight / Other Transit (if applicable):\n…  ", f"#### Rail / Freight / Other Transit (if applicable):\n{self._format_list(profile.transit_accessibility.rail_freight_other) or 'N/A'}")
+        content = content.replace("#### Highways & Major Roads:\n…  ", f"#### Highways & Major Roads:\n{self._format_list(profile.transit_accessibility.highways_major_roads) or 'N/A'}")
 
+        # Safely remove Commute Times section if no data is available
+        commute_section_pattern = re.compile(r"\n---\s*\n\n### Commute Times.*?(?=\n\n### Online Resources|$)", re.DOTALL)
         if profile.commute_times:
-            commute_table = [
-                "| Destination | Subway | Drive |",
-                "|-------------|--------|-------|",
-            ]
-            for ct in profile.commute_times:
-                commute_table.append(f"| {ct.destination} | {ct.subway} | {ct.drive} |")
-
-            commute_section = "### Commute Times (optional — if data available)\n" + "\n".join(commute_table)
-            rendered_content = re.sub(commute_section_pattern, commute_section, rendered_content, flags=re.DOTALL)
+            table = ["| Destination | Subway | Drive |", "|-------------|--------|-------|"]
+            table.extend([f"| {ct.destination} | {ct.subway} | {ct.drive} |" for ct in profile.commute_times])
+            commute_section = "\n---\n\n### Commute Times (optional — if data available)\n" + "\n".join(table)
+            content = commute_section_pattern.sub(commute_section, content)
         else:
-            # Remove the entire commute times section if no data
-            rendered_content = re.sub(commute_section_pattern, "", rendered_content, flags=re.DOTALL)
+            content = commute_section_pattern.sub("", content)
 
-        # Remove any remaining '…' placeholders if not filled
-        rendered_content = re.sub(r"…\s*", "", rendered_content)
-        rendered_content = rendered_content.replace('\xa0', ' ')
-        rendered_content = rendered_content.strip() # Remove any extra whitespace from template parts being removed
+        # Online Resources links
+        wiki_link = ""
+        official_link = ""
+        if profile.sources:
+            wiki_link = next((src for src in profile.sources if "wikipedia.org" in src.lower()), "")
+            official_link = next((src for src in profile.sources if "nyc.gov" in src.lower() or "official" in src.lower()), "")
 
+        if not wiki_link and profile.neighborhood_name and profile.borough:
+            # Construct a reasonable Wikipedia URL fallback
+            slug = f"{profile.neighborhood_name.replace(' ', '_')},_{profile.borough.replace(' ', '_')}"
+            wiki_link = f"https://en.wikipedia.org/wiki/{slug}"
 
-        return rendered_content
+        def _md_link(url: str) -> str:
+            return f"[{url}]({url})" if url else "N/A"
+
+        content = content.replace("[Neighborhood Website URL]", official_link or "N/A")
+        content = content.replace("[Wikipedia URL]", _md_link(wiki_link))
+
+        # Final cleanup
+        content = content.replace('…', '')
+        return content.strip()
 
     def _format_list(self, items: List[str]) -> str:
         """Formats a list of strings into a Markdown list."""
