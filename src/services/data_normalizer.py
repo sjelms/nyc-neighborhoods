@@ -1,5 +1,6 @@
 import logging
 import json
+import re
 from datetime import date, datetime
 from typing import Dict, Any, List, Optional
 from src.services.llm_helper import LLMHelper  # Optional LLM structuring
@@ -69,9 +70,12 @@ class DataNormalizer:
                 nf = data.get("neighborhood_facts", {})
                 ta = data.get("transit_accessibility", {})
                 kd = data.get("key_details", {})
+                atb = (data.get("around_the_block") or "").strip()
+                summary_text = (data.get("summary") or "").strip()
                 if not data.get("summary"):
                     return True
-                if not data.get("around_the_block"):
+                atb_words = len(atb.split())
+                if not atb or atb_words < 120 or (summary_text and atb == summary_text):
                     return True
                 if not nf.get("population") or nf.get("population") == "N/A":
                     return True
@@ -109,9 +113,15 @@ class DataNormalizer:
                     # --- Merge Around the Block ---
                     atb = refined.get("around_the_block")
                     if atb and isinstance(atb, str):
-                        existing_atb = raw_data.get("around_the_block", "")
-                        if len(atb) > len(existing_atb) or not existing_atb:
-                            raw_data["around_the_block"] = atb
+                        existing_atb = (raw_data.get("around_the_block", "") or "").strip()
+                        summary_text = (raw_data.get("summary", "") or "").strip()
+                        # Prefer LLM narrative if existing is empty/short or duplicates summary
+                        if (
+                            not existing_atb
+                            or len(existing_atb.split()) < 120
+                            or (summary_text and existing_atb == summary_text)
+                        ):
+                            raw_data["around_the_block"] = atb.strip()
                             filled_fields.append("around_the_block")
 
                     # --- Merge Neighborhood Facts ---
@@ -243,11 +253,19 @@ class DataNormalizer:
         # --- Construct NeighborhoodProfile ---
         try:
             around_text = raw_data.get("around_the_block", "").strip()
-            if not around_text:
-                summary_text = raw_data.get("summary", "").strip()
-                if summary_text:
-                    # Prefer a condensed version of summary for Around the Block when no LLM enrichment
+            summary_text = raw_data.get("summary", "").strip()
+            # If around_text is missing or identical to summary, try to build a distinct block from page_text
+            if not around_text or (summary_text and around_text == summary_text):
+                page_text = raw_data.get("page_text", "")
+                sentences = [s.strip() for s in re.split(r"(?<=[.!?]) +", page_text) if s.strip()]
+                # Drop leading sentence if it matches the summary
+                if sentences and summary_text and sentences[0].startswith(summary_text[:50]):
+                    sentences = sentences[1:]
+                if sentences:
+                    around_text = " ".join(sentences[:3])[:600]  # up to ~3 sentences
+                elif summary_text:
                     around_text = summary_text[:400]
+
             profile = NeighborhoodProfile(
                 version=self.version,
                 ratified_date=self.ratified_date,

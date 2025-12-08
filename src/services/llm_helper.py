@@ -86,20 +86,23 @@ class LLMHelper:
             kd = payload.get("key_details", {})
             nf = payload.get("neighborhood_facts", {})
             ta = payload.get("transit_accessibility", {})
-            if any(kd.get(k) for k in ["what_to_expect", "unexpected_appeal", "the_market"]):
-                return False
-            if payload.get("around_the_block"):
-                return False
-            if any(nf.get(k) for k in ["population", "population_density", "area"]):
-                return False
+            atb = (payload.get("around_the_block") or "").strip()
+            word_count = len(atb.split())
+            # Treat as empty if around_the_block is tiny (<120 words) or missing key details
+            if word_count < 120:
+                return True
+            if not any(kd.get(k) for k in ["what_to_expect", "unexpected_appeal", "the_market"]):
+                return True
+            if not any(nf.get(k) for k in ["population", "population_density", "area"]):
+                return True
             b = nf.get("boundaries", {})
-            if any(b.get(k) for k in ["east_to_west", "north_to_south"]):
-                return False
-            if nf.get("zip_codes"):
-                return False
-            if any(ta.get(k) for k in ["nearest_subways", "major_stations", "bus_routes", "rail_freight_other", "highways_major_roads"]):
-                return False
-            return True
+            if not any(b.get(k) for k in ["east_to_west", "north_to_south"]):
+                return True
+            if not nf.get("zip_codes"):
+                return True
+            if not any(ta.get(k) for k in ["nearest_subways", "major_stations", "bus_routes", "rail_freight_other", "highways_major_roads"]):
+                return True
+            return False
 
         if self.cache_manager:
             cache_filename = self._get_llm_cache_filename(neighborhood_name, borough)
@@ -167,7 +170,7 @@ class LLMHelper:
                 "}\n"
                 "INSTRUCTIONS (commercial focus):\n"
                 "1) key_details: Write concise, neutral, CRE-aware sentences. Mention retail corridors, industrial/warehouse presence, manufacturing legacy, parking availability, zoning/land-use hints, and commercial vibrancy when present. Avoid residential language.\n"
-                "2) around_the_block: 1-2 sentences summarizing the commercial vibe (retail streets, mixed-use density, industrial edges) from the intro/overview.\n"
+                "2) around_the_block: Write a rich 2-3 paragraph narrative (8-12 sentences total). Focus on commercial/industrial character, major employers, creative industries, adaptive reuse, waterfront/port/logistics notes, and how transit supports commerce. Keep it grounded in the text; avoid fluff. Minimum 200 words, maximum 350 words. If the source text is short, exhaustively summarize all relevant commercial/industrial details to meet the minimum length.\n"
                 "3) neighborhood_facts:\n"
                 "   - population/density/area: prefer values from infobox/demographics; keep units as seen (plain text ok).\n"
                 "   - boundaries: summarize E-W and N-S if text mentions 'bounded by' or similar; list adjacent neighborhoods if explicit.\n"

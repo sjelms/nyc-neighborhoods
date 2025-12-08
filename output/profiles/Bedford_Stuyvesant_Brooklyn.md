@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07
+**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
 
 ## Bedford Stuyvesant
 
@@ -7,13 +7,13 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 ---
 
 ### Key Details
-- **WHAT TO EXPECT:** A large, historic Brooklyn neighborhood with extensive late-19th and early-20th century brownstone and mixed-use building stock, active along major retail corridors such as Fulton Street and key north–south avenues.
+- **WHAT TO EXPECT:** Bedford–Stuyvesant is a large northern Brooklyn neighborhood with a strong commercial spine along Fulton Street and active north–south retail corridors such as Bedford, Nostrand, and Stuyvesant Avenues.
 
 
-- **UNEXPECTED APPEAL:** The area combines landmarked Victorian and brownstone historic districts with ongoing infrastructure upgrades, business improvement district activity, and growing food, hospitality, and creative-sector offerings.
+- **UNEXPECTED APPEAL:** The area pairs major shopping streets and business-improvement-district investment with one of the largest intact collections of pre-1900 Victorian and brownstone buildings in the United States.
 
 
-- **THE MARKET:** Bedford–Stuyvesant has seen significant gentrification since the early 2000s, rising rents and real estate prices, BID-backed retail revitalization on Fulton and Nostrand, and increasing demand for renovated mixed-use and commercial properties.
+- **THE MARKET:** Recent decades of gentrification have brought rising rents and real estate prices, new retailers, Zagat-rated restaurants, and BID-led streetscape upgrades to its established commercial corridors.
 
 
 
@@ -21,7 +21,9 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 
 ### Around the Block
 
-Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–Stuy , is a neighborhood in the northern section of the New York City borough of Brooklyn . Bedford–Stuyvesant is bordered by Flushing Avenue to the north (bordering Williamsburg ), Classon Avenue to the west (bordering Clinton Hill ), Broadway to the east (bordering Bushwick and East New York ), and Atlantic Avenue to the south (bordering Crown Heights and Brownsville ). The main shopping street, Fulton Street, runs east–west the length of the neighborhood and intersects high-traffic north–south streets including Bedford Avenue , Nostrand Avenue , and Stuyvesant Avenue. Bedford–Stuyvesant contains four smaller neighborhoods: Bedford, Stuyvesant Heights, Ocean Hill , and Weeksville (also part of Crown Heights). Part of Clinton Hill was once considered part of Bedford–Stuyvesant.
+Bedford–Stuyvesant occupies a key position in northern Brooklyn’s urban fabric, bordered by strong commercial and industrial districts such as Williamsburg, Bushwick, East New York, Crown Heights, Brownsville, and Clinton Hill. Its main shopping street, Fulton Street, runs east–west through the entire neighborhood and intersects heavily traveled north–south avenues including Bedford, Nostrand, and Stuyvesant. These crossings form natural commercial nodes that support dense street-level retail and services. Fulton Street and Nostrand Avenue together constitute the Bed-Stuy Gateway Business Improvement District, which has driven a coordinated beautification and investment effort, including redesigned streetscapes, new street trees, street furniture, pavers, and signage. This concentration of activity positions Bed-Stuy as a retail destination and service hub not just for local residents, but for surrounding neighborhoods as well.
+
+The neighborhood’s building stock is dominated by low- to mid-rise masonry rowhouses and mixed-use buildings, many with commercial ground floors. Bedford–Stuyvesant has roughly 8,800 buildings built before 1900 and is noted as having the largest collection of intact Victorian architecture in the United States, with brownstones and rowhouses that were originally developed for an upper-middle-class market. Over time, these structures have supported a mix of residential and neighborhood-scale commercial uses. Historic districts such as Stuyvesant Heights and Bedford Historic District, along with newer designations like the Willoughby–Hart Historic District, preserve the architectural character that now underpins much of the area’s investment appeal. Community-based development has also played a role: the Bedford Stuyvesant Restoration Corporation, headquartered in a former Sheffield Milk bottling plant on Fulton Street, was one of the country’s earliest community development corporations and has participated in housing and mortgage assistance programs that shape local real estate dynamics. Today, improved transit service, infrastructure upgrades, and the presence of farmers’ markets and food cooperatives further reinforce Bedford–Stuyvesant’s role as a growing, amenity-rich commercial environment within Brooklyn.
 
 ---
 
@@ -53,8 +55,6 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 - M
 - Z
 #### Major Stations:
-- Broadway BMT Jamaica Line corridor
-- Fulton Street IND Fulton Street Line corridor
 - Nostrand Avenue (LIRR)
 #### Bus Routes:
 - B15
@@ -80,10 +80,10 @@ Bedford–Stuyvesant ( BED -fərd STY -və-sənt ), colloquially known as Bed–
 - Atlantic Avenue
 - Bedford Avenue
 - Broadway
-- Classon Avenue
-- Flushing Avenue
 - Fulton Street
+- Halsey Street
 - Lafayette Avenue
+- Macon Street
 - Malcolm X Boulevard
 - Marcy Avenue
 - Nostrand Avenue
