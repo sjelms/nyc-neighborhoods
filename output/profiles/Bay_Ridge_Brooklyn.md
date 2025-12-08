@@ -87,4 +87,4 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 
 ### Online Resources
 - **Official Website:** N/A
-- **Wikipedia:** https://en.wikipedia.org/wiki/Bay_Ridge,_Brooklyn
+- **Wikipedia:** [https://en.wikipedia.org/wiki/Bay_Ridge,_Brooklyn](https://en.wikipedia.org/wiki/Bay_Ridge,_Brooklyn)

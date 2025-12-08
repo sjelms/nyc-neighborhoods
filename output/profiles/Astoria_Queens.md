@@ -116,4 +116,4 @@ to the north, Dutch Kills, East Elmhurst, Hazen Street to the west, Hunters Poin
 
 ### Online Resources
 - **Official Website:** N/A
-- **Wikipedia:** https://en.wikipedia.org/wiki/Astoria,_Queens
+- **Wikipedia:** [https://en.wikipedia.org/wiki/Astoria,_Queens](https://en.wikipedia.org/wiki/Astoria,_Queens)

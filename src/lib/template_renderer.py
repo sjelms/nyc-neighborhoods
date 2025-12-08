@@ -77,8 +77,11 @@ class TemplateRenderer:
             slug = f"{profile.neighborhood_name.replace(' ', '_')},_{profile.borough.replace(' ', '_')}"
             wiki_link = f"https://en.wikipedia.org/wiki/{slug}"
 
+        def _md_link(url: str) -> str:
+            return f"[{url}]({url})" if url else "N/A"
+
         content = content.replace("[Neighborhood Website URL]", official_link or "N/A")
-        content = content.replace("[Wikipedia URL]", wiki_link or "N/A")
+        content = content.replace("[Wikipedia URL]", _md_link(wiki_link))
 
         # Final cleanup
         content = content.replace('…', '')

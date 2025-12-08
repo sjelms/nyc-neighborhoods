@@ -104,4 +104,4 @@ Bayside Hills is a subdivision of Bayside's south side, bordered by 48th Avenue 
 
 ### Online Resources
 - **Official Website:** N/A
-- **Wikipedia:** https://en.wikipedia.org/wiki/Bayside,_Queens
+- **Wikipedia:** [https://en.wikipedia.org/wiki/Bayside,_Queens](https://en.wikipedia.org/wiki/Bayside,_Queens)

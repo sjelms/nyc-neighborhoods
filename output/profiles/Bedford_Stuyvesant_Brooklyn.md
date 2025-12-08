@@ -93,4 +93,4 @@ The neighborhood’s building stock is dominated by low- to mid-rise masonry row
 
 ### Online Resources
 - **Official Website:** N/A
-- **Wikipedia:** https://en.wikipedia.org/wiki/Bedford_Stuyvesant,_Brooklyn
+- **Wikipedia:** [https://en.wikipedia.org/wiki/Bedford_Stuyvesant,_Brooklyn](https://en.wikipedia.org/wiki/Bedford_Stuyvesant,_Brooklyn)

@@ -4,7 +4,7 @@
     "borough": "Queens",
     "unique_id": "astoria-queens",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:42:44.603738",
+    "generation_date": "2025-12-08T12:55:12.899256",
     "last_amended_date": "2025-12-08",
     "output_file_path": "output/profiles/Astoria_Queens.md"
   },
@@ -13,7 +13,7 @@
     "borough": "Brooklyn",
     "unique_id": "bay-ridge-brooklyn",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:42:58.313978",
+    "generation_date": "2025-12-08T12:55:13.099793",
     "last_amended_date": "2025-12-08",
     "output_file_path": "output/profiles/Bay_Ridge_Brooklyn.md"
   },
@@ -22,7 +22,7 @@
     "borough": "Queens",
     "unique_id": "bayside-queens",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:43:23.307623",
+    "generation_date": "2025-12-08T12:55:13.224259",
     "last_amended_date": "2025-12-08",
     "output_file_path": "output/profiles/Bayside_Queens.md"
   },
@@ -31,7 +31,7 @@
     "borough": "Brooklyn",
     "unique_id": "bedford-stuyvesant-brooklyn",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:43:49.205651",
+    "generation_date": "2025-12-08T12:55:13.401035",
     "last_amended_date": "2025-12-08",
     "output_file_path": "output/profiles/Bedford_Stuyvesant_Brooklyn.md"
   }
