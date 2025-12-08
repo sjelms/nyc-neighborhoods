@@ -13,6 +13,11 @@ from src.services.nyc_open_data_parser import NYCOpenDataParser   # Import Parse
 
 logger = logging.getLogger("nyc_neighborhoods")
 
+def _merge_lists(original: List, new: List) -> List:
+    """Combine lists and return a sorted, unique list."""
+    return sorted(list(set(original + new)))
+
+
 class DataNormalizer:
     def __init__(self,
                  version: str,
@@ -95,11 +100,6 @@ class DataNormalizer:
                 filled_fields: List[str] = []
 
                 if refined:
-
-                    def _merge_lists(original: List, new: List) -> List:
-                        """Combine lists and return a sorted, unique list."""
-                        return sorted(list(set(original + new)))
-
                     # --- Merge Key Details ---
                     if "key_details" in refined and isinstance(refined["key_details"], dict):
                         raw_kd = raw_data.get("key_details", {})

@@ -6,7 +6,7 @@ from src.services.wikipedia_parser import WikipediaParser
 
 def _load_cached_astoria_html() -> str:
     repo_root = Path(__file__).resolve().parents[2]
-    cache_path = repo_root / "cache/html/9bbcb6b6c18e86476af39c9f34bd6830.html"
+    cache_path = repo_root / "cache/html/Astoria_Queens.html"
     cache_entry = json.loads(cache_path.read_text())
     return cache_entry["content"]
 

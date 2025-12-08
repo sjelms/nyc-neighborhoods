@@ -72,7 +72,7 @@ class ProfileGenerator:
         logger.debug(f"Constructed Wikipedia URL: {wikipedia_url}")
 
         # 2. Fetch content
-        html_content = self.web_fetcher.fetch(wikipedia_url)
+        html_content = self.web_fetcher.fetch(wikipedia_url, item_name=f"{neighborhood_name}_{borough}")
         if not html_content:
             logger.error(f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}. Skipping.")
             self.last_failure_reason = f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}."

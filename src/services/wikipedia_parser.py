@@ -343,17 +343,9 @@ class WikipediaParser:
                 text
             )
             highways = []
-            suffixes = {"expressway", "parkway", "highway", "boulevard", "avenue", "drive", "road", "street"}
             for h in highway_matches:
                 cleaned = h.strip()
                 if "train" in cleaned.lower():
-                    continue
-                # Normalize to last two words when suffix is present
-                parts = cleaned.split()
-                if parts and parts[-1].lower() in suffixes and len(parts) >= 2:
-                    cleaned = f"{parts[-2]} {parts[-1]}"
-                # Require at least one space unless it's an interstate/us route
-                if " " not in cleaned and not cleaned.lower().startswith(("i-", "interstate", "u.s.")):
                     continue
                 highways.append(cleaned)
             highways = sorted(set(highways))
