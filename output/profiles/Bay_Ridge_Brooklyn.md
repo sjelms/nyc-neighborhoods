@@ -1,8 +1,8 @@
-**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Version**: 1.0 | **Ratified**: 2025-12-10 | **Last Amended**: 2025-12-10
 
 ## Bay Ridge
 
-Bay Ridge is a neighborhood in the southwest corner of the New York City borough of Brooklyn . It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano-Narrows Bridge to the south. The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton.
+Bay Ridge is a neighborhood in the southwest corner of the New York City borough of Brooklyn . It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south. The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton.
 
 ---
 
@@ -32,8 +32,8 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 - **Population Density:** 50.5 inhabitants per acre (32,300/sq mi; 12,500/km2)
 - **Area:** 2.12 sq mi (5.49 km 2 )
 - **Boundaries:**  
-  - **East to West:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano-Narrows Bridge to the south.
-  - **North to South:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano-Narrows Bridge to the south.
+  - **East to West:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south.
+  - **North to South:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south.
   - **Adjacent Neighborhoods:** Dyker Heights, Sunset Park, Sunset Park to the north
 - **ZIP Codes:**
 - 11209
@@ -71,6 +71,8 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 - Bay Ridge Branch (freight-only rail line)
 - NYC Ferry – South Brooklyn route (American Veterans Memorial Pier / 69th Street Pier)
 #### Highways & Major Roads:
+- BMT Fourth Avenue
+- Bay Ridge Avenue
 - Belt Parkway
 - DeKalb Avenue
 - Eighth Avenue
@@ -78,10 +80,10 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 - Fort Hamilton Parkway
 - Fourth Avenue
 - Gowanus Expressway
-- Lapskaus Boulevard
-- Ridge Avenue
 - Seventh Avenue
 - Shore Road
+- Sunset Park Lapskaus Boulevard
+- The Fourth Avenue
 - Third Avenue
 
 

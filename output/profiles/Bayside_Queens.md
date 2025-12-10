@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Version**: 1.0 | **Ratified**: 2025-12-10 | **Last Amended**: 2025-12-10
 
 ## Bayside
 
@@ -88,16 +88,15 @@ Bayside Hills is a subdivision of Bayside's south side, bordered by 48th Avenue 
 - Clearview Expressway
 - Clearview Expressway (I-295)
 - Cross Island Parkway
+- Flushing Main Street
 - Francis Lewis Boulevard
 - I-295
 - I-495
-- Island Expressway
-- Island Parkway
-- Lewis Boulevard
+- Island Francis Lewis Boulevard
+- Long Island Expressway
 - Long Island Expressway (I-495)
-- Main Street
+- Long Island Rail Road
 - Northern Boulevard
-- Rail Road
 - Union Turnpike
 - Utopia Parkway
 

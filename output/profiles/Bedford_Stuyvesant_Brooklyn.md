@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Version**: 1.0 | **Ratified**: 2025-12-10 | **Last Amended**: 2025-12-10
 
 ## Bedford Stuyvesant
 
@@ -82,6 +82,7 @@ The neighborhood’s building stock is dominated by low- to mid-rise masonry row
 - Broadway
 - Fulton Street
 - Halsey Street
+- IND Fulton Street
 - Lafayette Avenue
 - Macon Street
 - Malcolm X Boulevard

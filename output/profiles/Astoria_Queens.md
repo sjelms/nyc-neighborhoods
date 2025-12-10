@@ -1,4 +1,4 @@
-**Version**: 1.0 | **Ratified**: 2025-12-08 | **Last Amended**: 2025-12-08
+**Version**: 1.0 | **Ratified**: 2025-12-10 | **Last Amended**: 2025-12-10
 
 ## Astoria
 
@@ -64,7 +64,7 @@ to the north, Dutch Kills, East Elmhurst, Hazen Street to the west, Hunters Poin
 #### Nearest Subways:
 - 7
 - E
-- G
+- F
 - M
 - N
 - R
@@ -102,15 +102,16 @@ to the north, Dutch Kills, East Elmhurst, Hazen Street to the west, Hunters Poin
 - 34th Avenue
 - 36th Avenue
 - Astoria Boulevard
-- Bliss Street
+- Astoria Ditmars Boulevard
 - Brooklyn–Queens Expressway
 - Ditmars Boulevard
+- Flushing Main Street
 - Grand Central Parkway
-- Main Street
 - Northern Boulevard
 - Queens Plaza
 - Shore Boulevard
 - Steinway Street
+- Street Bliss Street
 - Vernon Boulevard
 
 

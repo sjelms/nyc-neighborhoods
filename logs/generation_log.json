@@ -1,38 +1,1334 @@
 [
   {
-    "neighborhood_name": "Astoria",
-    "borough": "Queens",
-    "unique_id": "astoria-queens",
+    "neighborhood_name": "Allerton",
+    "borough": "Bronx",
+    "unique_id": "allerton-bronx",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:55:12.899256",
-    "last_amended_date": "2025-12-08",
-    "output_file_path": "output/profiles/Astoria_Queens.md"
+    "generation_date": "2025-12-10T16:01:53.827304",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Allerton_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Williamsbridge",
+    "borough": "Bronx",
+    "unique_id": "williamsbridge-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:02:12.990752",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Williamsbridge_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Concourse",
+    "borough": "Bronx",
+    "unique_id": "concourse-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:02:32.755289",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Concourse_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Fordham",
+    "borough": "Bronx",
+    "unique_id": "fordham-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:03:03.846247",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Fordham_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Morris Park",
+    "borough": "Bronx",
+    "unique_id": "morris-park-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:03:23.409827",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Morris_Park_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Hunts Point",
+    "borough": "Bronx",
+    "unique_id": "hunts-point-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:03:43.386140",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Hunts_Point_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Port Morris",
+    "borough": "Bronx",
+    "unique_id": "port-morris-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:04:01.824045",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Port_Morris_Bronx.md"
+  },
+  {
+    "neighborhood_name": "West Farms",
+    "borough": "Bronx",
+    "unique_id": "west-farms-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:04:23.000269",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/West_Farms_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Van Nest",
+    "borough": "Bronx",
+    "unique_id": "van-nest-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:04:40.314174",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Van_Nest_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Baychester",
+    "borough": "Bronx",
+    "unique_id": "baychester-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:05:05.543191",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Baychester_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Throgs Neck",
+    "borough": "Bronx",
+    "unique_id": "throgs-neck-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:05:27.467041",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Throgs_Neck_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Melrose",
+    "borough": "Bronx",
+    "unique_id": "melrose-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:05:46.576321",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Melrose_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Bronx River",
+    "borough": "Bronx",
+    "unique_id": "bronx-river-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:06:01.989438",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bronx_River_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Morrisania",
+    "borough": "Bronx",
+    "unique_id": "morrisania-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:06:18.920876",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Morrisania_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Kingsbridge Heights",
+    "borough": "Bronx",
+    "unique_id": "kingsbridge-heights-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:06:31.722615",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Kingsbridge_Heights_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Co-op City",
+    "borough": "Bronx",
+    "unique_id": "co-op-city-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:06:53.609729",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Co-op_City_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Bronxdale",
+    "borough": "Bronx",
+    "unique_id": "bronxdale-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:07:34.691894",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bronxdale_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Castle Hill",
+    "borough": "Bronx",
+    "unique_id": "castle-hill-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:07:52.304054",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Castle_Hill_Bronx.md"
+  },
+  {
+    "neighborhood_name": "East Tremont",
+    "borough": "Bronx",
+    "unique_id": "east-tremont-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:08:15.841402",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_Tremont_Bronx.md"
+  },
+  {
+    "neighborhood_name": "University Heights",
+    "borough": "Bronx",
+    "unique_id": "university-heights-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:08:37.002265",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/University_Heights_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Wakefield",
+    "borough": "Bronx",
+    "unique_id": "wakefield-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:09:00.771461",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Wakefield_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Morris Heights",
+    "borough": "Bronx",
+    "unique_id": "morris-heights-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:09:17.862610",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Morris_Heights_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Mount Hope",
+    "borough": "Bronx",
+    "unique_id": "mount-hope-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:09:38.498813",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Mount_Hope_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Eastchester",
+    "borough": "Bronx",
+    "unique_id": "eastchester-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:09:55.634908",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Eastchester_Bronx.md"
+  },
+  {
+    "neighborhood_name": "City Island",
+    "borough": "Bronx",
+    "unique_id": "city-island-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:10:11.699145",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/City_Island_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Soundview",
+    "borough": "Bronx",
+    "unique_id": "soundview-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:10:35.297043",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Soundview_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Mott Haven",
+    "borough": "Bronx",
+    "unique_id": "mott-haven-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:11:05.804920",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Mott_Haven_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Unionport",
+    "borough": "Bronx",
+    "unique_id": "unionport-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:11:28.785510",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Unionport_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Longwood",
+    "borough": "Bronx",
+    "unique_id": "longwood-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:11:47.719887",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Longwood_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Norwood",
+    "borough": "Bronx",
+    "unique_id": "norwood-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:12:17.780494",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Norwood_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Concourse Village",
+    "borough": "Bronx",
+    "unique_id": "concourse-village-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:12:40.828314",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Concourse_Village_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Pelham Bay",
+    "borough": "Bronx",
+    "unique_id": "pelham-bay-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:13:07.988528",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Pelham_Bay_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Bedford Park",
+    "borough": "Bronx",
+    "unique_id": "bedford-park-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:13:29.030471",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bedford_Park_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Mount Eden",
+    "borough": "Bronx",
+    "unique_id": "mount-eden-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:13:47.113218",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Mount_Eden_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Kingsbridge",
+    "borough": "Bronx",
+    "unique_id": "kingsbridge-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:14:06.003795",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Kingsbridge_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Woodstock",
+    "borough": "Bronx",
+    "unique_id": "woodstock-bronx",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:14:41.733412",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Woodstock_Bronx.md"
+  },
+  {
+    "neighborhood_name": "Sheepshead Bay",
+    "borough": "Brooklyn",
+    "unique_id": "sheepshead-bay-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:15:05.099124",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Sheepshead_Bay_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "DUMBO",
+    "borough": "Brooklyn",
+    "unique_id": "dumbo-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:15:19.029372",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/DUMBO_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Brownsville",
+    "borough": "Brooklyn",
+    "unique_id": "brownsville-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:15:37.582490",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Brownsville_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Ocean Hill",
+    "borough": "Brooklyn",
+    "unique_id": "ocean-hill-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:15:55.184002",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Ocean_Hill_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Bergen Beach",
+    "borough": "Brooklyn",
+    "unique_id": "bergen-beach-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:16:12.436057",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bergen_Beach_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Coney Island",
+    "borough": "Brooklyn",
+    "unique_id": "coney-island-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:16:29.950519",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Coney_Island_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Georgetown",
+    "borough": "Brooklyn",
+    "unique_id": "georgetown-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:16:48.196756",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Georgetown_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Fort Greene",
+    "borough": "Brooklyn",
+    "unique_id": "fort-greene-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:17:07.658405",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Fort_Greene_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Bath Beach",
+    "borough": "Brooklyn",
+    "unique_id": "bath-beach-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:17:25.915317",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bath_Beach_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Brooklyn Heights",
+    "borough": "Brooklyn",
+    "unique_id": "brooklyn-heights-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:17:40.735433",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Brooklyn_Heights_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Gowanus",
+    "borough": "Brooklyn",
+    "unique_id": "gowanus-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:17:58.228865",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Gowanus_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Clinton Hill",
+    "borough": "Brooklyn",
+    "unique_id": "clinton-hill-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:18:17.163345",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Clinton_Hill_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Kensington",
+    "borough": "Brooklyn",
+    "unique_id": "kensington-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:18:32.380483",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Kensington_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Vinegar Hill",
+    "borough": "Brooklyn",
+    "unique_id": "vinegar-hill-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:18:46.258119",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Vinegar_Hill_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Prospect Heights",
+    "borough": "Brooklyn",
+    "unique_id": "prospect-heights-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:19:00.518404",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Prospect_Heights_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Carroll Gardens",
+    "borough": "Brooklyn",
+    "unique_id": "carroll-gardens-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:19:17.232769",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Carroll_Gardens_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Crown Heights",
+    "borough": "Brooklyn",
+    "unique_id": "crown-heights-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:19:41.862649",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Crown_Heights_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Brighton Beach",
+    "borough": "Brooklyn",
+    "unique_id": "brighton-beach-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:19:57.291610",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Brighton_Beach_Brooklyn.md"
   },
   {
     "neighborhood_name": "Bay Ridge",
     "borough": "Brooklyn",
     "unique_id": "bay-ridge-brooklyn",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:55:13.099793",
-    "last_amended_date": "2025-12-08",
+    "generation_date": "2025-12-10T16:19:57.598765",
+    "last_amended_date": "2025-12-10",
     "output_file_path": "output/profiles/Bay_Ridge_Brooklyn.md"
   },
   {
-    "neighborhood_name": "Bayside",
-    "borough": "Queens",
-    "unique_id": "bayside-queens",
+    "neighborhood_name": "Red Hook",
+    "borough": "Brooklyn",
+    "unique_id": "red-hook-brooklyn",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:55:13.224259",
-    "last_amended_date": "2025-12-08",
-    "output_file_path": "output/profiles/Bayside_Queens.md"
+    "generation_date": "2025-12-10T16:20:14.290334",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Red_Hook_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Park Slope",
+    "borough": "Brooklyn",
+    "unique_id": "park-slope-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:20:32.213512",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Park_Slope_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Flatlands",
+    "borough": "Brooklyn",
+    "unique_id": "flatlands-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:20:48.339160",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Flatlands_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Cypress Hills",
+    "borough": "Brooklyn",
+    "unique_id": "cypress-hills-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:21:05.096839",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Cypress_Hills_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Flatbush",
+    "borough": "Brooklyn",
+    "unique_id": "flatbush-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:21:21.338007",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Flatbush_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Prospect Lefferts Gardens",
+    "borough": "Brooklyn",
+    "unique_id": "prospect-lefferts-gardens-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:21:36.641217",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Prospect_Lefferts_Gardens_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Greenpoint",
+    "borough": "Brooklyn",
+    "unique_id": "greenpoint-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:21:53.315061",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Greenpoint_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Borough Park",
+    "borough": "Brooklyn",
+    "unique_id": "borough-park-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:22:12.298543",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Borough_Park_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Williamsburg",
+    "borough": "Brooklyn",
+    "unique_id": "williamsburg-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:22:43.135080",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Williamsburg_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Sea Gate",
+    "borough": "Brooklyn",
+    "unique_id": "sea-gate-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:22:56.905106",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Sea_Gate_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Boerum Hill",
+    "borough": "Brooklyn",
+    "unique_id": "boerum-hill-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:23:15.873800",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Boerum_Hill_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "East Flatbush",
+    "borough": "Brooklyn",
+    "unique_id": "east-flatbush-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:23:35.230519",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_Flatbush_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Gravesend",
+    "borough": "Brooklyn",
+    "unique_id": "gravesend-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:23:59.348741",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Gravesend_Brooklyn.md"
   },
   {
     "neighborhood_name": "Bedford Stuyvesant",
     "borough": "Brooklyn",
     "unique_id": "bedford-stuyvesant-brooklyn",
     "version": "1.0",
-    "generation_date": "2025-12-08T12:55:13.401035",
-    "last_amended_date": "2025-12-08",
+    "generation_date": "2025-12-10T16:23:59.642541",
+    "last_amended_date": "2025-12-10",
     "output_file_path": "output/profiles/Bedford_Stuyvesant_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Navy Yard",
+    "borough": "Brooklyn",
+    "unique_id": "navy-yard-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:24:21.010360",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Navy_Yard_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Marine Park",
+    "borough": "Brooklyn",
+    "unique_id": "marine-park-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:24:36.443521",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Marine_Park_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Canarsie",
+    "borough": "Brooklyn",
+    "unique_id": "canarsie-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:25:00.652179",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Canarsie_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Bushwick",
+    "borough": "Brooklyn",
+    "unique_id": "bushwick-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:25:19.710839",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bushwick_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Sunset Park",
+    "borough": "Brooklyn",
+    "unique_id": "sunset-park-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:25:35.650027",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Sunset_Park_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Midwood",
+    "borough": "Brooklyn",
+    "unique_id": "midwood-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:25:53.815328",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Midwood_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Ditmas Park",
+    "borough": "Brooklyn",
+    "unique_id": "ditmas-park-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:26:10.147806",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Ditmas_Park_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Mill Basin",
+    "borough": "Brooklyn",
+    "unique_id": "mill-basin-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:26:27.491510",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Mill_Basin_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "East New York",
+    "borough": "Brooklyn",
+    "unique_id": "east-new-york-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:26:51.319198",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_New_York_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Spring Creek",
+    "borough": "Brooklyn",
+    "unique_id": "spring-creek-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:27:29.562949",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Spring_Creek_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Greenwood Heights",
+    "borough": "Brooklyn",
+    "unique_id": "greenwood-heights-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:27:47.067463",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Greenwood_Heights_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "Old Mill Basin",
+    "borough": "Brooklyn",
+    "unique_id": "old-mill-basin-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:28:00.416859",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Old_Mill_Basin_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "East Williamsburg",
+    "borough": "Brooklyn",
+    "unique_id": "east-williamsburg-brooklyn",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:28:17.227394",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_Williamsburg_Brooklyn.md"
+  },
+  {
+    "neighborhood_name": "East Harlem",
+    "borough": "Manhattan",
+    "unique_id": "east-harlem-manhattan",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:28:39.727424",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_Harlem_Manhattan.md"
+  },
+  {
+    "neighborhood_name": "Lenox Hill",
+    "borough": "Manhattan",
+    "unique_id": "lenox-hill-manhattan",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:28:57.762672",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Lenox_Hill_Manhattan.md"
+  },
+  {
+    "neighborhood_name": "Clinton",
+    "borough": "Manhattan",
+    "unique_id": "clinton-manhattan",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:29:36.445156",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Clinton_Manhattan.md"
+  },
+  {
+    "neighborhood_name": "Washington Heights",
+    "borough": "Manhattan",
+    "unique_id": "washington-heights-manhattan",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:29:55.329129",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Washington_Heights_Manhattan.md"
+  },
+  {
+    "neighborhood_name": "Astoria",
+    "borough": "Queens",
+    "unique_id": "astoria-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:29:55.588868",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Astoria_Queens.md"
+  },
+  {
+    "neighborhood_name": "Jackson Heights",
+    "borough": "Queens",
+    "unique_id": "jackson-heights-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:30:14.264046",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Jackson_Heights_Queens.md"
+  },
+  {
+    "neighborhood_name": "Ozone Park",
+    "borough": "Queens",
+    "unique_id": "ozone-park-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:30:33.452036",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Ozone_Park_Queens.md"
+  },
+  {
+    "neighborhood_name": "Little Neck",
+    "borough": "Queens",
+    "unique_id": "little-neck-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:30:51.634475",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Little_Neck_Queens.md"
+  },
+  {
+    "neighborhood_name": "Hunters Point",
+    "borough": "Queens",
+    "unique_id": "hunters-point-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:31:23.946290",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Hunters_Point_Queens.md"
+  },
+  {
+    "neighborhood_name": "Forest Hills",
+    "borough": "Queens",
+    "unique_id": "forest-hills-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:31:40.955290",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Forest_Hills_Queens.md"
+  },
+  {
+    "neighborhood_name": "Elmhurst",
+    "borough": "Queens",
+    "unique_id": "elmhurst-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:32:07.643621",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Elmhurst_Queens.md"
+  },
+  {
+    "neighborhood_name": "Richmond Hill",
+    "borough": "Queens",
+    "unique_id": "richmond-hill-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:32:26.755136",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Richmond_Hill_Queens.md"
+  },
+  {
+    "neighborhood_name": "Bayside",
+    "borough": "Queens",
+    "unique_id": "bayside-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:32:26.937693",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bayside_Queens.md"
+  },
+  {
+    "neighborhood_name": "Woodside",
+    "borough": "Queens",
+    "unique_id": "woodside-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:32:47.469274",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Woodside_Queens.md"
+  },
+  {
+    "neighborhood_name": "Briarwood",
+    "borough": "Queens",
+    "unique_id": "briarwood-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:33:00.306317",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Briarwood_Queens.md"
+  },
+  {
+    "neighborhood_name": "Queens Village",
+    "borough": "Queens",
+    "unique_id": "queens-village-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:33:15.805676",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Queens_Village_Queens.md"
+  },
+  {
+    "neighborhood_name": "Flushing",
+    "borough": "Queens",
+    "unique_id": "flushing-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:33:40.060033",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Flushing_Queens.md"
+  },
+  {
+    "neighborhood_name": "Maspeth",
+    "borough": "Queens",
+    "unique_id": "maspeth-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:33:56.918138",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Maspeth_Queens.md"
+  },
+  {
+    "neighborhood_name": "Springfield Gardens",
+    "borough": "Queens",
+    "unique_id": "springfield-gardens-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:34:11.070261",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Springfield_Gardens_Queens.md"
+  },
+  {
+    "neighborhood_name": "Hollis",
+    "borough": "Queens",
+    "unique_id": "hollis-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:34:26.121433",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Hollis_Queens.md"
+  },
+  {
+    "neighborhood_name": "Fresh Meadows",
+    "borough": "Queens",
+    "unique_id": "fresh-meadows-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:34:49.901099",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Fresh_Meadows_Queens.md"
+  },
+  {
+    "neighborhood_name": "Pomonok",
+    "borough": "Queens",
+    "unique_id": "pomonok-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:35:07.334423",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Pomonok_Queens.md"
+  },
+  {
+    "neighborhood_name": "Kew Gardens",
+    "borough": "Queens",
+    "unique_id": "kew-gardens-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:35:26.268922",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Kew_Gardens_Queens.md"
+  },
+  {
+    "neighborhood_name": "Cambria Heights",
+    "borough": "Queens",
+    "unique_id": "cambria-heights-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:35:40.469825",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Cambria_Heights_Queens.md"
+  },
+  {
+    "neighborhood_name": "North Corona",
+    "borough": "Queens",
+    "unique_id": "north-corona-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:36:00.526986",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/North_Corona_Queens.md"
+  },
+  {
+    "neighborhood_name": "Jamaica Estates",
+    "borough": "Queens",
+    "unique_id": "jamaica-estates-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:36:36.302808",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Jamaica_Estates_Queens.md"
+  },
+  {
+    "neighborhood_name": "Howard Beach",
+    "borough": "Queens",
+    "unique_id": "howard-beach-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:36:52.401794",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Howard_Beach_Queens.md"
+  },
+  {
+    "neighborhood_name": "Long Island City",
+    "borough": "Queens",
+    "unique_id": "long-island-city-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:37:15.339189",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Long_Island_City_Queens.md"
+  },
+  {
+    "neighborhood_name": "College Point",
+    "borough": "Queens",
+    "unique_id": "college-point-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:37:39.405632",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/College_Point_Queens.md"
+  },
+  {
+    "neighborhood_name": "Douglaston",
+    "borough": "Queens",
+    "unique_id": "douglaston-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:37:52.869264",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Douglaston_Queens.md"
+  },
+  {
+    "neighborhood_name": "St. Albans",
+    "borough": "Queens",
+    "unique_id": "st.-albans-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:38:49.963796",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/St._Albans_Queens.md"
+  },
+  {
+    "neighborhood_name": "Far Rockaway",
+    "borough": "Queens",
+    "unique_id": "far-rockaway-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:39:07.406672",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Far_Rockaway_Queens.md"
+  },
+  {
+    "neighborhood_name": "Rosedale",
+    "borough": "Queens",
+    "unique_id": "rosedale-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:39:29.329165",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Rosedale_Queens.md"
+  },
+  {
+    "neighborhood_name": "Rochdale",
+    "borough": "Queens",
+    "unique_id": "rochdale-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:39:48.025441",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Rochdale_Queens.md"
+  },
+  {
+    "neighborhood_name": "Astoria Heights",
+    "borough": "Queens",
+    "unique_id": "astoria-heights-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:40:04.658482",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Astoria_Heights_Queens.md"
+  },
+  {
+    "neighborhood_name": "Oakland Gardens",
+    "borough": "Queens",
+    "unique_id": "oakland-gardens-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:40:23.980878",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Oakland_Gardens_Queens.md"
+  },
+  {
+    "neighborhood_name": "Rego Park",
+    "borough": "Queens",
+    "unique_id": "rego-park-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:40:45.976767",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Rego_Park_Queens.md"
+  },
+  {
+    "neighborhood_name": "Rockaway Park",
+    "borough": "Queens",
+    "unique_id": "rockaway-park-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:41:09.081817",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Rockaway_Park_Queens.md"
+  },
+  {
+    "neighborhood_name": "Seaside",
+    "borough": "Queens",
+    "unique_id": "seaside-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:41:22.378810",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Seaside_Queens.md"
+  },
+  {
+    "neighborhood_name": "Bellerose",
+    "borough": "Queens",
+    "unique_id": "bellerose-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:41:40.090643",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Bellerose_Queens.md"
+  },
+  {
+    "neighborhood_name": "Whitestone",
+    "borough": "Queens",
+    "unique_id": "whitestone-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:41:57.900296",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Whitestone_Queens.md"
+  },
+  {
+    "neighborhood_name": "Woodhaven",
+    "borough": "Queens",
+    "unique_id": "woodhaven-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:42:15.234450",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Woodhaven_Queens.md"
+  },
+  {
+    "neighborhood_name": "Auburndale",
+    "borough": "Queens",
+    "unique_id": "auburndale-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:42:32.152654",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Auburndale_Queens.md"
+  },
+  {
+    "neighborhood_name": "Glendale",
+    "borough": "Queens",
+    "unique_id": "glendale-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:42:56.177367",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Glendale_Queens.md"
+  },
+  {
+    "neighborhood_name": "Jamaica",
+    "borough": "Queens",
+    "unique_id": "jamaica-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:43:18.015523",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Jamaica_Queens.md"
+  },
+  {
+    "neighborhood_name": "Middle Village",
+    "borough": "Queens",
+    "unique_id": "middle-village-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:43:37.491630",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Middle_Village_Queens.md"
+  },
+  {
+    "neighborhood_name": "Laurelton",
+    "borough": "Queens",
+    "unique_id": "laurelton-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:43:54.829640",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Laurelton_Queens.md"
+  },
+  {
+    "neighborhood_name": "Sunnyside",
+    "borough": "Queens",
+    "unique_id": "sunnyside-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:44:12.119493",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Sunnyside_Queens.md"
+  },
+  {
+    "neighborhood_name": "Queensboro Hill",
+    "borough": "Queens",
+    "unique_id": "queensboro-hill-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:44:27.601042",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Queensboro_Hill_Queens.md"
+  },
+  {
+    "neighborhood_name": "Kew Gardens Hills",
+    "borough": "Queens",
+    "unique_id": "kew-gardens-hills-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:44:51.073175",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Kew_Gardens_Hills_Queens.md"
+  },
+  {
+    "neighborhood_name": "Lindenwood",
+    "borough": "Queens",
+    "unique_id": "lindenwood-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:45:06.026291",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Lindenwood_Queens.md"
+  },
+  {
+    "neighborhood_name": "Steinway",
+    "borough": "Queens",
+    "unique_id": "steinway-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:45:25.510472",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Steinway_Queens.md"
+  },
+  {
+    "neighborhood_name": "South Ozone Park",
+    "borough": "Queens",
+    "unique_id": "south-ozone-park-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:45:41.253147",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/South_Ozone_Park_Queens.md"
+  },
+  {
+    "neighborhood_name": "Dutch Kills",
+    "borough": "Queens",
+    "unique_id": "dutch-kills-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:46:00.092382",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Dutch_Kills_Queens.md"
+  },
+  {
+    "neighborhood_name": "East Elmhurst",
+    "borough": "Queens",
+    "unique_id": "east-elmhurst-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:46:21.276465",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/East_Elmhurst_Queens.md"
+  },
+  {
+    "neighborhood_name": "Ridgewood",
+    "borough": "Queens",
+    "unique_id": "ridgewood-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:46:38.094642",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Ridgewood_Queens.md"
+  },
+  {
+    "neighborhood_name": "Murray Hill",
+    "borough": "Queens",
+    "unique_id": "murray-hill-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:46:55.696828",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Murray_Hill_Queens.md"
+  },
+  {
+    "neighborhood_name": "New Hyde Park",
+    "borough": "Queens",
+    "unique_id": "new-hyde-park-queens",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:47:13.247478",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/New_Hyde_Park_Queens.md"
+  },
+  {
+    "neighborhood_name": "Stapleton",
+    "borough": "Staten Island",
+    "unique_id": "stapleton-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:47:31.327023",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Stapleton_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Rossville",
+    "borough": "Staten Island",
+    "unique_id": "rossville-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:47:52.752276",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Rossville_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Charleston",
+    "borough": "Staten Island",
+    "unique_id": "charleston-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:48:16.595154",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Charleston_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Port Ivory",
+    "borough": "Staten Island",
+    "unique_id": "port-ivory-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:48:35.321283",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Port_Ivory_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Pleasant Plains",
+    "borough": "Staten Island",
+    "unique_id": "pleasant-plains-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:48:49.055950",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Pleasant_Plains_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Mariner's Harbor",
+    "borough": "Staten Island",
+    "unique_id": "mariner's-harbor-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:49:03.617507",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Mariner's_Harbor_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "West Brighton",
+    "borough": "Staten Island",
+    "unique_id": "west-brighton-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:49:25.738018",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/West_Brighton_Staten_Island.md"
+  },
+  {
+    "neighborhood_name": "Elm Park",
+    "borough": "Staten Island",
+    "unique_id": "elm-park-staten-island",
+    "version": "1.0",
+    "generation_date": "2025-12-10T16:49:45.593711",
+    "last_amended_date": "2025-12-10",
+    "output_file_path": "output/profiles/Elm_Park_Staten_Island.md"
   }
 ]
