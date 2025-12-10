@@ -1,4 +1,4 @@
-# nyc-neighborhoods
+# NYC Neighborhood Profiles
 A CLI tool that turns a CSV of NYC neighborhoods into polished, standardized Markdown profiles. It fetches and parses Wikipedia by default, normalizes demographics/boundaries/transit, then uses an LLM (on by default) to synthesize the commercial narrative and fill gaps so the output is publication-ready. If no OpenAI key is available, it falls back to parser-only output, which will be much sparser.
 
 ## How it works (at a glance)
