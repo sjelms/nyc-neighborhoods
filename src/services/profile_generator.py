@@ -1,7 +1,7 @@
 import logging
 import os
 import json
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Optional, Tuple, List, Dict, Any
 
@@ -50,16 +50,46 @@ class ProfileGenerator:
         search_name = f"{neighborhood_name}, {borough}".replace(" ", "_")
         return f"{self.WIKIPEDIA_BASE_URL}{search_name}"
 
+    def _write_failure_artifact(self, neighborhood_name: str, borough: str, reason: str) -> Optional[Path]:
+        """
+        Writes a small marker file when a force-regenerate attempt fails so the
+        previous output stays untouched but the failure is discoverable.
+        """
+        timestamp = datetime.now().isoformat(timespec="seconds")
+        safe_timestamp = timestamp.replace(":", "-")
+        file_name = f"{neighborhood_name.replace(' ', '_')}_{borough.replace(' ', '_')}_regenerate-fail-{safe_timestamp}.md"
+        output_file_path = self.output_dir / file_name
+        version_str = f"{self.data_normalizer.version}-fail"
+        header = (
+            f"**Version**: {version_str} | **Ratified**: {self.data_normalizer.ratified_date.isoformat()} | "
+            f"**Last Amended**: {self.data_normalizer.last_amended_date.isoformat()} | "
+            f"**Status**: regenerate-fail @ {timestamp}"
+        )
+        body = (
+            f"{header}\n\n"
+            f"Generation failed while regenerating **{neighborhood_name}, {borough}**.\n\n"
+            f"Reason: {reason or 'Unknown error'}\n"
+        )
+        try:
+            output_file_path.write_text(body)
+            logger.info(f"Wrote regenerate failure marker to {os.path.relpath(output_file_path)}")
+            return output_file_path
+        except Exception as e:
+            logger.error(f"Could not write regenerate failure marker for {neighborhood_name}, {borough}: {e}")
+            return None
+
     def generate_profile(
                          self,
                          neighborhood_name: str,
-                         borough: str) -> Tuple[bool, Optional[Path]]:
+                         borough: str,
+                         force_regenerate: bool = False) -> Tuple[bool, Optional[Path]]:
         """
         Generates a Markdown profile for a single neighborhood.
 
         Args:
             neighborhood_name: The name of the neighborhood.
             borough: The borough the neighborhood belongs to.
+            force_regenerate: Whether this call is part of a force-regenerate run.
 
         Returns:
             A tuple: (success_status, path_to_generated_file if successful else None).
@@ -76,6 +106,8 @@ class ProfileGenerator:
         if not html_content:
             logger.error(f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}. Skipping.")
             self.last_failure_reason = f"Failed to fetch Wikipedia content for {neighborhood_name}, {borough}."
+            if force_regenerate:
+                self._write_failure_artifact(neighborhood_name, borough, self.last_failure_reason)
             return False, None
 
         # 3. Parse content
@@ -91,6 +123,8 @@ class ProfileGenerator:
         if not profile:
             logger.error(f"Failed to normalize data for {neighborhood_name}, {borough}. Skipping.")
             self.last_failure_reason = f"Failed to normalize data for {neighborhood_name}, {borough}."
+            if force_regenerate:
+                self._write_failure_artifact(neighborhood_name, borough, self.last_failure_reason)
             return False, None
 
         # 5. Render Markdown
@@ -99,6 +133,8 @@ class ProfileGenerator:
         except Exception as e:
             logger.error(f"Error rendering Markdown for {neighborhood_name}, {borough}: {e}. Skipping.")
             self.last_failure_reason = f"Error rendering Markdown for {neighborhood_name}, {borough}: {e}"
+            if force_regenerate:
+                self._write_failure_artifact(neighborhood_name, borough, self.last_failure_reason)
             return False, None
 
         # 6. Save Markdown to file
@@ -119,12 +155,15 @@ class ProfileGenerator:
                     "generation_date": profile.generation_date.isoformat(),
                     "last_amended_date": profile.last_amended_date.isoformat(),
                     "output_file_path": relative_output_path
-                }
-                self.generation_log.add_entry(log_entry)
-            
+            }
+            self.generation_log.add_entry(log_entry)
+        
             return True, output_file_path
         except Exception as e:
             logger.error(f"Error saving profile for {neighborhood_name}, {borough} to {os.path.relpath(output_file_path)}: {e}")
+            self.last_failure_reason = f"Error saving profile for {neighborhood_name}, {borough}: {e}"
+            if force_regenerate:
+                self._write_failure_artifact(neighborhood_name, borough, self.last_failure_reason)
             return False, None
     
     def generate_profiles_from_list(
@@ -213,7 +252,7 @@ class ProfileGenerator:
                 continue
 
             # Process the profile
-            success, file_path = self.generate_profile(neighborhood, borough)
+            success, file_path = self.generate_profile(neighborhood, borough, force_regenerate=force_regenerate)
             if success:
                 results["success"] += 1
                 results["details"].append({

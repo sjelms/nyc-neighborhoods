@@ -1,5 +1,12 @@
 # nyc-neighborhoods
-A tool that, given a list of New York City neighborhoods, automatically retrieves public information (such as demographics, boundaries, transit, and commercial context) from trusted online sources and outputs a standardized markdown file for each neighborhood, following a fixed template. It can optionally use an LLM to enrich narrative sections when data is sparse.
+A CLI tool that turns a CSV of NYC neighborhoods into polished, standardized Markdown profiles. It fetches and parses Wikipedia by default, normalizes demographics/boundaries/transit, then uses an LLM (on by default) to synthesize the commercial narrative and fill gaps so the output is publication-ready. If no OpenAI key is available, it falls back to parser-only output, which will be much sparser.
+
+## How it works (at a glance)
+- Read a CSV with `Neighborhood` and `Borough`.
+- Fetch each neighborhood’s Wikipedia page (cached for repeatable runs).
+- Parse infobox + transport/geography sections for hard facts.
+- Run the LLM to produce “Key Details” and “Around the Block” narratives and to backfill missing facts.
+- Render the profile into a Markdown template and log the generation for skip/force/update workflows.
 
 ## Installation
 
@@ -38,11 +45,12 @@ python3 -m src.cli.main generate-profiles [OPTIONS]
 *   `-l, --log-level <TEXT>`: Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL). Defaults to `INFO`.
 *   `-c, --cache-dir <PATH>`: Path to the directory for caching web content. Defaults to `cache`.
 *   `-e, --cache-expiry-days <INT>`: Number of days before cached web content expires. Set to `0` to disable caching. Defaults to `7`.
-*   `--odid, --nyc-open-data-dataset-id <TEXT>`: ID of the NYC Open Data Socrata dataset to use for supplementary data (e.g., `ntacode_dataset_placeholder`). If not provided, Open Data will not be used.
+*   `--odid, --nyc-open-data-dataset-id <TEXT>`: **Temporarily parked.** Option is accepted but ignored while the NYC Open Data integration is disabled pending API documentation review.
 *   `-f, --force-regenerate`: A boolean flag that, when present, forces the re-generation of all profiles, even if they already exist in the log.
+    - If a force-regenerate attempt fails, a marker file named `Neighborhood_Borough_regenerate-fail-<timestamp>.md` is written with the version suffixed by `-fail`, leaving any existing profile untouched.
 *   `-u, --update-since <YYYY-MM-DD>`: A date string that instructs the tool to only re-generate profiles that were last amended *on or after* this date.
 *   `--log-file, --generation-log-file, --glf <PATH>`: Path to the JSON log file for tracking generated profiles. Defaults to `logs/generation_log.json`.
-*   `--use-llm/--no-llm`: Enable or disable the optional LLM-assisted structuring layer. It auto-disables when `OPENAI_API_KEY` is missing.
+*   `--use-llm/--no-llm`: Enable or disable the LLM-assisted structuring layer (enabled by default; auto-disables when `OPENAI_API_KEY` is missing, which will reduce richness).
 *   `--llm-model <TEXT>`: LLM model name to use when the helper is enabled. Defaults to `gpt-5.1-2025-11-13`.
 
 ### Example:

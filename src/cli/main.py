@@ -88,13 +88,15 @@ def generate_profiles(
     # Initialize WebFetcher
     web_fetcher = WebFetcher(cache_manager=cache_manager, expiry_days=cache_expiry_days)
 
-    # Initialize NYC Open Data components if ID is provided
+    # Initialize NYC Open Data components (temporarily parked)
     nyc_open_data_fetcher: Optional[NYCOpenDataFetcher] = None
     nyc_open_data_parser: Optional[NYCOpenDataParser] = None
     if nyc_open_data_dataset_id:
-        nyc_open_data_fetcher = NYCOpenDataFetcher(web_fetcher=web_fetcher)
-        nyc_open_data_parser = NYCOpenDataParser()
-        internal_logger.info(f"NYC Open Data integration enabled for dataset: {nyc_open_data_dataset_id}")
+        internal_logger.info(
+            "NYC Open Data integration is temporarily disabled; ignoring dataset id '%s' until API docs are finalized.",
+            nyc_open_data_dataset_id,
+        )
+        nyc_open_data_dataset_id = None
     else:
         internal_logger.info("NYC Open Data integration disabled.")
 
