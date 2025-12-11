@@ -10,6 +10,22 @@ class TemplateRenderer:
             raise FileNotFoundError(f"Template file not found at {self.template_path}")
         self.template_content = self.template_path.read_text()
 
+    def _clean_text(self, text: Any) -> str:
+        """
+        Normalizes spacing around punctuation without disturbing line breaks.
+        """
+        if text is None:
+            return ""
+        cleaned = str(text)
+        cleaned = re.sub(r"[ \t]+([,.;:!?])", r"\1", cleaned)
+        cleaned = re.sub(r"\(\s+", "(", cleaned)
+        cleaned = re.sub(r"\s+\)", ")", cleaned)
+        cleaned = re.sub(r"[ \t]{2,}", " ", cleaned)
+        return cleaned.strip()
+
+    def _clean_list(self, items: List[str]) -> List[str]:
+        return [self._clean_text(item) for item in items or [] if self._clean_text(item)]
+
     def render(self, profile: NeighborhoodProfile) -> str:
         """
         Renders the Markdown template with data from a NeighborhoodProfile object.
@@ -17,43 +33,43 @@ class TemplateRenderer:
         content = self.template_content
 
         # Simple string replacements for direct fields
-        content = content.replace("[VERSION]", profile.version or "N/A")
+        content = content.replace("[VERSION]", self._clean_text(profile.version) or "N/A")
         content = content.replace("[RATIFIED_DATE]", profile.ratified_date.isoformat())
         content = content.replace("[LAST_AMENDED_DATE]", profile.last_amended_date.isoformat())
-        content = content.replace("[Neighborhood Name]", profile.neighborhood_name or "N/A")
-        content = content.replace("[Short Summary Paragraph]", profile.summary or "Not available.")
-        content = content.replace("[A 1–2 paragraph narrative]", profile.around_the_block or "")
+        content = content.replace("[Neighborhood Name]", self._clean_text(profile.neighborhood_name) or "N/A")
+        content = content.replace("[Short Summary Paragraph]", self._clean_text(profile.summary) or "Not available.")
+        content = content.replace("[A 1–2 paragraph narrative]", self._clean_text(profile.around_the_block) or "")
 
         # Key-Value replacements using regex for robustness
         def replace_kv(text, key, value):
             # Matches "- **KEY:**" followed by optional whitespace up to the end of the line.
             pattern = re.compile(f"(- \\*\\*{re.escape(key)}:\\*\\*).*$", re.IGNORECASE | re.MULTILINE)
-            replacement = f"\\g<1> {value or 'N/A'}"
+            replacement = f"\\g<1> {self._clean_text(value) or 'N/A'}"
             return pattern.sub(replacement, text)
 
         content = replace_kv(content, "WHAT TO EXPECT", profile.key_details.what_to_expect)
         content = replace_kv(content, "UNEXPECTED APPEAL", profile.key_details.unexpected_appeal)
         content = replace_kv(content, "THE MARKET", profile.key_details.the_market)
         
-        content = replace_kv(content, "Population", str(profile.neighborhood_facts.population or 'N/A'))
-        content = replace_kv(content, "Population Density", str(profile.neighborhood_facts.population_density or 'N/A'))
-        content = replace_kv(content, "Area", str(profile.neighborhood_facts.area or 'N/A'))
+        content = replace_kv(content, "Population", self._clean_text(profile.neighborhood_facts.population or 'N/A'))
+        content = replace_kv(content, "Population Density", self._clean_text(profile.neighborhood_facts.population_density or 'N/A'))
+        content = replace_kv(content, "Area", self._clean_text(profile.neighborhood_facts.area or 'N/A'))
 
         # Boundaries
-        content = replace_kv(content, "East to West", profile.neighborhood_facts.boundaries.east_to_west or 'N/A')
-        content = replace_kv(content, "North to South", profile.neighborhood_facts.boundaries.north_to_south or 'N/A')
-        adj_neighborhoods_str = ', '.join(profile.neighborhood_facts.boundaries.adjacent_neighborhoods or [])
+        content = replace_kv(content, "East to West", self._clean_text(profile.neighborhood_facts.boundaries.east_to_west or 'N/A'))
+        content = replace_kv(content, "North to South", self._clean_text(profile.neighborhood_facts.boundaries.north_to_south or 'N/A'))
+        adj_neighborhoods_str = ', '.join(self._clean_list(profile.neighborhood_facts.boundaries.adjacent_neighborhoods))
         content = replace_kv(content, "Adjacent Neighborhoods", adj_neighborhoods_str or 'N/A')
 
         # List-based sections (ZIPs and Transit)
-        zip_list_str = self._format_list(profile.neighborhood_facts.zip_codes)
+        zip_list_str = self._format_list(self._clean_list(profile.neighborhood_facts.zip_codes))
         content = re.sub(r"(- \*\*ZIP Codes:\*\*).*", f"\\g<1>\n{zip_list_str or 'N/A'}", content, flags=re.IGNORECASE)
 
-        content = content.replace("#### Nearest Subways:\n…  ", f"#### Nearest Subways:\n{self._format_list(profile.transit_accessibility.nearest_subways) or 'N/A'}")
-        content = content.replace("#### Major Stations:\n…  ", f"#### Major Stations:\n{self._format_list(profile.transit_accessibility.major_stations) or 'N/A'}")
-        content = content.replace("#### Bus Routes:\n…  ", f"#### Bus Routes:\n{self._format_list(profile.transit_accessibility.bus_routes) or 'N/A'}")
-        content = content.replace("#### Rail / Freight / Other Transit (if applicable):\n…  ", f"#### Rail / Freight / Other Transit (if applicable):\n{self._format_list(profile.transit_accessibility.rail_freight_other) or 'N/A'}")
-        content = content.replace("#### Highways & Major Roads:\n…  ", f"#### Highways & Major Roads:\n{self._format_list(profile.transit_accessibility.highways_major_roads) or 'N/A'}")
+        content = content.replace("#### Nearest Subways:\n…  ", f"#### Nearest Subways:\n{self._format_list(self._clean_list(profile.transit_accessibility.nearest_subways)) or 'N/A'}")
+        content = content.replace("#### Major Stations:\n…  ", f"#### Major Stations:\n{self._format_list(self._clean_list(profile.transit_accessibility.major_stations)) or 'N/A'}")
+        content = content.replace("#### Bus Routes:\n…  ", f"#### Bus Routes:\n{self._format_list(self._clean_list(profile.transit_accessibility.bus_routes)) or 'N/A'}")
+        content = content.replace("#### Rail / Freight / Other Transit (if applicable):\n…  ", f"#### Rail / Freight / Other Transit (if applicable):\n{self._format_list(self._clean_list(profile.transit_accessibility.rail_freight_other)) or 'N/A'}")
+        content = content.replace("#### Highways & Major Roads:\n…  ", f"#### Highways & Major Roads:\n{self._format_list(self._clean_list(profile.transit_accessibility.highways_major_roads)) or 'N/A'}")
 
         # Safely remove Commute Times section if no data is available
         commute_section_pattern = re.compile(r"\n---\s*\n\n### Commute Times.*?(?=\n\n### Online Resources|$)", re.DOTALL)
