@@ -2,7 +2,7 @@
 
 ## East Flatbush
 
-East Flatbush is a residential neighborhood in the New York City borough of Brooklyn . East Flatbush is bounded by Crown Heights and Empire Boulevard to the north; Brownsville and East 98th Street to the east; Flatlands , Canarsie and the Long Island Rail Road 's Bay Ridge Branch to the south; and the neighborhood of Flatbush and New York Avenue to the west. East Flatbush is a predominantly black neighborhood of African American and Afro-Caribbeans and has a population of 135,619 as of the 2010 United States census .
+East Flatbush is a residential neighborhood in the New York City borough of Brooklyn. East Flatbush is bounded by Crown Heights and Empire Boulevard to the north; Brownsville and East 98th Street to the east; Flatlands, Canarsie and the Long Island Rail Road 's Bay Ridge Branch to the south; and the neighborhood of Flatbush and New York Avenue to the west. East Flatbush is a predominantly black neighborhood of African American and Afro-Caribbeans and has a population of 135,619 as of the 2010 United States census.
 
 ---
 
@@ -33,7 +33,7 @@ From a mobility standpoint, the neighborhood relies heavily on surface transit. 
 - **Population:** 135,619
 - **Population Density:** 17,907/km² (46,378/sq mi) ; 72.5 inhabitants per acre (46,400/sq mi; 17,900/km²)
 - **Area:** 7.5737 km 2 (2.9242 sq mi)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Farragut is roughly bounded by Cortelyou Road and
 Holy Cross Cemetery
 to the north,
@@ -93,6 +93,19 @@ to the north, Crown Heights, Flatbush, Flatlands
 - Sutter Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/East_Flatbush,_Brooklyn](https://en.wikipedia.org/wiki/East_Flatbush,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

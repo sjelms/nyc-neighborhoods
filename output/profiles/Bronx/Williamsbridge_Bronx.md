@@ -2,7 +2,7 @@
 
 ## Williamsbridge
 
-Williamsbridge is a neighborhood geographically located in the north-central portion of the Bronx in New York City . Its boundaries, starting from the north and moving clockwise are East 222nd Street to the north, Boston Road to the east, Adee Avenue to the south, and the Bronx River to the west. White Plains Road is the primary thoroughfare through Williamsbridge.
+Williamsbridge is a neighborhood geographically located in the north-central portion of the Bronx in New York City. Its boundaries, starting from the north and moving clockwise are East 222nd Street to the north, Boston Road to the east, Adee Avenue to the south, and the Bronx River to the west. White Plains Road is the primary thoroughfare through Williamsbridge.
 
 ---
 
@@ -31,7 +31,7 @@ From a planning and investment perspective, Williamsbridge is shaped heavily by 
 - **Population:** 61,321
 - **Population Density:** 51,020/sq mi (19,700/km2) / 73.6 inhabitants per acre (47,100/sq mi; 18,200/km2)
 - **Area:** 1.202 sq mi (3.11 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Boston Road to the east, the Bronx River to the west
   - **North to South:** East 222nd Street to the north, Adee Avenue to the south
   - **Adjacent Neighborhoods:** N/A
@@ -74,6 +74,19 @@ From a planning and investment perspective, Williamsbridge is shaped heavily by 
 - Williamsbridge Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Williamsbridge,_Bronx](https://en.wikipedia.org/wiki/Williamsbridge,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

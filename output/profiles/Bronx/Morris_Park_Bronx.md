@@ -2,7 +2,7 @@
 
 ## Morris Park
 
-Morris Park is a  neighborhood in the New York City borough of the Bronx . Its approximate boundaries, starting from the north and moving clockwise, are Neill Avenue and Pelham Parkway to the north, Eastchester Road to the east, the Amtrak Northeast Corridor tracks and Sackett Avenue to the east and south, and Bronxdale Avenue and White Plains Road to the west. It borders the neighborhoods of Van Nest to its southwest and Pelham Parkway to its northeast. Williamsbridge Road and Morris Park Avenue are the primary thoroughfares.
+Morris Park is a neighborhood in the New York City borough of the Bronx. Its approximate boundaries, starting from the north and moving clockwise, are Neill Avenue and Pelham Parkway to the north, Eastchester Road to the east, the Amtrak Northeast Corridor tracks and Sackett Avenue to the east and south, and Bronxdale Avenue and White Plains Road to the west. It borders the neighborhoods of Van Nest to its southwest and Pelham Parkway to its northeast. Williamsbridge Road and Morris Park Avenue are the primary thoroughfares.
 
 ---
 
@@ -33,7 +33,7 @@ Transportation access underpins this commercial ecosystem. The IRT Dyre Avenue L
 - **Population:** 25,077
 - **Population Density:** 72,300/sq mi (27,900/km2) / 35.7 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** 0.347 sq mi (0.90 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Loreto Park,
 bounded by Morris Park, Haight, Van Nest, and Tomlinson Avenues, was named after Alfred Loreto, a police officer who lived nearby at 1870 Hering Avenue and was killed on July 21, 1950, while foiling an attempted kidnapping of his neighbor.
   - **North to South:** Loreto Park,
@@ -88,6 +88,19 @@ bounded by Morris Park, Haight, Van Nest, and Tomlinson Avenues, was named after
 - Williamsbridge Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Morris_Park,_Bronx](https://en.wikipedia.org/wiki/Morris_Park,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

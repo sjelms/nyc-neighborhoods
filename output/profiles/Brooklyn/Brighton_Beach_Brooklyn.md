@@ -2,7 +2,7 @@
 
 ## Brighton Beach
 
-Brighton Beach is a neighborhood in the southern portion of the New York City borough of Brooklyn , within the greater Coney Island area along the Atlantic Ocean coastline. Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk .
+Brighton Beach is a neighborhood in the southern portion of the New York City borough of Brooklyn, within the greater Coney Island area along the Atlantic Ocean coastline. Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk.
 
 ---
 
@@ -31,9 +31,9 @@ Historically, Brighton Beach’s economy evolved from Engeman’s grand hotel an
 - **Population:** 35,547
 - **Population Density:** 90.4 inhabitants per acre (57,900/sq mi; 22,300/km2) / 52,109 people per square mile also cited
 - **Area:** 393.32 acres (159.17 ha)
-- **Boundaries:**  
-  - **East to West:** Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk .
-  - **North to South:** Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk .
+- **Boundaries:** 
+  - **East to West:** Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk.
+  - **North to South:** Brighton Beach is bounded by Coney Island proper at Ocean Parkway to the west, Manhattan Beach at Corbin Place to the east, Sheepshead Bay at the Belt Parkway to the north, and the Atlantic Ocean to the south along the beach and boardwalk.
   - **Adjacent Neighborhoods:** Coney Island, Coney Island proper at Ocean Parkway to the west, Manhattan Beach, Sea Gate, Sheepshead Bay
 - **ZIP Codes:**
 - 11235
@@ -67,6 +67,19 @@ N/A
 - Surf Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Brighton_Beach,_Brooklyn](https://en.wikipedia.org/wiki/Brighton_Beach,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

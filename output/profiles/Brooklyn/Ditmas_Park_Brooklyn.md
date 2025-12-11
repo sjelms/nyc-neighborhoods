@@ -2,7 +2,7 @@
 
 ## Ditmas Park
 
-Ditmas Park is a historic district in the neighborhood of Flatbush in Brooklyn , New York City . The traditional boundaries of Ditmas Park, including Ditmas Park West, are Ocean Avenue and greater Flatbush to the east, Dorchester Road and the Prospect Park South neighborhood to the north, Coney Island Avenue and the Kensington neighborhood to the west, and Newkirk Avenue to the south. The name Ditmas Park is often used as a shorthand for the several neighborhoods that comprise the larger area of Victorian Flatbush .
+Ditmas Park is a historic district in the neighborhood of Flatbush in Brooklyn, New York City. The traditional boundaries of Ditmas Park, including Ditmas Park West, are Ocean Avenue and greater Flatbush to the east, Dorchester Road and the Prospect Park South neighborhood to the north, Coney Island Avenue and the Kensington neighborhood to the west, and Newkirk Avenue to the south. The name Ditmas Park is often used as a shorthand for the several neighborhoods that comprise the larger area of Victorian Flatbush.
 
 ---
 
@@ -31,7 +31,7 @@ Cortelyou Road’s venues also play a cultural and entertainment role, regularly
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** 35 acres (14 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Historic district Ditmas Avenue and Rugby Road Show map of New York City Show map of New York Show map of the United States Location Bounded by Marlborough Rd., Dorchester Rd., Ocean Ave., and Newkirk Ave., New York, New York Coordinates 40°38′20″N 73°57′40″W ﻿ / ﻿ 40.63889°N 73.96111°W ﻿ / 40.63889; -73.96111 Area 35 acres (14 ha) Built 1902 Architectural style Colonial, Queen Anne, Bungalow NRHP reference No.
   - **North to South:** Historic district Ditmas Avenue and Rugby Road Show map of New York City Show map of New York Show map of the United States Location Bounded by Marlborough Rd., Dorchester Rd., Ocean Ave., and Newkirk Ave., New York, New York Coordinates 40°38′20″N 73°57′40″W ﻿ / ﻿ 40.63889°N 73.96111°W ﻿ / 40.63889; -73.96111 Area 35 acres (14 ha) Built 1902 Architectural style Colonial, Queen Anne, Bungalow NRHP reference No.
   - **Adjacent Neighborhoods:** Flatbush, Kensington, Prospect Park South, Road Show map of New York City Show map of New York Show map of the United States Location Bounded by Marlborough Rd, Victorian Flatbush
@@ -69,6 +69,19 @@ N/A
 - Minister Community Newkirk Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Ditmas_Park,_Brooklyn](https://en.wikipedia.org/wiki/Ditmas_Park,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

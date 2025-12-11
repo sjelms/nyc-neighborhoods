@@ -2,7 +2,7 @@
 
 ## Kew Gardens Hills
 
-Kew Gardens Hills is a neighborhood in the middle of the New York City borough of Queens . The borders are Flushing Meadows–Corona Park to the west, the Long Island Expressway to the north, Union Turnpike to the south, and Kissena/Parsons Boulevards to the east.
+Kew Gardens Hills is a neighborhood in the middle of the New York City borough of Queens. The borders are Flushing Meadows–Corona Park to the west, the Long Island Expressway to the north, Union Turnpike to the south, and Kissena/Parsons Boulevards to the east.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional uses play an outsized role in the neighborhood’s commercial ecos
 - **Population:** 37,479
 - **Population Density:** 42.9 inhabitants per acre (27,500/sq mi; 10,600/km2)
 - **Area:** 1.0 sq mi (2.6 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Flushing Meadows–Corona Park to the west; Kissena/Parsons Boulevards to the east
   - **North to South:** Long Island Expressway (Horace Harding Expressway) to the north; Union Turnpike to the south
   - **Adjacent Neighborhoods:** Briarwood, Forest Hills, Fresh Meadows, Hillcrest, Jamaica Hills, Pomonok, Queensboro Hill
@@ -90,6 +90,19 @@ N/A
 - Van Wyck Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Kew_Gardens_Hills,_Queens](https://en.wikipedia.org/wiki/Kew_Gardens_Hills,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

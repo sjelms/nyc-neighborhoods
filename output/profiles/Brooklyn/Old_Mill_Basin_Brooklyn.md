@@ -2,7 +2,7 @@
 
 ## Old Mill Basin
 
-Mill Basin is a residential neighborhood in southeastern Brooklyn , New York City . It is on a peninsula abutting Jamaica Bay and is bordered by Avenue U on the northwest and the Mill Basin/Mill Island Inlet on its remaining sides. Mill Basin is adjacent to the neighborhood of Bergen Beach to the northeast, Flatlands to the northwest, Marine Park to the southwest, and Floyd Bennett Field and the former Barren Island to the southeast. Mill Basin also contains a subsection called Old Mill Basin, north of Avenue U.
+Mill Basin is a residential neighborhood in southeastern Brooklyn, New York City. It is on a peninsula abutting Jamaica Bay and is bordered by Avenue U on the northwest and the Mill Basin/Mill Island Inlet on its remaining sides. Mill Basin is adjacent to the neighborhood of Bergen Beach to the northeast, Flatlands to the northwest, Marine Park to the southwest, and Floyd Bennett Field and the former Barren Island to the southeast. Mill Basin also contains a subsection called Old Mill Basin, north of Avenue U.
 
 ---
 
@@ -31,7 +31,7 @@ Avenue U functions as a defining spine, separating Old Mill Basin from the Mill 
 - **Population:** 45,231
 - **Population Density:** 27.2 inhabitants per acre (17,400/sq mi; 6,700/km2)
 - **Area:** 1,662.88 acres (672.94 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** Old Mill Basin is defined as the portion of the neighborhood north of Avenue U; according to a 2009 New York Times map it can be considered to reach as far north as Avenue N.
   - **Adjacent Neighborhoods:** Barren Island, Bergen Beach, Canarsie, Flatlands, Floyd Bennett Field, Georgetown, Marine Park
@@ -68,6 +68,19 @@ N/A
 - Strickland Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Old_Mill_Basin,_Brooklyn](https://en.wikipedia.org/wiki/Old_Mill_Basin,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

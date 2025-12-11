@@ -2,7 +2,7 @@
 
 ## Gravesend
 
-Gravesend is a neighborhood in the south-central section of the New York City borough of Brooklyn , on the southwestern edge of Long Island in the U.S. state of New York . It is bounded by the Belt Parkway to the south, Bay Parkway to the west, Avenue P to the north, and Ocean Parkway to the east.
+Gravesend is a neighborhood in the south-central section of the New York City borough of Brooklyn, on the southwestern edge of Long Island in the U.S. state of New York. It is bounded by the Belt Parkway to the south, Bay Parkway to the west, Avenue P to the north, and Ocean Parkway to the east.
 
 ---
 
@@ -31,7 +31,7 @@ Modern Gravesend is characterized by a combination of public and private capital
 - **Population:** 29,436
 - **Population Density:** 25,740/sq mi (9,938/km2) in infobox; 40.2 inhabitants per acre (25,700/sq mi; 9,900/km2) in demographics section
 - **Area:** 1.144 sq mi (2.962 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From Ocean Parkway or East 12th Street/Coney Island Avenue in the east to Stillwell Avenue or Bay Parkway in the west, depending on the specific description used.
   - **North to South:** From Avenue P in the north to Coney Island Creek and the Belt/Shore Parkway to the south.
   - **Adjacent Neighborhoods:** Bath Beach, Bensonhurst, Brighton Beach, Coney Island, Homecrest, Midwood, Sheepshead Bay
@@ -42,7 +42,7 @@ Modern Gravesend is characterized by a combination of public and private capital
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - D
 - F
 - N
@@ -79,6 +79,19 @@ Modern Gravesend is characterized by a combination of public and private capital
 - Stillwell Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Gravesend,_Brooklyn](https://en.wikipedia.org/wiki/Gravesend,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

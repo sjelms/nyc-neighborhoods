@@ -2,7 +2,7 @@
 
 ## Bath Beach
 
-Bath Beach is a neighborhood in the New York City borough of Brooklyn , located at the southwestern edge of the borough on Gravesend Bay . The neighborhood borders Bensonhurst and New Utrecht to the northeast across 86th Street; Dyker Beach Park and Golf Course to the northwest across 14th Avenue; and Gravesend to the east across Stillwell Avenue .
+Bath Beach is a neighborhood in the New York City borough of Brooklyn, located at the southwestern edge of the borough on Gravesend Bay. The neighborhood borders Bensonhurst and New Utrecht to the northeast across 86th Street; Dyker Beach Park and Golf Course to the northwest across 14th Avenue; and Gravesend to the east across Stillwell Avenue.
 
 ---
 
@@ -33,7 +33,7 @@ Transit further reinforces Bath Beach’s commercial viability. The neighborhood
 - **Population:** 33,070
 - **Population Density:** 62.3 inhabitants per acre (39,900/sq mi; 15,400/km2)
 - **Area:** 480.37 acres (194.40 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Dyker Beach Park and Golf Course across 14th Avenue on the northwest to Gravesend Bay and the extended Bensonhurst Park/Ceasar's Bay shoreline on the southwest; the neighborhood borders Bensonhurst and New Utrecht to the northeast across 86th Street.
   - **North to South:** From 86th Street on the northeast southward toward Gravesend Bay and the Belt/Shore Parkway waterfront corridor; Stillwell Avenue forms the eastern edge across from Gravesend.
   - **Adjacent Neighborhoods:** Bensonhurst, Gravesend, New Utrecht
@@ -83,6 +83,19 @@ N/A
 - Stillwell Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bath_Beach,_Brooklyn](https://en.wikipedia.org/wiki/Bath_Beach,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Clinton Hill
 
-Clinton Hill is a neighborhood located in the north-central portion of the New York City borough of Brooklyn . It is bordered by the Brooklyn Navy Yard and Flushing Avenue to the north, Williamsburg to the northeast, Classon Avenue and Bedford–Stuyvesant to the east, Atlantic Avenue and Prospect Heights to the south and southwest and Vanderbilt Avenue and Fort Greene to the west.
+Clinton Hill is a neighborhood located in the north-central portion of the New York City borough of Brooklyn. It is bordered by the Brooklyn Navy Yard and Flushing Avenue to the north, Williamsburg to the northeast, Classon Avenue and Bedford–Stuyvesant to the east, Atlantic Avenue and Prospect Heights to the south and southwest and Vanderbilt Avenue and Fort Greene to the west.
 
 ---
 
@@ -33,7 +33,7 @@ Transit access is a key support for Clinton Hill’s commercial and institutiona
 - **Population:** 34,791
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by the Brooklyn Navy Yard and Flushing Avenue to the north, Williamsburg to the northeast, Classon Avenue and Bedford–Stuyvesant to the east, Atlantic Avenue and Prospect Heights to the south and southwest and Vanderbilt Avenue and Fort Greene to the west.
   - **North to South:** It is bordered by the Brooklyn Navy Yard and Flushing Avenue to the north, Williamsburg to the northeast, Classon Avenue and Bedford–Stuyvesant to the east, Atlantic Avenue and Prospect Heights to the south and southwest and Vanderbilt Avenue and Fort Greene to the west.
   - **Adjacent Neighborhoods:** Bedford–Stuyvesant, Brooklyn Navy Yard, Fort Greene, Prospect Heights, Williamsburg
@@ -82,6 +82,19 @@ Transit access is a key support for Clinton Hill’s commercial and institutiona
 - Washington Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Clinton_Hill,_Brooklyn](https://en.wikipedia.org/wiki/Clinton_Hill,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

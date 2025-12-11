@@ -2,7 +2,7 @@
 
 ## Marine Park
 
-Marine Park is a neighborhood in the New York City borough of Brooklyn . The neighborhood lies between Flatlands and Mill Basin to the east, and Gerritsen Beach , Midwood , and Sheepshead Bay to the south and west. It is mostly squared off in area by Gerritsen Avenue, Flatbush Avenue , Avenue U and Kings Highway . The neighborhood's eponymous park is the largest public park in Brooklyn. Charles Downing Lay won a silver medal in town planning at the 1936 Olympics for the planning of Marine Park.
+Marine Park is a neighborhood in the New York City borough of Brooklyn. The neighborhood lies between Flatlands and Mill Basin to the east, and Gerritsen Beach, Midwood, and Sheepshead Bay to the south and west. It is mostly squared off in area by Gerritsen Avenue, Flatbush Avenue, Avenue U and Kings Highway. The neighborhood's eponymous park is the largest public park in Brooklyn. Charles Downing Lay won a silver medal in town planning at the 1936 Olympics for the planning of Marine Park.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood’s defining asset is Marine Park itself, the largest public pa
 - **Population:** 45,231
 - **Population Density:** 27.2 inhabitants per acre (17,400/sq mi; 6,700/km2)
 - **Area:** 1,662.88 acres (672.94 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Mostly squared off by Gerritsen Avenue and Flatbush Avenue.
   - **North to South:** Mostly squared off by Avenue U and Kings Highway.
   - **Adjacent Neighborhoods:** Bergen Beach, Flatlands, Georgetown, Gerritsen Beach, Midwood, Mill Basin, Sheepshead Bay
@@ -73,6 +73,19 @@ N/A
 - Kings Highway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Marine_Park,_Brooklyn](https://en.wikipedia.org/wiki/Marine_Park,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

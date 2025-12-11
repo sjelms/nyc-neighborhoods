@@ -2,7 +2,7 @@
 
 ## Morris Heights
 
-Morris Heights is a residential neighborhood located in the West Bronx . Its boundaries, starting from the north and moving clockwise are: West Burnside Avenue to the north, Jerome Avenue to the east, the Cross-Bronx Expressway to the south, and the Harlem River to the west. University Avenue is the primary thoroughfare through Morris Heights.
+Morris Heights is a residential neighborhood located in the West Bronx. Its boundaries, starting from the north and moving clockwise are: West Burnside Avenue to the north, Jerome Avenue to the east, the Cross-Bronx Expressway to the south, and the Harlem River to the west. University Avenue is the primary thoroughfare through Morris Heights.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, Morris Heights had a more explicitly industrial profile along its 
 - **Population:** 36,779
 - **Population Density:** 73,300/sq mi (28,300/km2); 111.9 inhabitants per acre (71,600/sq mi; 27,700/km2) for University Heights and Morris Heights
 - **Area:** 0.502 sq mi (1.30 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Jerome Avenue to the east and the Harlem River to the west
   - **North to South:** West Burnside Avenue to the north and the Cross-Bronx Expressway to the south
   - **Adjacent Neighborhoods:** N/A
@@ -81,6 +81,19 @@ Historically, Morris Heights had a more explicitly industrial profile along its 
 - West Burnside Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Morris_Heights,_Bronx](https://en.wikipedia.org/wiki/Morris_Heights,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

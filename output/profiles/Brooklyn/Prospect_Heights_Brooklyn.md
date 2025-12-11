@@ -2,7 +2,7 @@
 
 ## Prospect Heights
 
-Prospect Heights is a neighborhood in the northwest of the New York City borough of Brooklyn . The traditional boundaries are Flatbush Avenue to the west, Atlantic Avenue to the north, Eastern Parkway – beginning at Grand Army Plaza – to the south, and Washington Avenue to the east. In the northern section of Prospect Heights are the Vanderbilt Rail Yards, built over as part of the Pacific Park (formerly Atlantic Yards) project. The Barclays Center , home to the NBA 's Brooklyn Nets basketball team, is located in the northwestern corner of the neighborhood in Pacific Park at Flatbush and Atlantic Avenues.
+Prospect Heights is a neighborhood in the northwest of the New York City borough of Brooklyn. The traditional boundaries are Flatbush Avenue to the west, Atlantic Avenue to the north, Eastern Parkway – beginning at Grand Army Plaza – to the south, and Washington Avenue to the east. In the northern section of Prospect Heights are the Vanderbilt Rail Yards, built over as part of the Pacific Park (formerly Atlantic Yards) project. The Barclays Center, home to the NBA 's Brooklyn Nets basketball team, is located in the northwestern corner of the neighborhood in Pacific Park at Flatbush and Atlantic Avenues.
 
 ---
 
@@ -31,7 +31,7 @@ Within the neighborhood, land use shifts quickly from large-scale civic and aren
 - **Population:** 19,849
 - **Population Density:** 83.6 inhabitants per acre (53,500/sq mi; 20,700/km2)
 - **Area:** 237.30 acres (96.03 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The letter began by noting that it was "amusing to see the attempts made to fix upon a name for the rapidly growing part of Brooklyn near Prospect Park, bounded by Flatbush, Fifth and Ninth avenues, Some call it
 Park Slope
 , some Park Hill Side, some Prospect Heights and others Prospect Hill..."
@@ -77,6 +77,19 @@ N/A
 - Vanderbilt Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Prospect_Heights,_Brooklyn](https://en.wikipedia.org/wiki/Prospect_Heights,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Gowanus
 
-Gowanus ( gə- WAH -nəs ) is a neighborhood in the northwestern portion of the New York City borough of Brooklyn , within the area once known as South Brooklyn . The neighborhood is part of Brooklyn Community District 6 . Gowanus is bounded by Wyckoff Street on the north, Fourth Avenue on the east, the Gowanus Expressway to the south, and Bond Street to the west.
+Gowanus ( gə- WAH -nəs ) is a neighborhood in the northwestern portion of the New York City borough of Brooklyn, within the area once known as South Brooklyn. The neighborhood is part of Brooklyn Community District 6. Gowanus is bounded by Wyckoff Street on the north, Fourth Avenue on the east, the Gowanus Expressway to the south, and Bond Street to the west.
 
 ---
 
@@ -31,7 +31,7 @@ Today the area is zoned for light to mid‑level manufacturing, which has both l
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Gowanus is bounded by Wyckoff Street on the north, Fourth Avenue on the east, the Gowanus Expressway to the south, and Bond Street to the west.
   - **North to South:** Gowanus is bounded by Wyckoff Street on the north, Fourth Avenue on the east, the Gowanus Expressway to the south, and Bond Street to the west.
   - **Adjacent Neighborhoods:** Boerum Hill, Carroll Gardens, Cobble Hill, Fort Greene, Greenwood Heights, Park Slope, Red Hook, Wyckoff Street on the north
@@ -72,6 +72,19 @@ N/A
 - Wyckoff Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Gowanus,_Brooklyn](https://en.wikipedia.org/wiki/Gowanus,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

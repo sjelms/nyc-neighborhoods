@@ -2,7 +2,7 @@
 
 ## West Brighton
 
-West New Brighton (also called West Brighton ) is a neighborhood of Staten Island , New York City , situated in the central area of North Shore . The neighborhood is bordered by New Brighton to the east, Port Richmond to the west, the waters of the Kill Van Kull to the north, and the communities of Sunnyside and Castleton Corners to the south.
+West New Brighton (also called West Brighton ) is a neighborhood of Staten Island, New York City, situated in the central area of North Shore. The neighborhood is bordered by New Brighton to the east, Port Richmond to the west, the waters of the Kill Van Kull to the north, and the communities of Sunnyside and Castleton Corners to the south.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional and recreational anchors add a second commercial and employment la
 - **Population:** 37,010
 - **Population Density:** 28,080/sq mi (10,840/km2)
 - **Area:** 1.318 sq mi (3.41 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The neighborhood is bordered by New Brighton to the east, Port Richmond to the west, the waters of the Kill Van Kull to the north, and the communities of Sunnyside and Castleton Corners to the south.
   - **North to South:** The neighborhood is bordered by New Brighton to the east, Port Richmond to the west, the waters of the Kill Van Kull to the north, and the communities of Sunnyside and Castleton Corners to the south.
   - **Adjacent Neighborhoods:** Castleton Corners, Grymes Hill, Livingston, New Brighton, New Brighton to the east, Port Richmond, Silver Lake, Sunnyside
@@ -68,6 +68,19 @@ N/A
 - Richmond Terrace
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/West_Brighton,_Staten_Island](https://en.wikipedia.org/wiki/West_Brighton,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

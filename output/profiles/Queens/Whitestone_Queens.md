@@ -2,7 +2,7 @@
 
 ## Whitestone
 
-Whitestone is a residential neighborhood in the northernmost part of the New York City borough of Queens . The neighborhood proper is located between the East River to the north; College Point and Whitestone Expressway to the west; Flushing and 25th Avenue to the south; and Bayside and Francis Lewis Boulevard to the east.
+Whitestone is a residential neighborhood in the northernmost part of the New York City borough of Queens. The neighborhood proper is located between the East River to the north; College Point and Whitestone Expressway to the west; Flushing and 25th Avenue to the south; and Bayside and Francis Lewis Boulevard to the east.
 
 ---
 
@@ -31,7 +31,7 @@ While Whitestone does not host a dense central business district, it has been ho
 - **Population:** 30,773 (2010 United States census)
 - **Population Density:** 19.4 inhabitants per acre (12,400/sq mi; 4,800/km2)
 - **Area:** 1,584.85 acres (641.37 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East River to the north; College Point and Whitestone Expressway to the west; Bayside and Francis Lewis Boulevard to the east
   - **North to South:** East River to the north; Flushing and 25th Avenue to the south
   - **Adjacent Neighborhoods:** Bayside, College Point, Flushing
@@ -43,7 +43,7 @@ While Whitestone does not host a dense central business district, it has been ho
 ### Transit & Accessibility
 #### Nearest Subways:
 - 7
-- <7>
+- 7
 #### Major Stations:
 - Bridge Street Station
 - Flushing–Main Street
@@ -86,6 +86,19 @@ While Whitestone does not host a dense central business district, it has been ho
 - Whitestone Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Whitestone,_Queens](https://en.wikipedia.org/wiki/Whitestone,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Williamsburg
 
-Williamsburg is a neighborhood in the New York City borough of Brooklyn , bordered by Greenpoint to the north; Bedford–Stuyvesant to the south; Bushwick and East Williamsburg to the east; and the East River to the west. It was an independent city until 1855, when it was annexed by Brooklyn; at that time, the spelling was changed from Williamsburgh (with an "h") to Williamsburg.
+Williamsburg is a neighborhood in the New York City borough of Brooklyn, bordered by Greenpoint to the north; Bedford–Stuyvesant to the south; Bushwick and East Williamsburg to the east; and the East River to the west. It was an independent city until 1855, when it was annexed by Brooklyn; at that time, the spelling was changed from Williamsburgh (with an "h") to Williamsburg.
 
 ---
 
@@ -33,7 +33,7 @@ The evolution of Williamsburg’s arts and entertainment economy is tightly link
 - **Population:** 151,308
 - **Population Density:** 69,440/sq mi (26,810/km²)
 - **Area:** 2.179 sq mi (5.64 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bushwick and East Williamsburg to the east; and the East River to the west.
   - **North to South:** bordered by Greenpoint to the north; Bedford–Stuyvesant to the south; Bushwick and East Williamsburg to the east; and the East River to the west.
   - **Adjacent Neighborhoods:** Bedford–Stuyvesant, Bushwick, Clinton Hill, East River (waterfront), East Williamsburg, Fort Greene, Greenpoint, Greenpoint to the north, Maspeth (Queens)
@@ -95,6 +95,19 @@ The evolution of Williamsburg’s arts and entertainment economy is tightly link
 - Williamsburg Bridge
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Williamsburg,_Brooklyn](https://en.wikipedia.org/wiki/Williamsburg,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

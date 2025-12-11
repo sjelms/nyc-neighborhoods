@@ -2,7 +2,7 @@
 
 ## City Island
 
-City Island is a neighborhood in the northeastern Bronx in New York City , located on an island of the same name approximately 1.5 miles (2.4 km) long by 0.5 miles (0.80 km) wide. City Island is located at the extreme western end of Long Island Sound , south of Pelham Bay Park , and east of Eastchester Bay .
+City Island is a neighborhood in the northeastern Bronx in New York City, located on an island of the same name approximately 1.5 miles (2.4 km) long by 0.5 miles (0.80 km) wide. City Island is located at the extreme western end of Long Island Sound, south of Pelham Bay Park, and east of Eastchester Bay.
 
 ---
 
@@ -31,7 +31,7 @@ Water-dependent and marine-support uses remain central to the local economy. The
 - **Population:** 4,417
 - **Population Density:** N/A
 - **Area:** 0.39505 sq mi (1.0232 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Located at the extreme western end of Long Island Sound, east of Eastchester Bay.
   - **North to South:** South of Pelham Bay Park; southern tip marked offshore by the Stepping Stones Light.
   - **Adjacent Neighborhoods:** N/A
@@ -67,6 +67,19 @@ Water-dependent and marine-support uses remain central to the local economy. The
 - Third Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/City_Island,_Bronx](https://en.wikipedia.org/wiki/City_Island,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

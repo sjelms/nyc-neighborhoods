@@ -2,7 +2,7 @@
 
 ## St. Albans
 
-St. Albans is a residential neighborhood in the southeastern portion of the New York City borough of Queens . It is bordered by Jamaica to the northwest, Hollis to the north, Queens Village to the northeast, Cambria Heights to the east, Laurelton to the southeast, Springfield Gardens to the south, and South Jamaica to the southwest. St. Albans is centered on the intersection of Linden Boulevard and Farmers Boulevard, about two miles north of John F. Kennedy International Airport .
+St. Albans is a residential neighborhood in the southeastern portion of the New York City borough of Queens. It is bordered by Jamaica to the northwest, Hollis to the north, Queens Village to the northeast, Cambria Heights to the east, Laurelton to the southeast, Springfield Gardens to the south, and South Jamaica to the southwest. St. Albans is centered on the intersection of Linden Boulevard and Farmers Boulevard, about two miles north of John F. Kennedy International Airport.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional and recreational land uses occupy a notable share of St. Albans an
 - **Population:** 48,593
 - **Population Density:** 27.3 inhabitants per acre (17,500/sq mi; 6,700/km2)
 - **Area:** 1,778.68 acres (719.81 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by Jamaica to the northwest, Hollis to the north, Queens Village to the northeast, Cambria Heights to the east, Laurelton to the southeast, Springfield Gardens to the south, and South Jamaica to the southwest.
   - **North to South:** Albans Park is bounded by Merrick Boulevard, Sayres Avenue, and Marne Place.
   - **Adjacent Neighborhoods:** Cambria Heights, Hollis, Jamaica, Jamaica to the northwest, Laurelton, Merrick Boulevard, Queens Village, South Jamaica, Springfield Gardens
@@ -78,6 +78,19 @@ Institutional and recreational land uses occupy a notable share of St. Albans an
 - Merrick Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/St._Albans,_Queens](https://en.wikipedia.org/wiki/St._Albans,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

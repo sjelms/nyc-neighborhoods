@@ -2,7 +2,7 @@
 
 ## Brownsville
 
-Brownsville is a residential neighborhood in eastern Brooklyn in New York City . The neighborhood is bordered by Crown Heights to the northwest; Bedford–Stuyvesant and the subsection of Ocean Hill to the north; East New York to the east; Canarsie to the south; and East Flatbush to the west.
+Brownsville is a residential neighborhood in eastern Brooklyn in New York City. The neighborhood is bordered by Crown Heights to the northwest; Bedford–Stuyvesant and the subsection of Ocean Hill to the north; East New York to the east; Canarsie to the south; and East Flatbush to the west.
 
 ---
 
@@ -31,7 +31,7 @@ Despite this history, Brownsville retains important commercial and institutional
 - **Population:** 58,300
 - **Population Density:** 50,100/sq mi (19,400/km2) or 77.7 inhabitants per acre (49,700/sq mi; 19,200/km2)
 - **Area:** 1.163 sq mi (3.01 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Although there are no official borders, Brownsville is generally bounded by
 East New York Avenue
 to the north on the
@@ -102,6 +102,19 @@ border, Ocean Hill, Powell Street and Rockaway
 - Van Sinderen Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Brownsville,_Brooklyn](https://en.wikipedia.org/wiki/Brownsville,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

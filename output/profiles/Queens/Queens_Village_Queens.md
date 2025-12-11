@@ -2,7 +2,7 @@
 
 ## Queens Village
 
-Queens Village is a mostly residential middle class neighborhood in the eastern part of the New York City borough of Queens . It is bound by Hollis to the west, Cambria Heights to the south, Bellerose, Queens and Elmont , Nassau County to the east, and Oakland Gardens to the north.
+Queens Village is a mostly residential middle class neighborhood in the eastern part of the New York City borough of Queens. It is bound by Hollis to the west, Cambria Heights to the south, Bellerose, Queens and Elmont, Nassau County to the east, and Oakland Gardens to the north.
 
 ---
 
@@ -31,7 +31,7 @@ Transit and regional access are key components of the neighborhood’s commercia
 - **Population:** 52,504
 - **Population Density:** 34.0 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** 1,611.17 acres (652.02 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Hollis Hills A welcome sign for Hollis Hills on Union Turnpike Hollis Hills is an affluent subsection, generally bounded by Springfield Boulevard to the east, Grand Central Parkway the south, Hollis Hills Terrace to the west, and Kingsbury Avenue and Richland Avenue the north.
   - **North to South:** Hollis Hills A welcome sign for Hollis Hills on Union Turnpike Hollis Hills is an affluent subsection, generally bounded by Springfield Boulevard to the east, Grand Central Parkway the south, Hollis Hills Terrace to the west, and Kingsbury Avenue and Richland Avenue the north.
   - **Adjacent Neighborhoods:** Bellerose, Cambria Heights, Elmont, Hollis, Oakland Gardens, Springfield Boulevard to the east
@@ -85,6 +85,19 @@ N/A
 - Union Turnpike
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Queens_Village,_Queens](https://en.wikipedia.org/wiki/Queens_Village,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

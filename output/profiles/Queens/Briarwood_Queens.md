@@ -2,7 +2,7 @@
 
 ## Briarwood
 
-Briarwood is a middle-class neighborhood in the New York City borough of Queens . The neighborhood is roughly bounded by the Van Wyck Expressway to the west, Parsons Boulevard to the east, Union Turnpike to the north, and Hillside Avenue to the south.
+Briarwood is a middle-class neighborhood in the New York City borough of Queens. The neighborhood is roughly bounded by the Van Wyck Expressway to the west, Parsons Boulevard to the east, Union Turnpike to the north, and Hillside Avenue to the south.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional uses play a notable role in Briarwood’s nonresidential landscape
 - **Population:** 53,877
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Approximately from the Van Wyck Expressway (Interstate 678) in the west to Parsons Boulevard in the east.
   - **North to South:** Approximately from Union Turnpike in the north to Hillside Avenue (NY 25) in the south.
   - **Adjacent Neighborhoods:** Jamaica, Jamaica Hills
@@ -42,7 +42,7 @@ Institutional uses play a notable role in Briarwood’s nonresidential landscape
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - E
 - F
 #### Major Stations:
@@ -71,6 +71,19 @@ N/A
 - Van Wyck Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Briarwood,_Queens](https://en.wikipedia.org/wiki/Briarwood,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

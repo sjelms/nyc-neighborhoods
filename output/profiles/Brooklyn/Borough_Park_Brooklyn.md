@@ -2,7 +2,7 @@
 
 ## Borough Park
 
-Borough Park (also spelled Boro Park ) is a neighborhood in the southwestern part of the borough of Brooklyn , in New York City . The neighborhood is bordered by Bensonhurst to the south, Dyker Heights to the southwest, Sunset Park to the west, Kensington and Green-Wood Cemetery to the northeast, Flatbush to the east, and Mapleton to the southeast.
+Borough Park (also spelled Boro Park ) is a neighborhood in the southwestern part of the borough of Brooklyn, in New York City. The neighborhood is bordered by Bensonhurst to the south, Dyker Heights to the southwest, Sunset Park to the west, Kensington and Green-Wood Cemetery to the northeast, Flatbush to the east, and Mapleton to the southeast.
 
 ---
 
@@ -33,7 +33,7 @@ Land use and built form respond directly to this demographic and commercial pres
 - **Population:** 153,470
 - **Population Density:** 85.9 inhabitants per acre (55,000/sq mi; 21,200/km2)
 - **Area:** 2.071 sq mi (5.36 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The neighborhood is bordered by Bensonhurst to the south, Dyker Heights to the southwest, Sunset Park to the west, Kensington and Green-Wood Cemetery to the northeast, Flatbush to the east, and Mapleton to the southeast.
   - **North to South:** The neighborhood is bordered by Bensonhurst to the south, Dyker Heights to the southwest, Sunset Park to the west, Kensington and Green-Wood Cemetery to the northeast, Flatbush to the east, and Mapleton to the southeast.
   - **Adjacent Neighborhoods:** Bensonhurst, Bensonhurst to the south, Dyker Heights, Flatbush, Green-Wood Cemetery, Kensington, Mapleton, Sunset Park
@@ -48,7 +48,7 @@ Land use and built form respond directly to this demographic and commercial pres
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - B
 - D
 - F
@@ -76,6 +76,19 @@ N/A
 - McDonald Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Borough_Park,_Brooklyn](https://en.wikipedia.org/wiki/Borough_Park,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Kingsbridge Heights
 
-Kingsbridge Heights is a residential neighborhood geographically located in the northwest Bronx , New York City . Its boundaries are Van Cortlandt Park to the north, Jerome Avenue to the east, Kingsbridge Road to the south, and the Major Deegan Expressway to the west. Sedgwick Avenue is the primary thoroughfare through Kingsbridge Heights.
+Kingsbridge Heights is a residential neighborhood geographically located in the northwest Bronx, New York City. Its boundaries are Van Cortlandt Park to the north, Jerome Avenue to the east, Kingsbridge Road to the south, and the Major Deegan Expressway to the west. Sedgwick Avenue is the primary thoroughfare through Kingsbridge Heights.
 
 ---
 
@@ -31,7 +31,7 @@ Within Kingsbridge Heights, the northern subsection known as Van Cortlandt Villa
 - **Population:** 32,496 (2010)
 - **Population Density:** 108.0 inhabitants per acre (69,100/sq mi; 26,700/km2)
 - **Area:** 300.86 acres (121.75 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** This subsection is bordered by the Major Deegan Expressway to the west, the Jerome Park Reservoir to the east, W 238th Street to the south, and Van Cortlandt Park to the north.
   - **North to South:** This subsection is bordered by the Major Deegan Expressway to the west, the Jerome Park Reservoir to the east, W 238th Street to the south, and Van Cortlandt Park to the north.
   - **Adjacent Neighborhoods:** Fordham, Jerome Park, Kingsbridge, University Heights, Van Cortlandt Village
@@ -82,6 +82,19 @@ N/A
 - University Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Kingsbridge_Heights,_Bronx](https://en.wikipedia.org/wiki/Kingsbridge_Heights,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

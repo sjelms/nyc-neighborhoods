@@ -2,7 +2,7 @@
 
 ## Boerum Hill
 
-Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn , bounded by Schermerhorn Street to the north and Fourth Avenue to the east. The western border is variously given as either Smith or Court Street, and Warren or Wyckoff Street as the southern edge.
+Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn, bounded by Schermerhorn Street to the north and Fourth Avenue to the east. The western border is variously given as either Smith or Court Street, and Warren or Wyckoff Street as the southern edge.
 
 ---
 
@@ -33,9 +33,9 @@ Historically, Boerum Hill’s built environment emerged largely between 1840 and
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
-  - **East to West:** Neighborhood in New York City Neighborhood in New York City Boerum Hill Neighborhood Rowhouses in Boerum Hill Boerum Hill Coordinates: 40°41′09″N 73°59′11″W ﻿ / ﻿ 40.68583°N 73.98639°W ﻿ / 40.68583; -73.98639 Country United States State New York City New York City Borough Brooklyn Established 1964 Founded by Helen Buckler Time zone UTC-5 (Eastern (EST)) ZIP Codes 11201,11217 Area codes 718, 347, 929 Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn , bounded by Schermerhorn Street to the north and Fourth Avenue to the east.
-  - **North to South:** Neighborhood in New York City Neighborhood in New York City Boerum Hill Neighborhood Rowhouses in Boerum Hill Boerum Hill Coordinates: 40°41′09″N 73°59′11″W ﻿ / ﻿ 40.68583°N 73.98639°W ﻿ / 40.68583; -73.98639 Country United States State New York City New York City Borough Brooklyn Established 1964 Founded by Helen Buckler Time zone UTC-5 (Eastern (EST)) ZIP Codes 11201,11217 Area codes 718, 347, 929 Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn , bounded by Schermerhorn Street to the north and Fourth Avenue to the east.
+- **Boundaries:** 
+  - **East to West:** Neighborhood in New York City Neighborhood in New York City Boerum Hill Neighborhood Rowhouses in Boerum Hill Boerum Hill Coordinates: 40°41′09″N 73°59′11″W ﻿ / ﻿ 40.68583°N 73.98639°W ﻿ / 40.68583; -73.98639 Country United States State New York City New York City Borough Brooklyn Established 1964 Founded by Helen Buckler Time zone UTC-5 (Eastern (EST)) ZIP Codes 11201,11217 Area codes 718, 347, 929 Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn, bounded by Schermerhorn Street to the north and Fourth Avenue to the east.
+  - **North to South:** Neighborhood in New York City Neighborhood in New York City Boerum Hill Neighborhood Rowhouses in Boerum Hill Boerum Hill Coordinates: 40°41′09″N 73°59′11″W ﻿ / ﻿ 40.68583°N 73.98639°W ﻿ / 40.68583; -73.98639 Country United States State New York City New York City Borough Brooklyn Established 1964 Founded by Helen Buckler Time zone UTC-5 (Eastern (EST)) ZIP Codes 11201,11217 Area codes 718, 347, 929 Boerum Hill (pronounced BOR -əm ) is a small neighborhood in the northwestern portion of the New York City borough of Brooklyn, bounded by Schermerhorn Street to the north and Fourth Avenue to the east.
   - **Adjacent Neighborhoods:** Brooklyn Heights, Carroll Gardens, Cobble Hill, Downtown Brooklyn, Fort Greene, Gowanus, Helen Buckler Time zone UTC-5, Park Slope, Prospect Heights, Schermerhorn Street to the north and Fourth Avenue to the east
 - **ZIP Codes:**
 - 11201
@@ -72,6 +72,19 @@ N/A
 - Wyckoff Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Boerum_Hill,_Brooklyn](https://en.wikipedia.org/wiki/Boerum_Hill,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

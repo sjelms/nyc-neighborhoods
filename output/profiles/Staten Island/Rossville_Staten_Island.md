@@ -2,7 +2,7 @@
 
 ## Rossville
 
-Rossville is a neighborhood of Staten Island , New York , on the island's South Shore . It is located to the north of Woodrow , to the west of Arden Heights , and to the south and east of the Arthur Kill . Rossville is located within Staten Island Community Board 3 .
+Rossville is a neighborhood of Staten Island, New York, on the island's South Shore. It is located to the north of Woodrow, to the west of Arden Heights, and to the south and east of the Arthur Kill. Rossville is located within Staten Island Community Board 3.
 
 ---
 
@@ -33,7 +33,7 @@ The heart of contemporary Rossville commerce is largely neighborhood-serving. A 
 - **Population:** 30,683 (Arden Heights-Rossville Neighborhood Tabulation Area, 2020 Census)
 - **Population Density:** 19.8 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** Located to the north of Woodrow, to the south and east of the Arthur Kill
   - **Adjacent Neighborhoods:** Arden Heights, Arthur Kill, Woodrow
@@ -66,6 +66,19 @@ N/A
 - West Shore Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Rossville,_Staten_Island](https://en.wikipedia.org/wiki/Rossville,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

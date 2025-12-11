@@ -2,7 +2,7 @@
 
 ## College Point
 
-College Point is a working-middle-class neighborhood in the New York City borough of Queens . It is bounded to the south by Whitestone Expressway and Flushing ; to the east by 138th Street and Malba / Whitestone ; to the north by the East River ; and to the west by Flushing Bay . College Point is a mostly residential ethnically diverse community with some industrial areas. The neighborhood is served by several parks and contains two yacht clubs.
+College Point is a working-middle-class neighborhood in the New York City borough of Queens. It is bounded to the south by Whitestone Expressway and Flushing ; to the east by 138th Street and Malba / Whitestone ; to the north by the East River ; and to the west by Flushing Bay. College Point is a mostly residential ethnically diverse community with some industrial areas. The neighborhood is served by several parks and contains two yacht clubs.
 
 ---
 
@@ -33,7 +33,7 @@ Transportation connections are central to College Point’s commercial viability
 - **Population:** 24,069
 - **Population Density:** 21.1 inhabitants per acre (13,500/sq mi; 5,200/km²) in 2010
 - **Area:** 1,148.84 acres (464.92 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The site, initially 300 acres (120 ha), was bounded by Whitestone Expressway on the southeast, 15th Avenue on the north, and 127th Street on the west.
   - **North to South:** In 1999, Triangle Equities developed a Multiplex cinema with two stores in College Point, on a site bounded by Ulmer Street, 28th Avenue, Linden Place, and Whitestone Expressway.
   - **Adjacent Neighborhoods:** Flushing, Malba, Ulmer Street, Whitestone, Whitestone Expressway on the southeast
@@ -71,6 +71,19 @@ N/A
 - Whitestone Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/College_Point,_Queens](https://en.wikipedia.org/wiki/College_Point,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

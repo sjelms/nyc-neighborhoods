@@ -2,7 +2,7 @@
 
 ## Hunts Point
 
-Hunts Point is a neighborhood located on a peninsula in the South Bronx of New York City . It is the location of one of the largest food distribution facilities in the world, the Hunts Point Cooperative Market . Its boundaries are the Bruckner Expressway to the west and north, the Bronx River to the east, and the East River to the south. Hunts Point Avenue is the primary street through Hunts Point.
+Hunts Point is a neighborhood located on a peninsula in the South Bronx of New York City. It is the location of one of the largest food distribution facilities in the world, the Hunts Point Cooperative Market. Its boundaries are the Bruckner Expressway to the west and north, the Bronx River to the east, and the East River to the south. Hunts Point Avenue is the primary street through Hunts Point.
 
 ---
 
@@ -31,7 +31,7 @@ Infrastructure and policy have been shaped around supporting this commercial eco
 - **Population:** 15,131
 - **Population Density:** 15.1 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** 1.650 sq mi (4.27 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bruckner Expressway (west) to Bronx River (east)
   - **North to South:** Bruckner Expressway (north) to East River (south)
   - **Adjacent Neighborhoods:** Longwood, Melrose, Mott Haven, Port Morris
@@ -43,7 +43,7 @@ Infrastructure and policy have been shaped around supporting this commercial eco
 ### Transit & Accessibility
 #### Nearest Subways:
 - 6
-- <6>
+- 6
 - C
 #### Major Stations:
 - Hunts Point Avenue
@@ -68,6 +68,19 @@ N/A
 - Whitlock Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Hunts_Point,_Bronx](https://en.wikipedia.org/wiki/Hunts_Point,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Soundview
 
-Soundview is a neighborhood on the Clason Point peninsula, on the southern section of the borough of the Bronx in New York City . Its boundaries, starting from the north and moving clockwise, are the Cross Bronx Expressway to the north, White Plains Road to the east, Lacombe Avenue to the south, and the Bronx River to the west. The Bruckner Expressway bisects the neighborhood horizontally along the center and the Bronx River Parkway runs north to south. Soundview Avenue is the primary thoroughfare through Soundview.
+Soundview is a neighborhood on the Clason Point peninsula, on the southern section of the borough of the Bronx in New York City. Its boundaries, starting from the north and moving clockwise, are the Cross Bronx Expressway to the north, White Plains Road to the east, Lacombe Avenue to the south, and the Bronx River to the west. The Bruckner Expressway bisects the neighborhood horizontally along the center and the Bronx River Parkway runs north to south. Soundview Avenue is the primary thoroughfare through Soundview.
 
 ---
 
@@ -31,7 +31,7 @@ The western edge of Soundview along the Bronx River is primarily used for storag
 - **Population:** 31,825
 - **Population Density:** 28,520/sq mi (11,010/km2) (2011)
 - **Area:** 1.116 sq mi (2.89 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** White Plains Road to the east and the Bronx River to the west
   - **North to South:** Cross Bronx Expressway to the north and Lacombe Avenue to the south
   - **Adjacent Neighborhoods:** Castle Hill, Clason Point, Parkchester, Soundview-Bruckner (tabulation area context)
@@ -46,7 +46,7 @@ The western edge of Soundview along the Bronx River is primarily used for storag
 - 2
 - 5
 - 6
-- <6>
+- 6
 - B
 #### Major Stations:
 - Bridge Bus Terminal
@@ -81,6 +81,19 @@ The western edge of Soundview along the Bronx River is primarily used for storag
 - White Plains Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Soundview,_Bronx](https://en.wikipedia.org/wiki/Soundview,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

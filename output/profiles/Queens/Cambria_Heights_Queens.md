@@ -2,7 +2,7 @@
 
 ## Cambria Heights
 
-Cambria Heights is a residential neighborhood in the southeastern portion of the New York City borough of Queens . It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont , Nassau County border on the east, Queens Village to the north, St. Albans to the west, and Montefiore Cemetery and Laurelton , Springfield Gardens , and Rosedale to the south. As of 2010, Cambria Heights's population was 18,677. The neighborhood is part of Queens Community Board 13 .
+Cambria Heights is a residential neighborhood in the southeastern portion of the New York City borough of Queens. It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont, Nassau County border on the east, Queens Village to the north, St. Albans to the west, and Montefiore Cemetery and Laurelton, Springfield Gardens, and Rosedale to the south. As of 2010, Cambria Heights's population was 18,677. The neighborhood is part of Queens Community Board 13.
 
 ---
 
@@ -31,9 +31,9 @@ The education sector is another defining institutional component of Cambria Heig
 - **Population:** 19,081
 - **Population Density:** 25.2 inhabitants per acre (27,100/sq mi; 10,500/km2)
 - **Area:** 772.01 acres (312.42 ha)
-- **Boundaries:**  
-  - **East to West:** It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont , Nassau County border on the east, Queens Village to the north, St.
-  - **North to South:** It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont , Nassau County border on the east, Queens Village to the north, St.
+- **Boundaries:** 
+  - **East to West:** It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont, Nassau County border on the east, Queens Village to the north, St.
+  - **North to South:** It is bounded by Springfield Boulevard and Francis Lewis Boulevard to the west, the Elmont, Nassau County border on the east, Queens Village to the north, St.
   - **Adjacent Neighborhoods:** Elmont, Laurelton, Queens Village, Rosedale, Springfield Boulevard and Francis Lewis Boulevard to the west, Springfield Gardens, St. Albans
 - **ZIP Codes:**
 - 11411
@@ -61,6 +61,19 @@ N/A
 - Springfield Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Cambria_Heights,_Queens](https://en.wikipedia.org/wiki/Cambria_Heights,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

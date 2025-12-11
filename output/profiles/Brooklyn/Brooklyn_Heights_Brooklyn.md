@@ -2,7 +2,7 @@
 
 ## Brooklyn Heights
 
-Brooklyn Heights is a residential neighborhood within the New York City borough of Brooklyn . The neighborhood is bounded by Old Fulton Street near the Brooklyn Bridge on the north, Cadman Plaza West on the east, Atlantic Avenue on the south, and the Brooklyn–Queens Expressway or the East River on the west. Adjacent neighborhoods are Dumbo to the north, Downtown Brooklyn to the east, and Cobble Hill and Boerum Hill to the south.
+Brooklyn Heights is a residential neighborhood within the New York City borough of Brooklyn. The neighborhood is bounded by Old Fulton Street near the Brooklyn Bridge on the north, Cadman Plaza West on the east, Atlantic Avenue on the south, and the Brooklyn–Queens Expressway or the East River on the west. Adjacent neighborhoods are Dumbo to the north, Downtown Brooklyn to the east, and Cobble Hill and Boerum Hill to the south.
 
 ---
 
@@ -31,7 +31,7 @@ Education and culture function as quiet but powerful commercial anchors. St. Fra
 - **Population:** 25,092
 - **Population Density:** 78,400/sq mi (30,300/km2)
 - **Area:** 0.320 sq mi (0.83 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The neighborhood is bounded by Old Fulton Street near the Brooklyn Bridge on the north, Cadman Plaza West on the east, Atlantic Avenue on the south, and the Brooklyn–Queens Expressway or the East River on the west.
   - **North to South:** The neighborhood is bounded by Old Fulton Street near the Brooklyn Bridge on the north, Cadman Plaza West on the east, Atlantic Avenue on the south, and the Brooklyn–Queens Expressway or the East River on the west.
   - **Adjacent Neighborhoods:** Boerum Hill, Cobble Hill, Downtown Brooklyn, Dumbo, Old Fulton Street near the Brooklyn Bridge on the north
@@ -76,6 +76,19 @@ Education and culture function as quiet but powerful commercial anchors. St. Fra
 - Tillary Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Brooklyn_Heights,_Brooklyn](https://en.wikipedia.org/wiki/Brooklyn_Heights,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

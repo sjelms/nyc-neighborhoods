@@ -2,7 +2,7 @@
 
 ## North Corona
 
-Corona is a neighborhood in the borough of Queens in New York City . It borders Flushing and Flushing Meadows–Corona Park to the east, Jackson Heights and Elmhurst to the west, Forest Hills and Rego Park to the south, and East Elmhurst to the north. Corona's main thoroughfares include Corona Avenue, Roosevelt Avenue , Northern Boulevard , Junction Boulevard , and 108th Street.
+Corona is a neighborhood in the borough of Queens in New York City. It borders Flushing and Flushing Meadows–Corona Park to the east, Jackson Heights and Elmhurst to the west, Forest Hills and Rego Park to the south, and East Elmhurst to the north. Corona's main thoroughfares include Corona Avenue, Roosevelt Avenue, Northern Boulevard, Junction Boulevard, and 108th Street.
 
 ---
 
@@ -31,7 +31,7 @@ The redevelopment of Corona Plaza was driven by the Queens Museum and the Queens
 - **Population:** 109,695
 - **Population Density:** 125.9 inhabitants per acre (80,600/sq mi; 31,100/km2)
 - **Area:** 413.24 acres (167.23 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** North Corona is the portion of Corona north of Roosevelt Avenue.
   - **Adjacent Neighborhoods:** East Elmhurst, Elmhurst, Flushing, Forest Hills, Jackson Heights, Rego Park
@@ -45,7 +45,7 @@ The redevelopment of Corona Plaza was driven by the Queens Museum and the Queens
 - 5
 - 6
 - 7
-- <7>
+- 7
 #### Major Stations:
 - 103rd Street–Corona Plaza
 - 111th Street
@@ -73,6 +73,19 @@ The redevelopment of Corona Plaza was driven by the Queens Museum and the Queens
 - Roosevelt Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/North_Corona,_Queens](https://en.wikipedia.org/wiki/North_Corona,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

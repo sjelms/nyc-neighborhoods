@@ -2,7 +2,7 @@
 
 ## East Williamsburg
 
-East Williamsburg is a neighborhood in the northwestern portion of Brooklyn , New York City , United States. East Williamsburg consists roughly of what was the 3rd District of the Village of Williamsburgh and what is now called the East Williamsburg In-Place Industrial Park (EWIPIP), bounded by the neighborhoods of Northside and Southside Williamsburg to the west, Greenpoint to the north, Bushwick to the south and southeast, and both Maspeth and Ridgewood in Queens to the east. Much of this area is still referred to as either Bushwick, Williamsburg, or Greenpoint with the term East Williamsburg falling out of use since the 1990s.
+East Williamsburg is a neighborhood in the northwestern portion of Brooklyn, New York City, United States. East Williamsburg consists roughly of what was the 3rd District of the Village of Williamsburgh and what is now called the East Williamsburg In-Place Industrial Park (EWIPIP), bounded by the neighborhoods of Northside and Southside Williamsburg to the west, Greenpoint to the north, Bushwick to the south and southeast, and both Maspeth and Ridgewood in Queens to the east. Much of this area is still referred to as either Bushwick, Williamsburg, or Greenpoint with the term East Williamsburg falling out of use since the 1990s.
 
 ---
 
@@ -31,7 +31,7 @@ Retail and small business corridors knit the industrial fabric into the surround
 - **Population:** 34,158
 - **Population Density:** 24,400/sq mi (9,420/km2) or 38.1 inhabitants per acre (24,400/sq mi; 9,400/km2)
 - **Area:** 1.40 sq mi (3.6 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East Williamsburg consists roughly of what was the 3rd District of the Village of Williamsburgh and what is now called the East Williamsburg In-Place Industrial Park (EWIPIP), bounded by the neighborhoods of Northside and Southside
 Williamsburg
 to the west,
@@ -110,6 +110,19 @@ N/A
 - Wyckoff Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/East_Williamsburg,_Brooklyn](https://en.wikipedia.org/wiki/East_Williamsburg,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

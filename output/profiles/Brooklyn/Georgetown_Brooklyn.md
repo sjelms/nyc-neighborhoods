@@ -2,7 +2,7 @@
 
 ## Georgetown
 
-Bergen Beach is a residential neighborhood in the borough of Brooklyn , New York City . It is located on a peninsula abutting Jamaica Bay in the southeastern portion of the borough, and is bordered by Mill Basin and the neighborhood of the same name to the south and west; the neighborhood of Flatlands to the northwest; Paerdegat Basin and the neighborhood of Canarsie to the northeast; and Jamaica Bay and the Belt Parkway to the east. Bergen Beach contains a sub-neighborhood named Georgetown. The vast majority of residents are white, and the neighborhood generally has a suburban quality.
+Bergen Beach is a residential neighborhood in the borough of Brooklyn, New York City. It is located on a peninsula abutting Jamaica Bay in the southeastern portion of the borough, and is bordered by Mill Basin and the neighborhood of the same name to the south and west; the neighborhood of Flatlands to the northwest; Paerdegat Basin and the neighborhood of Canarsie to the northeast; and Jamaica Bay and the Belt Parkway to the east. Bergen Beach contains a sub-neighborhood named Georgetown. The vast majority of residents are white, and the neighborhood generally has a suburban quality.
 
 ---
 
@@ -31,7 +31,7 @@ Commercial and light industrial activity is constrained by zoning, but there are
 - **Population:** 45,231
 - **Population Density:** 27.2 inhabitants per acre (17,400/sq mi; 6,700/km2)
 - **Area:** 1,662.88 acres (672.94 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Ralph Avenue to the west, Avenue N to the south, Avenue U to the southeast, and Paerdegat Basin to the northeast.
   - **North to South:** It is bounded by Ralph Avenue to the west, Avenue N to the south, Avenue U to the southeast, and Paerdegat Basin to the northeast.
   - **Adjacent Neighborhoods:** Bergen Beach, Canarsie, Flatlands, Marine Park, Mill Basin, Ralph Avenue to the west
@@ -62,6 +62,19 @@ N/A
 - Veterans Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Georgetown,_Brooklyn](https://en.wikipedia.org/wiki/Georgetown,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

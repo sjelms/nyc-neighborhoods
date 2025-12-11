@@ -2,7 +2,7 @@
 
 ## Port Ivory
 
-Port Ivory is a coastal area in the northwestern corner of Staten Island , New York City , New York , United States .  It is located on Newark Bay near the entrances the Kill van Kull in the east and Arthur Kill in the west. It is bordered by Arlington to the east, Old Place to the south, Newark Bay to the north, and the Arthur Kill to the west.
+Port Ivory is a coastal area in the northwestern corner of Staten Island, New York City, New York, United States. It is located on Newark Bay near the entrances the Kill van Kull in the east and Arthur Kill in the west. It is bordered by Arlington to the east, Old Place to the south, Newark Bay to the north, and the Arthur Kill to the west.
 
 ---
 
@@ -31,7 +31,7 @@ Modern commercial activity in Port Ivory centers on intermodal freight, marine t
 - **Population:** 33,492 (Mariner's Harbor-Arlington-Graniteville SI0107 Neighborhood Tabulation Area, 2020 Census)
 - **Population Density:** 35.2 inhabitants per acre (14,500/sq mi; 5,600/km2) (Mariner's Harbor-Arlington-Graniteville SI0107)
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by Arlington to the east, Old Place to the south, Newark Bay to the north, and the Arthur Kill to the west.
   - **North to South:** It is bordered by Arlington to the east, Old Place to the south, Newark Bay to the north, and the Arthur Kill to the west.
   - **Adjacent Neighborhoods:** Arlington, Arlington to the east, Old Place
@@ -85,6 +85,19 @@ N/A
 - The Staten Island Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Port_Ivory,_Staten_Island](https://en.wikipedia.org/wiki/Port_Ivory,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

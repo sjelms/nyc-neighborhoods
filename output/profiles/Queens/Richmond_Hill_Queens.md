@@ -2,7 +2,7 @@
 
 ## Richmond Hill
 
-Richmond Hill is a commercial and residential neighborhood located in the southeastern section of the New York City borough of Queens . The area borders Kew Gardens and Forest Park to the north, Jamaica and South Jamaica to the east, South Ozone Park to the south, and Woodhaven and Ozone Park to the west. The neighborhood is split between Queens Community Board 9 and 10 .
+Richmond Hill is a commercial and residential neighborhood located in the southeastern section of the New York City borough of Queens. The area borders Kew Gardens and Forest Park to the north, Jamaica and South Jamaica to the east, South Ozone Park to the south, and Woodhaven and Ozone Park to the west. The neighborhood is split between Queens Community Board 9 and 10.
 
 ---
 
@@ -31,7 +31,7 @@ Liberty Avenue and 101st Avenue carry an additional layer of ethnic and cultural
 - **Population:** 62,982
 - **Population Density:** 53.8 inhabitants per acre (34,400/sq mi; 13,300/km2)
 - **Area:** 1,171.55 acres (474.11 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** West: LIRR’s abandoned Rockaway Beach Branch north of Atlantic Avenue; between 104th and 107th Streets south of Atlantic Avenue. East: Van Wyck Expressway at the eastern end of the community.
   - **North to South:** North: Hillside Avenue east of Lefferts Boulevard; Forest Park and the Long Island Rail Road’s Montauk Branch right-of-way west of Lefferts Boulevard. South: extends to around 103rd Avenue or Liberty Avenue.
   - **Adjacent Neighborhoods:** Forest Park, Jamaica, Kew Gardens, Ozone Park, South Jamaica, South Ozone Park, Woodhaven
@@ -91,6 +91,19 @@ Liberty Avenue and 101st Avenue carry an additional layer of ethnic and cultural
 - Van Wyck Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Richmond_Hill,_Queens](https://en.wikipedia.org/wiki/Richmond_Hill,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Sunnyside
 
-Sunnyside is a neighborhood in the western portion of the New York City borough of Queens . It shares borders with Hunters Point and Long Island City to the west, Astoria to the north, Woodside to the east and Maspeth to the south. It contains the Sunnyside Gardens Historic District , one of the first planned communities in the United States.
+Sunnyside is a neighborhood in the western portion of the New York City borough of Queens. It shares borders with Hunters Point and Long Island City to the west, Astoria to the north, Woodside to the east and Maspeth to the south. It contains the Sunnyside Gardens Historic District, one of the first planned communities in the United States.
 
 ---
 
@@ -33,7 +33,7 @@ Transit accessibility is a defining asset for Sunnyside’s commercial environme
 - **Population:** 63,271
 - **Population Density:** 27 inhabitants per acre (17,000/sq mi; 6,700/km²)
 - **Area:** 2,340.44 acres (947.14 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** Astoria, Hunters Point, Long Island City, Maspeth, Woodside
@@ -77,6 +77,19 @@ Transit accessibility is a defining asset for Sunnyside’s commercial environme
 - Street Rawson Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Sunnyside,_Queens](https://en.wikipedia.org/wiki/Sunnyside,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

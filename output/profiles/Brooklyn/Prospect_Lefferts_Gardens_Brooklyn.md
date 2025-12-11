@@ -2,7 +2,7 @@
 
 ## Prospect Lefferts Gardens
 
-Prospect Lefferts Gardens is a residential neighborhood in the Flatbush area of the New York City borough of Brooklyn . The community is bounded by Empire Boulevard (formerly Malbone Street) to the north, Clarkson Avenue to the south, New York Avenue to the east, and Ocean Avenue / Prospect Park to the west. Prospect Lefferts Gardens was designated a New York City Landmark area in 1979 and called the Prospect Lefferts Gardens Historic District.
+Prospect Lefferts Gardens is a residential neighborhood in the Flatbush area of the New York City borough of Brooklyn. The community is bounded by Empire Boulevard (formerly Malbone Street) to the north, Clarkson Avenue to the south, New York Avenue to the east, and Ocean Avenue / Prospect Park to the west. Prospect Lefferts Gardens was designated a New York City Landmark area in 1979 and called the Prospect Lefferts Gardens Historic District.
 
 ---
 
@@ -31,7 +31,7 @@ Though overwhelmingly residential, the neighborhood’s commercial life is suppo
 - **Population:** 99,287
 - **Population Density:** 92.9 inhabitants per acre (59,500/sq mi; 23,000/km2) (2010); 70,020/sq mi (27,030/km2) (2015)
 - **Area:** 1.418 sq mi (3.67 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The community is bounded by Empire Boulevard (formerly Malbone Street) to the north, Clarkson Avenue to the south, New York Avenue to the east, and Ocean Avenue / Prospect Park to the west.
   - **North to South:** The community is bounded by Empire Boulevard (formerly Malbone Street) to the north, Clarkson Avenue to the south, New York Avenue to the east, and Ocean Avenue / Prospect Park to the west.
   - **Adjacent Neighborhoods:** Crown Heights, Crown Heights South, East Flatbush, Empire Boulevard, Flatbush
@@ -79,6 +79,19 @@ N/A
 - Winthrop Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Prospect_Lefferts_Gardens,_Brooklyn](https://en.wikipedia.org/wiki/Prospect_Lefferts_Gardens,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

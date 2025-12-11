@@ -2,7 +2,7 @@
 
 ## Pomonok
 
-Pomonok is a working class neighborhood within the Flushing area in the New York City borough of Queens . Its borders are the Long Island Expressway to the north; Kissena Boulevard to the west; 73rd Avenue to the south; and 164th Street to the east. The surrounding neighborhoods are Queensboro Hill to the north; Auburndale to the northeast; Kew Gardens Hills to the west; and the Utopia / Hillcrest areas of Fresh Meadows to both the east and southeast.
+Pomonok is a working class neighborhood within the Flushing area in the New York City borough of Queens. Its borders are the Long Island Expressway to the north; Kissena Boulevard to the west; 73rd Avenue to the south; and 164th Street to the east. The surrounding neighborhoods are Queensboro Hill to the north; Auburndale to the northeast; Kew Gardens Hills to the west; and the Utopia / Hillcrest areas of Fresh Meadows to both the east and southeast.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood is tightly integrated with Queens’ institutional and educatio
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Kissena Boulevard to 164th Street
   - **North to South:** Long Island Expressway to 73rd Avenue
   - **Adjacent Neighborhoods:** Auburndale, Fresh Meadows, Hillcrest, Kew Gardens Hills, Queensboro Hill, Utopia
@@ -84,6 +84,19 @@ N/A
 - Whitestone Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Pomonok,_Queens](https://en.wikipedia.org/wiki/Pomonok,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

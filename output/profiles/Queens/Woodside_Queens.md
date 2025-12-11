@@ -2,7 +2,7 @@
 
 ## Woodside
 
-Woodside is a neighborhood in the western portion of the borough of Queens in New York City . It is bordered on the south by Maspeth , on the north by Astoria , on the west by Sunnyside , and on the east by Elmhurst , Jackson Heights , and East Elmhurst . Some areas are widely residential and very quiet, while other parts, especially the ones around Roosevelt Avenue , are busier.
+Woodside is a neighborhood in the western portion of the borough of Queens in New York City. It is bordered on the south by Maspeth, on the north by Astoria, on the west by Sunnyside, and on the east by Elmhurst, Jackson Heights, and East Elmhurst. Some areas are widely residential and very quiet, while other parts, especially the ones around Roosevelt Avenue, are busier.
 
 ---
 
@@ -31,9 +31,9 @@ Today, commercial and community life is concentrated along several key corridors
 - **Population:** 45,099
 - **Population Density:** 69.5 inhabitants per acre (44,500/sq mi; 17,200/km2)
 - **Area:** 649.22 acres (262.73 ha)
-- **Boundaries:**  
-  - **East to West:** Green spaces Parks in the area include: Doughboy Plaza , bounded by Woodside Avenue, 52nd Street, and 39th Road.
-  - **North to South:** Green spaces Parks in the area include: Doughboy Plaza , bounded by Woodside Avenue, 52nd Street, and 39th Road.
+- **Boundaries:** 
+  - **East to West:** Green spaces Parks in the area include: Doughboy Plaza, bounded by Woodside Avenue, 52nd Street, and 39th Road.
+  - **North to South:** Green spaces Parks in the area include: Doughboy Plaza, bounded by Woodside Avenue, 52nd Street, and 39th Road.
   - **Adjacent Neighborhoods:** Astoria, East Elmhurst, Elmhurst, Jackson Heights, Laurel Hill, Maspeth, Sunnyside, Winfield, Woodside Avenue
 - **ZIP Codes:**
 - 11377
@@ -43,7 +43,7 @@ Today, commercial and community life is concentrated along several key corridors
 ### Transit & Accessibility
 #### Nearest Subways:
 - 7
-- <7>
+- 7
 - A
 - B
 - C
@@ -83,6 +83,19 @@ Today, commercial and community life is concentrated along several key corridors
 - Queens Boulevard (NY 25)
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Woodside,_Queens](https://en.wikipedia.org/wiki/Woodside,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

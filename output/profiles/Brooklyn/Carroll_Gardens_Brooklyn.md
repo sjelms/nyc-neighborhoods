@@ -2,7 +2,7 @@
 
 ## Carroll Gardens
 
-Carroll Gardens is a neighborhood in the northwestern portion of the New York City borough of Brooklyn . Encompassing approximately 40 city blocks, it is bounded by Degraw and Warren Streets (north), Hoyt and Smith Streets (east), Ninth Street or the Gowanus Expressway (south), and Interstate 278 , the Gowanus and Brooklyn–Queens Expressways (west). The neighborhoods that surround it are Cobble Hill to the northwest, Boerum Hill to the northeast, Gowanus to the east, Red Hook to the south and southwest, and the Columbia Street Waterfront District to the west.
+Carroll Gardens is a neighborhood in the northwestern portion of the New York City borough of Brooklyn. Encompassing approximately 40 city blocks, it is bounded by Degraw and Warren Streets (north), Hoyt and Smith Streets (east), Ninth Street or the Gowanus Expressway (south), and Interstate 278, the Gowanus and Brooklyn–Queens Expressways (west). The neighborhoods that surround it are Cobble Hill to the northwest, Boerum Hill to the northeast, Gowanus to the east, Red Hook to the south and southwest, and the Columbia Street Waterfront District to the west.
 
 ---
 
@@ -31,8 +31,8 @@ In the 21st century, a notable influx of French immigrants has added another com
 - **Population:** 12,853
 - **Population Density:** 52,000/sq mi (20,100/km2)
 - **Area:** 0.247 sq mi (0.64 km 2 )
-- **Boundaries:**  
-  - **East to West:** Encompassing approximately 40 city blocks, it is bounded by Degraw and Warren Streets (north), Hoyt and Smith Streets (east), Ninth Street or the Gowanus Expressway (south), and Interstate 278 , the Gowanus and Brooklyn–Queens Expressways (west).
+- **Boundaries:** 
+  - **East to West:** Encompassing approximately 40 city blocks, it is bounded by Degraw and Warren Streets (north), Hoyt and Smith Streets (east), Ninth Street or the Gowanus Expressway (south), and Interstate 278, the Gowanus and Brooklyn–Queens Expressways (west).
   - **North to South:** It includes houses located in a rough rectangle bounded by Carroll, President, Smith, and Hoyt Streets, as well as the western ends of the two blocks between President Street and First Street.
   - **Adjacent Neighborhoods:** Boerum Hill, Carroll, Cobble Hill, Columbia Street Waterfront District, Degraw and Warren Streets, Gowanus, Red Hook
 - **ZIP Codes:**
@@ -68,6 +68,19 @@ N/A
 - Smith Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Carroll_Gardens,_Brooklyn](https://en.wikipedia.org/wiki/Carroll_Gardens,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

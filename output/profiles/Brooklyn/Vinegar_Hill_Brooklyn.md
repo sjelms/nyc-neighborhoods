@@ -2,7 +2,7 @@
 
 ## Vinegar Hill
 
-Vinegar Hill is a neighborhood in the borough of Brooklyn in New York City on the East River Waterfront between Dumbo and the Brooklyn Navy Yard . The neighborhood is locally governed by Brooklyn Community Board 2 and is policed by the New York City Police Department 's 84th Precinct. The large Irish-American population in Vinegar Hill made it one of several New York City neighborhoods once known colloquially as Irishtown .
+Vinegar Hill is a neighborhood in the borough of Brooklyn in New York City on the East River Waterfront between Dumbo and the Brooklyn Navy Yard. The neighborhood is locally governed by Brooklyn Community Board 2 and is policed by the New York City Police Department 's 84th Precinct. The large Irish-American population in Vinegar Hill made it one of several New York City neighborhoods once known colloquially as Irishtown.
 
 ---
 
@@ -31,7 +31,7 @@ Over time, Vinegar Hill saw significant industrial growth that replaced many ear
 - **Population:** 2,671
 - **Population Density:** 26,400/sq mi (10,200/km2)
 - **Area:** 0.101 sq mi (0.26 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From the Brooklyn Navy Yard to Bridge Street
   - **North to South:** From the East River waterfront to Front Street
   - **Adjacent Neighborhoods:** Bridge Plaza, Brooklyn Navy Yard, Dumbo
@@ -43,7 +43,7 @@ Over time, Vinegar Hill saw significant industrial growth that replaced many ear
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - A
 - C
 - F
@@ -62,6 +62,19 @@ N/A
 - York Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Vinegar_Hill,_Brooklyn](https://en.wikipedia.org/wiki/Vinegar_Hill,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

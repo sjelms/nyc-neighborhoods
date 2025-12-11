@@ -2,7 +2,7 @@
 
 ## Greenpoint
 
-Greenpoint is the northernmost neighborhood in the New York City borough of Brooklyn . It is bordered on the southwest by Williamsburg at Bushwick Inlet Park and McCarren Park ; on the southeast by the Brooklyn–Queens Expressway and East Williamsburg ; on the north by Newtown Creek and the neighborhood of Long Island City in Queens ; and on the west by the East River . The neighborhood has a large Polish immigrant and Polish-American community, containing many Polish restaurants, markets, and businesses, and it is often referred to as Little Poland .
+Greenpoint is the northernmost neighborhood in the New York City borough of Brooklyn. It is bordered on the southwest by Williamsburg at Bushwick Inlet Park and McCarren Park ; on the southeast by the Brooklyn–Queens Expressway and East Williamsburg ; on the north by Newtown Creek and the neighborhood of Long Island City in Queens ; and on the west by the East River. The neighborhood has a large Polish immigrant and Polish-American community, containing many Polish restaurants, markets, and businesses, and it is often referred to as Little Poland.
 
 ---
 
@@ -31,7 +31,7 @@ Twentieth- and twenty‑first‑century shifts have rebalanced Greenpoint’s la
 - **Population:** 34,719
 - **Population Density:** 27,600/sq mi (10,600/km2) or 42.9 inhabitants per acre
 - **Area:** 1.26 sq mi (3.3 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Church of the Ascension, built in 1853 Architectural and historic landmarks The Greenpoint Historic District is roughly bounded by Kent, Calyer, Noble, and Franklin Streets, Clifford Place, Lorimer Street and Manhattan Avenue.
   - **North to South:** Church of the Ascension, built in 1853 Architectural and historic landmarks The Greenpoint Historic District is roughly bounded by Kent, Calyer, Noble, and Franklin Streets, Clifford Place, Lorimer Street and Manhattan Avenue.
   - **Adjacent Neighborhoods:** East Williamsburg, Kent, Long Island City, Maspeth, Ridgewood, Sunnyside, Williamsburg
@@ -78,6 +78,19 @@ Twentieth- and twenty‑first‑century shifts have rebalanced Greenpoint’s la
 - McGuinness Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Greenpoint,_Brooklyn](https://en.wikipedia.org/wiki/Greenpoint,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

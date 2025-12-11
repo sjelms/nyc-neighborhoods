@@ -2,7 +2,7 @@
 
 ## Sunset Park
 
-Sunset Park is a neighborhood in the western part of the New York City borough of Brooklyn , bounded by Park Slope and Green-Wood Cemetery to the north, Borough Park to the east, Bay Ridge to the south, and New York Harbor to the west. The neighborhood is named for a public park of the same name that covers 24.5 acres (9.9 ha) between Fifth and Seventh Avenues from 41st to 44th Street. The area north of 36th Street is alternatively known as Greenwood Heights , while the section north of 20th Street is also called South Slope .
+Sunset Park is a neighborhood in the western part of the New York City borough of Brooklyn, bounded by Park Slope and Green-Wood Cemetery to the north, Borough Park to the east, Bay Ridge to the south, and New York Harbor to the west. The neighborhood is named for a public park of the same name that covers 24.5 acres (9.9 ha) between Fifth and Seventh Avenues from 41st to 44th Street. The area north of 36th Street is alternatively known as Greenwood Heights, while the section north of 20th Street is also called South Slope.
 
 ---
 
@@ -31,9 +31,9 @@ Energy and waste infrastructure further underscore the neighborhood’s industri
 - **Population:** 126,000
 - **Population Density:** 68.1 inhabitants per acre (43,600/sq mi; 16,800/km²)
 - **Area:** 280 acres (110 ha)
-- **Boundaries:**  
-  - **East to West:** Historic district Show map of New York Show map of the United States Location Roughly bounded by the Upper New York Bay , Thirty-sixth St., Ninth Ave.
-  - **North to South:** 88001464 Added to NRHP September 15, 1988 Sunset Park is a neighborhood in the western part of the New York City borough of Brooklyn , bounded by Park Slope and Green-Wood Cemetery to the north, Borough Park to the east, Bay Ridge to the south, and New York Harbor to the west.
+- **Boundaries:** 
+  - **East to West:** Historic district Show map of New York Show map of the United States Location Roughly bounded by the Upper New York Bay, Thirty-sixth St., Ninth Ave.
+  - **North to South:** 88001464 Added to NRHP September 15, 1988 Sunset Park is a neighborhood in the western part of the New York City borough of Brooklyn, bounded by Park Slope and Green-Wood Cemetery to the north, Borough Park to the east, Bay Ridge to the south, and New York Harbor to the west.
   - **Adjacent Neighborhoods:** Bay Ridge, Borough Park, Fifth and Seventh Avenues between 41st and 43rd Streets, Green-Wood Cemetery, Park Slope, Park Slope and Green-Wood Cemetery to the north
 - **ZIP Codes:**
 - 11220
@@ -91,6 +91,19 @@ Energy and waste infrastructure further underscore the neighborhood’s industri
 - Third Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Sunset_Park,_Brooklyn](https://en.wikipedia.org/wiki/Sunset_Park,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

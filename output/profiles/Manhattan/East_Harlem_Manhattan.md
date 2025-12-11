@@ -2,7 +2,7 @@
 
 ## East Harlem
 
-East Harlem , also known as Spanish Harlem , or El Barrio , is a neighborhood of Upper Manhattan in New York City , north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north. Despite its name, it is generally not considered to be a part of Harlem proper , but it is one of the neighborhoods included in Greater Harlem.
+East Harlem, also known as Spanish Harlem, or El Barrio, is a neighborhood of Upper Manhattan in New York City, north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north. Despite its name, it is generally not considered to be a part of Harlem proper, but it is one of the neighborhoods included in Greater Harlem.
 
 ---
 
@@ -33,9 +33,9 @@ Transportation infrastructure underpins East Harlem’s commercial viability. Th
 - **Population:** 115,921
 - **Population Density:** East Harlem North: 101.1/acre (64,700/sq mi; 25,000/km2); East Harlem South: 148.7/acre (95,200/sq mi; 36,700/km2)
 - **Area:** Total land area 1.54 sq mi (4.0 km2); East Harlem North 573.94 acres (232.27 ha); East Harlem South 389.41 acres (157.59 ha)
-- **Boundaries:**  
-  - **East to West:** Neighborhood of Manhattan in New York City East Harlem Neighborhood of Manhattan Second Avenue and 97th Street as seen from the south in 2019 Location of East Harlem in New York City Coordinates: 40°47′55″N 73°56′30″W ﻿ / ﻿ 40.79861°N 73.94167°W ﻿ / 40.79861; -73.94167 Country United States State New York City New York City Borough Manhattan Community District Manhattan 11 Population ( 2010 ) • Total 115,921 Ethnicity • Hispanic 52.1% • Black 35.7% • White (non-Hispanic) 7.3% • Asian 2.7% • Other 0.2% Economics • Median income $21,480 Time zone UTC−5 ( Eastern ) • Summer ( DST ) UTC−4 ( EDT ) ZIP Codes 10029, 10035 Area code 212, 332, 646 , and 917 East Harlem , also known as Spanish Harlem , or El Barrio , is a neighborhood of Upper Manhattan in New York City , north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north.
-  - **North to South:** Neighborhood of Manhattan in New York City East Harlem Neighborhood of Manhattan Second Avenue and 97th Street as seen from the south in 2019 Location of East Harlem in New York City Coordinates: 40°47′55″N 73°56′30″W ﻿ / ﻿ 40.79861°N 73.94167°W ﻿ / 40.79861; -73.94167 Country United States State New York City New York City Borough Manhattan Community District Manhattan 11 Population ( 2010 ) • Total 115,921 Ethnicity • Hispanic 52.1% • Black 35.7% • White (non-Hispanic) 7.3% • Asian 2.7% • Other 0.2% Economics • Median income $21,480 Time zone UTC−5 ( Eastern ) • Summer ( DST ) UTC−4 ( EDT ) ZIP Codes 10029, 10035 Area code 212, 332, 646 , and 917 East Harlem , also known as Spanish Harlem , or El Barrio , is a neighborhood of Upper Manhattan in New York City , north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north.
+- **Boundaries:** 
+  - **East to West:** Neighborhood of Manhattan in New York City East Harlem Neighborhood of Manhattan Second Avenue and 97th Street as seen from the south in 2019 Location of East Harlem in New York City Coordinates: 40°47′55″N 73°56′30″W ﻿ / ﻿ 40.79861°N 73.94167°W ﻿ / 40.79861; -73.94167 Country United States State New York City New York City Borough Manhattan Community District Manhattan 11 Population ( 2010 ) • Total 115,921 Ethnicity • Hispanic 52.1% • Black 35.7% • White (non-Hispanic) 7.3% • Asian 2.7% • Other 0.2% Economics • Median income $21,480 Time zone UTC−5 ( Eastern ) • Summer ( DST ) UTC−4 ( EDT ) ZIP Codes 10029, 10035 Area code 212, 332, 646, and 917 East Harlem, also known as Spanish Harlem, or El Barrio, is a neighborhood of Upper Manhattan in New York City, north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north.
+  - **North to South:** Neighborhood of Manhattan in New York City East Harlem Neighborhood of Manhattan Second Avenue and 97th Street as seen from the south in 2019 Location of East Harlem in New York City Coordinates: 40°47′55″N 73°56′30″W ﻿ / ﻿ 40.79861°N 73.94167°W ﻿ / 40.79861; -73.94167 Country United States State New York City New York City Borough Manhattan Community District Manhattan 11 Population ( 2010 ) • Total 115,921 Ethnicity • Hispanic 52.1% • Black 35.7% • White (non-Hispanic) 7.3% • Asian 2.7% • Other 0.2% Economics • Median income $21,480 Time zone UTC−5 ( Eastern ) • Summer ( DST ) UTC−4 ( EDT ) ZIP Codes 10029, 10035 Area code 212, 332, 646, and 917 East Harlem, also known as Spanish Harlem, or El Barrio, is a neighborhood of Upper Manhattan in New York City, north of the Upper East Side and bounded by 96th Street to the south, Fifth Avenue to the west, and the East and Harlem Rivers to the east and north.
   - **Adjacent Neighborhoods:** Greater Harlem, Harlem, Upper East Side
 - **ZIP Codes:**
 - 10029
@@ -53,7 +53,7 @@ Transportation infrastructure underpins East Harlem’s commercial viability. Th
 - 5
 - 6
 - 7
-- <6>
+- 6
 - Q
 #### Major Stations:
 - 103rd Street (IRT Lexington Avenue Line)
@@ -88,6 +88,19 @@ Transportation infrastructure underpins East Harlem’s commercial viability. Th
 - Willis Avenue Bridge
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/East_Harlem,_Manhattan](https://en.wikipedia.org/wiki/East_Harlem,_Manhattan)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

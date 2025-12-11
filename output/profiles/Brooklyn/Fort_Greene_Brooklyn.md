@@ -2,7 +2,7 @@
 
 ## Fort Greene
 
-Fort Greene is a neighborhood in the northwestern part of the New York City borough of Brooklyn . The neighborhood is bounded by Flushing Avenue and the Brooklyn Navy Yard to the north, Flatbush Avenue Extension and Downtown Brooklyn to the west, Atlantic Avenue and Prospect Heights to the south, and Vanderbilt Avenue and Clinton Hill to the east. The Fort Greene Historic District is listed on the New York State Registry and on the National Register of Historic Places , and is a New York City designated historic district .
+Fort Greene is a neighborhood in the northwestern part of the New York City borough of Brooklyn. The neighborhood is bounded by Flushing Avenue and the Brooklyn Navy Yard to the north, Flatbush Avenue Extension and Downtown Brooklyn to the west, Atlantic Avenue and Prospect Heights to the south, and Vanderbilt Avenue and Clinton Hill to the east. The Fort Greene Historic District is listed on the New York State Registry and on the National Register of Historic Places, and is a New York City designated historic district.
 
 ---
 
@@ -31,7 +31,7 @@ On the northern fringe, Fort Greene’s boundary at Flushing Avenue is defined i
 - **Population:** 32,938
 - **Population Density:** 60,100/sq mi (23,200/km2)
 - **Area:** 0.548 sq mi (1.42 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Boundaries
 Fort Greene Park playground in 2008
 Although there are no official neighborhood boundaries in New York City,
@@ -112,6 +112,19 @@ to the north, Prospect Heights
 - Vanderbilt Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Fort_Greene,_Brooklyn](https://en.wikipedia.org/wiki/Fort_Greene,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Navy Yard
 
-The Brooklyn Navy Yard (originally known as the New York Navy Yard ) is a shipyard and industrial complex in northwest Brooklyn in New York City , New York, U.S. The Navy Yard is located on the East River in Wallabout Bay , a semicircular bend of the river across from Corlears Hook in Manhattan . It is bounded by Navy Street to the west, Flushing Avenue to the south, Kent Avenue to the east, and the East River on the north. The site, which covers 225.15 acres (91.11 ha), is listed on the National Register of Historic Places .
+The Brooklyn Navy Yard (originally known as the New York Navy Yard ) is a shipyard and industrial complex in northwest Brooklyn in New York City, New York, U.S. The Navy Yard is located on the East River in Wallabout Bay, a semicircular bend of the river across from Corlears Hook in Manhattan. It is bounded by Navy Street to the west, Flushing Avenue to the south, Kent Avenue to the east, and the East River on the north. The site, which covers 225.15 acres (91.11 ha), is listed on the National Register of Historic Places.
 
 ---
 
@@ -33,7 +33,7 @@ Commercial activity is reinforced by improving access and circulation tailored t
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** 225.15 acres (91.11 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Navy Street to the west, Flushing Avenue to the south, Kent Avenue to the east, and the East River on the north.
   - **North to South:** It is bounded by Navy Street to the west, Flushing Avenue to the south, Kent Avenue to the east, and the East River on the north.
   - **Adjacent Neighborhoods:** Farragut Houses, Fort Greene, Navy Street to the west, Vinegar Hill, Wallabout, Williamsburg
@@ -141,6 +141,19 @@ Commercial activity is reinforced by improving access and circulation tailored t
 - York Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Navy_Yard,_Brooklyn](https://en.wikipedia.org/wiki/Navy_Yard,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

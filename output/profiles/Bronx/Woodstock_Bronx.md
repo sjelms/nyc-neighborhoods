@@ -2,7 +2,7 @@
 
 ## Woodstock
 
-Longwood is a mixed-use neighborhood in the southeast Bronx in New York City . Its boundaries, starting from the north and moving clockwise are East 167th Street to the north, the Bronx River and the Bruckner Expressway to east, East 149th Street to the south, and Saint Anns Avenue to the west. Southern Boulevard is the primary thoroughfare through Longwood.
+Longwood is a mixed-use neighborhood in the southeast Bronx in New York City. Its boundaries, starting from the north and moving clockwise are East 167th Street to the north, the Bronx River and the Bruckner Expressway to east, East 149th Street to the south, and Saint Anns Avenue to the west. Southern Boulevard is the primary thoroughfare through Longwood.
 
 ---
 
@@ -33,7 +33,7 @@ Retail and community services are supported by several transit nodes that tie Lo
 - **Population:** 26,196
 - **Population Density:** 106.3 inhabitants per acre (68,000/sq mi; 26,300/km2)
 - **Area:** 0.489 sq mi (1.27 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bronx River and the Bruckner Expressway to the east, Saint Anns Avenue to the west
   - **North to South:** East 167th Street to the north, East 149th Street to the south
   - **Adjacent Neighborhoods:** Hunts Point
@@ -98,6 +98,19 @@ N/A
 - Westchester Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Woodstock,_Bronx](https://en.wikipedia.org/wiki/Woodstock,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Little Neck
 
-Douglaston–Little Neck is a neighborhood in the northeastern part of the New York City borough of Queens . The community is located on the North Shore of Long Island , bordered to the east by the region of Great Neck in Nassau County , to the south by Glen Oaks and the North Shore Towers , and to the west by Bayside .
+Douglaston–Little Neck is a neighborhood in the northeastern part of the New York City borough of Queens. The community is located on the North Shore of Long Island, bordered to the east by the region of Great Neck in Nassau County, to the south by Glen Oaks and the North Shore Towers, and to the west by Bayside.
 
 ---
 
@@ -31,7 +31,7 @@ The district’s setting is framed by significant transportation and natural ass
 - **Population:** 17,823
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Geography
 Douglaston–Little Neck is bounded by
 Cross Island Parkway
@@ -92,6 +92,19 @@ to the west, Glen Oaks to the south, Great Neck (Nassau County) to the east, Nor
 - Northern Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Little_Neck,_Queens](https://en.wikipedia.org/wiki/Little_Neck,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

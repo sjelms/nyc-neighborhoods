@@ -2,7 +2,7 @@
 
 ## Canarsie
 
-Canarsie ( kə- NAR -see ) is a mostly residential neighborhood in the southeastern portion of Brooklyn , New York City . Canarsie is bordered on the east by Fresh Creek Basin, East 108th Street, and Louisiana Avenue; on the north by Linden Boulevard ; on the west by Ralph Avenue; on the southwest by Paerdegat Basin ; and on the south by Jamaica Bay . It is adjacent to the neighborhoods of East Flatbush to the west, Flatlands and Bergen Beach to the southwest, Starrett City to the east, East New York to the northeast, and Brownsville to the north.
+Canarsie ( kə- NAR -see ) is a mostly residential neighborhood in the southeastern portion of Brooklyn, New York City. Canarsie is bordered on the east by Fresh Creek Basin, East 108th Street, and Louisiana Avenue; on the north by Linden Boulevard ; on the west by Ralph Avenue; on the southwest by Paerdegat Basin ; and on the south by Jamaica Bay. It is adjacent to the neighborhoods of East Flatbush to the west, Flatlands and Bergen Beach to the southwest, Starrett City to the east, East New York to the northeast, and Brownsville to the north.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, the Jamaica Bay shoreline at Canarsie evolved from a fishing and r
 - **Population:** 88,522
 - **Population Density:** 42.7 inhabitants per acre (27,300/sq mi; 10,600/km2)
 - **Area:** 2.898 sq mi (7.51 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East: Fresh Creek Basin and Williams Avenue; West: Ralph Avenue
   - **North to South:** North: Linden Boulevard and the Bay Ridge Branch; South/Southeast: Belt Parkway and Jamaica Bay
   - **Adjacent Neighborhoods:** Bergen Beach, Brownsville, East Flatbush, Flatlands, Spring Creek (East New York), Starrett City
@@ -70,6 +70,19 @@ Historically, the Jamaica Bay shoreline at Canarsie evolved from a fishing and r
 - Rockaway Parkway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Canarsie,_Brooklyn](https://en.wikipedia.org/wiki/Canarsie,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

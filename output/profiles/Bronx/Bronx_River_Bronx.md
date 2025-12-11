@@ -2,7 +2,7 @@
 
 ## Bronx River
 
-The Bronx River ( ), is a river that is approximately 24 miles (39 km) long, and flows through southeastern New York in the United States and drains an area of 38.4 square miles (99 km 2 ). It is named after colonial settler Jonas Bronck .
+The Bronx River ( ), is a river that is approximately 24 miles (39 km) long, and flows through southeastern New York in the United States and drains an area of 38.4 square miles (99 km 2 ). It is named after colonial settler Jonas Bronck.
 
 ---
 
@@ -31,7 +31,7 @@ Over the 19th and 20th centuries, the river effectively functioned as a natural 
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** East Bronx, Hunts Point, Soundview, West Bronx
@@ -64,6 +64,19 @@ N/A
 - Westchester Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bronx_River,_Bronx](https://en.wikipedia.org/wiki/Bronx_River,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

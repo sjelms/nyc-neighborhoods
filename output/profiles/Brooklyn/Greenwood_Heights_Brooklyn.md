@@ -2,7 +2,7 @@
 
 ## Greenwood Heights
 
-Greenwood Heights is a neighborhood in the New York City borough of Brooklyn , named partially after the adjacent Green-Wood Cemetery by real estate developers. Greenwood Heights is a part of Brooklyn Community District 7 along with Windsor Terrace , Sunset Park and South Slope . The much-debated borders are roughly the Prospect Expressway to the north, Gowanus Canal and Upper New York Bay to the west, Eighth Avenue to the east, and 39th Street to the south (along the southern boundary of the Green-Wood Cemetery and northern boundary of the 36th-38th Street Yard and South Brooklyn Railway ).
+Greenwood Heights is a neighborhood in the New York City borough of Brooklyn, named partially after the adjacent Green-Wood Cemetery by real estate developers. Greenwood Heights is a part of Brooklyn Community District 7 along with Windsor Terrace, Sunset Park and South Slope. The much-debated borders are roughly the Prospect Expressway to the north, Gowanus Canal and Upper New York Bay to the west, Eighth Avenue to the east, and 39th Street to the south (along the southern boundary of the Green-Wood Cemetery and northern boundary of the 36th-38th Street Yard and South Brooklyn Railway ).
 
 ---
 
@@ -33,7 +33,7 @@ The presence of several schools, including P.S. 172, P.S. 295, M.S. 88, the Hell
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Gowanus Canal and Upper New York Bay on the west to Eighth Avenue on the east
   - **North to South:** Prospect Expressway on the north to 39th Street on the south (along the southern boundary of Green-Wood Cemetery and the northern boundary of the 36th–38th Street Yard and South Brooklyn Railway)
   - **Adjacent Neighborhoods:** Park Slope, South Brooklyn, South Slope, Sunset Park, Windsor Terrace
@@ -68,6 +68,19 @@ The presence of several schools, including P.S. 172, P.S. 295, M.S. 88, the Hell
 - Third Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Greenwood_Heights,_Brooklyn](https://en.wikipedia.org/wiki/Greenwood_Heights,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

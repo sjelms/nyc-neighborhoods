@@ -2,7 +2,7 @@
 
 ## Kingsbridge
 
-Kingsbridge is a residential neighborhood in the northwest portion of the Bronx , New York City . Kingsbridge's boundaries are Manhattan College Parkway to the north, the Major Deegan Expressway or Bailey Avenue to the east, West 230th Street to the south, and Irwin Avenue to the west.
+Kingsbridge is a residential neighborhood in the northwest portion of the Bronx, New York City. Kingsbridge's boundaries are Manhattan College Parkway to the north, the Major Deegan Expressway or Bailey Avenue to the east, West 230th Street to the south, and Irwin Avenue to the west.
 
 ---
 
@@ -31,7 +31,7 @@ Transit and institutional uses reinforce this commercial base. Two nearby subway
 - **Population:** 10,669
 - **Population Density:** 34,400/sq mi (13,300/km2) (Kingsbridge, 2011); 55.8 inhabitants per acre (35,700/sq mi; 13,800/km2) (Kingsbridge and Spuyten Duyvil, 2010)
 - **Area:** 0.310 sq mi (0.80 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Irwin Avenue on the west to the Major Deegan Expressway or Bailey Avenue on the east
   - **North to South:** Manhattan College Parkway on the north to West 230th Street on the south
   - **Adjacent Neighborhoods:** Kingsbridge Heights, Marble Hill, Riverdale, Riverdale-on-Hudson (historic Riverdale reference), Spuyten Duyvil
@@ -82,6 +82,19 @@ N/A
 - West 230th Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Kingsbridge,_Bronx](https://en.wikipedia.org/wiki/Kingsbridge,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Forest Hills
 
-Forest Hills is a neighborhood in the central portion of the borough of Queens in New York City . It is adjacent to Corona to the north, Rego Park and Glendale to the west, Forest Park to the south, Kew Gardens to the southeast, and Flushing Meadows–Corona Park and Kew Gardens Hills to the east.
+Forest Hills is a neighborhood in the central portion of the borough of Queens in New York City. It is adjacent to Corona to the north, Rego Park and Glendale to the west, Forest Park to the south, Kew Gardens to the southeast, and Flushing Meadows–Corona Park and Kew Gardens Hills to the east.
 
 ---
 
@@ -23,7 +23,7 @@ Forest Hills is a neighborhood in the central portion of the borough of Queens i
 
 Forest Hills supports a notably active commercial ecosystem anchored by several distinct corridors. Austin Street functions as the neighborhood’s commercial heart, described as a busy, modern mile-long stretch between Yellowstone Boulevard and Ascan Avenue, lined with shops, cafes, restaurants, chain stores, and other retail that draws visitors from surrounding neighborhoods. Queens Boulevard, the main thoroughfare, adds another layer of visibility and volume, with wide roadways and heavy traffic that support both neighborhood-serving and commuter-oriented retail uses. Metropolitan Avenue contributes an additional niche, being specifically known for its antique shops, which positions that corridor as a destination for specialty retail and resale concepts.
 
-Transit access is a major driver of commercial viability in Forest Hills. The Queens Boulevard subway line provides multiple stations in and at the edges of the neighborhood—67th Avenue, Forest Hills–71st Avenue, 75th Avenue, and Kew Gardens–Union Turnpike—served by the E, F, M, R, and <F> trains. These stops, particularly the Forest Hills–71st Avenue express station, channel significant rider volumes directly onto nearby commercial blocks, supporting ground-floor retail, food and beverage, and services. The Forest Hills Long Island Rail Road station, integrated historically with a brick courtyard and arch-filled underpasses, supplies commuter rail access and further foot traffic, especially in the Station Square area. A large network of local and express buses, including the Q11, Q23, Q60, Q52/Q53 SBS, and numerous QM express routes to Midtown and Lower Manhattan, reinforces connectivity and expands the trade area of local businesses. Surrounding green spaces—Forest Park to the south and Flushing Meadows–Corona Park nearby—enhance recreational visitation, indirectly benefiting dining and retail clusters before and after park trips.
+Transit access is a major driver of commercial viability in Forest Hills. The Queens Boulevard subway line provides multiple stations in and at the edges of the neighborhood—67th Avenue, Forest Hills–71st Avenue, 75th Avenue, and Kew Gardens–Union Turnpike—served by the E, F, M, R, and F trains. These stops, particularly the Forest Hills–71st Avenue express station, channel significant rider volumes directly onto nearby commercial blocks, supporting ground-floor retail, food and beverage, and services. The Forest Hills Long Island Rail Road station, integrated historically with a brick courtyard and arch-filled underpasses, supplies commuter rail access and further foot traffic, especially in the Station Square area. A large network of local and express buses, including the Q11, Q23, Q60, Q52/Q53 SBS, and numerous QM express routes to Midtown and Lower Manhattan, reinforces connectivity and expands the trade area of local businesses. Surrounding green spaces—Forest Park to the south and Flushing Meadows–Corona Park nearby—enhance recreational visitation, indirectly benefiting dining and retail clusters before and after park trips.
 
 ---
 
@@ -31,9 +31,9 @@ Transit access is a major driver of commercial viability in Forest Hills. The Qu
 - **Population:** 83,728
 - **Population Density:** 63.0 inhabitants per acre (40,300/sq mi; 15,600/km2)
 - **Area:** 2.6 sq mi (6.7 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** The most expansive buildings are in Forest Hills Gardens, but many are located in the area loosely bounded by 68th Avenue on the north; 72nd Road on the south; 108th Street on the west; and Grand Central Parkway on the east.
-  - **North to South:** Parks and recreation Forest Hills is bordered by two of the largest parks in Queens managed by the New York City Department of Parks and Recreation : the 1,255 acres (5.08 km 2 ) Flushing Meadows–Corona Park , which is the site of two World's Fairs (in 1939 and 1964 ) and the iconic Unisphere ; as well as the 544 acres (2.20 km 2 ) Forest Park .
+  - **North to South:** Parks and recreation Forest Hills is bordered by two of the largest parks in Queens managed by the New York City Department of Parks and Recreation : the 1,255 acres (5.08 km 2 ) Flushing Meadows–Corona Park, which is the site of two World's Fairs (in 1939 and 1964 ) and the iconic Unisphere ; as well as the 544 acres (2.20 km 2 ) Forest Park.
   - **Adjacent Neighborhoods:** Corona, Flushing Meadows–Corona Park, Forest Park, Glendale, Kew Gardens, Kew Gardens Hills, Rego Park
 - **ZIP Codes:**
 - 11375
@@ -42,7 +42,7 @@ Transit access is a major driver of commercial viability in Forest Hills. The Qu
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - E
 - F
 - M
@@ -101,6 +101,19 @@ Transit access is a major driver of commercial viability in Forest Hills. The Qu
 - Yellowstone Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Forest_Hills,_Queens](https://en.wikipedia.org/wiki/Forest_Hills,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Ocean Hill
 
-Ocean Hill is a subsection of Bedford–Stuyvesant in the New York City borough of Brooklyn . The neighborhood is part of Brooklyn Community Board 16 and was founded in 1890. The ZIP code for the neighborhood is 11233. Ocean Hill's boundaries start from Broadway and the neighborhood of Bushwick in the north, Ralph Avenue and the neighborhoods of Bedford–Stuyvesant proper and Crown Heights to the west, East New York Avenue and the neighborhood of Brownsville to the south, and Van Sinderen Avenue and the neighborhood of East New York to the east.
+Ocean Hill is a subsection of Bedford–Stuyvesant in the New York City borough of Brooklyn. The neighborhood is part of Brooklyn Community Board 16 and was founded in 1890. The ZIP code for the neighborhood is 11233. Ocean Hill's boundaries start from Broadway and the neighborhood of Bushwick in the north, Ralph Avenue and the neighborhoods of Bedford–Stuyvesant proper and Crown Heights to the west, East New York Avenue and the neighborhood of Brownsville to the south, and Van Sinderen Avenue and the neighborhood of East New York to the east.
 
 ---
 
@@ -31,7 +31,7 @@ A major commercial and infrastructural anchor is Broadway Junction, a sub-sub-ne
 - **Population:** 37,952 (2020 census)
 - **Population Density:** 69.3 inhabitants per acre (44,400/sq mi; 17,100/km2)
 - **Area:** 460.85 acres (186.50 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Van Sinderen Avenue and East New York to the east; Ralph Avenue and Bedford–Stuyvesant proper and Crown Heights to the west
   - **North to South:** Broadway and Bushwick to the north; East New York Avenue and Brownsville to the south
   - **Adjacent Neighborhoods:** Bedford–Stuyvesant, Brownsville, Bushwick, Crown Heights, East New York
@@ -72,6 +72,19 @@ A major commercial and infrastructural anchor is Broadway Junction, a sub-sub-ne
 - Van Sinderen Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Ocean_Hill,_Brooklyn](https://en.wikipedia.org/wiki/Ocean_Hill,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Eastchester
 
-Eastchester is a working-class neighborhood in the northeast Bronx in New York City . Its boundaries, starting from the north and moving clockwise are the Bronx- Westchester County border to the north, the New England Thruway to the east, Baychester Avenue to the south, and the intersection of 233rd Street and Baychester Avenue to the west. Boston Road is the primary thoroughfare through Eastchester and Dyre Avenue is the main commercial street. Eastchester includes the sub-neighborhood of Edenwald .
+Eastchester is a working-class neighborhood in the northeast Bronx in New York City. Its boundaries, starting from the north and moving clockwise are the Bronx- Westchester County border to the north, the New England Thruway to the east, Baychester Avenue to the south, and the intersection of 233rd Street and Baychester Avenue to the west. Boston Road is the primary thoroughfare through Eastchester and Dyre Avenue is the main commercial street. Eastchester includes the sub-neighborhood of Edenwald.
 
 ---
 
@@ -31,7 +31,7 @@ Retail and services are reinforced by purpose-built centers like Shopwell Plaza 
 - **Population:** over 5,000
 - **Population Density:** N/A
 - **Area:** roughly half a square mile
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Completed on October 15, 1953, it is bordered by Grenada Place, East 225th Street, Baychester and Laconia Avenues.
   - **North to South:** Completed on October 15, 1953, it is bordered by Grenada Place, East 225th Street, Baychester and Laconia Avenues.
   - **Adjacent Neighborhoods:** Co-op City, Grenada Place, Morris Park, Mount Vernon, Pelham, Pelham Manor, Wakefield, Williamsbridge, Woodlawn
@@ -71,6 +71,19 @@ N/A
 - US Route 1
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Eastchester,_Bronx](https://en.wikipedia.org/wiki/Eastchester,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

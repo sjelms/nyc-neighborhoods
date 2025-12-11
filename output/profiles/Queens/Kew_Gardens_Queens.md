@@ -2,7 +2,7 @@
 
 ## Kew Gardens
 
-Kew Gardens is a neighborhood in the central area of the New York City borough of Queens . Kew Gardens is bounded to the north by the Union Turnpike and the Jackie Robinson Parkway , to the east by the Van Wyck Expressway and 131st Street, to the south by Hillside Avenue , and to the west by Park Lane, Abingdon Road, and 118th Street. Forest Park is to the west and the neighborhood of Forest Hills to the northwest, Flushing Meadows–Corona Park north, Richmond Hill south, Briarwood southeast, and Kew Gardens Hills east.
+Kew Gardens is a neighborhood in the central area of the New York City borough of Queens. Kew Gardens is bounded to the north by the Union Turnpike and the Jackie Robinson Parkway, to the east by the Van Wyck Expressway and 131st Street, to the south by Hillside Avenue, and to the west by Park Lane, Abingdon Road, and 118th Street. Forest Park is to the west and the neighborhood of Forest Hills to the northwest, Flushing Meadows–Corona Park north, Richmond Hill south, Briarwood southeast, and Kew Gardens Hills east.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional and governmental uses are key to the commercial ecosystem. Queens 
 - **Population:** 24,371
 - **Population Density:** 49.6 inhabitants per acre (31,700/sq mi; 12,300/km2)
 - **Area:** 469.74 acres (190.10 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East: Van Wyck Expressway and 131st Street; West: Park Lane, Abingdon Road, and 118th Street
   - **North to South:** North: Union Turnpike and Jackie Robinson Parkway; South: Hillside Avenue
   - **Adjacent Neighborhoods:** Briarwood, Flushing Meadows–Corona Park, Forest Hills, Kew Gardens Hills, Richmond Hill
@@ -42,7 +42,7 @@ Institutional and governmental uses are key to the commercial ecosystem. Queens 
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - E
 - F
 - J
@@ -72,6 +72,19 @@ Institutional and governmental uses are key to the commercial ecosystem. Queens 
 - Union Turnpike
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Kew_Gardens,_Queens](https://en.wikipedia.org/wiki/Kew_Gardens,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

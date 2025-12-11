@@ -2,7 +2,7 @@
 
 ## Port Morris
 
-Port Morris is a neighborhood geographically located in the southwest corner of the Bronx , New York City. The neighborhood is part of Bronx Community Board 1 . Its boundaries are the Major Deegan Expressway and Bruckner Expressway to the north, East 149th Street to the east, the East River to the southeast, the Bronx Kill to the south, and the Harlem River (Park Avenue stub) to the west. Its ZIP Codes are 10451 and 10454. The neighborhood is served by the NYPD 's 40th Precinct.
+Port Morris is a neighborhood geographically located in the southwest corner of the Bronx, New York City. The neighborhood is part of Bronx Community Board 1. Its boundaries are the Major Deegan Expressway and Bruckner Expressway to the north, East 149th Street to the east, the East River to the southeast, the Bronx Kill to the south, and the Harlem River (Park Avenue stub) to the west. Its ZIP Codes are 10451 and 10454. The neighborhood is served by the NYPD 's 40th Precinct.
 
 ---
 
@@ -31,7 +31,7 @@ Beginning in the late 1990s, city rezonings fundamentally reshaped the local com
 - **Population:** 3,523
 - **Population Density:** 4,750/sq mi (1,830/km2)
 - **Area:** 0.742 sq mi (1.92 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East 149th Street to the east, Harlem River (Park Avenue stub) to the west
   - **North to South:** Major Deegan Expressway and Bruckner Expressway to the north, East River to the southeast, Bronx Kill to the south
   - **Adjacent Neighborhoods:** Concourse Village, Mott Haven, South Bronx, West Bronx
@@ -46,7 +46,7 @@ Beginning in the late 1990s, city rezonings fundamentally reshaped the local com
 - 4
 - 5
 - 6
-- <6>
+- 6
 #### Major Stations:
 - 135th Street station
 - 138th Street–Grand Concourse
@@ -77,6 +77,19 @@ Beginning in the late 1990s, city rezonings fundamentally reshaped the local com
 - Willis Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Port_Morris,_Bronx](https://en.wikipedia.org/wiki/Port_Morris,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

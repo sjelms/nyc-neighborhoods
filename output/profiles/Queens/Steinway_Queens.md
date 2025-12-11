@@ -2,7 +2,7 @@
 
 ## Steinway
 
-Astoria is a neighborhood in the western portion of the New York City borough of Queens . Astoria is bounded by the East River and is adjacent to four other Queens neighborhoods: Long Island City to the southwest, Sunnyside to the southeast, and Woodside and East Elmhurst to the east. As of 2019 [update] , Astoria has an estimated population of 154,141.
+Astoria is a neighborhood in the western portion of the New York City borough of Queens. Astoria is bounded by the East River and is adjacent to four other Queens neighborhoods: Long Island City to the southwest, Sunnyside to the southeast, and Woodside and East Elmhurst to the east. As of 2019 [update], Astoria has an estimated population of 154,141.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, economic and commercial growth in Astoria was tied to manufacturin
 - **Population:** 78,793
 - **Population Density:** 60.3 inhabitants per acre (38,600/sq mi; 14,900/km2)
 - **Area:** 2,556.2 acres (1,034.5 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Ditmars
 A street in Ditmars (2012)
 Ditmars is a
@@ -117,6 +117,19 @@ to the north, East Elmhurst, Hazen Street to the west, Long Island City, Sunnysi
 - Vernon Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Steinway,_Queens](https://en.wikipedia.org/wiki/Steinway,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

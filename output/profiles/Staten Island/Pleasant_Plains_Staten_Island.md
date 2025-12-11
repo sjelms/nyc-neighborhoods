@@ -2,7 +2,7 @@
 
 ## Pleasant Plains
 
-Pleasant Plains is a neighborhood located on Staten Island , New York City , New York . It is bordered by Woodrow to the north, the Lower New York Bay to the south, Richmond Valley to the west, and Prince's Bay to the east.  The neighborhood is represented in the New York City Council by Joe Borelli .
+Pleasant Plains is a neighborhood located on Staten Island, New York City, New York. It is bordered by Woodrow to the north, the Lower New York Bay to the south, Richmond Valley to the west, and Prince's Bay to the east. The neighborhood is represented in the New York City Council by Joe Borelli.
 
 ---
 
@@ -31,7 +31,7 @@ A defining feature of Pleasant Plains from a land-use perspective is the extensi
 - **Population:** 5,000 (according to the 2000 census)
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by Woodrow to the north, the Lower New York Bay to the south, Richmond Valley to the west, and Prince's Bay to the east.
   - **North to South:** It is bordered by Woodrow to the north, the Lower New York Bay to the south, Richmond Valley to the west, and Prince's Bay to the east.
   - **Adjacent Neighborhoods:** Prince's Bay, Richmond Valley, Woodrow, Woodrow to the north
@@ -59,6 +59,19 @@ N/A
 - Sharrotts Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Pleasant_Plains,_Staten_Island](https://en.wikipedia.org/wiki/Pleasant_Plains,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

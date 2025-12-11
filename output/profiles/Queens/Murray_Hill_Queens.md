@@ -2,7 +2,7 @@
 
 ## Murray Hill
 
-Flushing is a neighborhood in the north-central portion of the New York City borough of Queens . The neighborhood is the fourth-largest central business district in New York City. Downtown Flushing is a major commercial and retail area, with the intersection of Main Street and Roosevelt Avenue at its core being the third-busiest in New York City, behind Times Square and Herald Square .
+Flushing is a neighborhood in the north-central portion of the New York City borough of Queens. The neighborhood is the fourth-largest central business district in New York City. Downtown Flushing is a major commercial and retail area, with the intersection of Main Street and Roosevelt Avenue at its core being the third-busiest in New York City, behind Times Square and Herald Square.
 
 ---
 
@@ -31,7 +31,7 @@ Flushing’s broader commercial landscape heavily influences Murray Hill. Flushi
 - **Population:** 72,008
 - **Population Density:** 84.4 inhabitants per acre (54,000/sq mi; 20,900/km²) for Flushing
 - **Area:** 853.06 acres (345.22 ha) for Flushing
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Broadway-Flushing is approximately bounded by 29th Avenue to the north, Northern Boulevard and Crocheron Avenue to the south, 155th Street to the west, and 172nd Streets to the east.
   - **North to South:** Murray Hill Murray Hill is bounded by 150th Street to the west and 160th Street to the east and straddles ZIP Codes 11354, 11355, and 11358.
   - **Adjacent Neighborhoods:** N/A
@@ -87,6 +87,19 @@ Flushing’s broader commercial landscape heavily influences Murray Hill. Flushi
 - Whitestone Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Murray_Hill,_Queens](https://en.wikipedia.org/wiki/Murray_Hill,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

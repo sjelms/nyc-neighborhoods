@@ -2,7 +2,7 @@
 
 ## Bushwick
 
-Bushwick is a neighborhood in the northern part of the New York City borough of Brooklyn . It is bound by the neighborhood of Ridgewood, Queens , to the northeast; Williamsburg to the northwest; the cemeteries of Highland Park to the southeast; and Bedford–Stuyvesant to the south and southwest.
+Bushwick is a neighborhood in the northern part of the New York City borough of Brooklyn. It is bound by the neighborhood of Ridgewood, Queens, to the northeast; Williamsburg to the northwest; the cemeteries of Highland Park to the southeast; and Bedford–Stuyvesant to the south and southwest.
 
 ---
 
@@ -31,7 +31,7 @@ Over the last two decades, landlords and developers have targeted Bushwick’s o
 - **Population:** 120,741
 - **Population Density:** 66,000/sq mi (25,500/km2)
 - **Area:** 1.83 sq mi (4.7 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** For its entry on Bushwick–Ridgewood, the
 American Institute of Architects
 '
@@ -102,6 +102,19 @@ and east of Bushwick Avenue.
 - Wyckoff Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bushwick,_Brooklyn](https://en.wikipedia.org/wiki/Bushwick,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

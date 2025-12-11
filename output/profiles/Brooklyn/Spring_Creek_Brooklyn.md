@@ -2,7 +2,7 @@
 
 ## Spring Creek
 
-Spring Creek , previously called Spring Creek Basin , is a neighborhood within the East New York section of Brooklyn in New York City . It roughly comprises the southern portions of East New York between Flatlands Avenue to the north, and Jamaica Bay and the Gateway National Recreation Area to the south, with the Brooklyn neighborhood of Canarsie to the west and the Queens neighborhood of Howard Beach to the east. It is named after Spring Creek, one of several creeks that formerly ran through the area and drained into Jamaica Bay.
+Spring Creek, previously called Spring Creek Basin, is a neighborhood within the East New York section of Brooklyn in New York City. It roughly comprises the southern portions of East New York between Flatlands Avenue to the north, and Jamaica Bay and the Gateway National Recreation Area to the south, with the Brooklyn neighborhood of Canarsie to the west and the Queens neighborhood of Howard Beach to the east. It is named after Spring Creek, one of several creeks that formerly ran through the area and drained into Jamaica Bay.
 
 ---
 
@@ -33,7 +33,7 @@ Spring Creek’s newer housing-led projects also embed commercial uses that supp
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From Schenck Avenue, Gateway Drive and Hendrix Creek (and, including Starrett City, west to Louisiana Avenue and Fresh Creek at the Canarsie boundary) on the west to Fountain Avenue and the former drainage basin of Spring and Betts Creeks on the Brooklyn–Queens border on the east.
   - **North to South:** From Flatlands Avenue (with some areas considered north to Linden Boulevard between Fountain Avenue and 78th Street) in the north to the Shore Parkway portion of the Belt Parkway, the Gateway National Recreation Area, Jamaica Bay, and the Pennsylvania Avenue and Fountain Avenue Landfills in the south.
   - **Adjacent Neighborhoods:** Canarsie, East New York, Howard Beach, Lindenwood, New Lots, Ozone Park
@@ -88,6 +88,19 @@ N/A
 - Shore Parkway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Spring_Creek,_Brooklyn](https://en.wikipedia.org/wiki/Spring_Creek,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Rochdale
 
-Rochdale Village (pronounced ) is a housing cooperative in the southeastern corner of the New York City borough of Queens . Located in Community District 12 , Rochdale Village is grouped as part of Greater Jamaica, corresponding to the former Town of Jamaica . It is adjacent to four other Queens neighborhoods: St. Albans to the east, South Jamaica to the west, Locust Manor to the north, and Springfield Gardens to the south across the Belt Parkway . Rochdale is about 2 miles (3.2 km) from the Queens/Nassau border and about 1 mile (1.6 km) north of John F. Kennedy International Airport .
+Rochdale Village (pronounced ) is a housing cooperative in the southeastern corner of the New York City borough of Queens. Located in Community District 12, Rochdale Village is grouped as part of Greater Jamaica, corresponding to the former Town of Jamaica. It is adjacent to four other Queens neighborhoods: St. Albans to the east, South Jamaica to the west, Locust Manor to the north, and Springfield Gardens to the south across the Belt Parkway. Rochdale is about 2 miles (3.2 km) from the Queens/Nassau border and about 1 mile (1.6 km) north of John F. Kennedy International Airport.
 
 ---
 
@@ -31,7 +31,7 @@ Today, Rochdale Village sustains a modest but important commercial footprint anc
 - **Population:** about 25,000 residents (as of 2008)
 - **Population Density:** N/A
 - **Area:** 120-acre (0.49 km2) residential park; architect's concept covered 122 blocks
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** Locust Manor, South Jamaica, Springfield Gardens, St. Albans
@@ -66,6 +66,19 @@ N/A
 - Long Island Rail Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Rochdale,_Queens](https://en.wikipedia.org/wiki/Rochdale,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

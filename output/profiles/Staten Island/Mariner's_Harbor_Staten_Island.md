@@ -2,7 +2,7 @@
 
 ## Mariner's Harbor
 
-Mariners Harbor is a neighborhood located in the northwestern part of New York City 's borough of Staten Island . It is bordered by Lake Avenue to the east, Forest Avenue to the south, Richmond Terrace to the north, and Holland Avenue to the west. The northwestern section of Mariners Harbor is often known as Arlington .
+Mariners Harbor is a neighborhood located in the northwestern part of New York City 's borough of Staten Island. It is bordered by Lake Avenue to the east, Forest Avenue to the south, Richmond Terrace to the north, and Holland Avenue to the west. The northwestern section of Mariners Harbor is often known as Arlington.
 
 ---
 
@@ -31,7 +31,7 @@ The western portion of the former North Shore railway line has been rebuilt for 
 - **Population:** 33,492 (Mariner's Harbor–Arlington–Graniteville NTA, 2020 Census)
 - **Population Density:** 35.2 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by Lake Avenue to the east, Forest Avenue to the south, Richmond Terrace to the north, and Holland Avenue to the west.
   - **North to South:** It is bordered by Lake Avenue to the east, Forest Avenue to the south, Richmond Terrace to the north, and Holland Avenue to the west.
   - **Adjacent Neighborhoods:** Elm Park, Graniteville, Lake Avenue to the east, Port Ivory
@@ -75,6 +75,19 @@ N/A
 - Van Pelt Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Mariner's_Harbor,_Staten_Island](https://en.wikipedia.org/wiki/Mariner's_Harbor,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

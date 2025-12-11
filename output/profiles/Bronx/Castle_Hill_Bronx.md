@@ -23,7 +23,7 @@ Castle Hill is a neighborhood located in the southeast section of the borough of
 
 Castle Hill in the southeast Bronx is a mixed-use neighborhood where residential density is closely interwoven with neighborhood-scale commerce and selective light industrial activity. The land area is primarily residential, with multi-unit attached and detached housing, NYCHA’s Castle Hill Houses, and the Mitchell-Lama Jamie Towers complex occupying substantial tracts. This residential base underpins a steady customer pool for local retail along the primary commercial corridors of White Plains Road, Castle Hill Avenue, and Westchester Avenue. These streets host supermarkets, pharmacies, barbershops, hair salons, fast food outlets, bodegas, and discount shops, creating a continuous run of small businesses oriented to daily needs. The establishment of the Castle Hill Avenue Business Improvement District in 2012 formalized local stakeholder involvement and brought more structure to corridor management, positioning it for incremental streetscape and retail upgrades.
 
-On the southern edge of the neighborhood, the Bruckner Expressway and its associated retail node, the Shops at Bruckner Commons, act as both a physical divider from neighboring Soundview and a major regional draw. Bruckner Commons, expanded in the 1990s and largely renovated in 2018, houses national chain retailers and functions as a power center serving a wider trade area than Castle Hill alone. To the east, along Westchester Creek, land use shifts to storage, warehousing, and municipal operations, giving the neighborhood a modest industrial and logistics presence near the waterfront. Transit connectivity supports both workers and shoppers: the Castle Hill Avenue station on the 6 and <6> trains anchors foot traffic, while multiple Bronx bus routes, including the Bx4, Bx5, Bx22, Bx36, Bx39, and Q44 SBS, link the area to commercial hubs like Westchester Square, Bay Plaza Shopping Center, and the Bronx Zoo. The Bruckner Expressway (I-278) running through the neighborhood further enhances vehicular access for goods movement and regional customers. With ongoing construction of modern multi-unit row houses and mixed-use properties, often multi-zoned for retail and serving mixed-income residents, Castle Hill’s commercial fabric continues to densify and diversify alongside its long-standing residential base.
+On the southern edge of the neighborhood, the Bruckner Expressway and its associated retail node, the Shops at Bruckner Commons, act as both a physical divider from neighboring Soundview and a major regional draw. Bruckner Commons, expanded in the 1990s and largely renovated in 2018, houses national chain retailers and functions as a power center serving a wider trade area than Castle Hill alone. To the east, along Westchester Creek, land use shifts to storage, warehousing, and municipal operations, giving the neighborhood a modest industrial and logistics presence near the waterfront. Transit connectivity supports both workers and shoppers: the Castle Hill Avenue station on the 6 and 6 trains anchors foot traffic, while multiple Bronx bus routes, including the Bx4, Bx5, Bx22, Bx36, Bx39, and Q44 SBS, link the area to commercial hubs like Westchester Square, Bay Plaza Shopping Center, and the Bronx Zoo. The Bruckner Expressway (I-278) running through the neighborhood further enhances vehicular access for goods movement and regional customers. With ongoing construction of modern multi-unit row houses and mixed-use properties, often multi-zoned for retail and serving mixed-income residents, Castle Hill’s commercial fabric continues to densify and diversify alongside its long-standing residential base.
 
 ---
 
@@ -31,7 +31,7 @@ On the southern edge of the neighborhood, the Bruckner Expressway and its associ
 - **Population:** 38,557
 - **Population Density:** 30,000/sq mi (11,000/km2)
 - **Area:** 1.3 sq mi (3.4 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Westchester Creek to the east, White Plains Road to the west
   - **North to South:** Waterbury Avenue and Westchester Avenue to the north, the East River to the south
   - **Adjacent Neighborhoods:** Clason Point, Parkchester, Soundview
@@ -45,7 +45,7 @@ On the southern edge of the neighborhood, the Bruckner Expressway and its associ
 ### Transit & Accessibility
 #### Nearest Subways:
 - 6
-- <6>
+- 6
 - C
 #### Major Stations:
 - 241st Street station
@@ -82,6 +82,19 @@ N/A
 - White Plains Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Castle_Hill,_Bronx](https://en.wikipedia.org/wiki/Castle_Hill,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

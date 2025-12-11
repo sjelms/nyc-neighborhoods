@@ -2,7 +2,7 @@
 
 ## Kensington
 
-Kensington is a neighborhood in the central portion of the New York City borough of Brooklyn , located south of Prospect Park and Green-Wood Cemetery . Kensington and Parkville are bordered by the Prospect Park South and Ditmas Park subsections of Flatbush to the east; Windsor Terrace to the north; Borough Park to the west; and Midwood to the south.
+Kensington is a neighborhood in the central portion of the New York City borough of Brooklyn, located south of Prospect Park and Green-Wood Cemetery. Kensington and Parkville are bordered by the Prospect Park South and Ditmas Park subsections of Flatbush to the east; Windsor Terrace to the north; Borough Park to the west; and Midwood to the south.
 
 ---
 
@@ -31,7 +31,7 @@ The subarea known as Parkville, in the southern part of Kensington between 18th 
 - **Population:** 36,891 (Kensington-Ocean Parkway, 2010 Census)
 - **Population Density:** 101.1 inhabitants per acre (64,700/sq mi; 25,000/km2)
 - **Area:** 364.84 acres (147.65 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Coney Island Avenue to Dahill Avenue/Macdonald Avenue (depending on source); western edge also described as 36th Street, Dahill Avenue, and 47th Street in one account.
   - **North to South:** Caton Avenue and Fort Hamilton Parkway to the north; Foster Avenue or Avenue H to the south (sources differ).
   - **Adjacent Neighborhoods:** Borough Park, Ditmas Park, Midwood, Prospect Park South, Windsor Terrace
@@ -42,7 +42,7 @@ The subarea known as Parkville, in the southern part of Kensington between 18th 
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - F
 - G
 #### Major Stations:
@@ -80,6 +80,19 @@ N/A
 - Prospect Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Kensington,_Brooklyn](https://en.wikipedia.org/wiki/Kensington,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

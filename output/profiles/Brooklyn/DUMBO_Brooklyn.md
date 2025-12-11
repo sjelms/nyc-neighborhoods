@@ -2,7 +2,7 @@
 
 ## DUMBO
 
-Dumbo (or DUMBO , an acronym for Down Under the Manhattan Bridge Overpass ) is a neighborhood in the New York City borough of Brooklyn . It encompasses two sections: one situated between the Manhattan and Brooklyn Bridges , which connect Brooklyn to Manhattan across the East River , and another extending eastward from the Manhattan Bridge to the Vinegar Hill area. The neighborhood is bounded by Brooklyn Bridge Park to the north, the Brooklyn Bridge to the west, Brooklyn Heights to the south, and Vinegar Hill to the east. Dumbo is part of Brooklyn Community Board 2 .
+Dumbo (or DUMBO, an acronym for Down Under the Manhattan Bridge Overpass ) is a neighborhood in the New York City borough of Brooklyn. It encompasses two sections: one situated between the Manhattan and Brooklyn Bridges, which connect Brooklyn to Manhattan across the East River, and another extending eastward from the Manhattan Bridge to the Vinegar Hill area. The neighborhood is bounded by Brooklyn Bridge Park to the north, the Brooklyn Bridge to the west, Brooklyn Heights to the south, and Vinegar Hill to the east. Dumbo is part of Brooklyn Community Board 2.
 
 ---
 
@@ -31,7 +31,7 @@ In recent decades, DUMBO has emerged as one of New York City’s premier arts an
 - **Population:** 4,975
 - **Population Density:** 45,000/sq mi (17,000/km2)
 - **Area:** 0.11 sq mi (0.28 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Historic district Plymouth Street, DUMBO Industrial District, March 2008 Show map of New York City Show map of New York Show map of the United States Location Roughly bounded by Main and Washington Sts, East River, John St., Bridge and Jay Sts., and Front and York Sts., Brooklyn, New York Coordinates 40°42′11″N 73°59′17″W ﻿ / ﻿ 40.70306°N 73.98806°W ﻿ / 40.70306; -73.98806 Area 48 acres (19 ha) Built 1883 Architect multiple Architectural style Greek Revival, Italianate, et al.
   - **North to South:** The neighborhood is bounded by Brooklyn Bridge Park to the north, the Brooklyn Bridge to the west, Brooklyn Heights to the south, and Vinegar Hill to the east.
   - **Adjacent Neighborhoods:** Brooklyn Bridge Park to the north, Brooklyn Heights, John Street to the north, Main and Washington Sts, Vinegar Hill
@@ -42,7 +42,7 @@ In recent decades, DUMBO has emerged as one of New York City’s premier arts an
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - A
 - C
 - F
@@ -67,6 +67,19 @@ In recent decades, DUMBO has emerged as one of New York City’s premier arts an
 - York Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/DUMBO,_Brooklyn](https://en.wikipedia.org/wiki/DUMBO,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

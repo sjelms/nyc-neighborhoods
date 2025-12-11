@@ -2,7 +2,7 @@
 
 ## Howard Beach
 
-Howard Beach is a neighborhood in the southwestern portion of the New York City borough of Queens . It is bordered to the north by the Belt Parkway and Conduit Avenue in Ozone Park , to the south by Jamaica Bay in Broad Channel , to the east by 102nd–104th Streets in South Ozone Park , and to the west by 75th Street in East New York, Brooklyn . The area consists mostly of low-rise single-family detached houses .
+Howard Beach is a neighborhood in the southwestern portion of the New York City borough of Queens. It is bordered to the north by the Belt Parkway and Conduit Avenue in Ozone Park, to the south by Jamaica Bay in Broad Channel, to the east by 102nd–104th Streets in South Ozone Park, and to the west by 75th Street in East New York, Brooklyn. The area consists mostly of low-rise single-family detached houses.
 
 ---
 
@@ -31,7 +31,7 @@ Geographically, much of Howard Beach is a peninsula bounded by the Belt Parkway 
 - **Population:** 27,320
 - **Population Density:** 22.6 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Often, Old Howard Beach, Ramblersville, Howard Park, and Hamilton Beach are collectively referred to as "Old Howard Beach." The main section of Howard Beach is a small peninsula bordered by the
 Belt Parkway
 and Conduit Avenue to the north,
@@ -80,6 +80,19 @@ to the south.
 - Linden Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Howard_Beach,_Queens](https://en.wikipedia.org/wiki/Howard_Beach,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

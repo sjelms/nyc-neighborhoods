@@ -2,7 +2,7 @@
 
 ## Clinton
 
-Hell's Kitchen , also known as Clinton , or Midtown West on real estate listings , is a neighborhood on the West Side of Midtown Manhattan in New York City , New York. It is considered to be bordered by 34th Street (or 41st Street) to the south, 59th Street to the north, Eighth Avenue to the east, and the Hudson River to the west.
+Hell's Kitchen, also known as Clinton, or Midtown West on real estate listings, is a neighborhood on the West Side of Midtown Manhattan in New York City, New York. It is considered to be bordered by 34th Street (or 41st Street) to the south, 59th Street to the north, Eighth Avenue to the east, and the Hudson River to the west.
 
 ---
 
@@ -33,7 +33,7 @@ Transportation infrastructure is one of Hell’s Kitchen’s defining commercial
 - **Population:** 49,758
 - **Population Density:** 59,165/sq. mi (22,825/sq. km)
 - **Area:** 0.841 sq mi (2.18 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Eighth Avenue to the Hudson River, including the Hudson River Park and West Side Highway waterfront edge.
   - **North to South:** 34th Street (or 41st Street by some interpretations) to the south, and 59th Street to the north.
   - **Adjacent Neighborhoods:** Chelsea, Columbus Circle, Garment District, Hudson Yards, Theater District, Times Square, Upper West Side
@@ -47,7 +47,7 @@ Transportation infrastructure is one of Hell’s Kitchen’s defining commercial
 ### Transit & Accessibility
 #### Nearest Subways:
 - 7
-- <7>
+- 7
 - A
 - C
 - E
@@ -87,6 +87,19 @@ Transportation infrastructure is one of Hell’s Kitchen’s defining commercial
 - West Side Highway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Clinton,_Manhattan](https://en.wikipedia.org/wiki/Clinton,_Manhattan)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

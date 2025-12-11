@@ -2,7 +2,7 @@
 
 ## Woodhaven
 
-Woodhaven is a neighborhood in the southwestern section of the New York City borough of Queens . It is bordered on the north by Park Lane South and Forest Park , on the east by Richmond Hill , on the south by Ozone Park and Atlantic Avenue , and the west by the Cypress Hills area of East New York, Brooklyn .
+Woodhaven is a neighborhood in the southwestern section of the New York City borough of Queens. It is bordered on the north by Park Lane South and Forest Park, on the east by Richmond Hill, on the south by Ozone Park and Atlantic Avenue, and the west by the Cypress Hills area of East New York, Brooklyn.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, Woodhaven also developed as a manufacturing and hospitality node, 
 - **Population:** 56,674
 - **Population Density:** 66.4 inhabitants per acre (42,500/sq mi; 16,400/km2)
 - **Area:** 853.08 acres (345.23 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Union Course was a nationally famous racetrack situated in the area now bounded by 78th Street, 82nd Street, Jamaica Avenue and Atlantic Avenue.
   - **North to South:** Union Course was a nationally famous racetrack situated in the area now bounded by 78th Street, 82nd Street, Jamaica Avenue and Atlantic Avenue.
   - **Adjacent Neighborhoods:** Cypress Hills (East New York, Brooklyn), Ozone Park, Richmond Hill
@@ -84,6 +84,19 @@ Historically, Woodhaven also developed as a manufacturing and hospitality node, 
 - Woodhaven Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Woodhaven,_Queens](https://en.wikipedia.org/wiki/Woodhaven,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

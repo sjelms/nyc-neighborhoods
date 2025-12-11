@@ -2,7 +2,7 @@
 
 ## Van Nest
 
-Van Nest is a working-class neighborhood geographically located in the East Bronx section of the Bronx , New York City . Going clockwise, its boundaries are Bronxdale Avenue to the northeast, the Amtrak tracks to the southeast, and Bronx Park to the west. Van Nest predated Morris Park by 20 years and is considered the older of the two communities. Morris Park Avenue and White Plains Road are the primary commercial thoroughfares through Van Nest.
+Van Nest is a working-class neighborhood geographically located in the East Bronx section of the Bronx, New York City. Going clockwise, its boundaries are Bronxdale Avenue to the northeast, the Amtrak tracks to the southeast, and Bronx Park to the west. Van Nest predated Morris Park by 20 years and is considered the older of the two communities. Morris Park Avenue and White Plains Road are the primary commercial thoroughfares through Van Nest.
 
 ---
 
@@ -31,7 +31,7 @@ The industrial and infrastructure footprint is anchored by Con Edison’s Van Ne
 - **Population:** 13,909
 - **Population Density:** 32,800/sq mi (12,700/km2)
 - **Area:** 0.424 sq mi (1.10 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bronxdale Avenue to the northeast and Bronx Park to the west; Amtrak tracks form the southeastern edge.
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** Morris Park, Parkchester, West Farms
@@ -97,6 +97,19 @@ The industrial and infrastructure footprint is anchored by Con Edison’s Van Ne
 - White Plains Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Van_Nest,_Bronx](https://en.wikipedia.org/wiki/Van_Nest,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

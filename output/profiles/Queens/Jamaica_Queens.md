@@ -2,7 +2,7 @@
 
 ## Jamaica
 
-Jamaica is a neighborhood in the New York City borough of Queens . Jamaica is bordered by Hollis , Queens Village , St. Albans , and Cambria Heights to the east; South Jamaica , Rochdale Village , John F. Kennedy International Airport , and Springfield Gardens to the south; Laurelton and Rosedale to the southeast; Richmond Hill , South Ozone Park , and Aqueduct Racetrack to the west and southwest; Briarwood to the northwest; and Kew Gardens Hills , Jamaica Hills , and Jamaica Estates to the north.
+Jamaica is a neighborhood in the New York City borough of Queens. Jamaica is bordered by Hollis, Queens Village, St. Albans, and Cambria Heights to the east; South Jamaica, Rochdale Village, John F. Kennedy International Airport, and Springfield Gardens to the south; Laurelton and Rosedale to the southeast; Richmond Hill, South Ozone Park, and Aqueduct Racetrack to the west and southwest; Briarwood to the northwest; and Kew Gardens Hills, Jamaica Hills, and Jamaica Estates to the north.
 
 ---
 
@@ -33,9 +33,9 @@ Transit is central to Jamaica’s commercial resurgence and logistics function. 
 - **Population:** 53,751
 - **Population Density:** 49.5 inhabitants per acre (31,700/sq mi; 12,200/km2)
 - **Area:** 2.670 sq mi (6.92 km 2 )
-- **Boundaries:**  
-  - **East to West:** Jamaica is bordered by Hollis , Queens Village , St.
-  - **North to South:** Jamaica is bordered by Hollis , Queens Village , St.
+- **Boundaries:** 
+  - **East to West:** Jamaica is bordered by Hollis, Queens Village, St.
+  - **North to South:** Jamaica is bordered by Hollis, Queens Village, St.
   - **Adjacent Neighborhoods:** Aqueduct Racetrack, Briarwood, Cambria Heights, Hollis, Jamaica Estates, Jamaica Hills, John F. Kennedy International Airport, Kew Gardens Hills, Laurelton, Queens Village, Richmond Hill, Rochdale Village, Rosedale, South Jamaica, South Ozone Park, Springfield Gardens, St. Albans
 - **ZIP Codes:**
 - 11432
@@ -48,7 +48,7 @@ Transit is central to Jamaica’s commercial resurgence and logistics function. 
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - E
 - F
 - J
@@ -82,6 +82,19 @@ Transit is central to Jamaica’s commercial resurgence and logistics function. 
 - Van Wyck Expressway (I-678)
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Jamaica,_Queens](https://en.wikipedia.org/wiki/Jamaica,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

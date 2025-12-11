@@ -2,7 +2,7 @@
 
 ## Co-op City
 
-Co-op City (short for Cooperative City ) is a cooperative housing development located in the northeast section of the borough of the Bronx in New York City . It is bounded by Interstate 95 to the southwest, west, and north and the Hutchinson River Parkway to the east and southeast, and is partially in the Baychester and Eastchester neighborhoods. With 43,752 residents as of the 2010 United States census , it is the largest housing cooperative in the world. It is in New York City Council District 12.
+Co-op City (short for Cooperative City ) is a cooperative housing development located in the northeast section of the borough of the Bronx in New York City. It is bounded by Interstate 95 to the southwest, west, and north and the Hutchinson River Parkway to the east and southeast, and is partially in the Baychester and Eastchester neighborhoods. With 43,752 residents as of the 2010 United States census, it is the largest housing cooperative in the world. It is in New York City Council District 12.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, Co-op City sits on land that transitioned from marshland to a larg
 - **Population:** 43,752
 - **Population Density:** 51.0 inhabitants per acre (32,600/sq mi; 12,600/km2)
 - **Area:** 0.936 sq mi (2.42 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Interstate 95 to the southwest, west, and north and the Hutchinson River Parkway to the east and southeast, and is partially in the Baychester and Eastchester neighborhoods.
   - **North to South:** It is bounded by Interstate 95 to the southwest, west, and north and the Hutchinson River Parkway to the east and southeast, and is partially in the Baychester and Eastchester neighborhoods.
   - **Adjacent Neighborhoods:** Baychester, Eastchester, Interstate 95 to the southwest
@@ -49,8 +49,8 @@ Historically, Co-op City sits on land that transitioned from marshland to a larg
 - 5
 - 6
 - 7
-- <6>
-- <7>
+- 6
+- 7
 - A
 - D
 #### Major Stations:
@@ -112,6 +112,19 @@ Historically, Co-op City sits on land that transitioned from marshland to a larg
 - Story Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Co-op_City,_Bronx](https://en.wikipedia.org/wiki/Co-op_City,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

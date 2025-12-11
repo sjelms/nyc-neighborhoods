@@ -2,7 +2,7 @@
 
 ## Rockaway Park
 
-Rockaway Park is a neighborhood in the New York City borough of Queens . The area is on the Rockaway Peninsula , nestled between Jamaica Bay to the north and the Atlantic Ocean to the south. The neighborhood of Rockaway Beach lies on its eastern border while the community of Belle Harbor is situated on its western side. The neighborhood is part of Queens Community Board 14 .
+Rockaway Park is a neighborhood in the New York City borough of Queens. The area is on the Rockaway Peninsula, nestled between Jamaica Bay to the north and the Atlantic Ocean to the south. The neighborhood of Rockaway Beach lies on its eastern border while the community of Belle Harbor is situated on its western side. The neighborhood is part of Queens Community Board 14.
 
 ---
 
@@ -31,7 +31,7 @@ Transportation infrastructure plays an outsized role in Rockaway Park’s commer
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Rockaway Beach borders Rockaway Park on the east and Belle Harbor on the west.
   - **North to South:** The neighborhood lies on the Rockaway Peninsula between Jamaica Bay to the north and the Atlantic Ocean to the south.
   - **Adjacent Neighborhoods:** Arverne, Belle Harbor, Broad Channel, Far Rockaway, Hammels, Neponsit, Rockaway Beach, Seaside
@@ -75,6 +75,19 @@ Transportation infrastructure plays an outsized role in Rockaway Park’s commer
 - Wall Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Rockaway_Park,_Queens](https://en.wikipedia.org/wiki/Rockaway_Park,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

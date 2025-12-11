@@ -2,7 +2,7 @@
 
 ## Park Slope
 
-Park Slope is a neighborhood in South Brooklyn , New York City , within the area once known as South Brooklyn . Park Slope is roughly bounded by Prospect Park and Prospect Park West to the east, Fourth Avenue to the west, Flatbush Avenue to the north, and Prospect Expressway to the south. Generally, the neighborhood is divided into three sections from north to south: North Slope, Center Slope, and South Slope. The neighborhood takes its name from its location on the western slope of neighboring Prospect Park . Fifth Avenue and Seventh Avenue are its primary commercial streets, while its east–west side streets are lined with brownstones and apartment buildings.
+Park Slope is a neighborhood in South Brooklyn, New York City, within the area once known as South Brooklyn. Park Slope is roughly bounded by Prospect Park and Prospect Park West to the east, Fourth Avenue to the west, Flatbush Avenue to the north, and Prospect Expressway to the south. Generally, the neighborhood is divided into three sections from north to south: North Slope, Center Slope, and South Slope. The neighborhood takes its name from its location on the western slope of neighboring Prospect Park. Fifth Avenue and Seventh Avenue are its primary commercial streets, while its east–west side streets are lined with brownstones and apartment buildings.
 
 ---
 
@@ -31,7 +31,7 @@ From a land-use perspective, Park Slope includes manufacturing, commercial, resi
 - **Population:** 120,661
 - **Population Density:** 70.4 inhabitants per acre (45,100/sq mi; 17,400/km²) for the Park Slope–Gowanus NTA
 - **Area:** 961.17 acres (388.97 ha) for the Park Slope–Gowanus NTA
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Park Slope is roughly bounded by Prospect Park and Prospect Park West to the east, Fourth Avenue to the west, Flatbush Avenue to the north, and Prospect Expressway to the south.
   - **North to South:** Park Slope is roughly bounded by Prospect Park and Prospect Park West to the east, Fourth Avenue to the west, Flatbush Avenue to the north, and Prospect Expressway to the south.
   - **Adjacent Neighborhoods:** Carroll Gardens, Gowanus, Prospect Heights, Prospect Park and Prospect Park West to the east
@@ -47,7 +47,7 @@ From a land-use perspective, Park Slope includes manufacturing, commercial, resi
 - 3
 - 4
 - 5
-- <F>
+- F
 - B
 - D
 - F
@@ -91,6 +91,19 @@ N/A
 - Seventh Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Park_Slope,_Brooklyn](https://en.wikipedia.org/wiki/Park_Slope,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

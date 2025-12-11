@@ -2,7 +2,7 @@
 
 ## Jackson Heights
 
-Jackson Heights is a neighborhood in the northwestern part of the borough of Queens in New York City . Jackson Heights is neighbored by North Corona to the east, Elmhurst to the south, Woodside to the west, and today northern Astoria ( Ditmars-Steinway ) to the northwest, and East Elmhurst to the north and northeast. Jackson Heights has an ethnically diverse community, with half the population having been foreign-born since the 2000s. The New York Times has called it "the most culturally diverse neighborhood in New York, if not on the planet." According to the 2010 United States census , the neighborhood has a population of 108,152.
+Jackson Heights is a neighborhood in the northwestern part of the borough of Queens in New York City. Jackson Heights is neighbored by North Corona to the east, Elmhurst to the south, Woodside to the west, and today northern Astoria ( Ditmars-Steinway ) to the northwest, and East Elmhurst to the north and northeast. Jackson Heights has an ethnically diverse community, with half the population having been foreign-born since the 2000s. The New York Times has called it "the most culturally diverse neighborhood in New York, if not on the planet." According to the 2010 United States census, the neighborhood has a population of 108,152.
 
 ---
 
@@ -33,9 +33,9 @@ While Jackson Heights originated as a high-elevation garden apartment enclave on
 - **Population:** 108,152
 - **Population Density:** 98.2 inhabitants per acre (62,800/sq mi; 24,300/km²)
 - **Area:** 1,101.36 acres (445.70 ha)
-- **Boundaries:**  
-  - **East to West:** 1831 Residential street in Jackson Heights District position on New York City map Location Bounded by Roosevelt Ave., Broadway, Leverich St., 70 St., Northern Blvd., and Junction Blvd., Queens , NYC Coordinates 40°45′5″N 73°53′13″W ﻿ / ﻿ 40.75139°N 73.88694°W ﻿ / 40.75139; -73.88694 Area 300 acres (120 ha) Architectural style Late 19th and 20th Century Revivals NRHP reference No.
-  - **North to South:** 1831 Residential street in Jackson Heights District position on New York City map Location Bounded by Roosevelt Ave., Broadway, Leverich St., 70 St., Northern Blvd., and Junction Blvd., Queens , NYC Coordinates 40°45′5″N 73°53′13″W ﻿ / ﻿ 40.75139°N 73.88694°W ﻿ / 40.75139; -73.88694 Area 300 acres (120 ha) Architectural style Late 19th and 20th Century Revivals NRHP reference No.
+- **Boundaries:** 
+  - **East to West:** 1831 Residential street in Jackson Heights District position on New York City map Location Bounded by Roosevelt Ave., Broadway, Leverich St., 70 St., Northern Blvd., and Junction Blvd., Queens, NYC Coordinates 40°45′5″N 73°53′13″W ﻿ / ﻿ 40.75139°N 73.88694°W ﻿ / 40.75139; -73.88694 Area 300 acres (120 ha) Architectural style Late 19th and 20th Century Revivals NRHP reference No.
+  - **North to South:** 1831 Residential street in Jackson Heights District position on New York City map Location Bounded by Roosevelt Ave., Broadway, Leverich St., 70 St., Northern Blvd., and Junction Blvd., Queens, NYC Coordinates 40°45′5″N 73°53′13″W ﻿ / ﻿ 40.75139°N 73.88694°W ﻿ / 40.75139; -73.88694 Area 300 acres (120 ha) Architectural style Late 19th and 20th Century Revivals NRHP reference No.
   - **Adjacent Neighborhoods:** Astoria (Ditmars-Steinway), East Elmhurst, Elmhurst, North Corona, Roosevelt Ave, Woodside
 - **ZIP Codes:**
 - 11369
@@ -48,8 +48,8 @@ While Jackson Heights originated as a high-elevation garden apartment enclave on
 ### Transit & Accessibility
 #### Nearest Subways:
 - 7
-- <7>
-- <F>
+- 7
+- F
 - A
 - E
 - F
@@ -83,6 +83,19 @@ N/A
 - Roosevelt Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Jackson_Heights,_Queens](https://en.wikipedia.org/wiki/Jackson_Heights,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

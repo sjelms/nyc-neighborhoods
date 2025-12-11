@@ -2,7 +2,7 @@
 
 ## Morrisania
 
-Morrisania ( MORR -i- SAY -nee-ə ) is a residential neighborhood in the southwestern Bronx , New York City , New York . Its boundaries are the Cross Bronx Expressway to the north, Crotona-Prospect Avenue to the east, East 163rd Street to the south, and Webster Avenue to the west. Third Avenue is the primary thoroughfare through Morrisania.
+Morrisania ( MORR -i- SAY -nee-ə ) is a residential neighborhood in the southwestern Bronx, New York City, New York. Its boundaries are the Cross Bronx Expressway to the north, Crotona-Prospect Avenue to the east, East 163rd Street to the south, and Webster Avenue to the west. Third Avenue is the primary thoroughfare through Morrisania.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, rail infrastructure and later elevated and subway extensions helpe
 - **Population:** 16,863
 - **Population Density:** 97.7 inhabitants per acre (62,500/sq mi; 24,100/km2); 72,700/sq mi (28,100/km2) for 2011 figure
 - **Area:** 0.232 sq mi (0.60 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Crotona-Prospect Avenue to the east and Webster Avenue to the west
   - **North to South:** Cross Bronx Expressway to the north and East 163rd Street to the south
   - **Adjacent Neighborhoods:** Crotona Park East
@@ -87,6 +87,19 @@ N/A
 - Webster Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Morrisania,_Bronx](https://en.wikipedia.org/wiki/Morrisania,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

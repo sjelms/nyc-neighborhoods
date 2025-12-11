@@ -2,7 +2,7 @@
 
 ## Bellerose
 
-Bellerose is an ethnically diverse , middle-class neighborhood on the eastern edge of the New York City borough of Queens , along the border of Queens and Nassau County , Long Island . It is adjacent to Bellerose Village and Bellerose Terrace in Nassau County, from which it is separated by Jericho Turnpike . The northern edge of Bellerose is separated from another part of the Nassau border by the neighborhood of Floral Park, Queens to the east, divided by Little Neck Parkway .
+Bellerose is an ethnically diverse, middle-class neighborhood on the eastern edge of the New York City borough of Queens, along the border of Queens and Nassau County, Long Island. It is adjacent to Bellerose Village and Bellerose Terrace in Nassau County, from which it is separated by Jericho Turnpike. The northern edge of Bellerose is separated from another part of the Nassau border by the neighborhood of Floral Park, Queens to the east, divided by Little Neck Parkway.
 
 ---
 
@@ -31,7 +31,7 @@ Transit connectivity plays a critical supporting role for Bellerose’s economic
 - **Population:** 26,566 (2020)
 - **Population Density:** 21.0 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** 1,258.85 acres (509.44 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** Bellerose Terrace, Bellerose Village, Floral Park, Queens, Jamaica, Queens Village
@@ -75,6 +75,19 @@ N/A
 - Union Turnpike
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bellerose,_Queens](https://en.wikipedia.org/wiki/Bellerose,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

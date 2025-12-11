@@ -2,7 +2,7 @@
 
 ## Throgs Neck
 
-Throggs Neck (also known as Throgs Neck ) is a neighborhood and peninsula in the south-eastern portion of the borough of the Bronx in New York City . It is bounded by the East River and Long Island Sound to the south and east, Westchester Creek on the west, and Baisley Avenue and the Bruckner Expressway on the north.
+Throggs Neck (also known as Throgs Neck ) is a neighborhood and peninsula in the south-eastern portion of the borough of the Bronx in New York City. It is bounded by the East River and Long Island Sound to the south and east, Westchester Creek on the west, and Baisley Avenue and the Bruckner Expressway on the north.
 
 ---
 
@@ -33,7 +33,7 @@ The neighborhood’s physical fabric reflects a gradual evolution from large far
 - **Population:** 21,009
 - **Population Density:** 11,040/sq mi (4,263/km2)
 - **Area:** 1.903 sq mi (4.93 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bounded on the east and south by the East River and Long Island Sound, and on the west by Westchester Creek.
   - **North to South:** Bounded on the north by Baisley Avenue and the Bruckner Expressway, extending south to the tip of the peninsula at the East River/Long Island Sound.
   - **Adjacent Neighborhoods:** Bay Terrace (Queens, via Throgs Neck Bridge), Castle Hill, City Island, Co-op City, Country Club, Edgewater Park, Locust Point, Pelham Bay, Schuylerville, Soundview, Westchester Square
@@ -84,6 +84,19 @@ The neighborhood’s physical fabric reflects a gradual evolution from large far
 - Throgs Neck Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Throgs_Neck,_Bronx](https://en.wikipedia.org/wiki/Throgs_Neck,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

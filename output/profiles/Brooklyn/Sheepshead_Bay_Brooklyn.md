@@ -2,7 +2,7 @@
 
 ## Sheepshead Bay
 
-Sheepshead Bay is a neighborhood in southern Brooklyn , New York City . It is bounded by Ocean Parkway to the west; Kings Highway to the north; Nostrand Avenue and Gerritsen Avenue to the east; and the Atlantic Ocean to the south. Sheepshead Bay is abutted by the neighborhoods of Brighton Beach , Manhattan Beach , Coney Island and Homecrest , to the west; Midwood to the north; and Gerritsen Beach to the east.
+Sheepshead Bay is a neighborhood in southern Brooklyn, New York City. It is bounded by Ocean Parkway to the west; Kings Highway to the north; Nostrand Avenue and Gerritsen Avenue to the east; and the Atlantic Ocean to the south. Sheepshead Bay is abutted by the neighborhoods of Brighton Beach, Manhattan Beach, Coney Island and Homecrest, to the west; Midwood to the north; and Gerritsen Beach to the east.
 
 ---
 
@@ -35,7 +35,7 @@ Away from the bay, Sheepshead Bay’s commercial activity is distributed along s
 - **Population:** 64,518
 - **Population Density:** 28,297/sq mi (10,925/km2) or 44.2 inhabitants per acre (28,300/sq mi; 10,900/km2)
 - **Area:** 2.2800 sq mi (5.9053 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Ocean Parkway to the west; Kings Highway to the north; Nostrand Avenue and Gerritsen Avenue to the east; and the Atlantic Ocean to the south.
   - **North to South:** It is bounded by Ocean Parkway to the west; Kings Highway to the north; Nostrand Avenue and Gerritsen Avenue to the east; and the Atlantic Ocean to the south.
   - **Adjacent Neighborhoods:** Brighton Beach, Coney Island, Gerritsen Beach, Homecrest, Madison, Manhattan Beach, Midwood, Ocean Parkway to the west
@@ -88,6 +88,19 @@ N/A
 - Shore Parkway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Sheepshead_Bay,_Brooklyn](https://en.wikipedia.org/wiki/Sheepshead_Bay,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

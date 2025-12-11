@@ -2,7 +2,7 @@
 
 ## Mott Haven
 
-Mott Haven is a primarily residential neighborhood in the southwestern section of the New York City borough of the Bronx . It is generally bounded by East 149th Street to the north, the Bruckner Expressway to the east and south, and the Harlem River to the west, although these boundaries are not precise. East 138th Street is the primary east–west thoroughfare through Mott Haven.
+Mott Haven is a primarily residential neighborhood in the southwestern section of the New York City borough of the Bronx. It is generally bounded by East 149th Street to the north, the Bruckner Expressway to the east and south, and the Harlem River to the west, although these boundaries are not precise. East 138th Street is the primary east–west thoroughfare through Mott Haven.
 
 ---
 
@@ -31,7 +31,7 @@ Land use in Mott Haven is dominated by multifamily buildings—tenement-style wa
 - **Population:** 54,163
 - **Population Density:** 45,900/sq mi (17,720/km2)
 - **Area:** 1.180 sq mi (3.06 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is generally bounded by East 149th Street to the north, the Bruckner Expressway to the east and south, and the Harlem River to the west, although these boundaries are not precise.
   - **North to South:** It is generally bounded by East 149th Street to the north, the Bruckner Expressway to the east and south, and the Harlem River to the west, although these boundaries are not precise.
   - **Adjacent Neighborhoods:** East 149th Street to the north, Hunts Point, Longwood, Melrose, Port Morris
@@ -100,6 +100,19 @@ Land use in Mott Haven is dominated by multifamily buildings—tenement-style wa
 - Willis Avenue Bridge
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Mott_Haven,_Bronx](https://en.wikipedia.org/wiki/Mott_Haven,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

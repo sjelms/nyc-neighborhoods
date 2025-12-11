@@ -2,7 +2,7 @@
 
 ## East New York
 
-East New York is a residential neighborhood in the eastern section of the New York City borough of Brooklyn . Its boundaries, starting from the north and moving clockwise, are roughly the Cemetery Belt and the Queens borough line to the north; the Queens borough line to the east; Jamaica Bay to the south; the New York City Subway 's BMT Canarsie Line , the Bay Ridge Branch railroad tracks, and Van Sinderen Avenue to the west. Linden Boulevard , Pennsylvania Avenue , and Atlantic Avenue are the primary thoroughfares through East New York.
+East New York is a residential neighborhood in the eastern section of the New York City borough of Brooklyn. Its boundaries, starting from the north and moving clockwise, are roughly the Cemetery Belt and the Queens borough line to the north; the Queens borough line to the east; Jamaica Bay to the south; the New York City Subway 's BMT Canarsie Line, the Bay Ridge Branch railroad tracks, and Van Sinderen Avenue to the west. Linden Boulevard, Pennsylvania Avenue, and Atlantic Avenue are the primary thoroughfares through East New York.
 
 ---
 
@@ -33,7 +33,7 @@ Transit assets significantly shape commercial viability throughout East New York
 - **Population:** 91,958
 - **Population Density:** 49,250/sq mi (19,020/km2) in infobox; 34.5 inhabitants per acre (22,100/sq mi; 8,500/km2) in demographics section
 - **Area:** 1.867 sq mi (4.84 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by
 Atlantic Avenue
 , Sheffield Avenue, Sutter Avenue and Powell Street.
@@ -139,6 +139,19 @@ Atlantic Avenue
 - Van Sinderen Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/East_New_York,_Brooklyn](https://en.wikipedia.org/wiki/East_New_York,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

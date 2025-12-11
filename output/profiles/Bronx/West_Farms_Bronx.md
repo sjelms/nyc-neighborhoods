@@ -2,7 +2,7 @@
 
 ## West Farms
 
-West Farms is a residential neighborhood in The Bronx , New York City .  Its boundaries are Bronx Park to the north, the Bronx River to the east, the Cross Bronx Expressway to the south, and Southern Boulevard to the west. East Tremont Avenue is the primary thoroughfare through West Farms.
+West Farms is a residential neighborhood in The Bronx, New York City. Its boundaries are Bronx Park to the north, the Bronx River to the east, the Cross Bronx Expressway to the south, and Southern Boulevard to the west. East Tremont Avenue is the primary thoroughfare through West Farms.
 
 ---
 
@@ -31,7 +31,7 @@ Transit and transportation infrastructure are central to the neighborhood’s co
 - **Population:** 4,700
 - **Population Density:** 32,000/sq mi (12,000/km2) for West Farms; 101.6 inhabitants per acre (65,000/sq mi; 25,100/km2) for West Farms–Bronx River
 - **Area:** 0.148 sq mi (0.38 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bronx River to Southern Boulevard
   - **North to South:** Bronx Park to the Cross Bronx Expressway
   - **Adjacent Neighborhoods:** N/A
@@ -77,6 +77,19 @@ N/A
 - Tremont Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/West_Farms,_Bronx](https://en.wikipedia.org/wiki/West_Farms,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Charleston
 
-Charleston is a neighborhood, or section, of New York City 's borough of Staten Island .  It is located on the island's South Shore , with Tottenville to the south, Pleasant Plains to the East, Rossville to the north, and the Arthur Kill to the west. The neighborhood is represented in the New York City Council by Joe Borelli and in the New York State Senate by Andrew Lanza .
+Charleston is a neighborhood, or section, of New York City 's borough of Staten Island. It is located on the island's South Shore, with Tottenville to the south, Pleasant Plains to the East, Rossville to the north, and the Arthur Kill to the west. The neighborhood is represented in the New York City Council by Joe Borelli and in the New York State Senate by Andrew Lanza.
 
 ---
 
@@ -31,7 +31,7 @@ Recent decades have brought a pronounced retail and service-oriented shift in Ch
 - **Population:** 16,089 (Tottenville–Charleston Neighborhood Tabulation Area, 2020 Census)
 - **Population Density:** 5.8 inhabitants per acre (14,500/sq mi; 5,600/km2)
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Triangle-shaped territory enclosed by Bloomingdale Road and the Arthur Kill
   - **North to South:** Triangle-shaped territory enclosed by the Richmond Parkway (Korean War Veterans Parkway) and the Arthur Kill
   - **Adjacent Neighborhoods:** Pleasant Plains, Rossville, Sandy Ground, Tottenville
@@ -62,6 +62,19 @@ N/A
 - Veterans Road West
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Charleston,_Staten_Island](https://en.wikipedia.org/wiki/Charleston,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

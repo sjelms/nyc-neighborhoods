@@ -2,7 +2,7 @@
 
 ## Washington Heights
 
-Washington Heights is a neighborhood in the northern part of the borough of Manhattan in New York City . It is named for Fort Washington , a fortification constructed at the highest natural point on Manhattan by Continental Army troops to defend the area from the British forces during the American Revolutionary War . Washington Heights is bordered by Inwood to the north along Dyckman Street , by Harlem to the south along 155th Street , by the Harlem River and Coogan's Bluff to the east, and by the Hudson River to the west.
+Washington Heights is a neighborhood in the northern part of the borough of Manhattan in New York City. It is named for Fort Washington, a fortification constructed at the highest natural point on Manhattan by Continental Army troops to defend the area from the British forces during the American Revolutionary War. Washington Heights is bordered by Inwood to the north along Dyckman Street, by Harlem to the south along 155th Street, by the Harlem River and Coogan's Bluff to the east, and by the Hudson River to the west.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood’s geography and infrastructure give it unusual logistics adva
 - **Population:** 151,574
 - **Population Density:** 91,590/sq mi (35,360/km2); elsewhere in text: 136.3 inhabitants per acre (87,200/sq mi; 33,700/km2)
 - **Area:** 1.655 sq mi (4.29 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From the Harlem River and Coogan's Bluff on the east to the Hudson River on the west.
   - **North to South:** From Dyckman Street on the north to 155th Street on the south (some sources place the southern boundary at 158th Street).
   - **Adjacent Neighborhoods:** Hamilton Heights, Harlem, Inwood
@@ -101,6 +101,19 @@ The neighborhood’s geography and infrastructure give it unusual logistics adva
 - Washington Bridge
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Washington_Heights,_Manhattan](https://en.wikipedia.org/wiki/Washington_Heights,_Manhattan)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

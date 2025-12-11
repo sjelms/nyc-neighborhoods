@@ -2,7 +2,7 @@
 
 ## Bedford Park
 
-Bedford Park is a residential neighborhood in the northwest Bronx , New York City, adjacent to the New York Botanical Garden . Its boundaries, starting from the north and moving clockwise, are: Mosholu Parkway to the north, Webster Avenue to the east, East 196th Street to the south, and Jerome Avenue to the west.
+Bedford Park is a residential neighborhood in the northwest Bronx, New York City, adjacent to the New York Botanical Garden. Its boundaries, starting from the north and moving clockwise, are: Mosholu Parkway to the north, Webster Avenue to the east, East 196th Street to the south, and Jerome Avenue to the west.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional anchors play an outsized role in shaping Bedford Park’s commerci
 - **Population:** 37,344
 - **Population Density:** 158.3 inhabitants per acre (101,300/sq mi; 39,100/km2)
 - **Area:** 0.455 sq mi (1.18 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Jerome Avenue to the west and Webster Avenue to the east
   - **North to South:** Mosholu Parkway to the north and East 196th Street to the south
   - **Adjacent Neighborhoods:** Bronx Park, Fordham, Jerome Park, Kingsbridge, Kingsbridge Heights, Norwood, Van Cortlandt Park
@@ -104,6 +104,19 @@ Institutional anchors play an outsized role in shaping Bedford Park’s commerci
 - Webster Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bedford_Park,_Bronx](https://en.wikipedia.org/wiki/Bedford_Park,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

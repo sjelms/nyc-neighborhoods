@@ -2,7 +2,7 @@
 
 ## Rego Park
 
-Rego Park is a neighborhood in the borough of Queens in New York City . Rego Park is bordered to the north by Elmhurst and Corona , to the east and south by Forest Hills , and to the west by Middle Village . Rego Park's boundaries include Queens Boulevard , the Long Island Expressway , Woodhaven Boulevard , and Yellowstone Boulevard. There is a large Jewish population in the neighborhood, which features high-rise apartment buildings and detached houses, as well as a large commercial zone.
+Rego Park is a neighborhood in the borough of Queens in New York City. Rego Park is bordered to the north by Elmhurst and Corona, to the east and south by Forest Hills, and to the west by Middle Village. Rego Park's boundaries include Queens Boulevard, the Long Island Expressway, Woodhaven Boulevard, and Yellowstone Boulevard. There is a large Jewish population in the neighborhood, which features high-rise apartment buildings and detached houses, as well as a large commercial zone.
 
 ---
 
@@ -33,7 +33,7 @@ Regional access and transit strongly reinforce Rego Park’s commercial position
 - **Population:** 28,260
 - **Population Density:** 62.0 inhabitants per acre (39,700/sq mi; 15,300/km2)
 - **Area:** 1.95 sq mi (5.04 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bordered to the west by Middle Village; bordered to the east by Forest Hills; boundaries include Queens Boulevard and Woodhaven Boulevard.
   - **North to South:** Bordered to the north by Elmhurst and Corona; bordered to the south by Forest Hills; boundaries include the Long Island Expressway and Yellowstone Boulevard.
   - **Adjacent Neighborhoods:** Corona, Elmhurst, Forest Hills, Middle Village
@@ -92,6 +92,19 @@ Regional access and transit strongly reinforce Rego Park’s commercial position
 - Yellowstone Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Rego_Park,_Queens](https://en.wikipedia.org/wiki/Rego_Park,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

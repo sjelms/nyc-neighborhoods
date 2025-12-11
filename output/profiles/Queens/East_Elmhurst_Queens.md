@@ -2,7 +2,7 @@
 
 ## East Elmhurst
 
-East Elmhurst is a residential neighborhood in the northwest section of the New York City borough of Queens . It is bounded to the south by Jackson Heights and Corona , to the north and east by Bowery Bay , and to the west by Woodside and Ditmars Steinway . The area also includes LaGuardia Airport , located on the shore of Flushing Bay, LaGuardia Landing Lights Fields, and Astoria Heights (the latter two in ZIP Code 11370).
+East Elmhurst is a residential neighborhood in the northwest section of the New York City borough of Queens. It is bounded to the south by Jackson Heights and Corona, to the north and east by Bowery Bay, and to the west by Woodside and Ditmars Steinway. The area also includes LaGuardia Airport, located on the shore of Flushing Bay, LaGuardia Landing Lights Fields, and Astoria Heights (the latter two in ZIP Code 11370).
 
 ---
 
@@ -31,7 +31,7 @@ Commercial corridors follow the neighborhood’s broad east–west routes. Astor
 - **Population:** 23,150
 - **Population Density:** 33,400/sq mi (12,900/km2) or 52.2 inhabitants per acre
 - **Area:** 0.693 sq mi (1.795 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** A more expansive definition considers East Elmhurst to be bordered by the
 Brooklyn Queens Expressway
 (BQE) and 70th Street on the west, Northern Boulevard on the south, and
@@ -89,6 +89,19 @@ N/A
 - Northern Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/East_Elmhurst,_Queens](https://en.wikipedia.org/wiki/East_Elmhurst,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Bronxdale
 
-Allerton is a working-class neighborhood geographically located in the East Bronx section of the Bronx , New York City . It is named in honor of Daniel Allerton, an early Bronx settler who purchased and farmed this area with his wife Hustace. It consists of two subsections called Bronxwood and Laconia . Its boundaries, starting from the north and moving clockwise, are Adee Avenue, Boston Road , and Gun Hill Road to the northeast; the IRT Dyre Avenue Line ( 5 train) to the east; Waring Avenue to the south; and Bronx River Parkway to the west. White Plains Road and Boston Road are the primary thoroughfares through Allerton.
+Allerton is a working-class neighborhood geographically located in the East Bronx section of the Bronx, New York City. It is named in honor of Daniel Allerton, an early Bronx settler who purchased and farmed this area with his wife Hustace. It consists of two subsections called Bronxwood and Laconia. Its boundaries, starting from the north and moving clockwise, are Adee Avenue, Boston Road, and Gun Hill Road to the northeast; the IRT Dyre Avenue Line ( 5 train) to the east; Waring Avenue to the south; and Bronx River Parkway to the west. White Plains Road and Boston Road are the primary thoroughfares through Allerton.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood is tightly woven into a larger health‑care and institutional 
 - **Population:** Bronxwood (southern Allerton) has a population over 20,000; Laconia (northern Allerton) has a population under 25,000. The combined Allerton–Pelham Gardens neighborhood had 28,903 residents in 2010.
 - **Population Density:** 39.8 inhabitants per acre (25,500/sq mi; 9,800/km²) for the combined Allerton–Pelham Gardens area.
 - **Area:** 726.98 acres (294.20 ha) for the combined Allerton–Pelham Gardens area; total Allerton land area is roughly two square miles.
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** For Allerton overall, bounded on the east by the IRT Dyre Avenue Line (5 train) and on the west by Bronx River Parkway.
   - **North to South:** For Allerton overall, bounded to the northeast by Adee Avenue, Boston Road, and Gun Hill Road, and to the south by Waring Avenue.
   - **Adjacent Neighborhoods:** Pelham Parkway, Williamsbridge
@@ -93,6 +93,19 @@ N/A
 - Williamsbridge Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bronxdale,_Bronx](https://en.wikipedia.org/wiki/Bronxdale,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Maspeth
 
-Maspeth is a residential and commercial community in the borough of Queens in New York City . It was founded in the early 17th century by Dutch and English settlers. Neighborhoods sharing borders with Maspeth are Woodside to the north; Sunnyside to the northwest; Greenpoint, Brooklyn , to the west; East Williamsburg, Brooklyn , to the southwest; Fresh Pond and Ridgewood to the south; and Middle Village and Elmhurst to the east.
+Maspeth is a residential and commercial community in the borough of Queens in New York City. It was founded in the early 17th century by Dutch and English settlers. Neighborhoods sharing borders with Maspeth are Woodside to the north; Sunnyside to the northwest; Greenpoint, Brooklyn, to the west; East Williamsburg, Brooklyn, to the southwest; Fresh Pond and Ridgewood to the south; and Middle Village and Elmhurst to the east.
 
 ---
 
@@ -31,8 +31,8 @@ At street level, Grand Avenue functions as Maspeth’s primary commercial corrid
 - **Population:** 30,516
 - **Population Density:** 37.3 inhabitants per acre (23,900/sq mi; 9,200/km2)
 - **Area:** 818.44 acres (331.21 ha)
-- **Boundaries:**  
-  - **East to West:** What was Laurel Hill in the post-colonial era has become West Maspeth, bounded by Calvary Cemetery, and later the Brooklyn-Queens Expressway , in the west, the Queens-Midtown Expressway on the north, 58th Street on the east, and 56th Road and the Long Island Rail Road 's Montauk Branch on the south.
+- **Boundaries:** 
+  - **East to West:** What was Laurel Hill in the post-colonial era has become West Maspeth, bounded by Calvary Cemetery, and later the Brooklyn-Queens Expressway, in the west, the Queens-Midtown Expressway on the north, 58th Street on the east, and 56th Road and the Long Island Rail Road 's Montauk Branch on the south.
   - **North to South:** Maurice Woods was bounded by Maurice Avenue, Jay Avenue, 66th Street, and Borden Avenue.
   - **Adjacent Neighborhoods:** Calvary Cemetery, East Williamsburg, Brooklyn, Elmhurst, Fresh Pond, Greenpoint, Brooklyn, Maurice Avenue, Middle Village, Ridgewood, Sunnyside, Woodside
 - **ZIP Codes:**
@@ -94,6 +94,19 @@ At street level, Grand Avenue functions as Maspeth’s primary commercial corrid
 - The Middle Village-Metropolitan Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Maspeth,_Queens](https://en.wikipedia.org/wiki/Maspeth,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

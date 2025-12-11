@@ -2,7 +2,7 @@
 
 ## Glendale
 
-Glendale is a neighborhood in the west-central portion of the New York City borough of Queens . It is bounded by Forest Hills to the east, Ridgewood to the west, Woodhaven to the south, and Middle Village to the north.
+Glendale is a neighborhood in the west-central portion of the New York City borough of Queens. It is bounded by Forest Hills to the east, Ridgewood to the west, Woodhaven to the south, and Middle Village to the north.
 
 ---
 
@@ -31,7 +31,7 @@ Today, Atlas Terminal’s demolition and replacement by The Shops at Atlas Park 
 - **Population:** 32,496
 - **Population Density:** N/A
 - **Area:** three square miles (approximate, as described by The New York Times)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** East: Rockaway Beach Branch of the LIRR and Woodhaven Boulevard; West: Ridgewood and cemeteries along the Cemetery Belt, with the borough line with Brooklyn running through the cemeteries on the western part of the southern border, and the Bay Ridge Branch of the LIRR/Fresh Pond Road from Cooper and Wyckoff Avenues to the BMT Myrtle Avenue Line right-of-way.
   - **North to South:** North: Montauk Branch of the LIRR (in Lower and Middle Glendale) and Cooper and Metropolitan Avenues (in Upper Glendale); South: Forest Park, Jackie Robinson Parkway, and a series of contiguous cemeteries forming the Cemetery Belt.
   - **Adjacent Neighborhoods:** Bushwick, Elmhurst, Forest Hills, Kew Gardens, Maspeth, Middle Village, Rego Park, Ridgewood, Sunset Park, Woodhaven, Wyckoff Heights
@@ -53,7 +53,7 @@ Today, Atlas Terminal’s demolition and replacement by The Shops at Atlas Park 
 - Z
 #### Major Stations:
 - 121st Street (J and Z trains)
-- 61st Street–Woodside (7 and <7> trains) / Woodside LIRR
+- 61st Street–Woodside (7 and 7 trains) / Woodside LIRR
 - 82nd Street–Jackson Heights (7 train)
 - DeKalb Avenue (L train)
 - Forest Hills LIRR station (nearby)
@@ -104,6 +104,19 @@ Today, Atlas Terminal’s demolition and replacement by The Shops at Atlas Park 
 - Wyckoff Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Glendale,_Queens](https://en.wikipedia.org/wiki/Glendale,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

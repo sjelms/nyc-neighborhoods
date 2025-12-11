@@ -2,7 +2,7 @@
 
 ## Crown Heights
 
-Crown Heights is a neighborhood in the central portion of the New York City borough of Brooklyn . Crown Heights is bounded by Washington Avenue to the west, Atlantic Avenue to the north, Ralph Avenue to the east, and Empire Boulevard to the south. It is about one mile (1.6 km) wide and two miles (3.2 km) long. Neighborhoods bordering Crown Heights include Prospect Heights to the west, Flatbush , Prospect Lefferts Gardens and East Flatbush to the south, Brownsville to the east, and Bedford–Stuyvesant to the north.
+Crown Heights is a neighborhood in the central portion of the New York City borough of Brooklyn. Crown Heights is bounded by Washington Avenue to the west, Atlantic Avenue to the north, Ralph Avenue to the east, and Empire Boulevard to the south. It is about one mile (1.6 km) wide and two miles (3.2 km) long. Neighborhoods bordering Crown Heights include Prospect Heights to the west, Flatbush, Prospect Lefferts Gardens and East Flatbush to the south, Brownsville to the east, and Bedford–Stuyvesant to the north.
 
 ---
 
@@ -31,7 +31,7 @@ The commercial fabric of Crown Heights is organized around several main corridor
 - **Population:** 143,000
 - **Population Density:** 101,000/sq mi (38,900/km2)
 - **Area:** 1.418 sq mi (3.67 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Crown Heights is bounded by Washington Avenue to the west, Atlantic Avenue to the north, Ralph Avenue to the east, and Empire Boulevard to the south.
   - **North to South:** Crown Heights is bounded by Washington Avenue to the west, Atlantic Avenue to the north, Ralph Avenue to the east, and Empire Boulevard to the south.
   - **Adjacent Neighborhoods:** Bedford–Stuyvesant, Brownsville, East Flatbush, Flatbush, Prospect Heights, Prospect Lefferts Gardens, Washington Avenue to the west
@@ -95,6 +95,19 @@ N/A
 - Utica Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Crown_Heights,_Brooklyn](https://en.wikipedia.org/wiki/Crown_Heights,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

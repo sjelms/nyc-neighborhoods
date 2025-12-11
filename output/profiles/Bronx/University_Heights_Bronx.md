@@ -2,7 +2,7 @@
 
 ## University Heights
 
-University Heights is a neighborhood of the West Bronx in New York City . Its boundaries, starting from the north and moving clockwise, are: West Fordham Road to the north, Jerome Avenue to the east, West Burnside Avenue to the south and the Harlem River to the west. University Avenue is the primary thoroughfare in University Heights.
+University Heights is a neighborhood of the West Bronx in New York City. Its boundaries, starting from the north and moving clockwise, are: West Fordham Road to the north, Jerome Avenue to the east, West Burnside Avenue to the south and the Harlem River to the west. University Avenue is the primary thoroughfare in University Heights.
 
 ---
 
@@ -33,7 +33,7 @@ Ten NYCHA developments—including Sedgwick Houses, West Tremont Rehab groups, a
 - **Population:** 25,702
 - **Population Density:** 64,700/sq mi (25,000/km2) for University Heights; 71,600/sq mi (27,700/km2) for University Heights and Morris Heights combined
 - **Area:** 0.397 sq mi (1.03 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Jerome Avenue to the east and the Harlem River to the west
   - **North to South:** West Fordham Road to the north and West Burnside Avenue to the south
   - **Adjacent Neighborhoods:** Fordham, Morris Heights
@@ -90,6 +90,19 @@ Ten NYCHA developments—including Sedgwick Houses, West Tremont Rehab groups, a
 - West Fordham Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/University_Heights,_Bronx](https://en.wikipedia.org/wiki/University_Heights,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

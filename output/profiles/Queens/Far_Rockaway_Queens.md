@@ -2,7 +2,7 @@
 
 ## Far Rockaway
 
-Far Rockaway is a neighborhood on the eastern part of the Rockaway peninsula in the New York City borough of Queens . It is the easternmost section of the Rockaways. The neighborhood extends from Beach 32nd Street east to the Nassau  County line. Its southern boundary is the Atlantic Ocean ; it is one of the neighborhoods along Rockaway Beach .
+Far Rockaway is a neighborhood on the eastern part of the Rockaway peninsula in the New York City borough of Queens. It is the easternmost section of the Rockaways. The neighborhood extends from Beach 32nd Street east to the Nassau County line. Its southern boundary is the Atlantic Ocean ; it is one of the neighborhoods along Rockaway Beach.
 
 ---
 
@@ -31,7 +31,7 @@ Over time, shifts in transportation, including the abandonment of the Rockaway B
 - **Population:** 50,058
 - **Population Density:** 40 inhabitants per acre (26,000/sq mi; 9,900/km2)
 - **Area:** 1,251 acres (506 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Extends from Beach 32nd Street east to the Nassau County line
   - **North to South:** Southern boundary is the Atlantic Ocean
   - **Adjacent Neighborhoods:** Arverne, Bayswater, Edgemere, Hammels, Rockaway Park
@@ -66,6 +66,19 @@ Over time, shifts in transportation, including the abandonment of the Rockaway B
 - Rockaway Turnpike
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Far_Rockaway,_Queens](https://en.wikipedia.org/wiki/Far_Rockaway,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

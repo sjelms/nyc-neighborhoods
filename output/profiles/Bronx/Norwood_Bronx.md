@@ -2,7 +2,7 @@
 
 ## Norwood
 
-Norwood , also known as Bainbridge , is a residential neighborhood in the northwest Bronx , New York City , U.S. It is bound by Van Cortlandt Park and Woodlawn Cemetery to the north, the Bronx River to the east, and Mosholu Parkway to the southwest. The area is dominated topographically by what was once Valentine's Hill, the highest point being near the intersection of 210th Street and Bainbridge Avenue, where Gun Hill Road intersects, and around the Montefiore Medical Center , the largest landowner and employer of the neighborhood. Norwood's main commercial arteries are Gun Hill Road, Jerome Avenue, Webster Avenue, and Bainbridge Avenue.
+Norwood, also known as Bainbridge, is a residential neighborhood in the northwest Bronx, New York City, U.S. It is bound by Van Cortlandt Park and Woodlawn Cemetery to the north, the Bronx River to the east, and Mosholu Parkway to the southwest. The area is dominated topographically by what was once Valentine's Hill, the highest point being near the intersection of 210th Street and Bainbridge Avenue, where Gun Hill Road intersects, and around the Montefiore Medical Center, the largest landowner and employer of the neighborhood. Norwood's main commercial arteries are Gun Hill Road, Jerome Avenue, Webster Avenue, and Bainbridge Avenue.
 
 ---
 
@@ -33,7 +33,7 @@ Transit access bolsters Norwood’s commercial viability and institutional role.
 - **Population:** 40,494
 - **Population Density:** 77,100/sq mi (29,800/km2) in infobox; 112.2 inhabitants per acre (71,800/sq mi; 27,700/km2) in demographic section
 - **Area:** 0.525 sq mi (1.36 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bounded by the Bronx River to the east and Van Cortlandt Park to the north, with Mosholu Parkway to the southwest and Woodlawn Cemetery to the north.
   - **North to South:** Extends from Van Cortlandt Park and Woodlawn Cemetery in the north to Mosholu Parkway in the southwest; exact southern edge beyond Mosholu Parkway not specified.
   - **Adjacent Neighborhoods:** Allerton, Bedford Park, Olinville, Williamsbridge, Woodlawn Heights
@@ -77,6 +77,19 @@ Transit access bolsters Norwood’s commercial viability and institutional role.
 - Webster Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Norwood,_Bronx](https://en.wikipedia.org/wiki/Norwood,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

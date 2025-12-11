@@ -2,7 +2,7 @@
 
 ## Red Hook
 
-Red Hook is a neighborhood in western Brooklyn , New York City , United States , within the area once known as South Brooklyn . It is located on a peninsula projecting into the Upper New York Bay and is bounded by the Gowanus Expressway and the Carroll Gardens neighborhood on the northeast, Gowanus Canal on the east, and the Upper New York Bay on the west and south. A prosperous shipping and port area in the early 20th century, the area declined in the latter part of the century. Today, it is home to the Red Hook Houses , the largest housing project in Brooklyn.
+Red Hook is a neighborhood in western Brooklyn, New York City, United States, within the area once known as South Brooklyn. It is located on a peninsula projecting into the Upper New York Bay and is bounded by the Gowanus Expressway and the Carroll Gardens neighborhood on the northeast, Gowanus Canal on the east, and the Upper New York Bay on the west and south. A prosperous shipping and port area in the early 20th century, the area declined in the latter part of the century. Today, it is home to the Red Hook Houses, the largest housing project in Brooklyn.
 
 ---
 
@@ -31,7 +31,7 @@ Retail and destination traffic are anchored in part by the 346,000-square-foot I
 - **Population:** 38,353 (Carroll Gardens/Columbia Street/Red Hook neighborhood tabulation area, 2010 census)
 - **Population Density:** 36.9 inhabitants per acre (23,600/sq mi; 9,100/km²)
 - **Area:** 1,040.71 acres (421.16 ha) for the Carroll Gardens/Columbia Street/Red Hook neighborhood tabulation area
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is located on a peninsula projecting into the
 Upper New York Bay
 and is bounded by the
@@ -94,6 +94,19 @@ on the east, and the Upper New York Bay on the west and south.
 - Van Brunt Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Red_Hook,_Brooklyn](https://en.wikipedia.org/wiki/Red_Hook,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

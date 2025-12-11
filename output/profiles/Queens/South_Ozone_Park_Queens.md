@@ -2,7 +2,7 @@
 
 ## South Ozone Park
 
-South Ozone Park is a neighborhood in the southwestern section of the New York City borough of Queens . It is just north of John F. Kennedy International Airport , between Aqueduct Racetrack to the west and the Van Wyck Expressway to the east. Adjacent neighborhoods include Ozone Park to the west; Richmond Hill to the north; Jamaica , South Jamaica , and Springfield Gardens to the east; and Howard Beach and Old Howard Beach to the southwest.
+South Ozone Park is a neighborhood in the southwestern section of the New York City borough of Queens. It is just north of John F. Kennedy International Airport, between Aqueduct Racetrack to the west and the Van Wyck Expressway to the east. Adjacent neighborhoods include Ozone Park to the west; Richmond Hill to the north; Jamaica, South Jamaica, and Springfield Gardens to the east; and Howard Beach and Old Howard Beach to the southwest.
 
 ---
 
@@ -31,7 +31,7 @@ Liberty Avenue provides a second commercial arm, described as one of South Ozone
 - **Population:** 79,540
 - **Population Density:** 42.4 inhabitants per acre (27,100/sq mi; 10,500/km2)
 - **Area:** 1,878.12 acres (760.05 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Between Aqueduct Racetrack to the west and the Van Wyck Expressway to the east.
   - **North to South:** Neighborhood is in the southwestern section of Queens, just north of John F. Kennedy International Airport; specific northern boundary not stated.
   - **Adjacent Neighborhoods:** Howard Beach, Jamaica, Old Howard Beach, Ozone Park, Richmond Hill, South Jamaica, Springfield Gardens
@@ -71,6 +71,19 @@ N/A
 - Van Wyck Expressway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/South_Ozone_Park,_Queens](https://en.wikipedia.org/wiki/South_Ozone_Park,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

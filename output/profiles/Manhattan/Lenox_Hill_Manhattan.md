@@ -31,7 +31,7 @@ Healthcare and institutional uses are especially prominent and shape both employ
 - **Population:** 80,771 (Lenox Hill and Roosevelt Island combined, 2010 Census)
 - **Population Density:** 157.8 inhabitants per acre (101,000/sq mi)
 - **Area:** 511.71 acres (207.08 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From Fifth Avenue on the west to Lexington Avenue on the east (per The Encyclopedia of New York City definition); many residents and city maps place Lenox Hill further east in the lower east section of the Upper East Side.
   - **North to South:** Between 60th Street and 77th Street (per The Encyclopedia of New York City definition).
   - **Adjacent Neighborhoods:** Carnegie Hill, Upper East Side, Yorkville
@@ -43,7 +43,7 @@ N/A
 ### Transit & Accessibility
 #### Nearest Subways:
 - 6
-- <6>
+- 6
 - F
 - M
 - N
@@ -92,6 +92,19 @@ N/A
 - York Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Lenox_Hill,_Manhattan](https://en.wikipedia.org/wiki/Lenox_Hill,_Manhattan)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

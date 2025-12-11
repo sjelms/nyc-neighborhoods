@@ -2,7 +2,7 @@
 
 ## New Hyde Park
 
-Glen Oaks is the easternmost neighborhood of the New York City borough of Queens . The neighborhood is part of Queens Community Board 13 and borders Nassau County to the east.
+Glen Oaks is the easternmost neighborhood of the New York City borough of Queens. The neighborhood is part of Queens Community Board 13 and borders Nassau County to the east.
 
 ---
 
@@ -33,7 +33,7 @@ Residential cooperatives shape much of the built environment, but they also info
 - **Population:** 27,546
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** From the Queens/Nassau border (Lakeville Road) in the east to the Cross Island Parkway in the west.
   - **North to South:** From Grand Central Parkway to the north to Union Turnpike to the south.
   - **Adjacent Neighborhoods:** Bellerose (Queens), Floral Park (Queens), Little Neck, New Hyde Park, North New Hyde Park
@@ -73,6 +73,19 @@ N/A
 - Union Turnpike
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/New_Hyde_Park,_Queens](https://en.wikipedia.org/wiki/New_Hyde_Park,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

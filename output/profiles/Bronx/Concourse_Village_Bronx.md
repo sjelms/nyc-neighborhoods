@@ -2,7 +2,7 @@
 
 ## Concourse Village
 
-Concourse is a neighborhood in the southwestern section of the New York City borough of the Bronx which includes the Bronx County Courthouse , the Bronx Museum of the Arts , and Yankee Stadium . Its boundaries, starting from the north and moving clockwise, are East 169th Street to the north, Webster Avenue to the east, East 149th Street to the south, and Jerome Avenue and Harlem River to the west. The neighborhood is divided into three subsections: West Concourse, East Concourse, and Concourse Village with the Grand Concourse being its main thoroughfare.
+Concourse is a neighborhood in the southwestern section of the New York City borough of the Bronx which includes the Bronx County Courthouse, the Bronx Museum of the Arts, and Yankee Stadium. Its boundaries, starting from the north and moving clockwise, are East 169th Street to the north, Webster Avenue to the east, East 149th Street to the south, and Jerome Avenue and Harlem River to the west. The neighborhood is divided into three subsections: West Concourse, East Concourse, and Concourse Village with the Grand Concourse being its main thoroughfare.
 
 ---
 
@@ -31,7 +31,7 @@ Along the Grand Concourse, the IND Concourse Line (B and D trains) runs beneath 
 - **Population:** 75,371
 - **Population Density:** 118.7 inhabitants per acre (76,000/sq mi; 29,300/km²)
 - **Area:** 855.37 acres (346.16 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Webster Avenue to the east; Jerome Avenue and the Harlem River to the west
   - **North to South:** East 169th Street to the north; East 149th Street to the south
   - **Adjacent Neighborhoods:** Claremont Village, Highbridge, Melrose, Morrisania, Mott Haven, Mount Eden
@@ -77,6 +77,19 @@ Along the Grand Concourse, the IND Concourse Line (B and D trains) runs beneath 
 - Triborough Bridge
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Concourse_Village,_Bronx](https://en.wikipedia.org/wiki/Concourse_Village,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

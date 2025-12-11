@@ -2,7 +2,7 @@
 
 ## Flushing
 
-Flushing is a neighborhood in the north-central portion of the New York City borough of Queens . The neighborhood is the fourth-largest central business district in New York City. Downtown Flushing is a major commercial and retail area, with the intersection of Main Street and Roosevelt Avenue at its core being the third-busiest in New York City, behind Times Square and Herald Square .
+Flushing is a neighborhood in the north-central portion of the New York City borough of Queens. The neighborhood is the fourth-largest central business district in New York City. Downtown Flushing is a major commercial and retail area, with the intersection of Main Street and Roosevelt Avenue at its core being the third-busiest in New York City, behind Times Square and Herald Square.
 
 ---
 
@@ -25,7 +25,7 @@ Flushing functions as a powerful commercial engine for Queens and much of northe
 
 Major mixed-use projects and malls consolidate this demand into large-format retail footprints. Properties such as New World Mall, Queens Crossing, One Fulton Square, The Shops at Skyview Center, Flushing Commons, and Tangram bring together shopping, food halls, entertainment, and in some cases residential or condominium components, intensifying both daytime and evening traffic. The Shops at Skyview Center, for example, pairs a mall with a condo development stacked above, while Tangram includes a food hall, a children’s swim school, and Queens’ first 4DX movie theater, enhancing family-oriented and leisure spending. These complexes cluster around the transit spine and key arterials like Roosevelt Avenue and College Point Boulevard, benefiting from heavy pedestrian and vehicular flows.
 
-Transit access is a defining commercial advantage. The terminus of the IRT Flushing Line (7 and <7> trains) at Flushing–Main Street is one of the subway system’s busiest stations, funneling riders directly into the downtown retail grid. Three Long Island Rail Road stations on the Port Washington Branch—Flushing–Main Street, Murray Hill, and Broadway—extend the trade area deep into eastern Queens and Nassau County. An extensive bus network, including routes such as the Q12, Q13, Q17, Q20, Q25, Q44 SBS, Q50, and Q58, and NICE routes like the n20G and n20x, connects Flushing to Jamaica, Queensboro Plaza, LaGuardia Airport, and multiple suburban nodes. Highways including the Van Wyck Expressway, Whitestone Expressway (I-678), Grand Central Parkway, and Long Island Expressway (I-495), along with major corridors like Northern Boulevard and Roosevelt Avenue, provide strong regional road access for customers, employees, and logistics. Surrounding subsections such as Broadway–Flushing, Linden Hill, Queensboro Hill, Pomonok, and Waldheim are more residential but feed consumer demand into the downtown core, with large co-op complexes like Linden Hill and Electchester adding stable, nearby population bases that support neighborhood retail strips and services.
+Transit access is a defining commercial advantage. The terminus of the IRT Flushing Line (7 and 7 trains) at Flushing–Main Street is one of the subway system’s busiest stations, funneling riders directly into the downtown retail grid. Three Long Island Rail Road stations on the Port Washington Branch—Flushing–Main Street, Murray Hill, and Broadway—extend the trade area deep into eastern Queens and Nassau County. An extensive bus network, including routes such as the Q12, Q13, Q17, Q20, Q25, Q44 SBS, Q50, and Q58, and NICE routes like the n20G and n20x, connects Flushing to Jamaica, Queensboro Plaza, LaGuardia Airport, and multiple suburban nodes. Highways including the Van Wyck Expressway, Whitestone Expressway (I-678), Grand Central Parkway, and Long Island Expressway (I-495), along with major corridors like Northern Boulevard and Roosevelt Avenue, provide strong regional road access for customers, employees, and logistics. Surrounding subsections such as Broadway–Flushing, Linden Hill, Queensboro Hill, Pomonok, and Waldheim are more residential but feed consumer demand into the downtown core, with large co-op complexes like Linden Hill and Electchester adding stable, nearby population bases that support neighborhood retail strips and services.
 
 ---
 
@@ -33,7 +33,7 @@ Transit access is a defining commercial advantage. The terminus of the IRT Flush
 - **Population:** 72,008
 - **Population Density:** 84.4 inhabitants per acre (54,000/sq mi; 20,900/km2)
 - **Area:** 853.06 acres (345.22 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Broadway-Flushing is approximately bounded by 29th Avenue to the north, Northern Boulevard and Crocheron Avenue to the south, 155th Street to the west, and 172nd Streets to the east.
   - **North to South:** Murray Hill Murray Hill is bounded by 150th Street to the west and 160th Street to the east and straddles ZIP Codes 11354, 11355, and 11358.
   - **Adjacent Neighborhoods:** N/A
@@ -49,7 +49,7 @@ Transit access is a defining commercial advantage. The terminus of the IRT Flush
 ### Transit & Accessibility
 #### Nearest Subways:
 - 7
-- <7>
+- 7
 #### Major Stations:
 - Broadway
 - Flushing–Main Street (IRT Flushing Line)
@@ -93,6 +93,19 @@ N/A
 - Whitestone Expressway (Interstate 678)
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Flushing,_Queens](https://en.wikipedia.org/wiki/Flushing,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

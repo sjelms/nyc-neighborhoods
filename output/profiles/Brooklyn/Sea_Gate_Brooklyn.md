@@ -2,7 +2,7 @@
 
 ## Sea Gate
 
-Sea Gate is a private gated community at the far western end of Coney Island at the southwestern tip of the New York City borough of Brooklyn . Located on the portion of the Coney Island peninsula west of West 37th Street, it contains mostly single-family homes, some directly on Gravesend Bay .
+Sea Gate is a private gated community at the far western end of Coney Island at the southwestern tip of the New York City borough of Brooklyn. Located on the portion of the Coney Island peninsula west of West 37th Street, it contains mostly single-family homes, some directly on Gravesend Bay.
 
 ---
 
@@ -31,7 +31,7 @@ Sea Gate’s geographic position is commercially notable for its waterfront adja
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Located on the portion of the Coney Island peninsula west of West 37th Street, at the far western end of Coney Island.
   - **North to South:** Situated at the southwestern tip of the borough of Brooklyn, surrounded on three sides by water with private beaches.
   - **Adjacent Neighborhoods:** Coney Island
@@ -58,6 +58,19 @@ N/A
 - Surf Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Sea_Gate,_Brooklyn](https://en.wikipedia.org/wiki/Sea_Gate,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

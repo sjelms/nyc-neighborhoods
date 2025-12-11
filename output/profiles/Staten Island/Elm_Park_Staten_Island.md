@@ -2,7 +2,7 @@
 
 ## Elm Park
 
-Elm Park is a small park in the Port Richmond section of Staten Island , one of the five boroughs of New York City , United States.  The park is located across Innis Street from Port Richmond High School .
+Elm Park is a small park in the Port Richmond section of Staten Island, one of the five boroughs of New York City, United States. The park is located across Innis Street from Port Richmond High School.
 
 ---
 
@@ -31,7 +31,7 @@ Transportation infrastructure has been central to the area’s commercial prospe
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** N/A
   - **North to South:** N/A
   - **Adjacent Neighborhoods:** N/A
@@ -60,6 +60,19 @@ N/A
 - New York State Route 440
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Elm_Park,_Staten_Island](https://en.wikipedia.org/wiki/Elm_Park,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

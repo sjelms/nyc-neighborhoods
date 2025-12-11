@@ -2,7 +2,7 @@
 
 ## Dutch Kills
 
-Long Island City ( LIC ) is a neighborhood within the New York City borough of Queens . It is bordered by Astoria to the north; the East River to the west; Sunnyside to the east; and Newtown Creek , which separates Queens from Greenpoint, Brooklyn , to the south.  Its name refers to its location on the western tip of Long Island .
+Long Island City ( LIC ) is a neighborhood within the New York City borough of Queens. It is bordered by Astoria to the north; the East River to the west; Sunnyside to the east; and Newtown Creek, which separates Queens from Greenpoint, Brooklyn, to the south. Its name refers to its location on the western tip of Long Island.
 
 ---
 
@@ -31,8 +31,8 @@ When Newtown Creek and the Kills were canalized, industrial development intensif
 - **Population:** 63,000
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
-  - **East to West:** It is bordered by Astoria to the north; the East River to the west; Sunnyside to the east; and Newtown Creek , which separates Queens from Greenpoint, Brooklyn , to the south.
+- **Boundaries:** 
+  - **East to West:** It is bordered by Astoria to the north; the East River to the west; Sunnyside to the east; and Newtown Creek, which separates Queens from Greenpoint, Brooklyn, to the south.
   - **North to South:** Blissville Hotel on Greenpoint Avenue in Blissville Blissville, which has the ZIP Code 11101, is a neighborhood within Long Island City, located at 40°44′4.87″N 73°56′9.81″W ﻿ / ﻿ 40.7346861°N 73.9360583°W ﻿ / 40.7346861; -73.9360583 and bordered by Calvary Cemetery to the east; the Long Island Expressway to the north; Newtown Creek to the south; and Dutch Kills, a tributary of Newtown Creek, to the west.
   - **Adjacent Neighborhoods:** Astoria to the north, Calvary Cemetery to the east
 - **ZIP Codes:**
@@ -49,8 +49,8 @@ When Newtown Creek and the Kills were canalized, industrial development intensif
 - 3
 - 5
 - 7
-- <7>
-- <F>
+- 7
+- F
 - E
 - F
 - G
@@ -86,6 +86,19 @@ N/A
 - Vernon Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Dutch_Kills,_Queens](https://en.wikipedia.org/wiki/Dutch_Kills,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

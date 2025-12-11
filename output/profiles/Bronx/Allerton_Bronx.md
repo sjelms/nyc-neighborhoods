@@ -2,7 +2,7 @@
 
 ## Allerton
 
-Allerton is a working-class neighborhood geographically located in the East Bronx section of the Bronx , New York City . It is named in honor of Daniel Allerton, an early Bronx settler who purchased and farmed this area with his wife Hustace. It consists of two subsections called Bronxwood and Laconia . Its boundaries, starting from the north and moving clockwise, are Adee Avenue, Boston Road , and Gun Hill Road to the northeast; the IRT Dyre Avenue Line ( 5 train) to the east; Waring Avenue to the south; and Bronx River Parkway to the west. White Plains Road and Boston Road are the primary thoroughfares through Allerton.
+Allerton is a working-class neighborhood geographically located in the East Bronx section of the Bronx, New York City. It is named in honor of Daniel Allerton, an early Bronx settler who purchased and farmed this area with his wife Hustace. It consists of two subsections called Bronxwood and Laconia. Its boundaries, starting from the north and moving clockwise, are Adee Avenue, Boston Road, and Gun Hill Road to the northeast; the IRT Dyre Avenue Line ( 5 train) to the east; Waring Avenue to the south; and Bronx River Parkway to the west. White Plains Road and Boston Road are the primary thoroughfares through Allerton.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood’s terrain is low and flat, and land use is heavily geared tow
 - **Population:** 28,903 (Allerton–Pelham Gardens combined, 2010 Census)
 - **Population Density:** 39.8 inhabitants per acre (25,500/sq mi; 9,800/km2)
 - **Area:** 726.98 acres (294.20 ha); total land area roughly two square miles
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** IRT Dyre Avenue Line (5 train) to the east; Bronx River Parkway to the west; White Plains Road and Boston Road are primary internal thoroughfares.
   - **North to South:** Adee Avenue, Boston Road, and Gun Hill Road to the north/northeast; Waring Avenue to the south.
   - **Adjacent Neighborhoods:** Morris Park, Olinville, Pelham Gardens, Pelham Parkway, Williamsbridge
@@ -100,6 +100,19 @@ N/A
 - Williamsbridge Road
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Allerton,_Bronx](https://en.wikipedia.org/wiki/Allerton,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

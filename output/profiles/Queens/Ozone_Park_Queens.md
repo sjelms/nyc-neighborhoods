@@ -2,7 +2,7 @@
 
 ## Ozone Park
 
-Ozone Park is a neighborhood in the southwestern section of the New York City borough of Queens , New York , United States. It is next to the Aqueduct Racetrack in South Ozone Park , a popular spot for Thoroughbred racing and home to the Resorts World Casino & Hotel . Home to a large Italian-American population, Ozone Park has also grown in recent decades to have many residents of Caribbean, Hispanic, and Asian backgrounds.
+Ozone Park is a neighborhood in the southwestern section of the New York City borough of Queens, New York, United States. It is next to the Aqueduct Racetrack in South Ozone Park, a popular spot for Thoroughbred racing and home to the Resorts World Casino & Hotel. Home to a large Italian-American population, Ozone Park has also grown in recent decades to have many residents of Caribbean, Hispanic, and Asian backgrounds.
 
 ---
 
@@ -31,8 +31,8 @@ Commercially, Ozone Park’s growth has been tied to improving access. The openi
 - **Population:** 21,376
 - **Population Density:** 37.1 inhabitants per acre (23,700/sq mi; 9,200/km2)
 - **Area:** 576.32 acres (233.23 ha)
-- **Boundaries:**  
-  - **East to West:** One area of Ozone Park is known as "The Hole" , and includes the area bounded by 75th (Ruby) Street, South Conduit Avenue, 78th Street and Linden Boulevard.
+- **Boundaries:** 
+  - **East to West:** One area of Ozone Park is known as "The Hole", and includes the area bounded by 75th (Ruby) Street, South Conduit Avenue, 78th Street and Linden Boulevard.
   - **North to South:** In 1996, a scandal broke surrounding two Ozone Park Jewish cemeteries, Mokom Sholom Cemetery and Bayside Cemetery, which share a coterminous tract bounded by 80th and 84th Streets and Liberty and Pitkin Avenues (the adjoining Acacia Cemetery was not involved).
   - **Adjacent Neighborhoods:** Aqueduct on the east, Howard Beach, Howard Beach (bordering Tudor Village), Liberty Avenue and North Conduit Avenue on the north, Liberty Avenue on the south, Richmond Hill, South Ozone Park, Woodhaven
 - **ZIP Codes:**
@@ -84,6 +84,19 @@ N/A
 - Woodhaven Boulevard
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Ozone_Park,_Queens](https://en.wikipedia.org/wiki/Ozone_Park,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

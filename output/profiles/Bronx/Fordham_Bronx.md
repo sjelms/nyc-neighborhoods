@@ -2,7 +2,7 @@
 
 ## Fordham
 
-Fordham is a neighborhood located in the western Bronx , New York City. Fordham is roughly bordered by East 196th Street to the north, the Harlem River to the west, Fordham Road to the south, and Southern Boulevard to the east. The neighborhood's primary thoroughfares are Fordham Road and Grand Concourse .
+Fordham is a neighborhood located in the western Bronx, New York City. Fordham is roughly bordered by East 196th Street to the north, the Harlem River to the west, Fordham Road to the south, and Southern Boulevard to the east. The neighborhood's primary thoroughfares are Fordham Road and Grand Concourse.
 
 ---
 
@@ -31,7 +31,7 @@ Institutional and cultural uses play an outsized role in Fordham’s economic pr
 - **Population:** 43,394
 - **Population Density:** 85,600/sq mi (33,000/km2)
 - **Area:** 0.507 sq mi (1.31 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Fordham is roughly bordered by East 196th Street to the north, the Harlem River to the west, Fordham Road to the south, and Southern Boulevard to the east.
   - **North to South:** Fordham is roughly bordered by East 196th Street to the north, the Harlem River to the west, Fordham Road to the south, and Southern Boulevard to the east.
   - **Adjacent Neighborhoods:** Bedford Park, Belmont, Concourse, East 196th Street to the north, Highbridge, Jerome Park, Kingsbridge Heights, Norwood, Tremont, University Heights
@@ -101,6 +101,19 @@ Institutional and cultural uses play an outsized role in Fordham’s economic pr
 - Webster Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Fordham,_Bronx](https://en.wikipedia.org/wiki/Fordham,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Mount Hope
 
-Tremont is a residential neighborhood in the West Bronx , New York City . Its boundaries are East 181st Street to the north, Third Avenue to the east, the Cross-Bronx Expressway to the south, and the Grand Concourse to the west. East Tremont Avenue is the primary thoroughfare through Tremont.
+Tremont is a residential neighborhood in the West Bronx, New York City. Its boundaries are East 181st Street to the north, Third Avenue to the east, the Cross-Bronx Expressway to the south, and the Grand Concourse to the west. East Tremont Avenue is the primary thoroughfare through Tremont.
 
 ---
 
@@ -31,7 +31,7 @@ The neighborhood’s topography is notably elevated and very hilly, with stair s
 - **Population:** 24,739
 - **Population Density:** 82,200/sq mi (31,700/km2)
 - **Area:** 0.301 sq mi (0.78 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Third Avenue to the east, the Grand Concourse to the west
   - **North to South:** East 181st Street to the north, the Cross-Bronx Expressway to the south
   - **Adjacent Neighborhoods:** Belmont, Claremont, Concourse, Crotona Park East, East Tremont, Fairmount, Fordham, Highbridge, Morris Heights, Morrisania, Mount Eden, University Heights, West Farms
@@ -88,6 +88,19 @@ The neighborhood’s topography is notably elevated and very hilly, with stair s
 - Webster Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Mount_Hope,_Bronx](https://en.wikipedia.org/wiki/Mount_Hope,_Bronx)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

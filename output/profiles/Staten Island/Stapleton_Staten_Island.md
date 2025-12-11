@@ -2,7 +2,7 @@
 
 ## Stapleton
 
-Stapleton is a neighborhood in northeastern Staten Island in New York City , United States. It is located along the waterfront of Upper New York Bay , roughly bounded on the north by Tompkinsville at Grant Street, on the south by Clifton at Vanderbilt Avenue, and on the west by St. Paul's Avenue and Van Duzer Street, which form the border with the community of Grymes Hill .
+Stapleton is a neighborhood in northeastern Staten Island in New York City, United States. It is located along the waterfront of Upper New York Bay, roughly bounded on the north by Tompkinsville at Grant Street, on the south by Clifton at Vanderbilt Avenue, and on the west by St. Paul's Avenue and Van Duzer Street, which form the border with the community of Grymes Hill.
 
 ---
 
@@ -31,7 +31,7 @@ After wartime peak utilization, however, the waterfront suffered from declining 
 - **Population:** 37,669
 - **Population Density:** 17,350/sq mi (6,699/km2)
 - **Area:** 2.171 sq mi (5.62 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Waterfront of Upper New York Bay on the east to St. Paul's Avenue and Van Duzer Street on the west
   - **North to South:** Grant Street/Tompkinsville on the north to Vanderbilt Avenue/Clifton on the south
   - **Adjacent Neighborhoods:** Clifton, Grymes Hill, Tompkinsville
@@ -65,6 +65,19 @@ N/A
 - Prospect Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Stapleton,_Staten_Island](https://en.wikipedia.org/wiki/Stapleton,_Staten_Island)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

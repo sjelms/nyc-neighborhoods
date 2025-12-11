@@ -2,7 +2,7 @@
 
 ## Seaside
 
-Seaside is a section of the Rockaway Peninsula in the New York City borough of Queens . It is bordered by the Rockaway Beach neighborhood on the east, and by the neighborhood of Rockaway Park on the west.  Formerly a resort community of small seasonal bungalows, Seaside is today dominated by middle-income high-rise Mitchell-Lama apartment buildings along its south shore beachfront. The zip code of Seaside is 11694.
+Seaside is a section of the Rockaway Peninsula in the New York City borough of Queens. It is bordered by the Rockaway Beach neighborhood on the east, and by the neighborhood of Rockaway Park on the west. Formerly a resort community of small seasonal bungalows, Seaside is today dominated by middle-income high-rise Mitchell-Lama apartment buildings along its south shore beachfront. The zip code of Seaside is 11694.
 
 ---
 
@@ -31,7 +31,7 @@ The main commercial spine of Seaside is organized around its major roads: Rockaw
 - **Population:** N/A
 - **Population Density:** N/A
 - **Area:** N/A
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bordered by the Rockaway Beach neighborhood on the east, and by the neighborhood of Rockaway Park on the west.
   - **North to South:** It is bordered by the Rockaway Beach neighborhood on the east, and by the neighborhood of Rockaway Park on the west.
   - **Adjacent Neighborhoods:** Rockaway Beach, Rockaway Park
@@ -58,6 +58,19 @@ N/A
 - Shore Front Parkway
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Seaside,_Queens](https://en.wikipedia.org/wiki/Seaside,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

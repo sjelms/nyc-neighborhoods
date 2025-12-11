@@ -2,7 +2,7 @@
 
 ## Coney Island
 
-Coney Island is a neighborhood and entertainment area in the southwestern section of the New York City borough of Brooklyn . The neighborhood is bounded by Brighton Beach to its east, Lower New York Bay to the south and west, and Gravesend to the north and includes the subsection of Sea Gate on its west. More broadly, the Coney Island peninsula consists of Coney Island proper, Brighton Beach, and Manhattan Beach. This was formerly the westernmost of the Outer Barrier islands on the southern shore of Long Island , but in the early 20th century it became connected to the rest of Long Island by land fill .
+Coney Island is a neighborhood and entertainment area in the southwestern section of the New York City borough of Brooklyn. The neighborhood is bounded by Brighton Beach to its east, Lower New York Bay to the south and west, and Gravesend to the north and includes the subsection of Sea Gate on its west. More broadly, the Coney Island peninsula consists of Coney Island proper, Brighton Beach, and Manhattan Beach. This was formerly the westernmost of the Outer Barrier islands on the southern shore of Long Island, but in the early 20th century it became connected to the rest of Long Island by land fill.
 
 ---
 
@@ -31,7 +31,7 @@ Major destination assets extend beyond rides and games. Maimonides Park, opened 
 - **Population:** 32,259
 - **Population Density:** 18,020/km² (46,680/sq mi) (2020); 37.5 inhabitants per acre (24,000/sq mi; 9,300/km²) (2010, Coney Island and Sea Gate)
 - **Area:** 1.790 km 2 (0.691 sq mi)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** Bounded by Brighton Beach to the east and Lower New York Bay to the south and west; the broader peninsula runs about 4 miles long and 0.5 miles wide, with Sea Gate at the western end.
   - **North to South:** Gravesend and the main part of Brooklyn to the north; Lower New York Bay to the south.
   - **Adjacent Neighborhoods:** Brighton Beach, Gravesend, Manhattan Beach, Sea Gate, Sheepshead Bay
@@ -43,7 +43,7 @@ Major destination assets extend beyond rides and games. Maimonides Park, opened 
 
 ### Transit & Accessibility
 #### Nearest Subways:
-- <F>
+- F
 - A
 - D
 - F
@@ -86,6 +86,19 @@ Major destination assets extend beyond rides and games. Maimonides Park, opened 
 - West Eighth Street
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Coney_Island,_Brooklyn](https://en.wikipedia.org/wiki/Coney_Island,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

@@ -2,7 +2,7 @@
 
 ## Flatbush
 
-Flatbush is a neighborhood in the New York City borough of Brooklyn . The neighborhood consists of several subsections in central Brooklyn and is generally bounded by Prospect Park to the north, East Flatbush to the east, Midwood to the south, and Kensington and Parkville to the west. The modern neighborhood includes or borders several institutions of note, including Brooklyn College .
+Flatbush is a neighborhood in the New York City borough of Brooklyn. The neighborhood consists of several subsections in central Brooklyn and is generally bounded by Prospect Park to the north, East Flatbush to the east, Midwood to the south, and Kensington and Parkville to the west. The modern neighborhood includes or borders several institutions of note, including Brooklyn College.
 
 ---
 
@@ -31,7 +31,7 @@ By the early 20th century, Flatbush supported an extensive array of commercial a
 - **Population:** 105,804
 - **Population Density:** 101.9 inhabitants per acre (65,200/sq mi; 25,200/km2) / 104,000/sq mi (40,100/km2) cited elsewhere
 - **Area:** 1.02 sq mi (2.64 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Foster Avenue on the north,
 Ocean Avenue
 on the east, the
@@ -113,6 +113,19 @@ trains) on the west.
 - Transportation Flatbush Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Flatbush,_Brooklyn](https://en.wikipedia.org/wiki/Flatbush,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

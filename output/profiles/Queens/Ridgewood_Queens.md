@@ -2,7 +2,7 @@
 
 ## Ridgewood
 
-Ridgewood is a neighborhood in the New York City borough of Queens .  It borders the Queens neighborhoods of Maspeth to the north, Middle Village to the east, and Glendale to the southeast, as well as the Brooklyn neighborhoods of Bushwick to the southwest and East Williamsburg to the west. Historically, the neighborhood straddled the Queens-Brooklyn boundary.
+Ridgewood is a neighborhood in the New York City borough of Queens. It borders the Queens neighborhoods of Maspeth to the north, Middle Village to the east, and Glendale to the southeast, as well as the Brooklyn neighborhoods of Bushwick to the southwest and East Williamsburg to the west. Historically, the neighborhood straddled the Queens-Brooklyn boundary.
 
 ---
 
@@ -31,7 +31,7 @@ Historically, Ridgewood’s southern blocks developed as dense residential stock
 - **Population:** 69,317
 - **Population Density:** 59.9/acre (38,300/sq mi; 14,800/km2)
 - **Area:** 1,156.31 acres (467.94 ha)
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** While buildings fronting on streets that are west of Forest Avenue and the Bay Ridge Branch follow the Queens address numbering system, the avenues which run parallel to the county line—bounded by Metropolitan Avenue to the north, Forest Avenue to the east, and the Brooklyn border to the south—do not follow this address numbering system.
   - **North to South:** ( March 2019 ) Ridgewood Veterans Triangle The Ridgewood Park baseball ground, built on land owned by William Wallace, was part of a larger entertainment area bounded by Wyckoff Avenue, Covert Street, Halsey Street, and Irving Avenue.
   - **Adjacent Neighborhoods:** Bushwick, East Williamsburg, Glendale, Maspeth, Metropolitan Avenue to the north, Middle Village, William Wallace, Wyckoff Avenue
@@ -80,6 +80,19 @@ Historically, Ridgewood’s southern blocks developed as dense residential stock
 - Railroad The Myrtle Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Ridgewood,_Queens](https://en.wikipedia.org/wiki/Ridgewood,_Queens)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.

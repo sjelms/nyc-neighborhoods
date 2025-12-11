@@ -2,7 +2,7 @@
 
 ## Bay Ridge
 
-Bay Ridge is a neighborhood in the southwest corner of the New York City borough of Brooklyn . It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south. The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton.
+Bay Ridge is a neighborhood in the southwest corner of the New York City borough of Brooklyn. It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south. The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton.
 
 ---
 
@@ -31,7 +31,7 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 - **Population:** 79,371
 - **Population Density:** 50.5 inhabitants per acre (32,300/sq mi; 12,500/km2)
 - **Area:** 2.12 sq mi (5.49 km 2 )
-- **Boundaries:**  
+- **Boundaries:** 
   - **East to West:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south.
   - **North to South:** It is bounded by Sunset Park to the north, Dyker Heights to the east, the Narrows and the Belt Parkway to the west, and Fort Hamilton Army Base and the Verrazzano–Narrows Bridge to the south.
   - **Adjacent Neighborhoods:** Dyker Heights, Sunset Park, Sunset Park to the north
@@ -87,6 +87,19 @@ Waterfront access plays a notable role in Bay Ridge’s commercial and logistica
 - Third Avenue
 
 
+
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+
 ### Online Resources
 - **Official Website:** N/A
 - **Wikipedia:** [https://en.wikipedia.org/wiki/Bay_Ridge,_Brooklyn](https://en.wikipedia.org/wiki/Bay_Ridge,_Brooklyn)
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.
