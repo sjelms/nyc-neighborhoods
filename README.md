@@ -78,7 +78,7 @@ python3 -m src.cli.main generate-profiles \
 
 ### Organize existing profiles by borough
 
-You can move already-generated profiles into borough subfolders without regenerating files:
+Newly generated profiles are written directly into `<output-dir>/<borough>/` (spaces become underscores). Regenerate-fail marker files stay in `<output-dir>` so they are easy to spot. If you have older flat files, you can move them into borough subfolders without regenerating:
 
 ```bash
 python3 -m src.cli.main organize-profiles \
@@ -86,7 +86,7 @@ python3 -m src.cli.main organize-profiles \
   --dry-run
 ```
 
-Remove `--dry-run` to perform the moves. Files are placed in `<profiles-dir>/<borough>/`. Regenerate-fail marker files are skipped unless you pass `--include-failure-artifacts`.
+Remove `--dry-run` to perform the moves. Regenerate-fail marker files are skipped unless you pass `--include-failure-artifacts`.
 
 ## Input CSV Format
 

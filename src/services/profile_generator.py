@@ -139,8 +139,20 @@ class ProfileGenerator:
 
         # 6. Save Markdown to file
         file_name = f"{profile.neighborhood_name.replace(' ', '_')}_{profile.borough.replace(' ', '_')}.md"
-        output_file_path = self.output_dir / file_name
+        borough_dir_name = profile.borough.replace(" ", "_")
+        borough_output_dir = self.output_dir / borough_dir_name
+        output_file_path = borough_output_dir / file_name
         try:
+            borough_output_dir.mkdir(parents=True, exist_ok=True)
+
+            legacy_flat_path = self.output_dir / file_name
+            if legacy_flat_path.exists() and legacy_flat_path != output_file_path:
+                try:
+                    legacy_flat_path.unlink()
+                    logger.info(f"Removed legacy unsorted profile at {os.path.relpath(legacy_flat_path)}")
+                except Exception as e:
+                    logger.warning(f"Could not remove legacy unsorted profile {os.path.relpath(legacy_flat_path)}: {e}")
+
             output_file_path.write_text(markdown_content)
             relative_output_path = os.path.relpath(output_file_path)
             logger.info(f"Successfully generated profile for {neighborhood_name}, {borough} at {relative_output_path}")
