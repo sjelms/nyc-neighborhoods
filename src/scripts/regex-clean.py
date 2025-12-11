@@ -10,13 +10,30 @@ def clean_file(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Remove space before punctuation
-    content = re.sub(r"\s+([.,])", r"\1", content)
+    # Process content line by line to preserve markdown indentation
+    cleaned_lines = []
+    for line in content.splitlines():
+        # Preserve leading spaces for markdown lists
+        leading_spaces_match = re.match(r"^( *[-+*] )", line)
+        leading_spaces = ""
+        if leading_spaces_match:
+            leading_spaces = leading_spaces_match.group(0)
+            rest_of_line = line[len(leading_spaces):]
+        else:
+            rest_of_line = line
 
-    # Replace multiple spaces with a single space
-    content = re.sub(r" +", " ", content)
+        # Remove space before punctuation
+        rest_of_line = re.sub(r"\s+([.,])", r"\1", rest_of_line)
+        
+        # Replace multiple spaces with a single space
+        rest_of_line = re.sub(r" +", " ", rest_of_line)
 
-    # Remove < and > from subway lines like <F>
+        # Reconstruct the line
+        cleaned_lines.append(leading_spaces + rest_of_line)
+    
+    content = "\n".join(cleaned_lines)
+
+    # Remove < and > from subway lines like <F> - this needs to be after line processing
     content = re.sub(r"<([A-Z0-9]+)>", r"\1", content)
 
     commute_table = """
