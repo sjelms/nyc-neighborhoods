@@ -178,8 +178,87 @@ def generate_profiles(
 
     internal_logger.info("CLI command finished.")
 
+
+@app.command()
+def organize_profiles(
+    profiles_dir: Path = typer.Option(
+        Path("output/profiles"), "--profiles-dir", "-p",
+        exists=True, file_okay=False, dir_okay=True,
+        readable=True, writable=True, resolve_path=True,
+        help="Directory containing generated Markdown profiles."
+    ),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Show planned moves without changing files."),
+    include_failure_artifacts: bool = typer.Option(
+        False, "--include-failure-artifacts/--skip-failure-artifacts",
+        help="Also move regenerate-fail marker files (skipped by default)."
+    ),
+):
+    """
+    Move existing profile Markdown files into borough subdirectories based on the borough in the filename.
+    """
+    files = sorted(profiles_dir.glob("*.md"))
+    if not files:
+        typer.echo(f"No Markdown files found directly in {profiles_dir}.")
+        raise typer.Exit(code=0)
+
+    move_plan = []
+    skipped = []
+
+    for file_path in files:
+        stem = file_path.stem
+
+        if "_regenerate-fail" in stem and not include_failure_artifacts:
+            skipped.append((file_path.name, "regenerate-fail marker (use --include-failure-artifacts to move)"))
+            continue
+
+        base_stem = stem.split("_regenerate-fail", 1)[0]
+        parts = base_stem.split("_")
+        if len(parts) < 2:
+            skipped.append((file_path.name, "no borough segment in filename"))
+            continue
+
+        if len(parts) >= 3 and parts[-2] == "Staten" and parts[-1] == "Island":
+            borough_segment = "Staten_Island"
+        else:
+            borough_segment = parts[-1]
+        if not borough_segment:
+            skipped.append((file_path.name, "empty borough segment"))
+            continue
+
+        borough_dir = profiles_dir / borough_segment
+        target_path = borough_dir / file_path.name
+        move_plan.append((file_path, borough_dir, target_path))
+
+    if not move_plan:
+        typer.echo("Nothing to move; all files were skipped.")
+        raise typer.Exit(code=0)
+
+    moved = 0
+    for file_path, borough_dir, target_path in move_plan:
+        if target_path.exists():
+            skipped.append((file_path.name, f"target exists at {target_path.relative_to(profiles_dir)}"))
+            continue
+
+        action = "Would move" if dry_run else "Moving"
+        typer.echo(f"{action} {file_path.name} -> {borough_dir.name}/")
+
+        if dry_run:
+            continue
+
+        borough_dir.mkdir(parents=True, exist_ok=True)
+        file_path.rename(target_path)
+        moved += 1
+
+    typer.echo("\n--- Organize Profiles Summary ---")
+    typer.echo(f"Planned moves: {len(move_plan)}")
+    typer.echo(f"Moved: {moved}" + (" (dry run)" if dry_run else ""))
+    typer.echo(f"Skipped: {len(skipped)}")
+    for name, reason in skipped:
+        typer.echo(f"  - {name}: {reason}")
+
 # Support legacy underscore command name alongside the Typer-preferred kebab-case
 app.command(name="generate_profiles", hidden=True)(generate_profiles)
+app.command(name="organize_profiles", hidden=True)(organize_profiles)
 
 if __name__ == "__main__":
     app()

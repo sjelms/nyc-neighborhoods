@@ -76,6 +76,18 @@ python3 -m src.cli.main generate-profiles \
   --no-llm
 ```
 
+### Organize existing profiles by borough
+
+You can move already-generated profiles into borough subfolders without regenerating files:
+
+```bash
+python3 -m src.cli.main organize-profiles \
+  --profiles-dir output/profiles \
+  --dry-run
+```
+
+Remove `--dry-run` to perform the moves. Files are placed in `<profiles-dir>/<borough>/`. Regenerate-fail marker files are skipped unless you pass `--include-failure-artifacts`.
+
 ## Input CSV Format
 
 Your input CSV file should have at least two columns: `Neighborhood` and `Borough`.
