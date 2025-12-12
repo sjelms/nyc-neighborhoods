@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 import json
 from datetime import date, datetime
 from pathlib import Path
@@ -49,6 +50,61 @@ class ProfileGenerator:
         # Wikipedia uses underscores for spaces and often includes the borough for disambiguation
         search_name = f"{neighborhood_name}, {borough}".replace(" ", "_")
         return f"{self.WIKIPEDIA_BASE_URL}{search_name}"
+
+    def _clean_profile_content(self, content: str) -> str:
+        """
+        Cleans the generated markdown content by applying various regex-based fixes.
+        """
+        # Process content line by line to preserve markdown indentation
+        cleaned_lines = []
+        for line in content.splitlines():
+            # Preserve leading spaces for markdown lists
+            leading_spaces_match = re.match(r"^( *[-+*] )", line)
+            leading_spaces = ""
+            if leading_spaces_match:
+                leading_spaces = leading_spaces_match.group(0)
+                rest_of_line = line[len(leading_spaces):]
+            else:
+                rest_of_line = line
+
+            # Remove space before punctuation
+            rest_of_line = re.sub(r"\s+([.,])", r"\1", rest_of_line)
+            
+            # Replace multiple spaces with a single space
+            rest_of_line = re.sub(r" +", " ", rest_of_line)
+
+            # Reconstruct the line
+            cleaned_lines.append(leading_spaces + rest_of_line)
+        
+        content = "\n".join(cleaned_lines)
+
+        # Remove < and > from subway lines like <F>
+        content = re.sub(r"<([A-Z0-9]+)>", r"\1", content)
+
+        # Add commute table if it's not there and "Online Resources" exists.
+        if "### Commute Times" not in content and "### Online Resources" in content:
+            commute_table = """
+---
+
+### Commute Times (optional — if data available)
+| Destination | Subway | Drive |
+|-------------|--------|-------|
+| … | … | … |
+| … | … | … |
+
+---
+"""
+            content = re.sub(r"(### Online Resources)", commute_table + r"\n\1", content)
+
+        # Add disclaimer if it's not there
+        if "Disclaimer:" not in content:
+            disclaimer = """
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system. While efforts have been made to ensure accuracy and reliability, AI-generated information may contain errors or omissions. Please verify any critical information.
+"""
+            content += disclaimer
+
+        return content
 
     def _write_failure_artifact(self, neighborhood_name: str, borough: str, reason: str) -> Optional[Path]:
         """
@@ -136,6 +192,8 @@ class ProfileGenerator:
             if force_regenerate:
                 self._write_failure_artifact(neighborhood_name, borough, self.last_failure_reason)
             return False, None
+
+        markdown_content = self._clean_profile_content(markdown_content)
 
         # 6. Save Markdown to file
         file_name = f"{profile.neighborhood_name.replace(' ', '_')}_{profile.borough.replace(' ', '_')}.md"

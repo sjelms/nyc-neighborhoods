@@ -9,7 +9,7 @@ A CLI tool that turns a CSV of NYC neighborhoods into polished, standardized Mar
 - Fetch each neighborhood’s Wikipedia page (cached for repeatable runs).
 - Parse infobox + transport/geography sections for hard facts.
 - Run the LLM to produce “Key Details” and “Around the Block” narratives and to backfill missing facts.
-- Render the profile into a Markdown template and log the generation for skip/force/update workflows.
+- Render the profile into a Markdown template, apply automated content corrections (e.g., fixing punctuation, adding a disclaimer), and log the generation for skip/force/update workflows.
 
 ## Installation
 
@@ -112,16 +112,21 @@ The tool generates Markdown files based on a template. An example template (`ref
 - Transit & Accessibility (subways, stations, buses, other transit, highways/major roads)
 - Commute Times (optional)
 - Online Resources (Wikipedia link auto-populated; official link if available)
+- An AI-generated content disclaimer appended at the end of the file.
 
 ## Development
 
-Refer to the `tasks.md` and other documentation in the `specs/001-automated-neighborhood-profile-generator/` directory for development details, design decisions, and task tracking.
+Refer to the `tasks.md` and other documentation in the `specs/` directory for development details, design decisions, and task tracking.
 
-Key recent changes:
-- Wikipedia-first scraping with deterministic infobox/section parsing (population, area, ZIPs, transit).
-- LLM gap-fill with CRE-focused prompts (rich “Around the Block” and key details) and cache refresh when prior responses are empty/short.
-- Force-regenerate now clears existing log entries so profiles are actually rewritten.
-- Online Resources section now renders clickable Wikipedia links by default.
+### Key recent changes:
+- **Integrated Content Cleanup:** The generation process now includes an automated cleanup step that fixes common formatting issues, such as removing extra spaces before punctuation and standardizing subway line formatting.
+- **AI Disclaimer:** A disclaimer is now automatically appended to each generated profile to note the use of AI.
+- **Borough-Based File Organization:** Newly generated profiles are now saved in borough-specific subdirectories (`output/profiles/Bronx`, `output/profiles/Brooklyn`, etc.) for better organization. An `organize-profiles` CLI command was added to help migrate older, unsorted profiles.
+- **Robust Caching:** The caching mechanism has been enhanced, with separate directories for fetched HTML (`cache/html/`) and LLM responses (`cache/llm/`). This improves debugging and allows for more granular cache management.
+- **LLM API Fixes:** Resolved issues with LLM API parameters (`max_tokens`, `temperature`) and upgraded the default model to ensure reliable and high-quality JSON output for data enrichment.
+- **Generation Log Enhancements:** The generation log is now more robust, enabling more reliable skipping of existing profiles and targeted regeneration with `--force-regenerate` and `--update-since`.
+
+### Example Generation Command
 
 ```bash
 python3 -m src.cli.main generate-profiles \

@@ -15,12 +15,14 @@
 
 | Source | Purpose / Use Cases |
 |--------|--------------------|
-| **Wikipedia** (neighborhood pages) | Demographics, historical context, boundaries, ZIP codes, transit summary, notable features — often compiled with citations and used as primary scrape source. |  
-| **NYC Open Data** portal ([data.cityofnewyork.us](https://data.cityofnewyork.us)) | For more granular / official data — e.g. zoning, community district boundaries, land use, infrastructure, sanitation, or other public‑agency datasets. |  
+| **Wikipedia** (neighborhood pages) | Demographics, historical context, boundaries, ZIP codes, transit summary, notable features — often compiled with citations and used as primary scrape source. |
+| **LLM (GPT series)** | Synthesizing narrative content ("Around the Block", "Key Details") and filling gaps in parsed data by structuring unstructured text. |
+| **NYC Open Data** portal ([data.cityofnewyork.us](https://data.cityofnewyork.us)) | For more granular / official data — e.g. zoning, community district boundaries, land use, infrastructure, sanitation, or other public‑agency datasets. (Integration currently parked). |
 
 **Source Strategy:**
 
 - For each neighborhood, first attempt to retrieve a dedicated Wikipedia page. If found, use as primary source for narrative, demographics, transit overview.
+- Use an LLM to enrich the parsed data, generate descriptive narratives, and fill in missing fields in a structured format.
 - Supplement with NYC Open Data when available — especially for numeric data (zoning, land use, infrastructure), or to cross‑validate key facts.
 - Where conflicting data exists (e.g. boundaries, ZIP codes), prefer official data (Open Data). If only Wikipedia exists, include a note and flag for manual review.
 
@@ -29,16 +31,21 @@
 ## 3. Input Specification
 
 - Provide a **list of neighborhood names** as input.
-  - Best stored in a **CSV file** with two columns: `neighborhood_name`, `borough`
-  - CSV is simple to manage, editable in Excel or a text editor, and easy to parse
-- Optionally include metadata columns in CSV (e.g. `preferred_version`, `manual_override`) for future flexibility
+  - Best stored in a **CSV file** with two columns: `Neighborhood`, `Borough`
+  - CSV is simple to manage, editable in Excel or a text editor, and easy to parse.
+- Optionally include metadata columns in CSV (e.g. `preferred_version`, `manual_override`) for future flexibility.
 
 ---
 
 ## 4. Output Specification
 
-For each neighborhood, produce a standalone Markdown (`.md`) file using the following structure (see `reference/output-template.md`):
+For each neighborhood, produce a standalone Markdown (`.md`) file using the following structure (see `reference/output-template.md`).
 
+**File Location & Naming:**
+- **Path:** `output/profiles/<Borough>/<Neighborhood>_<Borough>.md` (e.g., `output/profiles/Queens/Maspeth_Queens.md`)
+- **Format:** Spaces in borough and neighborhood names are replaced with underscores.
+
+**Content Structure:**
 ```markdown
 **Version**: [VERSION] | **Ratified**: [RATIFIED_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
 
@@ -50,14 +57,8 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 
 ### Key Details
 - **WHAT TO EXPECT:**  
-
-
 - **UNEXPECTED APPEAL:**  
-
-
 - **THE MARKET:**  
-
-
 
 ---
 
@@ -72,135 +73,92 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 - **Population Density:**   
 - **Area:** 
 - **Boundaries:**  
-  - **East to West:** 
-  - **North to South:** 
-  - **Adjacent Neighborhoods:**   
-- **ZIP Codes:** 
+...
 
 ---
 
 ### Transit & Accessibility
-#### Nearest Subways:
-…  
-#### Major Stations:
-…  
-#### Bus Routes:
-…  
-#### Rail / Freight / Other Transit (if applicable):
-…  
-#### Highways & Major Roads:
-…  
+...
 
 ---
 
 ### Commute Times (optional — if data available)
-| Destination | Subway | Drive |
-|-------------|--------|-------|
-| … | … | … |
+...
 
 ### Online Resources
 - **Official Website:** [Neighborhood Website URL]
 - **Wikipedia:** [Wikipedia URL]
+
+> **Disclaimer:** This content was generated in part by an artificial intelligence system...
 ```
 
-- File naming format: `Neighborhood_Borough.md` (e.g. `Maspeth_Queens.md`)
-- Maintain a companion log (CSV or JSON) with fields: `neighborhood`, `sources_used`, `date_generated`, `warnings`, etc.
+- **Generation Log:** A companion log (`logs/generation_log.json`) tracks each generated file, its version, and key metadata to manage regeneration workflows (`--force-regenerate`, `--update-since`).
 
 ---
 
 ## 5. Technical Architecture & Tools
 
 ### Preferred Stack:
-- Language: **Python 3.x**
+- Language: **Python 3.11**
 - Libraries:
   - `requests` — for fetching web content
-  - `BeautifulSoup` — for HTML parsing
+  - `beautifulsoup4` — for HTML parsing
   - `pandas` — for CSV parsing
-  - `pydantic` (or `dataclasses`) — for data modeling
-  - `typer` or `argparse` — for CLI (optional)
+  - `pydantic` — for data modeling
+  - `typer` — for the command-line interface
+  - `openai` — for interacting with the LLM API
 
 ### Components:
-- **CSV Input Parser** — read the list of neighborhoods
-- **Data Fetcher** — fetch Wikipedia page or Open Data API (if available)
-- **Parser / Extractor** — extract key data (infoboxes, sections, transit text)
-- **Data Normalizer** — convert raw HTML data into a structured schema; orchestrates LLM gap-fill for narratives and key details
-- **Template Renderer** — inject structured data into the Markdown template (including Online Resources links)
-- **File Writer** — output individual `.md` files into an `/output/` folder
-- **Logging** — record source URLs, warnings, or missing fields
-- **Cache (Optional)** — save downloaded HTML/JSON for repeatability
+- **CLI (`main.py`)**: The entry point, defining commands (`generate-profiles`, `organize-profiles`) and options.
+- **CSV Parser**: Reads the input CSV file.
+- **Web Fetcher**: Fetches content from Wikipedia, with caching support.
+- **Wikipedia Parser**: Extracts structured data (infoboxes, sections) from HTML.
+- **LLM Helper**: A dedicated service that constructs prompts, interacts with the OpenAI API, and validates/parses the JSON response.
+- **Data Normalizer**: Converts raw parsed data into the `NeighborhoodProfile` Pydantic model; orchestrates the LLM gap-fill.
+- **Template Renderer**: Injects the structured data from the profile model into the Markdown template.
+- **Profile Generator**: Orchestrates the entire process from fetching to file writing, including the final content cleanup.
+- **Cache Manager**: A file-based caching utility. It's used by `WebFetcher` and `LLMHelper` to store downloaded HTML and LLM responses in `cache/html/` and `cache/llm/` respectively, reducing redundant API calls.
+- **Generation Log**: A JSON-backed log to track generated profiles and their metadata.
 
 ---
 
 ## 6. Implementation Steps
 
-1. **Project setup**
-   - Create folders: `/input`, `/output`, `/logs`, `/cache`
-   - Install dependencies via `pip`
-
-2. **CSV Importer**
-   - Load `neighborhood_name` and `borough` columns
-   - Handle duplicates or missing values
-
-3. **Page Fetcher**
-   - Build Wikipedia URL from name
-   - Fallback: Open Data API (if available)
-
-4. **HTML Parser**
-   - Extract infobox items (population, ZIPs, area, etc.)
-   - Scrape transit, boundary, and zoning info with heuristics across sections/inline text
-   - Handle missing/malformed sections with warnings
-
-5. **Data Schema**
-   - Define `NeighborhoodProfile` model (Pydantic or plain class)
-   - Populate fields with parsed data
-
-6. **Template Renderer**
-   - Inject values into Markdown template with correct formatting
-   - Add version metadata at top
-   - Render Online Resources with clickable Wikipedia link; official link when available
-
-7. **File Output**
-   - Save as `Neighborhood_Borough.md` in `/output`
-   - Append a log entry for each record (CSV or JSON)
-
-8. **CLI Interface**
-   - Allow version, ratified, amended dates to be passed as flags
-   - Example:
-     ```bash
-     python generate_profiles.py neighborhoods.csv --version 1.0 --ratified 2025-12-03 --last-amended 2025-12-03
-     ```
-
-9. **Testing / Debugging**
-   - Start with ~3 neighborhoods (e.g. Williamsburg, Maspeth, Sunset Park)
-   - Verify: formatting, structure, key data filled in
-   - Log any missing or ambiguous values
-   - Fixture-based parser tests with cached HTML (e.g. Astoria) for infobox/transit extraction
-
-10. **Refinement**
-    - Add fallback options for unreliable sources
-    - Add inline flags for `#reference-required` or `#to-validate` for missing data
+1. **Project setup**: `input`, `output`, `logs`, and `cache` directories were created. Dependencies installed via `pip`.
+2. **CSV Importer**: A `CSVParser` class was implemented to load `Neighborhood` and `Borough` data.
+3. **Page Fetcher**: `WebFetcher` handles retrieving Wikipedia pages with caching.
+4. **HTML Parser**: `WikipediaParser` uses BeautifulSoup to scrape key data points.
+5. **Data Schema**: `NeighborhoodProfile` Pydantic model defines the data structure.
+6. **Template Renderer**: `TemplateRenderer` populates the `.md` template.
+7. **File Output**: `ProfileGenerator` saves files to `output/profiles/<Borough>/<File>.md` and records the action in `logs/generation_log.json`.
+8. **CLI Interface**: A robust CLI was built with `Typer`, supporting various options for caching, regeneration, and LLM usage.
+    ```bash
+    # Example of a full command
+    python3 -m src.cli.main generate-profiles \
+      --input-csv reference/neighborhood-borough.csv \
+      --output-dir output/profiles \
+      --force-regenerate \
+      --use-llm
+    ```
+9. **Testing**: Unit and integration tests were developed to validate parsing, data modeling, and generation logic.
+10. **Refinement**: Logic was added for borough-based file organization and automated content cleanup (e.g., punctuation, adding disclaimer).
 
 ---
 
 ## 7. Source Tracking & Manual Overrides
 
-- At the end of each Markdown file (or in metadata/log), include:
-  - `Source URLs`
-  - `Date accessed`
-  - Any `#to-validate` notes
-- Allow override of any field via optional `overrides.csv` or inline YAML front matter (future enhancement)
+- Each profile includes a link to its Wikipedia source.
+- The generation log tracks the file path, version, and generation dates.
+- No manual override system is currently implemented, but it is a potential future enhancement.
 
 ---
 
 ## 8. Versioning & Maintenance
 
-- Version metadata fields:
-  - `Version`
-  - `Ratified`
-  - `Last Amended`
-- Encourage users to manually update the `Last Amended` date if they revise the markdown file
-- Refresh process (every 6–12 months): re-run generator with updated sources, bump version number
-- LLM cache refresh: empty/short responses trigger a new LLM call to ensure rich narratives
+- Version metadata is included at the top of each profile (`Version`, `Ratified`, `Last Amended`).
+- **Automated Content Cleanup**: A post-processing step integrated into the generation pipeline automatically corrects common formatting errors (e.g., spacing and punctuation) and appends an AI-generated content disclaimer.
+- **Refresh Process**: To refresh profiles, re-run the generator with `--force-regenerate`. The `Last Amended` date should be updated accordingly.
+- **LLM Cache Refresh**: The system is designed to re-request LLM responses if a cached response is found to be empty or malformed, ensuring data richness.
 
 ---
 
@@ -208,17 +166,18 @@ For each neighborhood, produce a standalone Markdown (`.md`) file using the foll
 
 | Issue | Mitigation |
 |-------|------------|
-| Wikipedia content varies per neighborhood | Write flexible parsing logic and fallback rules |
-| Missing/incomplete data | Flag with `#to-validate`, supplement manually |
-| Open Data APIs may change structure or be incomplete | Use caching, stable endpoints, or file downloads |
-| Long-run maintenance | Keep code modular, log parsing issues, automate tests |
-| Licensing of scraped data | Use public domain or Creative Commons sources only |
+| Wikipedia content varies per neighborhood | Write flexible parsing logic; use LLM to fill gaps; log missing data. |
+| Missing/incomplete data | Flag with `#to-validate` (manual process), supplement manually. |
+| API/Source Changes (Wikipedia/OpenAI) | Keep code modular, use caching, pin dependencies, and maintain tests. |
+| Long-run maintenance | Keep code modular, log parsing issues, automate tests. |
+| Licensing of scraped data | Use public domain or Creative Commons sources only; add disclaimers. |
 
 ---
 
 ## 10. Future Enhancements
 
-- Add YAML front matter to each `.md` file for integration into static site generators (e.g. Jekyll, Hugo)
-- Integrate vector search or semantic indexing to make files searchable
-- Build a web interface for previewing profiles
-- Auto-generate visual maps or boundary diagrams via NYC Open Data shapefiles
+- Add YAML front matter to each `.md` file for integration into static site generators (e.g. Jekyll, Hugo).
+- Integrate vector search or semantic indexing to make files searchable.
+- Build a web interface for previewing profiles.
+- Auto-generate visual maps or boundary diagrams via NYC Open Data shapefiles.
+- Implement a manual override system for specific data fields.
