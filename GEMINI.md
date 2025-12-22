@@ -4,8 +4,8 @@ Auto-generated from all feature plans. Last updated: 2025-12-03
 
 ## Active Technologies
 
-- Python 3.11 + requests, beautifulsoup4, pandas, pydantic, typer (001-automated-neighborhood-profile-generator)
-- pytest, pytest-cov, pytest-mock (001-automated-neighborhood-profile-generator)
+- Python 3.11 + requests, beautifulsoup4, pandas, pydantic, typer (`001-automated-neighborhood-profile-generator`)
+- pytest, pytest-cov, pytest-mock (`001-automated-neighborhood-profile-generator`)
 - **openai, python-dotenv (002-helper-llm-feature)**
 
 ## Project Structure
